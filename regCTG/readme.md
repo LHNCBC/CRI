@@ -1,3 +1,5 @@
+[CLICK HERE FOR A HYPERLINKED LIST OF 4000+ DISEASE-SPECIFIC RESERACH SNAPSHOT REPORTS](https://lhncbc.github.io/CRI/regCTG/regCTG-condition_report_links.html)
+
 # regCTG
 
 registered trials in ClinicalTrials.gov
