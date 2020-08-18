@@ -382,96 +382,93 @@ summary {
 <h1><span class="header-section-number">1</span> Format</h1>
 <div id="share-person-table-in-cdisc-or-omop-format" class="section level2">
 <h2><span class="header-section-number">1.1</span> Share person table in CDISC or OMOP format</h2>
-<p>OMOP person table specification can be found at <a href="https://github.com/OHDSI/CommonDataModel/wiki/PERSON" class="uri">https://github.com/OHDSI/CommonDataModel/wiki/PERSON</a></p>
-<p><strong>Positive Example:</strong> <span style="color: green;">Trial <a href="http://clinicaltrials.gov/ct2/show/NCT01612169" class="uri">http://clinicaltrials.gov/ct2/show/NCT01612169</a> IPV data posted on NIDA Data Share (at <a href="https://datashare.nida.nih.gov/study/nidactn0049" class="uri">https://datashare.nida.nih.gov/study/nidactn0049</a>) provide file dem.csv provides one row per person with person_id and basic demographic data. (following CDISC standard).</span></p>
+<p>A listing of person participating in the study is always present. Person table includes typically demographic data (year of birth, gender at birth). CDISC SDTM person table is DM.xpt domain. Specification is at <a href="https://www.cdisc.org/standards/foundational/sdtm" class="uri">https://www.cdisc.org/standards/foundational/sdtm</a> (requires creating a free login). Examle of DM table is available at <a href="https://github.com/lhncbc/r-snippets-bmi/blob/master/cdisc/inst/extdata/cdisc01/csv/dm.csv" class="uri">https://github.com/lhncbc/r-snippets-bmi/blob/master/cdisc/inst/extdata/cdisc01/csv/dm.csv</a> OMOP person table specification can be found at <a href="https://github.com/OHDSI/CommonDataModel/wiki/PERSON" class="uri">https://github.com/OHDSI/CommonDataModel/wiki/PERSON</a></p>
+<p><strong>Positive Example:</strong> <span style="color: green;">Trial <a href="http://clinicaltrials.gov/ct2/show/NCT01612169" class="uri">http://clinicaltrials.gov/ct2/show/NCT01612169</a> IPD data posted on NIDA Data Share (at <a href="https://datashare.nida.nih.gov/study/nidactn0049" class="uri">https://datashare.nida.nih.gov/study/nidactn0049</a>) provide file dem.csv provides one row per person with person_id and basic demographic data. (following CDISC standard).</span></p>
 <p><strong>Challenging Example:</strong> <span style="color: red;"></span></p>
-<p><strong>Score:</strong> score one</p>
+<p><strong>Score:</strong> Score 1 or 0. No Partial score. 1 if person table is provided, 0 if not provided</p>
 </div>
-<div id="for-improved-integration-of-research-and-routine-healthcare-data-e.g.-from-electronic-health-record-system-or-healthcare-billing-data-group-data-and-data-elements-into-relevant-data-domains-e.g.-medication-history-laboratory-results-history-medical-procedure-history" class="section level2">
-<h2><span class="header-section-number">1.2</span> For improved integration of research and routine healthcare data (e.g., from Electronic Health Record system or healthcare billing data), group data and data elements into relevant data domains (e.g., medication history, laboratory results history, medical procedure history)</h2>
-<p>Emergence of several common data models (CDMs) for healthcare data shows that there is a common way to organize clinical data. For example, rather than considering numerical value as test result and unit in which the value is expressed as two separate data elements, a review of several CDMs shows that these are typically grouped into a single data row.</p>
+<div id="group-data-and-data-elements-into-relevant-data-domains-e.g.-medication-history-laboratory-results-history-medical-procedure-history" class="section level2">
+<h2><span class="header-section-number">1.2</span> Group data and data elements into relevant data domains (e.g., medication history, laboratory results history, medical procedure history)</h2>
+<p>Consider integration of research and routine healthcare data (e.g., from Electronic Health Record system or healthcare billing data). The emergence of several common data models (CDMs) for healthcare data shows that there is a common way to organize clinical data. For example, rather than considering numerical value as test result and unit in which the value is expressed as two separate data elements, a review of several CDMs shows that these are typically grouped into a single data row.</p>
 <p><strong>Positive Example:</strong> <span style="color: green;"></span></p>
 <p><strong>Challenging Example:</strong> <span style="color: red;"></span></p>
-<p><strong>Score:</strong> score one</p>
+<p><strong>Score:</strong> Score 1 or 0. No Partial score. 1 if data elements grouped into relevent domains, 0 if data elements are not grouped</p>
 </div>
-<div id="use-consistent-relative-time-start-counting-at-day-1-not-0" class="section level2">
-<h2><span class="header-section-number">1.3</span> Use consistent relative time (start counting at day 1, not 0)</h2>
-<p>When using relative time, specify index event with datetime granularity. Refer to the first day as relative day 1. Do not use day 0 as a relative date. For example if the index event is signing of informed consent and it was signed at 10:31am on March 10, 2011, the index date-time is midnight of March 10, 2011. In relative time, of an event on the next day (on March 11) at 11:15am, would have relative time of Day 2, 11:15am. (for analogous discussion in astronomical data see <a href="https://en.wikipedia.org/wiki/Sol_(day_on_Mars)#Usage_in_Mars_landers" class="uri">https://en.wikipedia.org/wiki/Sol_(day_on_Mars)#Usage_in_Mars_landers</a>)</p>
-<p><strong>Positive Example:</strong> <span style="color: green;"></span></p>
-<p><strong>Challenging Example:</strong> <span style="color: red;"></span></p>
-<p><strong>Score:</strong> score one</p>
+<div id="follow-a-convention-when-using-relative-time." class="section level2">
+<h2><span class="header-section-number">1.3</span> Follow a convention when using relative time.</h2>
+<p>The recomendation applies to a context where absolute dates in raw data were replaced with relative dates. The convention is to start counting at day 1, not 0. Assumme that index event (e.g., day when patient consented to the trial or day of first visit) has been specified at datetime granularity. Refer to the first day as relative day 1. Do not use day 0 as a relative date. For example if the index event is signing of informed consent and it was signed at 10:31am on March 10, 2011, the index date-time is midnight of March 10, 2011. In relative time, of an event on the next day (on March 11) at 11:15am, would have relative time of Day 2, 11:15am. (for analogous discussion in astronomical data see <a href="https://en.wikipedia.org/wiki/Sol_(day_on_Mars)#Usage_in_Mars_landers" class="uri">https://en.wikipedia.org/wiki/Sol_(day_on_Mars)#Usage_in_Mars_landers</a>)</p>
+<p><strong>Positive Example:</strong> <span style="color: green;"><span></span></p>
+<p><strong>Challenging Example:</strong> <span style="color: red;"><span></span></p>
+<p><strong>Score:</strong> Score 1 or 0. No Partial score. 1 if a convention for releative time is used, 0 if not</p>
 </div>
-<div id="utilize-clinicaltrials.gov-fields-for-uploading-study-protocol-empty-case-report-forms-statistical-analysis-plan-and-study-url-link" class="section level2">
-<h2><span class="header-section-number">1.4</span> Utilize ClinicalTrials.gov fields for uploading study protocol, empty case report forms, statistical analysis plan and study URL link</h2>
-<p>ClinicalTrials.gov allows for the upload of relevant documents related to the study page including protocols, analysis plans and other related documents while also allowing for the providing of links to relevant materials such as data dictionaries and IPD.</p>
-<p><strong>Positive Example:</strong> <span style="color: green;">NCT02755818 (<a href="https://clinicaltrials.gov/ct2/show/NCT02755818" class="uri">https://clinicaltrials.gov/ct2/show/NCT02755818</a>) provides documents, such as protocol, informed consent form and results as both links to external sites and uploads to ClinicalTrials.gov.</span></p>
-<p><strong>Challenging Example:</strong> <span style="color: red;"></span></p>
-<p><strong>Score:</strong> score one</p>
-</div>
-<div id="provide-basic-summary-results-using-results-registry-component-of-clinicaltrials.gov" class="section level2">
-<h2><span class="header-section-number">1.5</span> Provide basic summary results using results registry component of Clinicaltrials.gov</h2>
-<p><strong>Positive Example:</strong> <span style="color: green;">NCT00962780 (<a href="https://clinicaltrials.gov/ct2/show/results/NCT00962780" class="uri">https://clinicaltrials.gov/ct2/show/results/NCT00962780</a>) has basic summary results of the study posted on ClinicalTrials.gov using the results registry component</span></p>
-<p><strong>Challenging Example:</strong> <span style="color: red;"></span></p>
-<p><strong>Score:</strong> score one</p>
-</div>
-<div id="share-case-report-forms-in-non-pdf-machine-readable-format." class="section level2">
-<h2><span class="header-section-number">1.6</span> Share Case Report Forms in non-PDF, machine-readable format.</h2>
-<p>Machine-readable Case Report Forms allow for easier integration and use os the information provided from the empty Case Report Forms</p>
-<p><strong>Positive Example:</strong> <span style="color: green;">For example, REDCap, OpenClinica and several other Electronic Data Capture (EDC) systems allow export into CDISC Operational Data Model (ODM) format for forms. If no cross-platform standard is supported by your EDC, provide CRFs in the platform-specific format.</span></p>
-<p><strong>Challenging Example:</strong> <span style="color: red;">NCT00005273 provides case report forms as PDFS of photocopied forms making any automated integration or machine reading of the information not plausible.</span></p>
-<p><strong>Score:</strong> score one</p>
-</div>
-<div id="if-you-considered-formally-defined-research-common-data-elements-at-study-design-more-common-for-studies-initiated-after-2015-provide-a-spreadsheet-file-that-lists-all-cdes-utilized-by-your-study.-include-unique-cde-identifiers-e.g.-phenx-variableid." class="section level2">
-<h2><span class="header-section-number">1.7</span> If you considered formally defined research Common Data Elements at study design (more common for studies initiated after 2015), provide a spreadsheet file that lists all CDEs utilized by your study. Include unique CDE identifiers (e.g., PhenX VariableID).</h2>
-<p><strong>Positive Example:</strong> <span style="color: green;">Data elements in AllofUs study are linked to LOINC codes. Elements are listed here (<a href="http://athena.ohdsi.org/search-terms/terms?vocabulary=PPI&amp;conceptClass=Clinical+Observation&amp;page=1&amp;pageSize=15&amp;query=" class="uri">http://athena.ohdsi.org/search-terms/terms?vocabulary=PPI&amp;conceptClass=Clinical+Observation&amp;page=1&amp;pageSize=15&amp;query=</a>) and example of mapping can be seen for this weight (<a href="http://athena.ohdsi.org/search-terms/terms/903121" class="uri">http://athena.ohdsi.org/search-terms/terms/903121</a>) data element (mapped to LOINC CDE 29463-7 [<a href="https://loinc.org/29463-7/" class="uri">https://loinc.org/29463-7/</a>]).</span></p>
+<div id="utilize-previosly-defined-common-data-elements-and-reference-them-by-their-identifiers" class="section level2">
+<h2><span class="header-section-number">1.4</span> Utilize previosly defined Common Data Elements and reference them by their identifiers</h2>
+<p>If you considered formally defined research Common Data Elements at study design (more common for studies initiated after 2015), provide a spreadsheet file that lists all CDEs utilized by your study. Include unique CDE identifiers (e.g., PhenX VariableID). This recommendation promotes two aspects. First is to adopt established CDEs. Second, if the study did adopt CDE, it must clearly indicte which DEs are CDEs and which are not (such DEs would be unique to the study).</p>
+<p><strong>Positive Example:</strong> <span style="color: green;">Data elements in AllofUs study are linked to LOINC codes. Elements are listed <a href="http://athena.ohdsi.org/search-terms/terms?vocabulary=PPI&amp;conceptClass=Clinical+Observation&amp;page=1&amp;pageSize=15&amp;query=">here</a> and example of mapping can be seen for this weight (<a href="http://athena.ohdsi.org/search-terms/terms/903121" class="uri">http://athena.ohdsi.org/search-terms/terms/903121</a>) data element (mapped to LOINC CDE 29463-7 (<a href="https://loinc.org/29463-7/" class="uri">https://loinc.org/29463-7/</a>)).</span></p>
 <p><strong>Challenging Example:</strong> <span style="color: red;">AllofUs study provides the source for each data element (<a href="http://athena.ohdsi.org/search-terms/terms?vocabulary=PPI&amp;conceptClass=Clinical+Observation&amp;page=1&amp;pageSize=50&amp;query=" class="uri">http://athena.ohdsi.org/search-terms/terms?vocabulary=PPI&amp;conceptClass=Clinical+Observation&amp;page=1&amp;pageSize=50&amp;query=</a>). Identifiers for individual CDE are not provided. Although, in many cases, the instrument does not have a formal identifier that could be listed.</span></p>
-<p><strong>Score:</strong> score one</p>
+<p><strong>Score:</strong> For studies initiatied after Jan 1, 2015,1 if common data elements are used, and 0 if no defined common data elements are used</p>
 </div>
-<div id="use-data-formats-that-can-be-natively-loaded-without-add-ons-into-multiple-statistical-platforms" class="section level2">
-<h2><span class="header-section-number">1.8</span> Use data formats that can be natively loaded (without add-ons) into multiple statistical platforms</h2>
-<p>The preferred file taps are comma/tab separated values (.CSV) filesinstead of SAS XPT, XLS/XSLX), which require add ons or conversions to be read in and used in differet statistical platforms</p>
+<div id="use-formats-that-can-be-natively-loaded-without-highly-specialized-add-ons-into-multiple-statistical-platforms" class="section level2">
+<h2><span class="header-section-number">1.5</span> Use formats that can be natively loaded (without highly specialized add-ons) into multiple statistical platforms</h2>
+<p>The preferred file types are comma/tab separated values (.CSV) files instead of SAS XPT, XLS/XSLX), which require add ons or conversions to be read in and used in different statistical platforms (e.g., SAS, STATA, R, etc.)</p>
 <p><strong>Positive Example:</strong> <span style="color: green;">NCT01751646 provides IPD in CSV files easily usable in a multitude of statistical platforms. Trial <a href="https://clinicaltrials.gov/ct2/show/study/NCT00005159" class="uri">https://clinicaltrials.gov/ct2/show/study/NCT00005159</a> provides 3 formats</span></p>
-<p><strong>Challenging Example:</strong> <span style="color: red;">NCT00951249 provides IPD as SAS XPT files which require processing and conversion to use in any non-SAS platform for view and analysis</span></p>
-<p><strong>Score:</strong> score one</p>
+<p><strong>Challenging Example:</strong> <span style="color: red;"><a href="https://clinicaltrials.gov/ct2/show/NCT00951249">NCT00951249</a> provides IPD as SAS XPT files which require processing and conversion to use in any non-SAS platform for view and analysis</span></p>
+<p><strong>Score:</strong> Score 1 or 0. No Partial score. 1if a format that can be natively loaded into multiple platforms is used, 0 if a format is used that cannot be natively loaded into multiple platforms and requires conversion, add-ons, or specialty software.</p>
 </div>
 </div>
 <div id="data-sharing" class="section level1">
 <h1><span class="header-section-number">2</span> Data Sharing</h1>
-<div id="use-clinicaltrials.gov-registry-to-document-your-study" class="section level2">
-<h2><span class="header-section-number">2.1</span> Use ClinicalTrials.gov registry to document your study</h2>
+<div id="register-your-study-at-clinicaltrials.gov-registry" class="section level2">
+<h2><span class="header-section-number">2.1</span> Register your study at ClinicalTrials.gov registry</h2>
 <p>Trial titled RC-HIVMAB060-00-AB (VRC01) in People With Chronic HIV Infection Undergoing Analytical Treatment Interruption is registered at ClinicalTrials.gov under NCT02471326 <a href="https://clinicaltrials.gov/ct2/show/study/NCT02471326" class="uri">https://clinicaltrials.gov/ct2/show/study/NCT02471326</a>. It allows retrieval of study metadata that is unified across various platform.</p>
 <p><strong>Positive Example:</strong> <span style="color: green;"></span></p>
-<p><strong>Challenging Example:</strong> <span style="color: red;"></span></p>
-<p><strong>Score:</strong> score one</p>
+<p><strong>Challenging Example:</strong> <span style="color: red;">dbGaP repository contains datasets that originate from a clinical trial but the trial reference at ClinicalTrials.gov is not provided.</span></p>
+<p><strong>Score:</strong> Score 1 or 0. No partial score. 1 if study is registered, 0 if stidy is not registered.</p>
 </div>
 <div id="do-not-limit-study-metadata-to-the-legally-required-elements.-also-populate-optional-elements-such-as-data-sharing-metadata" class="section level2">
 <h2><span class="header-section-number">2.2</span> Do not limit study metadata to the legally required elements. Also populate optional elements (such as data sharing metadata)</h2>
-<p><strong>Positive Example:</strong> <span style="color: green;"></span></p>
+<p>Some study metadata collected by ClinicalTrials.gov registry are mandated by regulation wheras others are added as optional elements. The FAIR principles are reflectad by many of thos optional fields.</p>
+<p><strong>Positive Example:</strong> <span style="color: green;"><span></span></p>
 <p><strong>Challenging Example:</strong> <span style="color: red;"></span></p>
-<p><strong>Score:</strong> score one</p>
+<p><strong>Score:</strong> Score 1 or 0. No Partial score. 1 if optional fields are included in study registration data, 0 if only required fields are completed.</p>
 </div>
-<div id="on-clinicaltrials.gov-if-you-answer-yes-to-share_ipd_data-do-not-leave-the-data_sharing_plan-text-empty" class="section level2">
-<h2><span class="header-section-number">2.3</span> On ClinicalTrials.gov, if you answer Yes to share_ipd_data, do not leave the data_sharing_plan text empty</h2>
+<div id="fully-populate-data_sharing_plan-text-filed-on-clinicaltrials.gov-if-sharing-data" class="section level2">
+<h2><span class="header-section-number">2.3</span> Fully populate data_sharing_plan text filed on ClinicalTrials.gov (if sharing data)</h2>
+<p>On ClinicalTrials.gov, if you answer Yes to share_ipd_data, do not leave the data_sharing_plan text empty</p>
 <p><strong>Positive Example:</strong> <span style="color: green;"></span></p>
 <p><strong>Challenging Example:</strong> <span style="color: red;">Out of 69 reviewed HIV trials IPD sharing plans on ClinicalTrials.gov, 2 (NCT02756208 [<a href="https://clinicaltrials.gov/ct2/show/study/NCT02756208" class="uri">https://clinicaltrials.gov/ct2/show/study/NCT02756208</a>] and NCT03275701 [<a href="https://clinicaltrials.gov/ct2/show/study/NCT03275701" class="uri">https://clinicaltrials.gov/ct2/show/study/NCT03275701</a>]) left the plan description blank.</span></p>
-<p><strong>Score:</strong> score one</p>
+<p><strong>Score:</strong> Score 1 or 0. No partial score. 1 if a full data sharing plan with details on how to find IPD is included, 0 if no data sharing plan of if an incomplete data sharing plan is included</p>
 </div>
 <div id="if-individual-participant-data-is-shared-on-a-data-sharing-platform-update-the-clinicaltrials.gov-record-with-the-url-link-to-the-data." class="section level2">
 <h2><span class="header-section-number">2.4</span> If Individual Participant Data is shared on a data sharing platform, update the ClinicalTrials.gov record with the URL link to the data.</h2>
 <p>At ClinicalTrials.gov, use the following infrastructure: “AvailIPDList”: { “AvailIPD”: [ { “AvailIPDId”: “NLMS”, “AvailIPDType”: “Individual Participant Data Set”, “AvailIPDURL”: “YOUR ULR GOES HERE”, “AvailIPDComment”: “INSTRUCTIONS” }</p>
 <p><strong>Positive Example:</strong> <span style="color: green;">Study <a href="https://clinicaltrials.gov/ct2/show/study/NCT00005159" class="uri">https://clinicaltrials.gov/ct2/show/study/NCT00005159</a> provides link to IPD at Biolincc repository. “AvailIPDList”: { “AvailIPD”: [ { “AvailIPDId”: “NLMS”, “AvailIPDType”: “Individual Participant Data Set”, “AvailIPDURL”: “<a href="http://biolincc.nhlbi.nih.gov/studies/nlms/" class="uri">http://biolincc.nhlbi.nih.gov/studies/nlms/</a>”, “AvailIPDComment”: “Public-use IPD through BioLINCC. Registration is required for access.” } </span></p>
 <p><strong>Challenging Example:</strong> <span style="color: red;"></span></p>
-<p><strong>Score:</strong> score one</p>
+<p><strong>Score:</strong> Score 1 or 0. No Partial score. 1 if the link to the shared IPD is included, 0 if no link is added</p>
+</div>
+<div id="provide-basic-summary-results-using-results-registry-component-of-clinicaltrials.gov" class="section level2">
+<h2><span class="header-section-number">2.5</span> Provide basic summary results using results registry component of Clinicaltrials.gov</h2>
+<p>If the clinical trial registry allows (such as on ClinicalTrials.gpv) upload basic summary results to the registry at the completion of the study or when first available.</p>
+<p><strong>Positive Example:</strong> <span style="color: green;">NCT00962780 (<a href="https://clinicaltrials.gov/ct2/show/results/NCT00962780" class="uri">https://clinicaltrials.gov/ct2/show/results/NCT00962780</a>) has basic summary results of the study posted on ClinicalTrials.gov using the results registry component</span></p>
+<p><strong>Challenging Example:</strong> <span style="color: red;"></span></p>
+<p><strong>Score:</strong> Score 1 or 0. No Partial score. 1 if results are included, 0 if no results are uploaded. If a registry does not support posting results, score is 0.</p>
+</div>
+<div id="utilize-clinicaltrials.gov-fields-for-uploading-study-protocol-empty-case-report-forms-statistical-analysis-plan-and-study-url-link" class="section level2">
+<h2><span class="header-section-number">2.6</span> Utilize ClinicalTrials.gov fields for uploading study protocol, empty case report forms, statistical analysis plan and study URL link</h2>
+<p>ClinicalTrials.gov allows for the upload of relevant documents related to the study page including protocols, analysis plans and other related documents while also allowing for the providing of links to relevant materials such as data dictionaries and IPD.</p>
+<p><strong>Positive Example:</strong> <span style="color: green;">NCT02755818 (<a href="https://clinicaltrials.gov/ct2/show/NCT02755818" class="uri">https://clinicaltrials.gov/ct2/show/NCT02755818</a>) provides documents, such as protocol, informed consent form and results as both links to external sites and uploads to ClinicalTrials.gov.</span></p>
+<p><strong>Challenging Example:</strong> <span style="color: red;"></span></p>
+<p><strong>Score:</strong> Score 1 or 0. No Partial score. 1 if study documents are uploaded to the clinical trial registry, 0 if no study documents are uploaded.</p>
 </div>
 </div>
 <div id="study-design" class="section level1">
 <h1><span class="header-section-number">3</span> Study Design</h1>
-<div id="at-study-design-time-and-when-resources-allow-adopt-previously-defined-applicable-common-data-elements" class="section level2">
-<h2><span class="header-section-number">3.1</span> At study design time and when resources allow, adopt previously defined applicable common data elements</h2>
-<p>Common Data Elements initiatives in various domains (e.g., PhenX, PROMIS) aim to standardize data collection.</p>
-<p><strong>Positive Example:</strong> <span style="color: green;"></span></p>
+<div id="adopt-previously-defined-applicable-common-data-elements" class="section level2">
+<h2><span class="header-section-number">3.1</span> Adopt previously defined applicable Common Data Elements</h2>
+<p>This recommendation assumes there are significant resources (financial or staff) that can be used for this goal. Common Data Elements initiatives in various domains (e.g., PhenX, PROMIS) aim to standardize data collection.</p>
+<p><strong>Positive Example:</strong> <span style="color: green;">AllofUs study adopted LOINC terminology to document body measurements.</span></p>
 <p><strong>Challenging Example:</strong> <span style="color: red;"></span></p>
-<p><strong>Score:</strong> score one</p>
+<p><strong>Score:</strong> Score 1 or 0. No Partial score. 1 if CDEs are used, 0 if no CDEs are used.</p>
 </div>
 </div>
 <div id="case-report-forms" class="section level1">
@@ -479,9 +476,16 @@ summary {
 <div id="share-all-case-report-forms-used-in-a-study" class="section level2">
 <h2><span class="header-section-number">4.1</span> Share all Case Report Forms used in a study</h2>
 <p>Interpretation of data is easier if full content</p>
-<p><strong>Positive Example:</strong> <span style="color: green;">UK Biobank provides screenshot of the form (see <a href="http://biobank.ctsu.ox.ac.uk/showcase/refer.cgi?id=158595" class="uri">http://biobank.ctsu.ox.ac.uk/showcase/refer.cgi?id=158595</a>) for data element <a href="http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22501" class="uri">http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22501</a> This allows researchers understand why value -1: never went to school appears in the data since the form shows a check box near the question that allows research participant to indicate that they never went to school. ClinicalTrials.gov allows upload of resource type: annotated CRFs.</span></p>
+<p><strong>Positive Example:</strong> <span style="color: green;">UK Biobank provides screenshot of the form (see <a href="http://biobank.ctsu.ox.ac.uk/showcase/refer.cgi?id=158595">UKBB Showcase</a> for data element <a href="http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22501" class="uri">http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22501</a> This allows researchers understand why value -1: never went to school appears in the data since the form shows a check box near the question that allows research participant to indicate that they never went to school. ClinicalTrials.gov allows upload of resource type: annotated CRFs.</span></p>
 <p><strong>Challenging Example:</strong> <span style="color: red;"></span></p>
-<p><strong>Score:</strong> score one</p>
+<p><strong>Score:</strong> Score is a percent. 1 if all CRFs are shared, 0 if no CRFs are shared. A score of 0.5 means 50% of of the CRFs used were shared.</p>
+</div>
+<div id="share-case-report-forms-in-non-pdf-machine-readable-format." class="section level2">
+<h2><span class="header-section-number">4.2</span> Share Case Report Forms in non-PDF, machine-readable format.</h2>
+<p>Machine-readable Case Report Forms allow for easier integration and use os the information provided from the empty Case Report Forms</p>
+<p><strong>Positive Example:</strong> <span style="color: green;">For example, REDCap, OpenClinica and several other Electronic Data Capture (EDC) systems allow export into CDISC Operational Data Model (ODM) format for forms. If no cross-platform standard is supported by your EDC, provide CRFs in the platform-specific format.</span></p>
+<p><strong>Challenging Example:</strong> <span style="color: red;">NCT00005273 provides case report forms as PDFS of photocopied forms making any automated integration or machine reading of the information not plausible.</span></p>
+<p><strong>Score:</strong> Score 1 or 0. No Partial score. 1 if CRFs included in machiene-readable format, 0 if shared in a non- machiene -readable format (such as PDFs) or not shared at all.</p>
 </div>
 </div>
 <div id="data-dictionary" class="section level1">
@@ -491,87 +495,96 @@ summary {
 <p>If DD does contain important intellectual property (IP), consider creating a smaller list of DEs that do not contain any IP and release this limited subset of DEs without employing a request-wall.</p>
 <p><strong>Positive Example:</strong> <span style="color: green;">NCT01769456 has the data dictionary on the data sharing platform and is available for download without requiring any request, approval or the filling out of any documents. Another example for study NCT00005159 is here (<a href="https://biolincc.nhlbi.nih.gov/media/studies/nlms/Code_Manuals_and_Forms.pdf" class="uri">https://biolincc.nhlbi.nih.gov/media/studies/nlms/Code_Manuals_and_Forms.pdf</a>).</span></p>
 <p><strong>Challenging Example:</strong> <span style="color: red;"></span></p>
-<p><strong>Score:</strong> score one</p>
+<p><strong>Score:</strong> Score 1 or 0. No Partial score. 1 if the data dictionary is provided seperately and in advance of any request for de-identified data, 0 if the data dictionary is only provided as part of the de-identified data package.</p>
 </div>
 <div id="share-a-data-dictionary-as-soon-as-possible.-do-not-wait-until-the-data-collection-is-complete." class="section level2">
 <h2><span class="header-section-number">5.2</span> Share a data dictionary as soon as possible. Do not wait until the data collection is complete.</h2>
 <p>Data dictionary has scientific value for other studies in the field and can help such studies speed up their study design phase. For registry studies (without a fixed end date), early sharing is equally important.</p>
 <p><strong>Positive Example:</strong> <span style="color: green;">AllofUs research study shared their Case Report Forms at the start of the study (see <a href="https://www.researchallofus.org/data-sources/survey-explorer" class="uri">https://www.researchallofus.org/data-sources/survey-explorer</a>).</span></p>
 <p><strong>Challenging Example:</strong> <span style="color: red;"></span></p>
-<p><strong>Score:</strong> score one</p>
+<p><strong>Score:</strong> Score 1 or 0. No Partial score. 1 if a data dictionary is shared as early as possible, 0 if the data dictionary is not made available until after data collection and study completion</p>
 </div>
 <div id="provide-data-dictionary-in-a-single-machine-readable-file." class="section level2">
 <h2><span class="header-section-number">5.3</span> Provide data dictionary in a single, machine-readable file.</h2>
 <p>This simplifies machine processing of available study data. Using a single file approach also ensures that each file (if scattered across multiple) uses the same structure (e.g., DE label, DE data type, DE permissible values [for categorical DEs])</p>
 <p><strong>Positive Example:</strong> <span style="color: green;">NCT01772823 provides a single data dictionary document as a CSV containing all data elements and information pertaining to the data elements such as data type and description</span></p>
 <p><strong>Challenging Example:</strong> <span style="color: red;">Trials NCT00005274 and NCT00005274 provided DD in several files. In order to relate those to CDEs, manual processing is required. NCT01233531 has 17 data dictionary files, which includes documents in different formats and document types. Also includes identical file names that represent dictionaries for different data based on visit type and study population group. NIDA Data Share trial had 65 data files but only 63 data dictionary PDF files. Matching data files with data dictionary requires manual matching.</span></p>
-<p><strong>Score:</strong> score one</p>
+<p><strong>Score:</strong> Score 1 or 0. No Partial score. 1if data dictionary inlcuded in a single macheiene-readable format, 0 if the data dictionary is in multiple files or a non maciene-readable format.</p>
 </div>
 <div id="for-each-data-element-provide-a-data-type-such-as-numeric-date-string-categorical" class="section level2">
 <h2><span class="header-section-number">5.4</span> For each data element, provide a data type (such as numeric, date, string, categorical)</h2>
 <p>Specifying data type helps computers to process the information properly. Data type also helps with semantic matching to corresponding CDEs. For example, date of death data type is stated as date (not as character). Most studies collect categorical data types.</p>
 <p><strong>Positive Example:</strong> <span style="color: green;">NCT00491556 provides the data type for each of the data elements in the DD UK Biobank uses a comprehensive set of data types available at <a href="http://biobank.ctsu.ox.ac.uk/showcase/help.cgi?cd=value_type" class="uri">http://biobank.ctsu.ox.ac.uk/showcase/help.cgi?cd=value_type</a> The UK Biobank description and listed types are in italic below The Value Type of a Data-Field describes the type of variable corresponding to it. There are 10 categories: 1) Integer - whole numbers, for example the age of a participant on a particular date; 2) Categorical (single) - a single answer selected from a coded list or tree of mutually exclusive options, for example a yes/no choice; 3) Categorical (multiple) - sets of answers selected from a coded list or tree of options, for instance concurrent medications; 4) Continuous - floating-point numbers, for example the height of a participant; 5) Text - data composed of alphanumeric characters, for example the first line of an address; 6) Date - a calendar date, for example 14th October 2010; 7) Time - a time, for example 13:38:05 on 14th October 2010; 8) Compound - a set of values required as a whole to describe some compound property, for example an ECG trace; 9) Binary object - a complex dataset (blob), for example an image; 10) Records - a summary showing the volume of records data available via the secure portal.</span></p>
 <p><strong>Challenging Example:</strong> <span style="color: red;">NCT00046280 does not provide data type.</span></p>
-<p><strong>Score:</strong> score one</p>
+<p><strong>Score:</strong> Score is a percent. 1 if all data elements havedata type, 0 if no elements have type. A score of 0.5 means 50% of data elements incldue a data type.</p>
 </div>
 <div id="for-categorical-data-elements-provide-a-list-of-permissible-values-and-distinguish-when-numerical-code-or-string-code-is-a-code-for-a-permissible-value-versus-actual-number-or-string" class="section level2">
 <h2><span class="header-section-number">5.5</span> For categorical data elements, provide a list of permissible values and distinguish when numerical code or string code is a code for a permissible value (versus actual number or string)</h2>
 <p>For example, for educational level data element, it is important to know what possible values were considered during data collection. While it is possible to discover those permissible values from IPD, if some values were never applicable to any of the subjects, the reverse-engineered permissible value list will be incomplete. In terms of standards, CDISC ODM and REDCap provide a mechanism to list permissible values.</p>
 <p><strong>Positive Example:</strong> <span style="color: green;">NCT00683579 provides permissible values and definitions for the values associated with categorical data elements.</span></p>
 <p><strong>Challenging Example:</strong> <span style="color: red;">NCT00000590 does not provide permissible vales for categorical variables in the data dictionary. Another example is providing permissible value in the same document that describes the data elements, but in non-machine readable way.</span></p>
-<p><strong>Score:</strong> score one</p>
+<p><strong>Score:</strong> Score 1 or 0. No Partial score. 1 if a list of permissable values are included, 0 if no list is included</p>
 </div>
-<div id="link-data-elements-including-individual-permissible-values-to-applicable-routine-healthcare-terminologies-or-research-common-data-elements" class="section level2">
-<h2><span class="header-section-number">5.6</span> Link data elements (including individual permissible values) to applicable routine healthcare terminologies or research common data elements</h2>
-<p>This recommendation does not mean that all DEs (and permissible values) are linked to a terminology or applicable standard. Only where a relevant code exist (or is easy to find and reference) this link is recommended.</p>
+<div id="link-utilized-common-data-elements-adopted-by-your-study-to-appropriate-terminologies" class="section level2">
+<h2><span class="header-section-number">5.6</span> Link utilized Common Data Elements adopted by your study to appropriate terminologies</h2>
+<p>This recommendation does not mean that all DEs (and permissible values) are linked to a terminology or applicable standard. Only where a relevant code exist (or is easy to find and reference) this link is recommended. This is linked to another item that deals with external terminologies.</p>
 <p><strong>Positive Example:</strong> <span style="color: green;">AllOfUs study links DEs to SNOMED CT and LOINC codes. For example, Body Mass Index data element is clearly linked to LOINC code of 39156-5 (for BMI)</span></p>
 <p><strong>Challenging Example:</strong> <span style="color: red;">NCT01751646 has no link to any standardized vocabulary</span></p>
-<p><strong>Score:</strong> score one</p>
+<p><strong>Score:</strong> Score 1 or 0. No Partial score. 1 if used CDEs are linked to used terminologies, 0 if used CDEs are not linked.</p>
+</div>
+<div id="link-data-elements-or-permissible-values-to-applicable-routine-healthcare-terminologies-either-because-you-designed-them-to-be-linked-or-post-hoc-they-can-be-semantically-linked-as-equivalent" class="section level2">
+<h2><span class="header-section-number">5.7</span> Link data elements or permissible values to applicable routine healthcare terminologies (either because you designed them to be linked or post-hoc, they can be semantically linked as equivalent)</h2>
+<p><strong>Positive Example:</strong> <span style="color: green;"><span></span></p>
+<p><strong>Challenging Example:</strong> <span style="color: red;"></span></p>
+<p><strong>Score:</strong> Score 1 or 0. No Partial score. 1 if data elements linked to routing healthcare terminologies, 0 if t daat elements are not linked to routine terminologies and custom values are used.</p>
 </div>
 <div id="provide-complete-data-dictionary-all-elements-in-data-are-listed-in-a-dictionary-and-all-types-of-applicable-dictionaries-date-elements-forms-or-groupings-and-permissible-values" class="section level2">
-<h2><span class="header-section-number">5.7</span> Provide complete data dictionary (all elements in data are listed in a dictionary) and all types of applicable dictionaries (date elements, forms [or groupings], and permissible values)</h2>
+<h2><span class="header-section-number">5.8</span> Provide complete data dictionary (all elements in data are listed in a dictionary) and all types of applicable dictionaries (date elements, forms [or groupings], and permissible values)</h2>
 <p>Note: NIDA trial had 5 data files that were missing a data dictionary file.</p>
 <p><strong>Positive Example:</strong> <span style="color: green;"></span></p>
 <p><strong>Challenging Example:</strong> <span style="color: red;"></span></p>
-<p><strong>Score:</strong> score one</p>
+<p><strong>Score:</strong> Score is a percent. 1 if all data elements are included in dictionary, 0 if no data elements are included. A score of 0.5 means 50% of data elements are incldued in the data dictionary.</p>
 </div>
 <div id="include-sufficient-description-for-data-elements" class="section level2">
-<h2><span class="header-section-number">5.8</span> Include sufficient description for data elements</h2>
+<h2><span class="header-section-number">5.9</span> Include sufficient description for data elements</h2>
 <p>In some cases, a descriptive name can be sufficient to define a data element and interpreting a data element is straightforward. However, if a study has two distinct data elements with identical name, data can be hard to interpret.</p>
 <p><strong>Positive Example:</strong> <span style="color: green;">All elements in UK Biobank have description. See <a href="http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22501" class="uri">http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22501</a> for example for data element titled: (Year ended full time education) has the following detailed description: Some values have special meanings defined by Data-Coding 100306. Units of measurement are calendar year.</span></p>
 <p><strong>Challenging Example:</strong> <span style="color: red;">In study NCT01751646: Vitamin D Absorption in HIV Infected Young Adults Being Treated With Tenofovir Containing cART: a description for forms C100 and B100 both state: Specimen Tracking Form. This makes it to interpret if the data represent the same or two distinct specimen. Avoid identical descriptions for 2 separate items.</span></p>
-<p><strong>Score:</strong> score one</p>
+<p><strong>Score:</strong> Score is a percent. 1 if all data elements have adequate dsecriptions, 0 if no descriptions are included. A score of 0.5 means 50% of data elements incldue a sufficient description.</p>
 </div>
 <div id="use-identifiers-unique-where-applicable-for-data-element-forms-and-permissible-values." class="section level2">
-<h2><span class="header-section-number">5.9</span> Use identifiers (unique where applicable) for data element, forms and permissible values.</h2>
+<h2><span class="header-section-number">5.10</span> Use identifiers (unique where applicable) for data element, forms and permissible values.</h2>
 <p>Permissible value data dictionary should be linked to data element data dictionary. Provide annonated case report forms</p>
 <p><strong>Positive Example:</strong> <span style="color: green;"></span></p>
 <p><strong>Challenging Example:</strong> <span style="color: red;"></span></p>
-<p><strong>Score:</strong> score one</p>
+<p><strong>Score:</strong> Score 1 or 0. No Partial score. 1 if all identifiers for elements, forms and permissable values are unique, 0 if duplicate identifiers are used.</p>
 </div>
 </div>
 <div id="data-de-identification" class="section level1">
 <h1><span class="header-section-number">6</span> Data de-identification</h1>
 <div id="provide-data-de-identification-notes" class="section level2">
 <h2><span class="header-section-number">6.1</span> Provide data de-identification notes</h2>
+<p>Data de-identification notes state how identifiers have been removed or redacted to ensure compliance with privacy regulations. This includes the remoeal of personal identifers and the shifting or relativsation of dates.</p>
 <p><strong>Positive Example:</strong> <span style="color: green;"></span></p>
 <p><strong>Challenging Example:</strong> <span style="color: red;"></span></p>
-<p><strong>Score:</strong> score one</p>
+<p><strong>Score:</strong> Score 1 or 0. No Partial score. 1 if data de-identification notes are provided, 0 if de-identification notes are not provided.</p>
 </div>
 </div>
 <div id="choice-of-a-data-sharing-platform" class="section level1">
 <h1><span class="header-section-number">7</span> Choice of a Data Sharing platform</h1>
-<div id="choose-a-platform-that-allows-download-of-all-studies-available-on-the-platform" class="section level2">
-<h2><span class="header-section-number">7.1</span> Choose a platform that allows download of all studies available on the platform</h2>
+<div id="use-platforms-that-allows-download-of-all-studies-available-on-the-platform" class="section level2">
+<h2><span class="header-section-number">7.1</span> Use platforms that allows download of all studies available on the platform</h2>
+<p>In order for a computerized algorighm to access a data sharing platform, a machine readable list (not a web search interface) is required (FAIR principles)</p>
 <p><strong>Positive Example:</strong> <span style="color: green;">ClinicalStudyDataRequest.com platform provides a spreadsheet download with a list of all studies included on the platform. (available at <a href="https://www.clinicalstudydatarequest.com/Documents/All%20Sponsor-Funder%20Studies.xls" class="uri">https://www.clinicalstudydatarequest.com/Documents/All%20Sponsor-Funder%20Studies.xls</a></span></p>
 <p><strong>Challenging Example:</strong> <span style="color: red;"></span></p>
-<p><strong>Score:</strong> score one</p>
+<p><strong>Score:</strong> Score 1 or 0. No Partial score. 1 if the platform used allows for the downloading of a list of all studies available, 0 if the platform does not have this capability</p>
 </div>
 <div id="choose-a-platform-that-supports-batch-request-ability-to-request-multiple-studies-with-one-request" class="section level2">
 <h2><span class="header-section-number">7.2</span> Choose a platform that supports batch request (ability to request multiple studies with one request)</h2>
-<p><strong>Positive Example:</strong> <span style="color: green;"></span></p>
+<p>Survey of data recipients indicates that batch requests are preferred because the simply retrieval of multiple studies by a data recipient. Filing a separate request for multiple studies is less eficient.</p>
+<p><strong>Positive Example:</strong> <span style="color: green;">Vivli allows a researcher to define multiple studies in a single request.</span></p>
 <p><strong>Challenging Example:</strong> <span style="color: red;"></span></p>
-<p><strong>Score:</strong> score one</p>
+<p><strong>Score:</strong> Score 1 or 0. No Partial score. 1 if batch study requests can be made, 0 if each study must be requested separately</p>
 </div>
 </div>
 
