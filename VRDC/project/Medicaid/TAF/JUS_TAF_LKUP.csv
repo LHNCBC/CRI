@@ -1,0 +1,75 @@
+Code,Code_String,Code_Transform
+Null/missing , source value is missing or unknown,Other
+1, Parents and Other Caretaker Relatives,Disability
+2, Transitional Medical Assistance,Other
+3, Extended Medicaid due to Earnings,Income
+4, Extended Medicaid due to Spousal Support Collections,Disability
+5, Pregnant Women,Child
+6, Deemed Newborns,Child
+7, Infants and Children under Age 19,Child
+8," Children with Title IV-E Adoption Assistance, Foster Care or Guardianship Care",Child
+9, Former Foster Care Children,Child
+11, Individuals Receiving SSI,Income
+12," Aged, Blind and Disabled Individuals in 209(b) States",Disability
+13, Individuals Receiving Mandatory State Supplements,Income
+14, Individuals Who Are Essential Spouses,Disability
+15, Institutionalized Individuals Continuously Eligible Since 1973,Disability
+16, Blind or Disabled Individuals Eligible in 1973,Disability
+17, Individuals Who Lost Eligibility for SSI/SSP Due to an Increase in OASDI Benefits in 1972,Income
+18," Individuals Who Would be Eligible for SSI/SSP but for OASDI COLA increases since April, 1977",Income
+19, Disabled Widows and Widowers Ineligible for SSI due to Increase in OASDI,Income
+20, Disabled Widows and Widowers Ineligible for SSI due to Early Receipt of Social Security,Income
+21, Working Disabled under 1619(b),Disability
+22, Disabled Adult Children,Disability
+23, Qualified Medicare Beneficiaries,Other
+24, Qualified Disabled and Working Individuals,Disability
+25, Specified Low Income Medicare Beneficiaries,Income
+26, Qualifying Individuals,Other
+27, Optional Coverage of Parents and Other Caretaker Relatives,Disability
+28, Reasonable Classifications of Individuals under Age 21,Child
+29, Children with Non-IV-E Adoption Assistance,Child
+30, Independent Foster Care Adolescents,Child
+31, Optional Targeted Low Income Children,Child
+32, Individuals Electing COBRA Continuation Coverage,Income
+33, Individuals above 133% FPL under Age 65,Income
+34, Certain Individuals Needing Treatment for Breast or Cervical Cancer,Other
+35, Individuals Eligible for Family Planning Services,Child
+36, Individuals with Tuberculosis,Disability
+37," Aged, Blind or Disabled Individuals Eligible for but Not Receiving Cash Assistance",Disability
+38, Individuals Eligible for Cash Assistance except for Institutionalization,Income
+39, Individuals Receiving Home and Community Based Services under Institutional Rules,Disability
+40," Optional State Supplement Recipients - 1634 States, and SSI Criteria States with 1616 Agreements",Income
+41," Optional State Supplement Recipients - 209(b) States, and SSI Criteria States without 1616 Agreements",Income
+42, Institutionalized Individuals Eligible under a Special Income Level,Income
+43, Individuals participating in a PACE Program under Institutional Rules,Disability
+44, Individuals Receiving Hospice Care,Disability
+45, Qualified Disabled Children under Age 19,Disability
+46, Poverty Level Aged or Disabled,Income
+47, Work Incentives Eligibility Group,Income
+48, Ticket to Work Basic Group,Income
+49, Ticket to Work Medical Improvements Group,Income
+50, Family Opportunity Act Children with Disabilities,Disability
+51, Individuals Eligible for Home and Community-Based Services,Other
+52, Individuals Eligible for Home and Community-Based Services - Special Income Level,Income
+53, Medically Needy Pregnant Women,Child
+54, Medically Needy Children under Age 18,Child
+55, Medically Needy Children Age 18 through 20,Child
+56, Medically Needy Parents and Other Caretakers,Disability
+59," Medically Needy Aged, Blind or Disabled",Disability
+60, Medically Needy Blind or Disabled Individuals Eligible in 1973,Disability
+61, Targeted Low-Income Children,Child
+62, Deemed Newborn,Child
+63, Children Ineligible for Medicaid Due to Loss of Income Disregards,Child
+64, Coverage from Conception to Birth,Child
+65, Children with Access to Public Employee Coverage,Child
+66, Children Eligible for Dental Only Supplemental Coverage,Income
+67, Targeted Low-Income,Income
+68, Pregnant Women with Access to Public Employee Coverage,Disability
+69, Individuals with Mental Health Conditions (expansion group),Disability
+70, Family Planning Participants (expansion group),Other
+71, Other expansion group,Income
+72," Adult Group - Individuals at or below 133% FPL,19-64, newly eligible for all states",Income
+73," Adult Group - Individuals at or below 133% FPL,19-64, not newly eligible for non 1905z(3) states",Income
+74," Adult Group - Individuals at or below 133% FPL,19-64, not newly eligible parent/ caretaker-relative(s) in 1905z(3) states",Income
+75," Adult Group - Individuals at or below 133% FPL,19-64, not newly eligible nonparent/ caretaker-relative(s) in 1905z(3) states",Income
+,BLANK,Other
