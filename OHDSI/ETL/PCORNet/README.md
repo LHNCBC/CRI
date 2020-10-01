@@ -1,7 +1,9 @@
 # ETL code to transform PCORNEt into OMOP 
 
-see file 01-R-based-ETL.R (stage 1) and file 02-SQL-updates.sql (stage 2)
-
+all code is in R file
+There are 2 stages 
+Stage 1 is strictly in R
+Stage 2 (also subsumed in the R scrip) - we run update SQL statements
 
 # Notes
 - see comments in the file, each OMOP table is in a separate section
