@@ -5,14 +5,18 @@ library(readr)
 library(reshape2)
 library(data.table)
 
-# Select rows for diagnosis codes nd diagnosis dates
+# Select rows for diagnosis codes (ICD10, ICD9) and diagnosis dates
 rows<-0:212
+rows2<-1:46
 dx_cols<-paste0('41270-0.', rows)
+dx_cols2<-paste0('41271-0.', rows2)
+
 date_cols<-paste0('41280-0.', rows)
+date_cols2<-paste0('41281-0.', rows2)
 
 #Load files separately
-dx<-fread('ukb43407.csv', select=c('eid',dx_cols))
-dx_dates<- fread('ukb43407.csv', select=c('eid', date_cols))
+dx<-fread('ukb43407.csv', select=c('eid',dx_cols, dx_cols2))
+dx_dates<- fread('ukb43407.csv', select=c('eid', date_cols, date_cols2))
 
 # Reshape into long format
 dx2 <- melt(dx, id.vars="eid", value.name = 'condition_source_value')
