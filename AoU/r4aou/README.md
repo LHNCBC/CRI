@@ -1,3 +1,5 @@
+[r4AOU Full Github page](https://github.com/lhncbc/CRI/tree/master/AoU/r4aou)
+
 # r4aou
 R package for tasks inside All of Us Workbench  (AllofUs or AOU)
 
@@ -5,7 +7,7 @@ R package for tasks inside All of Us Workbench  (AllofUs or AOU)
 # Install package
 
     library(devtools)
-    install_github('vojtechhuser/r4aou')
+    install_github('lhncbc/CRI/AoU/r4aou')
     
 # Sample use
 
