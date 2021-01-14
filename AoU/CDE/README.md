@@ -1,4 +1,4 @@
 # All of US Data Elements
 
 Report
-- https://ohdsi.github.io/CommonDataModel/index.html
+- https://lhncbc.github.io/CRI/AoU/CDE/AOU_CDE.html
