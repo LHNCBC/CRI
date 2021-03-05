@@ -6,4 +6,4 @@ In repo, see Appendix file for Supplemental Appendix.
 Code is also included
 
 Landing page: 
-https://github.com/lhncbc/CRI/tree/master/ArticleLinkage
+https://lhncbc.github.io/CRI/ArticleLinkage
