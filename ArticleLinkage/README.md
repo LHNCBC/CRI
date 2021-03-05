@@ -6,4 +6,7 @@ In repo, see Appendix file for Supplemental Appendix.
 Code is also included
 
 Landing page: 
+
 [https://lhncbc.github.io/CRI/ArticleLinkage](https://lhncbc.github.io/CRI/ArticleLinkage)
+
+[here](https://lhncbc.github.io/CRI/ArticleLinkage)
