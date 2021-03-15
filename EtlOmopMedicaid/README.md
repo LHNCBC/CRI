@@ -1,7 +1,7 @@
 # ETL into OMOP Common Data Model (Medicaid data)
 
 Landing page link: [https://lhncbc.github.io/CRI/EtlOmopMedicaid](https://lhncbc.github.io/CRI/EtlOmopMedicaid)  
-Full repository link:[https://github.com/lhncbc/CRI/tree/master/EtlOmopMedicaid](https://github.com/lhncbc/CRI/tree/master/EtlOmopMedicaid)  
+Full repository link: [https://github.com/lhncbc/CRI/tree/master/EtlOmopMedicaid](https://github.com/lhncbc/CRI/tree/master/EtlOmopMedicaid)  
 
 # Introduction
 Common Data Models (CDMs) allow portability of analysis. In order to execute analyses that assume the OMOP representation of data, we convert Medicaid data into OMOP model.
