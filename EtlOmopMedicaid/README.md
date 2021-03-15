@@ -15,4 +15,4 @@ For OMOP model, see here: [https://ohdsi.github.io/CommonDataModel](https://ohds
 ETL: June 2021 - December 2022
 
 # References
-* [Formats](https://www.researchgate.net/publication/346632577_Data_Characterization_of_Medicaid_Legacy_and_New_Data_Formats_in_the_CMS_Virtual_Research_Data_Center)
+* [Full AMIA conference paper published by us](https://www.researchgate.net/publication/346632577_Data_Characterization_of_Medicaid_Legacy_and_New_Data_Formats_in_the_CMS_Virtual_Research_Data_Center) in 2021
