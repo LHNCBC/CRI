@@ -186,7 +186,7 @@ aou_getDd<-function(){
 #Edit query
 # Run SQL
 
-execute_cohorts <-function(cohortID){
+execute_cohort <-function(cohortID){
   #grabs sql from cohort_id
   baseUrl='http://atlas-demo.ohdsi.org:80/WebAPI'
   version <- ROhdsiWebApi:::getWebApiVersion(baseUrl = baseUrl)
