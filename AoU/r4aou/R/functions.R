@@ -40,12 +40,12 @@ aou_run <-function(sql){
   cdmDatabaseSchema=Sys.getenv('WORKSPACE_CDR')
   sql <- SqlRender::render(sql,cdmDatabaseSchema=cdmDatabaseSchema)
   sql <- SqlRender::translate(sql,targetDialect = 'bigquery')
-  #below has error Warning message in stringr::str_replace_all(sql, "r2019q4r3", "R2019Q4R3"):
-     #Error in stringr::str_replace_all(sql, "r2019q4r3", "R2019Q4R3"): lazy-load database '/usr/local/lib/R/site-library/stringi/R/stringi.rdb' is corrupt
-  #sql=stringr::str_replace_all(sql,'r2019q4r3','R2019Q4R3')
+  #below has error Warning message in stringr::str_replace_all(sql, "r2020q4r2", "R2020Q4R2"):
+     #Error in stringr::str_replace_all(sql, "r2020q4r2", "R2020Q4R2"): lazy-load database '/usr/local/lib/R/site-library/stringi/R/stringi.rdb' is corrupt
+  #sql=stringr::str_replace_all(sql,'r2020q4r2','R2020Q4R2')
 
   #using base R instead  
-  sql=gsub("r2019q4r3", "R2019Q4R3", sql)
+  sql=gsub("r2020q4r2", "R2020Q4R2", sql)
 
   #cat(sql)
   q <- bigrquery::bq_project_query(billing, sql)
@@ -179,3 +179,43 @@ aou_getDd<-function(){
   #nrow(ln)
 }
 
+
+
+# Run cohorts
+#load from Atlas
+#Edit query
+# Run SQL
+
+execute_cohorts <-function(cohortID){
+  #grabs sql from cohort_id
+  baseUrl='http://atlas-demo.ohdsi.org:80/WebAPI'
+  version <- ROhdsiWebApi:::getWebApiVersion(baseUrl = baseUrl)
+  d=getDefinitionsMetadata(baseUrl,category = 'cohort')
+  aa=getCohortDefinition(cohortID,baseUrl)
+  sql=getCohortSql(aa,baseUrl)
+  
+  #cohort edits
+  sql2= gsub("@cdm_database_schema", "@cdmDatabaseSchema", sql)
+  sql2= gsub("@results_database_schema.", "", sql2)
+  sql2= gsub("@vocabulary_database_schema", "@cdmDatabaseSchema", sql2)
+  sql2=gsub("DELETE FROM @target_database_schema.@target_cohort_table where cohort_definition_id = @target_cohort_id;","",sql2)
+  sql2=gsub("select @target_cohort_id as cohort_definition_id, person_id, start_date, end_date", "create temp table #target_cohort_table AS (select cohort_definition_id as target_cohort_id, co.person_id as subject_id, co.start_date as cohort_start_date, co.end_date as 
+cohort_end_date ", sql2) 
+  sql2=gsub("FROM #final_cohort CO", "FROM #final_cohort CO)", sql2)
+  sql2=gsub("delete from cohort_censor_stats where cohort_definition_id = @target_cohort_id;","",sql2)
+  sql2= paste(sql2, "
+select * from #target_cohort_table")
+  sql2 <- SqlRender::render(sql2,cdmDatabaseSchema=cdmDatabaseSchema)
+  sql2 <- SqlRender::translate(sql2,targetDialect = 'bigquery')
+  sql2=stringr::str_replace_all(sql2,'r2020q4r2','R2020Q4R2')
+  sql5= gsub("create table", "CREATE TEMP TABLE", sql2)
+  sql5= gsub("CREATE TABLE", "CREATE TEMP TABLE", sql5)
+  sql5=gsub("insert into @target_database_schema.@target_cohort_table ","",sql5)
+  sql5=gsub("\\(cohort_definition_id, subject_id, cohort_start_date, cohort_end_date)","",sql5)
+  sql5=gsub("cohort_definition_id",cohortID,sql5)
+  cat(sql5)
+  
+  #run sql
+  output=aou_run(sql5)
+  return(output$result)
+}
