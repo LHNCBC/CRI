@@ -35,7 +35,7 @@ aou_tables <- function() {
 #' @export
 #'
 #' @examples
-aou_run <-function(sql){
+aou_run_old <-function(sql){
   billing=Sys.getenv('GOOGLE_PROJECT')
   cdmDatabaseSchema=Sys.getenv('WORKSPACE_CDR')
   sql <- SqlRender::render(sql,cdmDatabaseSchema=cdmDatabaseSchema)
@@ -227,4 +227,29 @@ select * from #target_cohort_table")
   #run sql
   output=aou_run(sql5)
   return(output$result)
+}
+
+
+getCaseReportForms <-function(){
+#connect concept_relationship  to concept
+relationship_7<-left_join(concept_relationship,concept, by=c('concept_id_1'= 'concept_id'))
+relationship_71<-left_join(relationship_7,concept, by=c('concept_id_2'= 'concept_id'))
+
+#Find topic/module relationship
+tm= relationship_71 %>% filter(concept_class_id.x=='Topic') %>% filter(relationship_id=='Is a') %>% filter(concept_class_id.y=='Module')
+tm_1= relationship_71 %>% filter(concept_class_id.y=='Topic') %>% filter(relationship_id=='PPI parent code of') %>% filter(concept_class_id.x=='Module')
+
+#find question/topic relationship
+qt<-relationship_71%>%filter(relationship_id=='Is a'| relationship_id=='Has PPI parent code')
+qt2<-qt%>%filter(concept_class_id.y=='Topic')
+qt3<-qt2%>%filter(concept_class_id.x=='Clinical Observation'|concept_class_id.x=='Question'|concept_class_id.x=='Survey')
+
+# Combine  Module/Topic/Question
+qtm<-left_join(qt3, tm2, by=c('concept_id_2'='concept_id_1'))
+
+#Get Question/Answer
+aq2= relationship_71 %>% filter(concept_class_id=='Answer') %>% filter(relationship_id=='Answer of (PPI)') #%>% filter(concept_class_id_1=='Question')
+
+#Combine Answer/Question/Topic/Module
+aqtm2 =left_join(aq2, qtm, by=c('concept_id_2'='concept_id_1'))
 }
