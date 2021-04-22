@@ -229,6 +229,7 @@ select * from #target_cohort_table")
   return(output$result)
 }
 
+# Get the Case Report FOrms for the included data elements
 
 getCaseReportForms <-function(){
 #connect concept_relationship  to concept
