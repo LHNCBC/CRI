@@ -1,8 +1,14 @@
 # Specialty-diagnosis analysis
 
-This repository contains supplemental files. Files are named in style that mirrors the tables in the manuscript.
+This repository contains supplemental files.
+Article: Linking provider specialty and outpatient diagnoses in healthcare Medicare claims data: Data quality implications.   
+Authors: Vojtech Huser, Nick D. Williams, Craig S. Mayer  
+Affiliation: National Library of Medicine, Lister Hill Center for Biomedical Communications  
 
-Comments on selected individual files are below. They are organized by chapter heading for the file name.
+
+Files are named in style that mirrors the tables in the manuscript.  
+
+Comments on selected individual files are below. They are organized by chapter heading for the file name.  
 
 # File st4 - supplemental data for table 4
 
