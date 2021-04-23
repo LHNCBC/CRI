@@ -14,3 +14,5 @@ This file is not as relevant for data quality assesment of a dataset. It is too 
 ## Example view of one diagnosis
 ![image](https://user-images.githubusercontent.com/7526119/115904897-574ec700-a433-11eb-8476-46ca80934717.png)
 
+# Network folder
+Two files (one for notes and one for edges of the network) are provided. These can be used by software (e.g., Cytoscape) to import the specialty-diagnosis data as a network. On request, one of the authors (NW) can provide results of several standard network analysis metrics.
