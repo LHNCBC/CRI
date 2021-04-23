@@ -231,9 +231,11 @@ select * from #target_cohort_table")
 
 # Get the Case Report FOrms for the included data elements
 
-getCaseReportForms <-function(){
+aou_getCaseReportForms <-function(){
 #connect concept_relationship  to concept
-relationship_7<-left_join(concept_relationship,concept, by=c('concept_id_1'= 'concept_id'))
+concept<-aou_run("select * from @cdmDatabaseSchema.concept")
+  concept_relationship<-aou_run("select * from @cdmDatabaseSchema.concept_relationship")
+  relationship_7<-left_join(concept_relationship,concept, by=c('concept_id_1'= 'concept_id'))
 relationship_71<-left_join(relationship_7,concept, by=c('concept_id_2'= 'concept_id'))
 
 #Find topic/module relationship
