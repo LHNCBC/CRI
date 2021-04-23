@@ -2,7 +2,7 @@
 
 This repository contains supplemental files. Files are named in style that mirrors the tables in the manuscript.
 
-Comments on individual files are below organized by chapter heading for the file name.
+Comments on selected individual files are below. They are organized by chapter heading for the file name.
 
 # File st4 - supplemental data for table 4
 
