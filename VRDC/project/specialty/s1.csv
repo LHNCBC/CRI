@@ -1,0 +1,136 @@
+CMS_CrossWalk_Code,VRDC_String,Reason,Reason_code,Action,Action_code
+45,Mammography_screening_center,Excluded,0,Remove,0
+47,Independent_Diagnostic_Testing_Facility,Excluded,0,Remove,0
+49,Ambulatory_surgical_center,Excluded,0,Remove,0
+59,Ambulance_service_supplier,Excluded,0,Remove,0
+60,Public_health_or_welfare_agencies,Excluded,0,Remove,0
+63,Portable_X-ray_supplier,Excluded,0,Remove,0
+69,Clinical_laboratory,Excluded,0,Remove,0
+73,Mass_Immunization_Roster_Biller,Excluded,0,Remove,0
+74,Radiation_Therapy_Centers,Excluded,0,Remove,0
+75,Slide_Preparation_Facilities,Excluded,0,Remove,0
+87,All_other_suppliers,Excluded,0,Remove,0
+88,Unknown_supplier_provider_specialty,Excluded,0,Remove,0
+A5,Pharmacy,Excluded,0,Remove,0
+C1,Centralized Flu,Excluded,0,Remove,0
+1,General_Practice,In dictionary and in data,1,Keep,1
+2,General_surgery,In dictionary and in data,1,Keep,1
+3,Allergy_immunology,In dictionary and in data,1,Keep,1
+4,Otolaryngology,In dictionary and in data,1,Keep,1
+5,Anesthesiology,In dictionary and in data,1,Keep,1
+6,Cardiology,In dictionary and in data,1,Keep,1
+7,Dermatology,In dictionary and in data,1,Keep,1
+8,Family_practice,In dictionary and in data,1,Keep,1
+9,Interventional_Pain_Management,In dictionary and in data,1,Keep,1
+10,Gastroenterology,In dictionary and in data,1,Keep,1
+11,Internal_medicine,In dictionary and in data,1,Keep,1
+12,Osteopathic_manipulative_therapy,In dictionary and in data,1,Keep,1
+13,Neurology,In dictionary and in data,1,Keep,1
+14,Neurosurgery,In dictionary and in data,1,Keep,1
+15,Speech_Language_Pathologists,In dictionary and in data,1,Keep,1
+16,Obstetrics_gynecology,In dictionary and in data,1,Keep,1
+17,Hospice_and_Palliative_Care,In dictionary and in data,1,Keep,1
+18,Ophthalmology,In dictionary and in data,1,Keep,1
+19,Oral_surgery,In dictionary and in data,1,Keep,1
+20,Orthopedic_surgery,In dictionary and in data,1,Keep,1
+21,Cardiac_Electrophysiology,In dictionary and in data,1,Keep,1
+22,Pathology,In dictionary and in data,1,Keep,1
+23,Sports_medicine,In dictionary and in data,1,Keep,1
+24,Plastic_and_reconstructive_surgery,In dictionary and in data,1,Keep,1
+25,Physical_medicine_and_rehabilitation,In dictionary and in data,1,Keep,1
+26,Psychiatry,In dictionary and in data,1,Keep,1
+27,Geriatric_Psychiatry,In dictionary and in data,1,Keep,1
+28,Colorectal_surgery,In dictionary and in data,1,Keep,1
+29,Pulmonary_disease,In dictionary and in data,1,Keep,1
+30,Diagnostic_radiology,In dictionary and in data,1,Keep,1
+32,Anesthesiologist_Assistants_,In dictionary and in data,1,Keep,1
+33,Thoracic_surgery,In dictionary and in data,1,Keep,1
+34,Urology,In dictionary and in data,1,Keep,1
+35,Chiropractic,In dictionary and in data,1,Keep,1
+36,Nuclear_medicine,In dictionary and in data,1,Keep,1
+37,Pediatric_medicine,In dictionary and in data,1,Keep,1
+38,Geriatric_medicine,In dictionary and in data,1,Keep,1
+39,Nephrology,In dictionary and in data,1,Keep,1
+40,Hand_surgery,In dictionary and in data,1,Keep,1
+41,Optometrist,In dictionary and in data,1,Keep,1
+42,Certified_nurse_midwife,In dictionary and in data,1,Keep,1
+43,CRNA_,In dictionary and in data,1,Keep,1
+44,Infectious_disease,In dictionary and in data,1,Keep,1
+46,Endocrinology,In dictionary and in data,1,Keep,1
+48,Podiatry,In dictionary and in data,1,Keep,1
+50,Nurse_practitioner,In dictionary and in data,1,Keep,1
+62,Psychologist,In dictionary and in data,1,Keep,1
+64,Audiologist,In dictionary and in data,1,Keep,1
+65,Physical_therapist,In dictionary and in data,1,Keep,1
+66,Rheumatology,In dictionary and in data,1,Keep,1
+67,Occupational_therapist,In dictionary and in data,1,Keep,1
+68,Clinical_psychologist,In dictionary and in data,1,Keep,1
+70,Multispecialty_clinic_or_group_practice,In dictionary and in data,1,Keep,1
+71,Registered_Dietician_Nutrition_Professional,In dictionary and in data,1,Keep,1
+72,Pain_Management,In dictionary and in data,1,Keep,1
+76,Peripheral_vascular_disease,In dictionary and in data,1,Keep,1
+77,Vascular_surgery,In dictionary and in data,1,Keep,1
+78,Cardiac_surgery,In dictionary and in data,1,Keep,1
+79,Addiction_medicine,In dictionary and in data,1,Keep,1
+80,Licensed_clinical_social_worker,In dictionary and in data,1,Keep,1
+81,Critical_care,In dictionary and in data,1,Keep,1
+82,Hematology,In dictionary and in data,1,Keep,1
+83,Hematology_oncology,In dictionary and in data,1,Keep,1
+84,Preventive_medicine,In dictionary and in data,1,Keep,1
+85,Maxillofacial_surgery,In dictionary and in data,1,Keep,1
+86,Neuropsychiatry,In dictionary and in data,1,Keep,1
+89,Certified_clinical_nurse_specialist,In dictionary and in data,1,Keep,1
+90,Medical_oncology,In dictionary and in data,1,Keep,1
+91,Surgical_oncology,In dictionary and in data,1,Keep,1
+92,Radiation_oncology,In dictionary and in data,1,Keep,1
+93,Emergency_medicine,In dictionary and in data,1,Keep,1
+94,Interventional_radiology,In dictionary and in data,1,Keep,1
+97,Physician_assistant,In dictionary and in data,1,Keep,1
+98,Gynecologist_oncologist,In dictionary and in data,1,Keep,1
+99,Unknown_physician_specialty,In dictionary and in data,1,Keep,1
+C0,Sleep_medicine,In dictionary and in data,1,Keep,1
+C3,Interventional_cardiology,In dictionary and in data,1,Keep,1
+C5,Dentist,In dictionary and in data,1,Keep,1
+C6,Hospitalist,In dictionary and in data,1,Keep,1
+C7,Advanced_heart_failure_and_transplan_cardiology,In dictionary and in data,1,Keep,1
+C8,Medical_toxicology,In dictionary and in data,1,Keep,1
+C9,Hematopoietic_cell_transplantation_and_cellular_therapy,In dictionary and in data,1,Keep,1
+0,Carrier_Wide,In dictionary and not in data,a,Remove,0
+31,Intensive_Cardiac_Rehabilitation,In dictionary and not in data,a,Remove,0
+51,Medical_supply_company_with_certified_orthotist,In dictionary and not in data,a,Remove,0
+52,Medical_supply_company_with_certified_prosthetist,In dictionary and not in data,a,Remove,0
+53,Medical_supply_company_with_certified_prosthetist-orthotist,In dictionary and not in data,a,Remove,0
+54,Medical_supply_company_NOS,In dictionary and not in data,a,Remove,0
+55,Individual_certified_orthotist,In dictionary and not in data,a,Remove,0
+56,Individual_certified_prosthetist,In dictionary and not in data,a,Remove,0
+57,Individual_certified_prosthetist-orthotist,In dictionary and not in data,a,Remove,0
+58,Medical_supply_company_with_registered_pharmacist,In dictionary and not in data,a,Remove,0
+61,Voluntary_health_or_charitable_agencies,In dictionary and not in data,a,Remove,0
+95,Competative_Acquisition_Program,In dictionary and not in data,a,Remove,0
+96,Optician,In dictionary and not in data,a,Remove,0
+A0,Hospital,In dictionary and not in data,a,Remove,0
+A1,SNF,In dictionary and not in data,a,Remove,0
+A2,Intermediate_care_nursing_facility,In dictionary and not in data,a,Remove,0
+A3,Nursing_facility,In dictionary and not in data,a,Remove,0
+A4,HHA,In dictionary and not in data,a,Remove,0
+A6,Medical_supply_company_with_respiratory_therapist,In dictionary and not in data,a,Remove,0
+A7,Department_store,In dictionary and not in data,a,Remove,0
+A8,Grocery_store,In dictionary and not in data,a,Remove,0
+A9,Indian_Health_Service,In dictionary and not in data,a,Remove,0
+B1,Supplier_of_oxygen,In dictionary and not in data,a,Remove,0
+B2,Pedorthic_Personnel,In dictionary and not in data,a,Remove,0
+B3,Medical_Supply_Company_with_Pedorthic_Personnel,In dictionary and not in data,a,Remove,0
+B4,Does_not_meet_definition_of_health_care_provider,In dictionary and not in data,a,Remove,0
+B5,Ocularist,In dictionary and not in data,a,Remove,0
+C2,Indirect Payment Procedure,In dictionary and not in data,a,Remove,0
+D1,Medicare Diabetes Preventive Program,In dictionary and not in data,a,Remove,0
+D3,Medical Genetics and Genomics,In dictionary and not in data,a,Remove,0
+D3,Medical Genetics and Genomics,In dictionary and not in data,a,Remove,0
+D3,Medical Genetics and Genomics,In dictionary and not in data,a,Remove,0
+D3,Medical Genetics and Genomics,In dictionary and not in data,a,Remove,0
+D3,Medical Genetics and Genomics,In dictionary and not in data,a,Remove,0
+D4,Undersea and Hyperbaric Medicine,In dictionary and not in data,a,Remove,0
+D5,Opioid Treatment Program,In dictionary and not in data,a,Remove,0
+D6,Home Infusion Therapy Services,In dictionary and not in data,a,Remove,0
+D7,Micrographic Dermatologic Surgery,In dictionary and not in data,a,Remove,0
+D8,Adult Congenital Heart Disease,In dictionary and not in data,a,Remove,0
