@@ -1,18 +1,4 @@
 CMS_CrossWalk_Code,VRDC_String,Reason,Reason_code,Action,Action_code
-45,Mammography_screening_center,Excluded,0,Remove,0
-47,Independent_Diagnostic_Testing_Facility,Excluded,0,Remove,0
-49,Ambulatory_surgical_center,Excluded,0,Remove,0
-59,Ambulance_service_supplier,Excluded,0,Remove,0
-60,Public_health_or_welfare_agencies,Excluded,0,Remove,0
-63,Portable_X-ray_supplier,Excluded,0,Remove,0
-69,Clinical_laboratory,Excluded,0,Remove,0
-73,Mass_Immunization_Roster_Biller,Excluded,0,Remove,0
-74,Radiation_Therapy_Centers,Excluded,0,Remove,0
-75,Slide_Preparation_Facilities,Excluded,0,Remove,0
-87,All_other_suppliers,Excluded,0,Remove,0
-88,Unknown_supplier_provider_specialty,Excluded,0,Remove,0
-A5,Pharmacy,Excluded,0,Remove,0
-C1,Centralized Flu,Excluded,0,Remove,0
 1,General_Practice,In dictionary and in data,1,Keep,1
 2,General_surgery,In dictionary and in data,1,Keep,1
 3,Allergy_immunology,In dictionary and in data,1,Keep,1
@@ -134,3 +120,17 @@ D5,Opioid Treatment Program,In dictionary and not in data,a,Remove,0
 D6,Home Infusion Therapy Services,In dictionary and not in data,a,Remove,0
 D7,Micrographic Dermatologic Surgery,In dictionary and not in data,a,Remove,0
 D8,Adult Congenital Heart Disease,In dictionary and not in data,a,Remove,0
+45,Mammography_screening_center,Excluded,0,Remove,0
+47,Independent_Diagnostic_Testing_Facility,Excluded,0,Remove,0
+49,Ambulatory_surgical_center,Excluded,0,Remove,0
+59,Ambulance_service_supplier,Excluded,0,Remove,0
+60,Public_health_or_welfare_agencies,Excluded,0,Remove,0
+63,Portable_X-ray_supplier,Excluded,0,Remove,0
+69,Clinical_laboratory,Excluded,0,Remove,0
+73,Mass_Immunization_Roster_Biller,Excluded,0,Remove,0
+74,Radiation_Therapy_Centers,Excluded,0,Remove,0
+75,Slide_Preparation_Facilities,Excluded,0,Remove,0
+87,All_other_suppliers,Excluded,0,Remove,0
+88,Unknown_supplier_provider_specialty,Excluded,0,Remove,0
+A5,Pharmacy,Excluded,0,Remove,0
+C1,Centralized Flu,Excluded,0,Remove,0
