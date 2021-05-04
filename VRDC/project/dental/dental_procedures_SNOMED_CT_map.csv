@@ -1,0 +1,505 @@
+concept_code,concept_name,sct_id,sct_concept_name_preferred,match_direction_snomed_to_source,sct_side_note,ommitted_source_side_note,quality,note,concept_class,study_class,Weight,link,corrected_name,state_volume_CA,state_volume_WA,cumulative_perc,state_volume_OR, code_sum_CA , code_sum_WA , code_sum_OR 
+D0120,,34043003,,broad to narrow,,"established patient, periodic",acceptable,,Preventative Care,Procedure,,,,6.49%,8.92%,8.92%,5.82%,"7,492,893.00","2,724,534.00","691,121.00"
+D0230,,241047004,,broad to narrow,,"intraoral, each additional film",acceptable,,Radiology,Procedure,,,,27.33%,7.65%,16.57%,5.67%,"31,575,278.00","2,339,041.00","674,126.00"
+D1120,,87189000,,broad to narrow,,"child, debridement is more severe prophylaxis",acceptable,,Preventative Care,Procedure,,,,7.21%,7.40%,23.98%,4.90%,"8,330,243.00","2,261,995.00","581,688.00"
+D0220,,241047004,,broad to narrow,,first film,acceptable,,Radiology,Procedure,,,,2.95%,6.71%,30.69%,5.78%,"3,411,394.00","2,050,906.00","686,487.00"
+D1206,,313042009,,exact match,,for moderate to high risk patients,acceptable,,Preventative Care,Procedure,,,,2.02%,6.25%,36.94%,7.18%,"2,332,800.00","1,909,658.00","853,323.00"
+D1351,,234713009,,exact match,,,exact,,SEALANT,NA,,,,4.60%,5.57%,42.51%,4.16%,"5,312,338.00","1,702,641.00","493,819.00"
+D1208,,234723000,,exact match,,excluding varnish,exact,,Preventative Care,Procedure,,,,6.27%,4.87%,47.38%,2.22%,"7,247,625.00","1,488,012.00","263,745.00"
+D0272,,241046008,,broad to narrow,,number of films,acceptable,number can be expressed in quantity,Radiology,Procedure,,,,3.74%,4.57%,51.95%,2.29%,"4,315,463.00","1,396,182.00","272,658.00"
+D2392,,234789004,,broad to narrow,,number of surfaces,acceptable,number of surfaces can be put into other field,RESIN RESTORATIONS (FILLINGS),Caries,Simple,,,1.54%,3.90%,55.85%,2.53%,"1,778,571.00","1,191,407.00","300,817.00"
+D0140,,34043003,,broad to narrow,,"limited, problem focused",acceptable,,LIMITED ORAL EVALUATION,Procedure,,,,0.35%,3.64%,59.48%,4.26%,"403,070.00","1,111,080.00","506,631.00"
+D0150,,34043003,,broad to narrow,,comprehensive,acceptable,,Oral Evaluation,Procedure,,,,4.36%,3.37%,62.85%,3.79%,"5,037,442.00","1,028,334.00","449,901.00"
+D2391,,234789004,,broad to narrow,,number of surfaces,acceptable,number of surfaces can be put into other field,RESIN RESTORATIONS (FILLINGS),Caries,Simple,,,1.29%,3.25%,66.10%,2.09%,"1,488,840.00","992,922.00","248,887.00"
+D7140,,55162003,,broad to narrow,sct has another concept (not used) for extraction of single tooth,simplest of the several types of extraction,acceptable,"combination of tooth and code can guide mapping to SCT two variants (extraction of permanent tooth and extraction of deciduous tooth), separate target code for wisdom tooth (third molar removal)",NON-SURGICAL EXTRACTIONS,Extraction,,https://www.ada.org/~/media/ADA/Publications/Files/CDT_ADAGuidetoExtractions_ToothandRemnants.pdf?la=en,"D7140 extraction, erupted tooth or exposed root (elevation and/or forceps removal)",2.47%,2.85%,68.95%,3.79%,"2,853,461.00","871,618.00","450,664.00"
+D1110,,87189000,,broad to narrow,,,acceptable,,Preventative Care,Procedure,,,,1.76%,2.77%,71.72%,3.65%,"2,032,320.00","846,803.00","433,387.00"
+D0274,,241046008,,broad to narrow,,number of films,acceptable,,Radiology,Procedure,,,,2.58%,2.64%,74.36%,3.29%,"2,984,851.00","808,085.00","391,333.00"
+D9230,,231319006,,exact match,,,exact,,ANESTHESIA,Procedure,,,,1.01%,2.05%,76.42%,1.21%,"1,169,072.00","627,681.00","144,183.00"
+D0330,,89846007,,exact match,,,exact,,Radiology,Procedure,,,,0.68%,2.01%,78.42%,1.31%,"790,405.00","613,291.00","155,080.00"
+D9999,,371883000,,general code,procedure performed by dentist (158979008 |Dental general practitioner (occupation)|) or hygenist or other dental professional,,general,,MISCELLANEOUS,MISC,,,,0.08%,1.89%,80.32%,0.00%,"91,202.00","578,483.00",308
+D4341,,346004,,broad to narrow,,4 or more tooth,acceptable,,NON-SURGICAL PERIODONTICS,Procedure,,,,0.64%,1.48%,81.80%,1.10%,"744,658.00","453,129.00","130,709.00"
+D2930,,77579004,,exact match,,,exact,posterchild,STAINLESS STEEL CROWN (PREFABRICATED CROWN),Caries,Complex,,,1.27%,1.34%,83.14%,0.89%,"1,462,983.00","408,160.00","105,699.00"
+D7210,,68381003,,exact match,,,exact,posterchild,SURGICAL EXTRACTIONS,Extraction,,,,1.54%,1.21%,84.34%,1.21%,"1,780,762.00","368,091.00","143,675.00"
+D2393,,234789004,,broad to narrow,,number of surfaces,acceptable,number of surfaces can be put into other field,RESIN RESTORATIONS (FILLINGS),Caries,Simple,,,0.43%,0.99%,85.33%,0.76%,"497,130.00","301,678.00","90,259.00"
+D2330,,27445001,,broad to narrow,,number of surfaces,acceptable,,RESIN RESTORATIONS (FILLINGS),Caries,Simple,,,0.92%,0.78%,86.11%,0.75%,"1,061,894.00","238,629.00","89,021.00"
+D2331,,27445001,,broad to narrow,,number of surfaces,acceptable,,RESIN RESTORATIONS (FILLINGS),Caries,Simple,,,0.18%,0.74%,86.85%,0.76%,"206,918.00","225,996.00","90,290.00"
+D2150,,31196005,,narrow to broad,age>18 we assume permanent (separate concept exist for primary),,acceptable,"8 codes in sct exist, for 1,2,3,4+ surfaces and versions for primary and permanent",AMALGAM RESTORATIONS (FILLINGS),Caries,Simple,,,2.61%,0.71%,87.55%,1.24%,"3,019,183.00","215,704.00","147,712.00"
+D0210,,446463003,,broad to narrow,,complete series,"acceptable, improvement possible",,Radiology,Procedure,,,,1.89%,0.61%,88.16%,1.50%,"2,184,158.00","184,818.00","177,713.00"
+D8080,,122452007,,exact match,no specific code for adult and adolescent,adolescent dentition,acceptable,,Orthodontics,Procedure,,,,0.04%,0.60%,88.76%,0.00%,"41,180.00","184,444.00",100
+D0191,,34043003,,broad to narrow,,"pre-diagnostic service, possibly done by hygenist","acceptable, improvement possible",,Oral Evaluation,Procedure,,,,0.00%,0.59%,89.35%,1.68%,"3,152.00","179,267.00","199,724.00"
+D9223,,241695009,,exact match,,15 minute interval,acceptable,quantity can be represented in other fields,ANESTHESIA,Procedure,,,,0.03%,0.58%,89.93%,0.11%,"30,432.00","175,912.00","13,508.00"
+D2332,,27445001,,broad to narrow,,number of surfaces,acceptable,,RESIN RESTORATIONS (FILLINGS),Caries,Simple,,,0.22%,0.55%,90.48%,0.58%,"254,652.00","169,405.00","68,939.00"
+D1330,,,,,,,,,Preventative Care,Procedure,,,,0.63%,0.54%,91.02%,4.54%,"728,200.00","165,421.00","539,274.00"
+D9920,,,,,,,,,Preventative Care,Procedure,,,,0.04%,0.53%,91.55%,0.18%,"48,205.00","161,499.00","21,199.00"
+D0240,,,,,,,,,Radiology,Procedure,,,,0.03%,0.53%,92.08%,1.30%,"37,014.00","161,271.00","154,680.00"
+D2140,,,,,,,,,AMALGAM RESTORATIONS (FILLINGS),Caries,Simple,,,1.55%,0.50%,92.58%,0.65%,"1,789,651.00","152,405.00","77,543.00"
+D7240,,,,,,,,,SURGICAL EXTRACTIONS,Extraction,,,,0.19%,0.46%,93.03%,0.09%,"218,717.00","139,645.00","10,912.00"
+D3220,,,,,,,,,ENDODONTICS MISCELLANEOUS,Procedure,,,,1.04%,0.46%,93.49%,0.37%,"1,198,318.00","138,993.00","44,233.00"
+D0270,,,,,,,,,Radiology,Procedure,,,,0.22%,0.42%,93.91%,0.74%,"255,646.00","127,439.00","87,782.00"
+D0603,,,,,,,,,Oral Evaluation,Procedure,,,,0.05%,0.35%,94.25%,1.45%,"51,674.00","106,485.00","172,601.00"
+D0160,,,,,,,,,Oral Evaluation,Procedure,,,,0.00%,0.33%,94.58%,0.01%,"4,332.00","100,010.00","1,267.00"
+D0190,,,,,,,,,Oral Evaluation,Procedure,,,,0.01%,0.32%,94.90%,0.03%,"9,903.00","97,787.00","3,077.00"
+D2335,,27445001,"Restoration, resin (procedure)|",broad to narrow,,number of surfaces,acceptable,source code has disjunction,RESIN RESTORATIONS (FILLINGS),Caries,Simple,,,0.19%,0.30%,95.20%,0.50%,"223,677.00","91,811.00","59,479.00"
+D2160,,,,,,,,,AMALGAM RESTORATIONS (FILLINGS),Caries,Simple,,,0.71%,0.26%,95.46%,0.43%,"814,541.00","77,953.00","51,252.00"
+D2390,,,,,,,,,STAINLESS STEEL CROWN (PREFABRICATED CROWN),Caries,Complex,,,0.01%,0.23%,95.68%,0.05%,"13,391.00","69,913.00","6,305.00"
+D9110,,,,,,,,,PALLIATIVE,Procedure,,,,0.17%,0.21%,95.90%,0.07%,"199,716.00","64,549.00","8,370.00"
+D4342,,,,,,,,,NON-SURGICAL PERIODONTICS,Procedure,,,,0.16%,0.20%,96.10%,0.58%,"184,606.00","62,257.00","68,536.00"
+D7230,,,,,,,,,SURGICAL EXTRACTIONS,Extraction,,,,0.17%,0.20%,96.30%,0.12%,"197,459.00","61,529.00","14,268.00"
+D2394,,234789004,Insertion of composite restoration into tooth (procedure),broad to narrow,,number of surfaces,acceptable,number of surfaces can be put into other field,RESIN RESTORATIONS (FILLINGS),Caries,Simple,,,0.07%,0.20%,96.50%,0.25%,"81,891.00","60,502.00","29,820.00"
+D4910,,,,,,,,,PERIODONTAL MAINTENANCE,Procedure,,,,0.16%,0.19%,96.69%,0.69%,"183,035.00","59,175.00","81,737.00"
+D1354,,,,,,,,,Preventative Care,Procedure,,,,0.00%,0.18%,96.87%,3.22%,"2,966.00","53,848.00","383,045.00"
+D9248,,,,,,,,,ANESTHESIA,Procedure,,,,0.10%,0.15%,97.02%,0.09%,"110,785.00","45,505.00","10,336.00"
+D5110,,,,,,,,,Denture,Procedure,,,,0.08%,0.15%,97.17%,0.13%,"94,348.00","45,370.00","15,669.00"
+D0602,,,,,,,,,Oral Evaluation,Procedure,,,,0.02%,0.12%,97.28%,0.93%,"17,827.00","36,283.00","110,866.00"
+D3120,,,,,,,,,ENDODONTICS MISCELLANEOUS,Procedure,,,,0.01%,0.12%,97.40%,0.06%,"10,758.00","35,394.00","6,552.00"
+D0601,,,,,,,,,Oral Evaluation,Procedure,,,,0.01%,0.11%,97.51%,1.05%,"14,652.00","34,877.00","124,351.00"
+D5120,,,,,,,,,Denture,Procedure,,,,0.06%,0.11%,97.63%,0.10%,"66,524.00","34,180.00","11,423.00"
+D8660,,,,,,,,,Orthodontics,Procedure,,,,0.00%,0.11%,97.74%,0.00%,"3,771.00","34,090.00",342
+D7111,,,,,,,,,NON-SURGICAL EXTRACTIONS,Extraction,,,,0.17%,0.11%,97.85%,0.07%,"195,996.00","33,831.00","8,680.00"
+D9221,,,,,,,,,ANESTHESIA,Procedure,,,,0.12%,0.11%,97.96%,0.00%,"134,693.00","32,839.00",137
+D9222,,,,,,,,,ANESTHESIA,Procedure,,,,0.00%,0.10%,98.05%,0.02%,46,"28,959.00","1,730.00"
+D7250,,,,,,,,,SURGICAL EXTRACTIONS,Extraction,,,,0.02%,0.09%,98.15%,0.21%,"24,493.00","28,800.00","25,426.00"
+D3310,,,,,,,,,ENDODONTIC THERAPY (ROOT CANALS),Procedure,Complex,,,0.11%,0.09%,98.24%,0.09%,"129,746.00","27,910.00","10,709.00"
+D9220,,,,,,,,,ANESTHESIA,Procedure,,,,0.11%,0.09%,98.33%,0.00%,"131,479.00","27,706.00",214
+D8030,,,,,,,,,Orthodontics,Procedure,,,,,0.09%,98.42%,,  ,"27,697.00",  
+D0170,,,,,,,,,LIMITED ORAL EVALUATION,Procedure,,,,0.01%,0.08%,98.50%,0.22%,"5,813.00","25,260.00","26,360.00"
+D7220,,,,,,,,,SURGICAL EXTRACTIONS,Extraction,,,,0.05%,0.08%,98.58%,0.05%,"59,574.00","24,523.00","6,118.00"
+D1510,,,,,,,,,Orthodontics,Procedure,,,,0.16%,0.08%,98.66%,0.10%,"188,430.00","23,977.00","11,646.00"
+D2929,,,,,,,,,Orthodontics,Procedure,,,,0.01%,0.07%,98.73%,0.02%,"5,914.00","22,091.00","2,588.00"
+D9610,,,,,,,,,MISCELLANEOUS,Procedure,,,,0.09%,0.07%,98.80%,0.01%,"99,716.00","20,286.00",812
+D9612,,,,,,,,,MISCELLANEOUS,Procedure,,,,0.00%,0.06%,98.85%,0.00%,620,"17,191.00",249
+D9930,,,,,,,,,PROFESSIONAL CONSULT/VISIT/SERVICES,Procedure,,,,0.00%,0.06%,98.91%,0.01%,"4,035.00","17,008.00","1,642.00"
+D9243,,,,,,,,,ANESTHESIA,Procedure,,,,0.00%,0.05%,98.96%,0.14%,"1,242.00","16,337.00","16,312.00"
+D9630,,,,,,,,,MISCELLANEOUS,Procedure,,,,0.00%,0.05%,99.02%,0.07%,"4,673.00","16,211.00","8,756.00"
+D0999,,,,,,,,,Oral Evaluation,Procedure,,,,0.02%,0.05%,99.07%,0.09%,"16,999.00","15,568.00","10,546.00"
+D3221,,,,,,,,,ENDODONTICS MISCELLANEOUS,Procedure,,,,0.02%,0.05%,99.11%,0.10%,"27,164.00","14,795.00","11,790.00"
+D2161,,,,,,,,,AMALGAM RESTORATIONS (FILLINGS),Caries,Simple,,,0.09%,0.05%,99.16%,0.12%,"100,192.00","13,672.00","14,772.00"
+D3330,,,,,,,,,ENDODONTIC THERAPY (ROOT CANALS),Procedure,Complex,,,0.11%,0.04%,99.20%,0.05%,"130,953.00","12,357.00","5,394.00"
+D1515,,,,,,,,,Orthodontics,Procedure,,,,0.02%,0.04%,99.24%,0.03%,"26,141.00","11,886.00","3,554.00"
+D5211,,,,,,,,,Denture,Procedure,,,,0.01%,0.04%,99.28%,0.05%,"16,126.00","11,367.00","5,558.00"
+D5212,,,,,,,,,Denture,Procedure,,,,0.01%,0.04%,99.31%,0.05%,"11,946.00","10,772.00","6,472.00"
+D0273,,,,,,,,,Radiology,Procedure,,,,0.00%,0.04%,99.35%,0.06%,"5,058.00","10,584.00","6,857.00"
+D2931,,,,,,,,,STAINLESS STEEL CROWN (PREFABRICATED CROWN),Caries,Complex,,,0.03%,0.03%,99.38%,0.05%,"39,303.00","9,756.00","6,458.00"
+D5750,,,,,,,,,Denture,Procedure,,,,0.07%,0.03%,99.41%,0.06%,"78,574.00","9,066.00","7,263.00"
+D0460,,,,,,,,,ORAL PATHOLOGY/LABORATORY,Procedure,,,,0.00%,0.03%,99.44%,0.01%,379,"9,129.00",568
+D2920,,,,,,,,,RECEMENT,Procedure,,,,0.05%,0.03%,99.46%,0.04%,"55,100.00","8,387.00","4,409.00"
+D1555,,,,,,,,,Orthodontics,Procedure,,,,0.02%,0.02%,99.49%,0.03%,"23,143.00","7,329.00","3,191.00"
+D5751,,,,,,,,,Denture,Procedure,,,,0.06%,0.02%,99.51%,0.04%,"63,068.00","7,089.00","4,807.00"
+D2934,,,,,,,,,STAINLESS STEEL CROWN (PREFABRICATED CROWN),Caries,Complex,,,0.01%,0.02%,99.53%,0.00%,"8,162.00","5,898.00",186
+D2941,,,,,,,,,Orthodontics,Procedure,,,,,0.02%,99.55%,0.02%,  ,"5,569.00","2,630.00"
+D5410,,,,,,,,,Denture,Procedure,,,,0.03%,0.02%,99.57%,0.11%,"32,538.00","5,100.00","12,591.00"
+D9410,,,,,,,,,MISCELLANEOUS,Procedure,,,,0.58%,0.02%,99.58%,0.10%,"664,827.00","5,240.00","11,463.00"
+D7310,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.01%,0.02%,99.60%,0.00%,"6,298.00","5,151.00",329
+D5411,,,,,,,,,Denture,Procedure,,,,0.02%,0.02%,99.62%,0.10%,"23,865.00","4,943.00","12,131.00"
+D3230,,,,,,,,,ENDODONTICS MISCELLANEOUS,Procedure,,,,0.02%,0.02%,99.63%,0.02%,"26,298.00","4,544.00","1,992.00"
+D0350,,,,,,,,,MISCELLANEOUS,Procedure,,,,2.71%,0.02%,99.65%,0.01%,"3,133,928.00","4,551.00","1,041.00"
+D9420,,,,,,,,,MISCELLANEOUS,Procedure,,,,0.12%,0.01%,99.66%,0.12%,"140,724.00","4,251.00","14,409.00"
+D1550,,,,,,,,,Orthodontics,Procedure,,,,0.01%,0.01%,99.67%,0.01%,"10,428.00","4,409.00","1,382.00"
+D7280,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,0.01%,99.69%,0.00%,"4,742.00","4,422.00",13
+D2940,,,,,,,,,SEDATIVE FILLING,Question,,,,0.04%,0.01%,99.70%,0.67%,"43,509.00","4,431.00","79,057.00"
+D3320,,,,,,,,,ENDODONTIC THERAPY (ROOT CANALS),Procedure,Complex,,,0.07%,0.01%,99.71%,0.11%,"76,723.00","3,687.00","12,838.00"
+D4999,,,,,,,,,MISCELLANEOUS,Procedure,,,,0.00%,0.01%,99.72%,0.00%,"3,870.00","3,455.00",365
+D9215,,,,,,,,,ANESTHESIA,Procedure,,,,0.00%,0.01%,99.73%,0.03%,"1,479.00","3,061.00","3,237.00"
+D7960,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,0.01%,99.74%,0.01%,"1,418.00","2,984.00",810
+D9951,,,,,,,,,OCCLUSAL ADJUSTMENT,Procedure,,,,0.01%,0.01%,99.75%,0.01%,"9,347.00","2,780.00","1,049.00"
+D8060,,,,,,,,,Orthodontics,Procedure,,,,0.00%,0.01%,99.76%,,29,"2,657.00",  
+D7283,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,0.01%,99.77%,,"3,844.00","2,727.00",  
+D9242,,,,,,,,,ANESTHESIA,Procedure,,,,0.01%,0.01%,99.78%,,"7,606.00","2,331.00",  
+D3240,,,,,,,,,ENDODONTICS MISCELLANEOUS,Procedure,,,,0.03%,0.01%,99.79%,0.06%,"31,475.00","2,528.00","6,783.00"
+D4355,,,,,,,,,FULL MOUTH DEBRIDEMENT,NA,,,,0.06%,0.01%,99.80%,0.38%,"67,068.00","2,369.00","45,072.00"
+D8020,,,,,,,,,Orthodontics,Procedure,,,,0.00%,0.01%,99.80%,,11,"2,520.00",  
+D5510,,,,,,,,,Denture,Procedure,,,,0.02%,0.01%,99.81%,0.01%,"18,629.00","2,257.00","1,091.00"
+D2932,,,,,,,,,STAINLESS STEEL CROWN (PREFABRICATED CROWN),Caries,Complex,,,0.03%,0.01%,99.82%,0.01%,"38,730.00","2,227.00","1,254.00"
+D0340,,,,,,,,,Radiology,Procedure,,,,0.05%,0.01%,99.82%,0.00%,"58,435.00","2,048.00",115
+D5422,,,,,,,,,Denture,Procedure,,,,0.01%,0.01%,99.83%,0.06%,"6,040.00","1,779.00","6,637.00"
+D3110,,,,,,,,,ENDODONTICS MISCELLANEOUS,Procedure,,,,0.00%,0.01%,99.84%,0.01%,"2,939.00","1,892.00",756
+D2950,,,,,,,,,Orthodontics,Procedure,,,,0.01%,0.01%,99.84%,0.03%,"12,759.00","1,751.00","3,249.00"
+D7473,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,0.01%,99.85%,0.00%,"1,039.00","1,736.00",233
+D5520,,,,,,,,,Denture,Procedure,,,,0.02%,0.01%,99.85%,0.01%,"22,978.00","1,392.00","1,366.00"
+D0145,,,,,,,,,Oral Evaluation,Procedure,,,,0.33%,0.01%,99.86%,0.30%,"379,776.00","1,513.00","35,085.00"
+D0470,,,,,,,,,Orthodontics,Procedure,,,,0.03%,0.01%,99.86%,0.00%,"39,580.00","1,535.00",220
+D7510,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.01%,0.01%,99.87%,0.01%,"13,837.00","1,468.00",975
+D1310,,,,,,,,,Preventative Care,Procedure,,,,0.11%,0.01%,99.87%,2.25%,"132,137.00","1,438.00","267,613.00"
+D7241,,,,,,,,,SURGICAL EXTRACTIONS,Extraction,,,,0.00%,0.01%,99.88%,0.02%,"1,663.00","1,622.00","2,564.00"
+D9241,,,,,,,,,ANESTHESIA,Procedure,,,,0.01%,0.00%,99.88%,0.00%,"6,396.00","1,217.00",13
+D9219,,,,,,,,,ANESTHESIA,Procedure,,,,,0.00%,99.89%,0.00%,  ,"1,208.00",61
+D5421,,,,,,,,,Denture,Procedure,,,,0.00%,0.00%,99.89%,0.03%,"4,151.00","1,099.00","4,045.00"
+D0180,,,,,,,,,Oral Evaluation,Procedure,,,,0.00%,0.00%,99.89%,0.04%,"3,588.00","1,316.00","4,809.00"
+D8070,,,,,,,,,Orthodontics,Procedure,,,,0.00%,0.00%,99.90%,,37,"1,252.00",  
+D7311,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,0.00%,99.90%,0.00%,458,"1,248.00",192
+D7320,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,0.00%,99.91%,0.00%,"1,046.00","1,294.00",90
+D2933,,,,,,,,,STAINLESS STEEL CROWN (PREFABRICATED CROWN),Caries,Complex,,,0.01%,0.00%,99.91%,0.08%,"13,453.00","1,308.00","9,100.00"
+D7286,,,,,,,,,BIOPSY OF ORAL TISSUE,Procedure,,,,0.00%,0.00%,99.91%,0.00%,"1,323.00","1,051.00",458
+D5761,,,,,,,,,Denture,Procedure,,,,0.00%,0.00%,99.92%,0.01%,"2,676.00",897,862
+D5650,,,,,,,,,Denture,Procedure,,,,0.01%,0.00%,99.92%,0.04%,"7,355.00",905,"5,014.00"
+D5710,,,,,,,,,Denture,Procedure,,,,,0.00%,99.92%,0.00%,  ,"1,011.00",134
+D1999,,,,,,,,,Orthodontics,Procedure,,,,0.00%,0.00%,99.93%,0.00%,"3,407.00",980,54
+D2740,,,,,,,,,Poly Restorations (FILLINGS),Caries,Complex,,,0.01%,0.00%,99.93%,0.00%,"16,045.00",902,349
+D9971,,,,,,,,,Cosmetic,Procedure,,,,0.00%,0.00%,99.93%,0.01%,16,462,"1,115.00"
+D5610,,,,,,,,,Denture,Procedure,,,,0.01%,0.00%,99.93%,0.02%,"7,380.00",683,"2,589.00"
+D5760,,,,,,,,,Denture,Procedure,,,,0.00%,0.00%,99.93%,0.01%,"1,782.00",535,543
+D5711,,,,,,,,,Denture,Procedure,,,,,0.00%,99.94%,0.00%,  ,726,79
+D8680,,,,,,,,,Orthodontics,Procedure,,,,0.05%,0.00%,99.94%,0.00%,"51,859.00",471,17
+D9940,,,,,,,,,Orthodontics,Procedure,,,,0.00%,0.00%,99.94%,0.00%,880,686,158
+D7321,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,0.00%,99.94%,0.00%,110,481,66
+D7410,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,0.00%,99.94%,0.00%,"1,001.00",598,15
+D1352,,,,,,,,,Preventative Care,Procedure,,,,0.03%,0.00%,99.95%,0.01%,"31,226.00",470,634
+D1353,,,,,,,,,Preventative Care,Procedure,,,,,0.00%,99.95%,0.08%,  ,747,"9,344.00"
+D9310,,,,,,,,,PROFESSIONAL CONSULT/VISIT/SERVICES,Procedure,,,,0.04%,0.00%,99.95%,0.26%,"46,882.00",489,"30,695.00"
+D4210,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,0.00%,0.00%,99.95%,0.00%,177,680,136
+D9210,,,,,,,,,ANESTHESIA,Procedure,,,,0.00%,0.00%,99.95%,0.00%,380,340,142
+D9910,,,,,,,,,ANESTHESIA,Procedure,,,,0.05%,0.00%,99.95%,0.02%,"52,496.00",445,"2,207.00"
+D9970,,,,,,,,,Cosmetic,Procedure,,,,0.00%,0.00%,99.96%,0.00%,349,171,153
+D5640,,,,,,,,,Denture,Procedure,,,,0.01%,0.00%,99.96%,0.01%,"5,804.00",437,"1,249.00"
+D5721,,,,,,,,,Denture,Procedure,,,,,0.00%,99.96%,,  ,173,  
+D9934,,,,,,,,,Denture,Procedure,,,,,0.00%,99.96%,,  ,232,  
+D3346,,,,,,,,,ENDODONTIC THERAPY (ROOT CANALS),Procedure,Complex,,,0.01%,0.00%,99.96%,0.00%,"5,574.00",153,137
+D2954,,,,,,,,,Multi-Crown,Caries,Complex,,,0.06%,0.00%,99.96%,0.00%,"68,305.00",312,43
+D2980,,,,,,,,,MISCELLANEOUS,Procedure,,,,,0.00%,99.96%,,  ,232,  
+D0171,,,,,,,,,Oral Evaluation,Procedure,,,,0.00%,0.00%,99.96%,0.01%,38,306,765
+D0431,,,,,,,,,ORAL PATHOLOGY/LABORATORY,Procedure,,,,0.00%,0.00%,99.96%,,"1,298.00",337,  
+D8220,,,,,,,,,Orthodontics,Procedure,,,,0.00%,0.00%,99.96%,,699,223,  
+D8670,,,,,,,,,Orthodontics,Procedure,,,,0.33%,0.00%,99.97%,0.00%,"383,599.00",400,363
+D8690,,,,,,,,,Orthodontics,Procedure,,,,0.00%,0.00%,99.97%,,14,378,  
+D8999,,,,,,,,,Orthodontics,Procedure,,,,0.00%,0.00%,99.97%,0.00%,"3,328.00",380,226
+D1520,,,,,,,,,Orthodontics,Procedure,,,,0.00%,0.00%,99.97%,0.00%,"1,912.00",219,130
+D7270,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,0.00%,99.97%,,542,254,  
+D7880,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,0.00%,99.97%,,124,157,  
+D7971,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,0.00%,99.97%,,863,272,  
+D7999,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,0.00%,99.97%,0.01%,550,315,"1,088.00"
+D1201,,,,,,,,,Preventative Care,Procedure,,,,0.00%,0.00%,99.97%,,"1,719.00",199,  
+D1203,,,,,,,,,Preventative Care,Procedure,,,,0.01%,0.00%,99.97%,0.00%,"14,132.00",403,227
+D1320,,,,,,,,,Preventative Care,Procedure,,,,0.00%,0.00%,99.97%,0.45%,"2,085.00",384,"53,064.00"
+D9430,,,,,,,,,PROFESSIONAL CONSULT/VISIT/SERVICES,Procedure,,,,0.98%,0.00%,99.98%,0.00%,"1,136,429.00",320,469
+D9440,,,,,,,,,PROFESSIONAL CONSULT/VISIT/SERVICES,Procedure,,,,0.00%,0.00%,99.98%,0.00%,"1,082.00",425,66
+D0277,,,,,,,,,Radiology,Procedure,,,,0.00%,0.00%,99.98%,0.04%,"1,030.00",421,"4,324.00"
+D0367,,,,,,,,,Radiology,Procedure,,,,0.00%,0.00%,99.98%,0.00%,334,357,150
+D0380,,,,,,,,,Radiology,Procedure,,,,,0.00%,99.98%,,  ,388,  
+D6930,,,,,,,,,RECEMENT,Procedure,,,,0.01%,0.00%,99.98%,0.00%,"7,787.00",163,82
+D4211,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,0.00%,0.00%,99.98%,0.00%,"1,154.00",207,91
+D4212,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,,0.00%,99.98%,,  ,207,  
+D7285,,,,,,,,,BIOPSY OF ORAL TISSUE,Procedure,,,,0.00%,0.00%,99.98%,0.00%,362,129,12
+D5660,,,,,,,,,Denture,Procedure,,,,0.00%,0.00%,99.98%,0.00%,"1,079.00",51,266
+D5720,,,,,,,,,Denture,Procedure,,,,,0.00%,99.98%,,  ,36,  
+D5820,,,,,,,,,Denture,Procedure,,,,0.00%,0.00%,99.98%,0.03%,533,11,"3,296.00"
+D5850,,,,,,,,,Denture,Procedure,,,,0.05%,0.00%,99.98%,0.04%,"51,843.00",19,"4,523.00"
+D5851,,,,,,,,,Denture,Procedure,,,,0.04%,0.00%,99.98%,0.03%,"42,787.00",15,"3,360.00"
+D9120,,,,,,,,,Denture,Procedure,,,,0.00%,0.00%,99.98%,0.00%,198,65,251
+D3348,,,,,,,,,ENDODONTIC THERAPY (ROOT CANALS),Procedure,Complex,,,0.00%,0.00%,99.98%,,"4,281.00",64,  
+D3351,,,,,,,,,ENDODONTICS MISCELLANEOUS,Procedure,,,,0.00%,0.00%,99.98%,,"2,817.00",19,  
+D4921,,,,,,,,,MISCELLANEOUS,Procedure,,,,0.01%,0.00%,99.98%,0.07%,"7,857.00",75,"7,691.00"
+D2710,,,,,,,,,Poly Restorations (FILLINGS),Caries,Complex,,,,0.00%,99.98%,,  ,102,  
+D8010,,,,,,,,,Orthodontics,Procedure,,,,,0.00%,99.98%,,  ,19,  
+D8050,,,,,,,,,Orthodontics,Procedure,,,,,0.00%,99.98%,,  ,80,  
+D8692,,,,,,,,,Orthodontics,Procedure,,,,0.00%,0.00%,99.98%,,"3,917.00",55,  
+D1525,,,,,,,,,Orthodontics,Procedure,,,,0.00%,0.00%,99.98%,0.00%,661,91,53
+D9941,,,,,,,,,Orthodontics,Procedure,,,,0.00%,0.00%,99.98%,,31,12,  
+D7282,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,0.00%,99.98%,,  ,12,  
+D7451,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,0.00%,99.98%,,113,19,  
+D7465,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,0.00%,99.98%,,  ,43,  
+D7471,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,0.00%,99.98%,0.00%,29,31,252
+D7472,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,0.00%,99.98%,,22,55,  
+D7530,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,0.00%,99.98%,,82,17,  
+D7910,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,0.00%,99.98%,0.00%,300,14,119
+D5899,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,0.00%,99.98%,0.01%,"4,469.00",111,640
+D7953,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.01%,0.00%,99.98%,,"6,181.00",58,  
+D2750,,,,,,,,,Poly Restorations (FILLINGS),Caries,Complex,,,0.00%,0.00%,99.98%,,"2,759.00",85,  
+D2751,,,,,,,,,Poly Restorations (FILLINGS),Caries,Complex,,,0.08%,0.00%,99.98%,,"87,779.00",141,  
+D2752,,,,,,,,,Poly Restorations (FILLINGS),Caries,Complex,,,0.00%,0.00%,99.98%,0.00%,52,21,110
+D2799,,,,,,,,,Poly Restorations (FILLINGS),Caries,Complex,,,,0.00%,99.98%,,  ,39,  
+D1204,,,,,,,,,Preventative Care,Procedure,,,,0.00%,0.00%,99.98%,0.00%,"2,904.00",114,18
+D0250,,,,,,,,,Radiology,Procedure,,,,0.01%,0.00%,99.98%,,"8,178.00",72,  
+D0260,,,,,,,,,Radiology,Procedure,,,,0.01%,0.00%,99.98%,,"9,820.00",23,  
+D0290,,,,,,,,,Radiology,Procedure,,,,0.00%,0.00%,99.98%,,150,18,  
+D0364,,,,,,,,,Radiology,Procedure,,,,0.00%,0.00%,99.98%,0.00%,637,127,363
+D0365,,,,,,,,,Radiology,Procedure,,,,0.00%,0.00%,99.98%,0.00%,78,12,27
+D0383,,,,,,,,,Radiology,Procedure,,,,,0.00%,99.98%,,  ,37,  
+D4321,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,,0.00%,99.98%,,  ,97,  
+D3332,,,,,,,,,ENDODONTIC THERAPY (ROOT CANALS),Procedure,Complex,,,,,99.98%,,  ,  ,  
+D9211,,,,,,,,,ANESTHESIA,Procedure,,,,0.00%,,99.98%,,72,  ,  
+D9212,,,,,,,,,ANESTHESIA,Procedure,,,,,,99.98%,,  ,  ,  
+D7287,,,,,,,,,BIOPSY OF ORAL TISSUE,Procedure,,,,,,99.98%,,  ,  ,  
+D7288,,,,,,,,,BIOPSY OF ORAL TISSUE,Procedure,,,,,,99.98%,,  ,  ,  
+D9972,,,,,,,,,Cosmetic,Procedure,,,,,,99.98%,,  ,  ,  
+D9974,,,,,,,,,Cosmetic,Procedure,,,,,,99.98%,,  ,  ,  
+D5620,,,,,,,,,Denture,Procedure,,,,0.00%,,99.98%,0.00%,148,  ,70
+D5630,,,,,,,,,Denture,Procedure,,,,0.00%,,99.98%,0.00%,926,  ,91
+D5730,,,,,,,,,Denture,Procedure,,,,0.01%,,99.98%,0.03%,"6,567.00",  ,"3,717.00"
+D5731,,,,,,,,,Denture,Procedure,,,,0.00%,,99.98%,0.02%,"5,190.00",  ,"2,528.00"
+D5740,,,,,,,,,Denture,Procedure,,,,0.00%,,99.98%,0.00%,912,  ,392
+D5741,,,,,,,,,Denture,Procedure,,,,0.00%,,99.98%,0.00%,"1,085.00",  ,473
+D5130,,,,,,,,,Denture,Procedure,,,,0.07%,,99.98%,0.07%,"82,913.00",  ,"8,454.00"
+D5140,,,,,,,,,Denture,Procedure,,,,0.06%,,99.98%,0.05%,"69,889.00",  ,"5,859.00"
+D5213,,,,,,,,,Denture,Procedure,,,,0.00%,,99.98%,,"2,372.00",  ,  
+D5214,,,,,,,,,Denture,Procedure,,,,0.01%,,99.98%,0.00%,"9,039.00",  ,17
+D5221,,,,,,,,,Denture,Procedure,,,,,,99.98%,,  ,  ,  
+D5222,,,,,,,,,Denture,Procedure,,,,,,99.98%,,  ,  ,  
+D5223,,,,,,,,,Denture,Procedure,,,,,,99.98%,,  ,  ,  
+D5224,,,,,,,,,Denture,Procedure,,,,,,99.98%,,  ,  ,  
+D5225,,,,,,,,,Denture,Procedure,,,,0.00%,,99.98%,,95,  ,  
+D5226,,,,,,,,,Denture,Procedure,,,,0.00%,,99.98%,,107,  ,  
+D5281,,,,,,,,,Denture,Procedure,,,,,,99.98%,,  ,  ,  
+D5670,,,,,,,,,Denture,Procedure,,,,,,99.98%,,  ,  ,  
+D5671,,,,,,,,,Denture,Procedure,,,,,,99.98%,,  ,  ,  
+D5810,,,,,,,,,Denture,Procedure,,,,0.00%,,99.98%,,96,  ,  
+D5811,,,,,,,,,Denture,Procedure,,,,0.00%,,99.98%,,38,  ,  
+D5821,,,,,,,,,Denture,Procedure,,,,0.00%,,99.98%,0.01%,175,  ,"1,451.00"
+D5860,,,,,,,,,Denture,Procedure,,,,,,99.98%,,  ,  ,  
+D5862,,,,,,,,,Denture,Procedure,,,,,,99.98%,,  ,  ,  
+D5863,,,,,,,,,Denture,Procedure,,,,,,99.98%,,  ,  ,  
+D5865,,,,,,,,,Denture,Procedure,,,,,,99.98%,,  ,  ,  
+D5867,,,,,,,,,Denture,Procedure,,,,,,99.98%,,  ,  ,  
+D6985,,,,,,,,,Denture,Procedure,,,,0.00%,,99.98%,,42,  ,  
+D6999,,,,,,,,,Denture,Procedure,,,,0.00%,,99.98%,,123,  ,  
+D9932,,,,,,,,,Denture,Procedure,,,,,,99.98%,,  ,  ,  
+D9933,,,,,,,,,Denture,Procedure,,,,,,99.98%,,  ,  ,  
+D9935,,,,,,,,,Denture,Procedure,,,,,,99.98%,,  ,  ,  
+D3347,,,,,,,,,ENDODONTIC THERAPY (ROOT CANALS),Procedure,Complex,,,0.00%,,99.98%,,"1,714.00",  ,  
+D3331,,,,,,,,,ENDODONTIC THERAPY (ROOT CANALS),Procedure,Complex,,,,,99.98%,,  ,  ,  
+D2952,,,,,,,,,Multi-Crown,Caries,Complex,,,0.01%,,99.98%,,"13,925.00",  ,  
+D2955,,,,,,,,,Multi-Crown,Caries,Complex,,,,,99.98%,,  ,  ,  
+D2957,,,,,,,,,Multi-Crown,Caries,Complex,,,,,99.98%,,  ,  ,  
+D3333,,,,,,,,,ENDODONTICS MISCELLANEOUS,Procedure,,,,,,99.98%,,  ,  ,  
+D3352,,,,,,,,,ENDODONTICS MISCELLANEOUS,Procedure,,,,0.00%,,99.98%,,516,  ,  
+D3353,,,,,,,,,ENDODONTICS MISCELLANEOUS,Procedure,,,,,,99.98%,,  ,  ,  
+D3430,,,,,,,,,ENDODONTICS MISCELLANEOUS,Procedure,,,,,,99.98%,,  ,  ,  
+D3450,,,,,,,,,ENDODONTICS MISCELLANEOUS,Procedure,,,,,,99.98%,,  ,  ,  
+D3222,,,,,,,,,ENDODONTICS MISCELLANEOUS,Procedure,,,,0.00%,,99.98%,,782,  ,  
+D3355,,,,,,,,,ENDODONTICS MISCELLANEOUS,Procedure,,,,,,99.98%,,  ,  ,  
+D3357,,,,,,,,,ENDODONTICS MISCELLANEOUS,Procedure,,,,,,99.98%,,  ,  ,  
+D3470,,,,,,,,,ENDODONTICS MISCELLANEOUS,Procedure,,,,,,99.98%,,  ,  ,  
+D3910,,,,,,,,,ENDODONTICS MISCELLANEOUS,Procedure,,,,,,99.98%,,  ,  ,  
+D3950,,,,,,,,,ENDODONTICS MISCELLANEOUS,Procedure,,,,,,99.98%,,  ,  ,  
+D3999,,,,,,,,,ENDODONTICS MISCELLANEOUS,Procedure,,,,0.00%,,99.98%,,288,  ,  
+D2951,,,,,,,,,MISCELLANEOUS,Procedure,,,,0.00%,,99.98%,0.00%,135,  ,59
+D9911,,,,,,,,,MISCELLANEOUS,Procedure,,,,0.00%,,99.98%,,"1,069.00",  ,  
+D2960,,,,,,,,,MISCELLANEOUS,Procedure,,,,,,99.98%,,  ,  ,  
+D2962,,,,,,,,,MISCELLANEOUS,Procedure,,,,,,99.98%,,  ,  ,  
+D2970,,,,,,,,,MISCELLANEOUS,Procedure,,,,,,99.98%,,  ,  ,  
+D2975,,,,,,,,,MISCELLANEOUS,Procedure,,,,,,99.98%,,  ,  ,  
+D2990,,,,,,,,,MISCELLANEOUS,Procedure,,,,,,99.98%,,  ,  ,  
+D2999,,,,,,,,,MISCELLANEOUS,Procedure,,,,0.00%,,99.98%,0.00%,55,  ,73
+D4920,,,,,,,,,MISCELLANEOUS,Procedure,,,,,,99.98%,,  ,  ,  
+D5999,,,,,,,,,MISCELLANEOUS,Procedure,,,,0.00%,,99.98%,,30,  ,  
+D9450,,,,,,,,,MISCELLANEOUS,Procedure,,,,0.00%,,99.98%,0.00%,82,  ,17
+D9975,,,,,,,,,MISCELLANEOUS,MISC,,,,,,99.98%,,  ,  ,  
+D9985,,,,,,,,,MISCELLANEOUS,MISC,,,,,,99.98%,0.00%,  ,  ,70
+D9986,,,,,,,,,MISCELLANEOUS,MISC,,,,0.00%,,99.98%,0.00%,17,  ,27
+D9987,,,,,,,,,MISCELLANEOUS,MISC,,,,0.00%,,99.98%,0.01%,48,  ,"1,471.00"
+D9990,,,,,,,,,MISCELLANEOUS,MISC,,,,,,99.98%,,  ,  ,  
+D2712,,,,,,,,,Poly Restorations (FILLINGS),Caries,Complex,,,,,99.98%,,  ,  ,  
+D2720,,,,,,,,,Poly Restorations (FILLINGS),Caries,Complex,,,,,99.98%,,  ,  ,  
+D2721,,,,,,,,,Poly Restorations (FILLINGS),Caries,Complex,,,,,99.98%,,  ,  ,  
+D4381,,,,,,,,,NON-SURGICAL PERIODONTICS,Procedure,,,,0.01%,,99.98%,,"12,770.00",  ,  
+D9952,,,,,,,,,OCCLUSAL ADJUSTMENT,Procedure,,,,,,99.98%,,  ,  ,  
+D0472,,,,,,,,,ORAL PATHOLOGY/LABORATORY,Procedure,,,,,,99.98%,,  ,  ,  
+D0473,,,,,,,,,ORAL PATHOLOGY/LABORATORY,Procedure,,,,,,99.98%,,  ,  ,  
+D0474,,,,,,,,,ORAL PATHOLOGY/LABORATORY,Procedure,,,,,,99.98%,,  ,  ,  
+D0415,,,,,,,,,ORAL PATHOLOGY/LABORATORY,Procedure,,,,,,99.98%,,  ,  ,  
+D0416,,,,,,,,,ORAL PATHOLOGY/LABORATORY,Procedure,,,,,,99.98%,,  ,  ,  
+D0418,,,,,,,,,ORAL PATHOLOGY/LABORATORY,Procedure,,,,,,99.98%,,  ,  ,  
+D0421,,,,,,,,,ORAL PATHOLOGY/LABORATORY,Procedure,,,,,,99.98%,,  ,  ,  
+D0425,,,,,,,,,ORAL PATHOLOGY/LABORATORY,Procedure,,,,0.00%,,99.98%,0.01%,520,  ,"1,551.00"
+D0476,,,,,,,,,ORAL PATHOLOGY/LABORATORY,Procedure,,,,,,99.98%,,  ,  ,  
+D0480,,,,,,,,,ORAL PATHOLOGY/LABORATORY,Procedure,,,,,,99.98%,,  ,  ,  
+D0482,,,,,,,,,ORAL PATHOLOGY/LABORATORY,Procedure,,,,,,99.98%,,  ,  ,  
+D0486,,,,,,,,,ORAL PATHOLOGY/LABORATORY,Procedure,,,,,,99.98%,,  ,  ,  
+D0502,,,,,,,,,ORAL PATHOLOGY/LABORATORY,Procedure,,,,0.00%,,99.98%,,"1,665.00",  ,  
+D0600,,,,,,,,,ORAL PATHOLOGY/LABORATORY,Procedure,,,,,,99.98%,,  ,  ,  
+D7290,,,,,,,,,Orthodontics,Procedure,,,,0.00%,,99.98%,,49,  ,  
+D8040,,,,,,,,,Orthodontics,Procedure,,,,,,99.98%,,  ,  ,  
+D8090,,,,,,,,,Orthodontics,Procedure,,,,0.00%,,99.98%,,147,  ,  
+D8210,,,,,,,,,Orthodontics,Procedure,,,,0.01%,,99.98%,,"5,751.00",  ,  
+D8681,,,,,,,,,Orthodontics,Procedure,,,,,,99.98%,,  ,  ,  
+D8691,,,,,,,,,Orthodontics,Procedure,,,,,,99.98%,,  ,  ,  
+D8693,,,,,,,,,Orthodontics,Procedure,,,,0.00%,,99.98%,,92,  ,  
+D8694,,,,,,,,,Orthodontics,Procedure,,,,,,99.98%,,  ,  ,  
+D2921,,,,,,,,,Orthodontics,Procedure,,,,,,99.98%,,  ,  ,  
+D2949,,,,,,,,,Orthodontics,Procedure,,,,,,99.98%,,  ,  ,  
+D9942,,,,,,,,,Orthodontics,Procedure,,,,,,99.98%,,  ,  ,  
+D9943,,,,,,,,,Orthodontics,Procedure,,,,,,99.98%,,  ,  ,  
+D9950,,,,,,,,,Orthodontics,Procedure,,,,0.00%,,99.98%,,17,  ,  
+D7251,,,,,,,,,OTHER ORAL SURGERY,Extraction,,,,,,99.98%,0.00%,  ,  ,120
+D7260,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7261,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,,99.98%,,12,  ,  
+D7340,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7350,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7411,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,,99.98%,,345,  ,  
+D7412,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7413,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7414,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7440,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7441,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7450,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,,99.98%,0.00%,146,  ,17
+D7460,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7485,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7490,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7520,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,,99.98%,,45,  ,  
+D7540,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7550,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,0.00%,  ,  ,91
+D7560,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7911,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7912,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,,99.98%,,59,  ,  
+D7963,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7970,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,,99.98%,0.00%,23,  ,109
+D7972,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7980,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D5931,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D5932,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D5933,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D5936,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D5951,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.01%,,99.98%,,"13,413.00",  ,  
+D5952,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D5954,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D5982,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D5984,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D5986,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,0.00%,  ,  ,46
+D5988,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,,99.98%,,253,  ,  
+D5992,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D5993,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7295,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7461,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,,99.98%,,31,  ,  
+D7511,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7521,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7610,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7620,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7630,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,,99.98%,,14,  ,  
+D7640,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,,99.98%,,19,  ,  
+D7650,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7660,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7670,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7671,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7680,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7710,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7720,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7730,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,,99.98%,,37,  ,  
+D7740,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7750,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7770,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7771,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7780,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7810,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7820,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7830,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7850,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7858,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7865,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7870,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7871,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7873,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7899,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7921,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7940,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7941,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,,99.98%,,381,  ,  
+D7943,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7945,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7946,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,,99.98%,,138,  ,  
+D7947,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,,99.98%,,145,  ,  
+D7948,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7949,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7950,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,,99.98%,,13,  ,  
+D7951,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7955,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,,99.98%,,22,  ,  
+D7981,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7982,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7991,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7995,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D7997,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,0.00%,,99.98%,,12,  ,  
+D7998,,,,,,,,,OTHER ORAL SURGERY,Procedure,,,,,,99.98%,,  ,  ,  
+D2722,,,,,,,,,Poly Restorations (FILLINGS),Caries,Complex,,,,,99.98%,,  ,  ,  
+D2780,,,,,,,,,Poly Restorations (FILLINGS),Caries,Complex,,,,,99.98%,,  ,  ,  
+D2781,,,,,,,,,Poly Restorations (FILLINGS),Caries,Complex,,,,,99.98%,,  ,  ,  
+D2782,,,,,,,,,Poly Restorations (FILLINGS),Caries,Complex,,,,,99.98%,,  ,  ,  
+D2783,,,,,,,,,Poly Restorations (FILLINGS),Caries,Complex,,,,,99.98%,,  ,  ,  
+D2790,,,,,,,,,Poly Restorations (FILLINGS),Caries,Complex,,,,,99.98%,,  ,  ,  
+D2791,,,,,,,,,Poly Restorations (FILLINGS),Caries,Complex,,,0.00%,,99.98%,,"3,638.00",  ,  
+D2792,,,,,,,,,Poly Restorations (FILLINGS),Caries,Complex,,,,,99.98%,,  ,  ,  
+D2794,,,,,,,,,Poly Restorations (FILLINGS),Caries,Complex,,,,,99.98%,,  ,  ,  
+D2620,,,,,,,,,Poly Restorations (FILLINGS),Caries,Simple,,,,,99.98%,,  ,  ,  
+D2630,,,,,,,,,Poly Restorations (FILLINGS),Caries,Simple,,,,,99.98%,,  ,  ,  
+D0475,,,,,,,,,Preventative Care,Procedure,,,,0.00%,,99.98%,,18,  ,  
+D1205,,,,,,,,,Preventative Care,Procedure,,,,0.00%,,99.98%,,512,  ,  
+D0251,,,,,,,,,Radiology,Procedure,,,,,,99.98%,0.00%,  ,  ,73
+D0310,,,,,,,,,Radiology,Procedure,,,,0.00%,,99.98%,,12,  ,  
+D0320,,,,,,,,,Radiology,Procedure,,,,0.00%,,99.98%,,481,  ,  
+D0321,,,,,,,,,Radiology,Procedure,,,,,,99.98%,,  ,  ,  
+D0322,,,,,,,,,Radiology,Procedure,,,,0.00%,,99.98%,,295,  ,  
+D0351,,,,,,,,,Radiology,Procedure,,,,,,99.98%,,  ,  ,  
+D0360,,,,,,,,,Radiology,Procedure,,,,0.00%,,99.98%,,193,  ,  
+D0363,,,,,,,,,Radiology,Procedure,,,,,,99.98%,,  ,  ,  
+D0366,,,,,,,,,Radiology,Procedure,,,,0.00%,,99.98%,0.00%,118,  ,25
+D0368,,,,,,,,,Radiology,Procedure,,,,,,99.98%,,  ,  ,  
+D0370,,,,,,,,,Radiology,Procedure,,,,,,99.98%,,  ,  ,  
+D0381,,,,,,,,,Radiology,Procedure,,,,,,99.98%,,  ,  ,  
+D0382,,,,,,,,,Radiology,Procedure,,,,,,99.98%,,  ,  ,  
+D0391,,,,,,,,,Radiology,Procedure,,,,,,99.98%,0.00%,  ,  ,155
+D0393,,,,,,,,,Radiology,Procedure,,,,,,99.98%,,  ,  ,  
+D0394,,,,,,,,,Radiology,Procedure,,,,,,99.98%,,  ,  ,  
+D2910,,,,,,,,,RECEMENT,Procedure,,,,,,99.98%,,  ,  ,  
+D2915,,,,,,,,,RECEMENT,Procedure,,,,,,99.98%,,  ,  ,  
+D6092,,,,,,,,,RECEMENT,Procedure,,,,,,99.98%,,  ,  ,  
+D6093,,,,,,,,,RECEMENT,Procedure,,,,,,99.98%,,  ,  ,  
+D2643,,,,,,,,,Poly Restorations (FILLINGS),Caries,Simple,,,,,99.98%,,  ,  ,  
+D2644,,,,,,,,,Poly Restorations (FILLINGS),Caries,Simple,,,,,99.98%,,  ,  ,  
+D2650,,,,,,,,,Poly Restorations (FILLINGS),Caries,Simple,,,,,99.98%,,  ,  ,  
+D2652,,,,,,,,,Poly Restorations (FILLINGS),Caries,Simple,,,,,99.98%,,  ,  ,  
+D2662,,,,,,,,,Poly Restorations (FILLINGS),Caries,Simple,,,,,99.98%,,  ,  ,  
+D2664,,,,,,,,,Poly Restorations (FILLINGS),Caries,Simple,,,,,99.98%,,  ,  ,  
+D2410,,,,,,,,,RESIN RESTORATIONS (FILLINGS),Caries,Simple,,,,,99.98%,,  ,  ,  
+D3410,,,,,,,,,SURGICAL ENDODONTICS,Extraction,,,,,,99.98%,,  ,  ,  
+D3421,,,,,,,,,SURGICAL ENDODONTICS,Extraction,,,,,,99.98%,,  ,  ,  
+D3425,,,,,,,,,SURGICAL ENDODONTICS,Extraction,,,,,,99.98%,,  ,  ,  
+D3426,,,,,,,,,SURGICAL ENDODONTICS,Extraction,,,,,,99.98%,,  ,  ,  
+D6010,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6056,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6057,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6058,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6059,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6060,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6065,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6066,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6080,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6100,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6102,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6104,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6110,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6111,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6190,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6199,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6210,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6240,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6241,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6242,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6245,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,0.00%,,99.98%,,60,  ,  
+D6250,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6545,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,0.00%,,99.98%,,14,  ,  
+D6740,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,0.00%,,99.98%,,88,  ,  
+D6750,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6751,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6752,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6783,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6950,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D6980,,,,,,,,,SURGICAL ENDODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D4240,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D4241,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D4260,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,0.00%,,99.98%,,331,  ,  
+D4261,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,0.00%,,99.98%,,28,  ,  
+D4263,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,0.00%,,99.98%,,50,  ,  
+D4264,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D4265,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D4270,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D4271,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D4273,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D4274,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D4230,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D4231,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D4245,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D4249,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D4266,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,0.00%,,99.98%,,52,  ,  
+D4277,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D4278,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D4320,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D7291,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D7292,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D7293,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
+D7294,,,,,,,,,SURGICAL PERIODONTICS,Procedure,,,,,,99.98%,,  ,  ,  
