@@ -27,32 +27,6 @@ aou_tables <- function() {
 
 }
 
-#' Run query
-#'
-#' @param sql
-#'
-#' @return
-#' @export
-#'
-#' @examples
-aou_run_old <-function(sql){
-  billing=Sys.getenv('GOOGLE_PROJECT')
-  cdmDatabaseSchema=Sys.getenv('WORKSPACE_CDR')
-  sql <- SqlRender::render(sql,cdmDatabaseSchema=cdmDatabaseSchema)
-  sql <- SqlRender::translate(sql,targetDialect = 'bigquery')
-  #below has error Warning message in stringr::str_replace_all(sql, "r2020q4r2", "R2020Q4R2"):
-     #Error in stringr::str_replace_all(sql, "r2020q4r2", "R2020Q4R2"): lazy-load database '/usr/local/lib/R/site-library/stringi/R/stringi.rdb' is corrupt
-  #sql=stringr::str_replace_all(sql,'r2020q4r2','R2020Q4R2')
-
-  #using base R instead  
-  sql=gsub("r2020q4r2", "R2020Q4R2", sql)
-
-  #cat(sql)
-  q <- bigrquery::bq_project_query(billing, sql)
-  out<-bigrquery::bq_table_download(q)
-  out
-}
-
 
 #' run sql command
 #'
