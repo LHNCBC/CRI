@@ -40,11 +40,12 @@ aou_run <-function(sql){
   sql <- SqlRender::render(sql,cdmDatabaseSchema=cdmDatabaseSchema)
   sql <- SqlRender::translate(sql,targetDialect = 'bigquery')
   sql=stringr::str_replace_all(sql,'r2020q4r2','R2020Q4R2')
-  cat(sql)
   q <- bigrquery::bq_project_query(billing, sql)
   out<-bigrquery::bq_table_download(q)
   list(query=sql,result=out)
 }
+
+
 
 
 #' Write data into bucket
@@ -121,7 +122,7 @@ aou_tbl_fields<-function(table){
 #'
 #' @return data.frame with data dictionary
 #' @export
-aou_getDd<-function(){
+aou_get_dd<-function(){
   t<-bigrquery::bq_dataset_tables(Sys.getenv('WORKSPACE_CDR'))
   #t[[1]]$table
   #f=bq_table_fields(t[[1]])
@@ -155,17 +156,22 @@ aou_getDd<-function(){
 
 
 
-# Run cohorts
-#load from Atlas
-#Edit query
-# Run SQL
 
-execute_cohort <-function(cohortID){
+
+#' Execute a cohort from server 
+#'
+#' @param cohortId identifier of cohort on atlas server (in URL of the cohort when defining it)
+#' @param baseUrl URL of the Atlas server
+#' @return cohort id and data.frame with cohort data (person, start and end date)
+#' @export
+aou_execute_cohort <-function(cohortId,baseUrl='http://atlas-demo.ohdsi.org:80/WebAPI'){
+  billing=Sys.getenv('GOOGLE_PROJECT')
+  cdmDatabaseSchemaInternal=Sys.getenv('WORKSPACE_CDR')
   #grabs sql from cohort_id
-  baseUrl='http://atlas-demo.ohdsi.org:80/WebAPI'
+  
   version <- ROhdsiWebApi:::getWebApiVersion(baseUrl = baseUrl)
   d=getDefinitionsMetadata(baseUrl,category = 'cohort')
-  aa=getCohortDefinition(cohortID,baseUrl)
+  aa=getCohortDefinition(cohortId,baseUrl)
   sql=getCohortSql(aa,baseUrl)
   
   #cohort edits
@@ -187,31 +193,54 @@ cohort_end_date ", sql2)
   #generate output since no result schema exist
   sql2= paste(sql2, "
 select * from #target_cohort_table")
-  sql2 <- SqlRender::render(sql2,cdmDatabaseSchema=cdmDatabaseSchema)
-  sql2 <- SqlRender::translate(sql2,targetDialect = 'bigquery')
-  sql2=stringr::str_replace_all(sql2,'r2020q4r2','R2020Q4R2')
+  #step ONE-   RENDERING
+  sql3rendered <- SqlRender::render(sql2,cdmDatabaseSchema=cdmDatabaseSchemaInternal,target_cohort_id=cohortId)
+  
+  #switching to not a calling aou_run at all here 
+  #step TWO - translating
+  sql4translated <- SqlRender::translate(sql3rendered,targetDialect = 'bigquery')
+  
   # state temp table
-  sql5= gsub("create table", "CREATE TEMP TABLE", sql2)
+  sql5= gsub("create table", "CREATE TEMP TABLE", sql4translated)
   sql5= gsub("CREATE TABLE", "CREATE TEMP TABLE", sql5)
+  #POSSIBLE PROBLEM HERE  TODOCM
   sql5=gsub("insert into @target_database_schema.@target_cohort_table ","",sql5)
   sql5=gsub("\\(cohort_definition_id, subject_id, cohort_start_date, cohort_end_date)","",sql5)
-  sql5=gsub("cohort_definition_id",cohortID,sql5)
+  #PROBLEM HERE not a good way to inject the id, rely on render  TODOCM
+  sql5=gsub("cohort_definition_id",cohortId,sql5)
   cat(sql5)
   
-  #run sql
-  output=aou_run(sql5)
-  return(output$result)
+  #run sql  (core part of aou_run)
+  sql=stringr::str_replace_all(sql,'r2020q4r2','R2020Q4R2')
+  q <- bigrquery::bq_project_query(billing, sql)
+  out<-bigrquery::bq_table_download(q)
+  
+  #return both the Id and the results
+  return(list(result=output$result,cohortId=cohortId,OhdsiSql=sql,RenderedSql=sql3rendered,TranslatedSql=sql4translated,ExecutedSql=sql5))
 }
 
-# Get the Case Report FOrms for the included data elements
 
-aou_getCaseReportForms <-function(){
-#connect concept_relationship  to concept
-concept<-aou_run("select * from @cdmDatabaseSchema.concept")
-  concept_relationship<-aou_run("select * from @cdmDatabaseSchema.concept_relationship")
-  relationship_7<-left_join(concept_relationship,concept, by=c('concept_id_1'= 'concept_id'))
+
+#' obtain CRF data dictionary as data.frame using vocabulary tables
+#'
+#' @return describe
+#' @export
+
+aou_get_case_report_forms <-function(){
+
+# q means question a means answer t meand topic and m means module
+# connect concept_relationship  to concept
+
+#fetch tables into memory
+concept<-aou_run("select * from @cdmDatabaseSchema.concept")$result 
+concept_relationship<-aou_run("select * from @cdmDatabaseSchema.concept_relationship")$result
+
+#make joins in memory  
+relationship_7<-left_join(concept_relationship,concept, by=c('concept_id_1'= 'concept_id'))
 relationship_71<-left_join(relationship_7,concept, by=c('concept_id_2'= 'concept_id'))
 
+# and of preparation and moving on the main problem of the function (in memory)
+  
 #Find topic/module relationship
 tm= relationship_71 %>% filter(concept_class_id.x=='Topic') %>% filter(relationship_id=='Is a') %>% filter(concept_class_id.y=='Module')
 tm_1= relationship_71 %>% filter(concept_class_id.y=='Topic') %>% filter(relationship_id=='PPI parent code of') %>% filter(concept_class_id.x=='Module')
@@ -229,4 +258,6 @@ aq2= relationship_71 %>% filter(concept_class_id=='Answer') %>% filter(relations
 
 #Combine Answer/Question/Topic/Module
 aqtm2 =left_join(aq2, qtm, by=c('concept_id_2'='concept_id_1'))
+
+#return something TODOCM
 }
