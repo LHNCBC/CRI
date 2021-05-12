@@ -165,59 +165,52 @@ aou_get_dd<-function(){
 #' @return cohort id and data.frame with cohort data (person, start and end date)
 #' @export
 aou_execute_cohort <-function(cohortId,baseUrl='http://atlas-demo.ohdsi.org:80/WebAPI'){
-  billing=Sys.getenv('GOOGLE_PROJECT')
-  cdmDatabaseSchemaInternal=Sys.getenv('WORKSPACE_CDR')
-  #grabs sql from cohort_id
-  
-  version <- ROhdsiWebApi:::getWebApiVersion(baseUrl = baseUrl)
-  d=getDefinitionsMetadata(baseUrl,category = 'cohort')
-  aa=getCohortDefinition(cohortId,baseUrl)
-  sql=getCohortSql(aa,baseUrl)
-  
-  #cohort edits
-  # Declare database schema
-  sql2= gsub("@cdm_database_schema", "@cdmDatabaseSchema", sql)
-  #Remove result schema since not present
-  sql2= gsub("@results_database_schema.", "", sql2)
-  #declare vocabulary schema as same as database schema
-  sql2= gsub("@vocabulary_database_schema", "@cdmDatabaseSchema", sql2)
-  #Remove deletion since table does not already exist
-  sql2=gsub("DELETE FROM @target_database_schema.@target_cohort_table where cohort_definition_id = @target_cohort_id;","",sql2)
-  #create final table with select statment
-  sql2=gsub("select @target_cohort_id as cohort_definition_id, person_id, start_date, end_date", "create temp table #target_cohort_table AS (select cohort_definition_id as target_cohort_id, co.person_id as subject_id, co.start_date as cohort_start_date, co.end_date as 
+billing=Sys.getenv('GOOGLE_PROJECT')
+cdmDatabaseSchemaInternal=Sys.getenv('WORKSPACE_CDR')
+#grabs sql from cohort_id
+
+version <- ROhdsiWebApi:::getWebApiVersion(baseUrl = baseUrl)
+d=getDefinitionsMetadata(baseUrl,category = 'cohort')
+aa=getCohortDefinition(cohortId,baseUrl)
+sql=getCohortSql(aa,baseUrl)
+
+sql2= gsub("@cdm_database_schema", "@cdmDatabaseSchema", sql)
+#Remove result schema since not present
+sql2= gsub("@results_database_schema.", "", sql2)
+#declare vocabulary schema as same as database schema
+sql2= gsub("@vocabulary_database_schema", "@cdmDatabaseSchema", sql2)
+#Remove deletion since table does not already exist
+sql2=gsub("DELETE FROM @target_database_schema.@target_cohort_table where cohort_definition_id = @target_cohort_id;","",sql2)
+#create final table with select statment
+sql2=gsub("select @target_cohort_id as cohort_definition_id, person_id, start_date, end_date", "create temp table #target_cohort_table AS (select cohort_definition_id as target_cohort_id, co.person_id as subject_id, co.start_date as cohort_start_date, co.end_date as 
 cohort_end_date ", sql2) 
-  # Add parentheses at end of table creation
-  sql2=gsub("FROM #final_cohort CO", "FROM #final_cohort CO)", sql2)
-  # Remove irrelevent parts
-  sql2=gsub("delete from cohort_censor_stats where cohort_definition_id = @target_cohort_id;","",sql2)
-  #generate output since no result schema exist
-  sql2= paste(sql2, "
+# Add parentheses at end of table creation
+sql2=gsub("FROM #final_cohort CO", "FROM #final_cohort CO)", sql2)
+# Remove irrelevent parts
+sql2=gsub("delete from cohort_censor_stats where cohort_definition_id = @target_cohort_id;","",sql2)
+#generate output since no result schema exist
+sql2= paste(sql2, "
 select * from #target_cohort_table")
-  #step ONE-   RENDERING
-  sql3rendered <- SqlRender::render(sql2,cdmDatabaseSchema=cdmDatabaseSchemaInternal,target_cohort_id=cohortId)
-  
-  #switching to not a calling aou_run at all here 
-  #step TWO - translating
-  sql4translated <- SqlRender::translate(sql3rendered,targetDialect = 'bigquery')
-  
-  # state temp table
-  sql5= gsub("create table", "CREATE TEMP TABLE", sql4translated)
-  sql5= gsub("CREATE TABLE", "CREATE TEMP TABLE", sql5)
-  #POSSIBLE PROBLEM HERE  TODOCM
-  sql5=gsub("insert into @target_database_schema.@target_cohort_table ","",sql5)
-  sql5=gsub("\\(cohort_definition_id, subject_id, cohort_start_date, cohort_end_date)","",sql5)
-  #PROBLEM HERE not a good way to inject the id, rely on render  TODOCM
-  sql5=gsub("cohort_definition_id",cohortId,sql5)
-  cat(sql5)
-  
-  #run sql  (core part of aou_run)
-  sql=stringr::str_replace_all(sql,'r2020q4r2','R2020Q4R2')
-  q <- bigrquery::bq_project_query(billing, sql)
-  out<-bigrquery::bq_table_download(q)
-  
-  #return both the Id and the results
-  return(list(result=output$result,cohortId=cohortId,OhdsiSql=sql,RenderedSql=sql3rendered,TranslatedSql=sql4translated,ExecutedSql=sql5))
+sql2=gsub("INSERT INTO @target_database_schema.@target_cohort_table ","",sql2)
+sql2=gsub("\\(cohort_definition_id, subject_id, cohort_start_date, cohort_end_date)","",sql2)
+
+
+sql3rendered <- SqlRender::render(sql2,cdmDatabaseSchema=cdmDatabaseSchemaInternal,target_cohort_id=cohortId)
+
+#switching to not a calling aou_run at all here 
+#step TWO - translating
+sql4translated <- SqlRender::translate(sql3rendered,targetDialect = 'bigquery')
+
+
+sql5= gsub("create table", "CREATE TEMP TABLE", sql4translated)
+sql5= gsub("CREATE TABLE", "CREATE TEMP TABLE", sql5)
+sql5=stringr::str_replace_all(sql5,'r2020q4r2','R2020Q4R2')
+q <- bigrquery::bq_project_query(billing, sql5)
+out<-bigrquery::bq_table_download(q)
+output<-list(query=sql5,result=out)
+return(list(result=output$result,cohortId=cohortId,OhdsiSql=sql,RenderedSql=sql3rendered,TranslatedSql=sql4translated,ExecutedSql=sql5))
 }
+
 
 
 
