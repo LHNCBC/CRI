@@ -14,5 +14,10 @@ For OMOP model, see here: [https://ohdsi.github.io/CommonDataModel](https://ohds
 ## Duration
 ETL: June 2021 - December 2022
 
+# Architecture
+- combine tables (by year or by month) into large views  ('feeder tables')
+- create tables DDL (prefix z_ is for similar ETL for Medicare data (only in super experimental mode)
+- actual transformations  suffix x represents OMOP tables that have unorthodox columns
+
 # References
 * [Full AMIA conference paper published by us](https://www.researchgate.net/publication/346632577_Data_Characterization_of_Medicaid_Legacy_and_New_Data_Formats_in_the_CMS_Virtual_Research_Data_Center) in 2021
