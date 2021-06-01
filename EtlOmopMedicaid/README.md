@@ -4,7 +4,9 @@ Landing page link: [https://lhncbc.github.io/CRI/EtlOmopMedicaid](https://lhncbc
 Full repository link: [https://github.com/lhncbc/CRI/tree/master/EtlOmopMedicaid](https://github.com/lhncbc/CRI/tree/master/EtlOmopMedicaid)  
 
 # Introduction
-Common Data Models (CDMs) allow portability of analysis. In order to execute analyses that assume the OMOP representation of data, we convert Medicaid data into OMOP model.
+Common Data Models (CDMs) allow portability of analysis. Conversion of data into a CDM also allows application of existing software tools. For example [https://ohdsi.github.io/Hades](https://ohdsi.github.io/Hades). In order to execute analyses that assume the OMOP representation of data, we convert Medicaid data into the OMOP model.
+
+## More context information about CMS Virtual Research Data Center (VRDC)
 
 The data dictionary of the TMSIS Analytic Files (TAF) data format is availabe at [https://www2.ccwdata.org/web/guest/data-dictionaries](https://www2.ccwdata.org/web/guest/data-dictionaries) (scroll down to section Medicaid).  
  - E.g., TAF Claims columns: [here](https://www2.ccwdata.org/documents/10280/19022436/record-layout-taf-claims.xlsx)  Values explanation:[here](https://www2.ccwdata.org/documents/10280/19022436/codebook-taf-claims.pdf)
@@ -20,4 +22,4 @@ ETL: June 2021 - December 2022
 - actual transformations  suffix x represents OMOP tables that have unorthodox columns
 
 # References
-* [Full AMIA conference paper published by us](https://www.researchgate.net/publication/346632577_Data_Characterization_of_Medicaid_Legacy_and_New_Data_Formats_in_the_CMS_Virtual_Research_Data_Center) in 2021
+* [Full AMIA conference paper published by us](https://www.researchgate.net/publication/346632577_Data_Characterization_of_Medicaid_Legacy_and_New_Data_Formats_in_the_CMS_Virtual_Research_Data_Center) in 2021. This paper describes in detail two formats of Medicaid data (current TMSIS/TAF format and legacy MSIS/MAX format). 
