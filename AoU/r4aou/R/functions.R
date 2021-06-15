@@ -167,6 +167,7 @@ aou_get_dd<-function(){
 aou_execute_cohort <-function(cohortId,baseUrl='http://atlas-demo.ohdsi.org:80/WebAPI'){
 billing=Sys.getenv('GOOGLE_PROJECT')
 cdmDatabaseSchemaInternal=Sys.getenv('WORKSPACE_CDR')
+
 #grabs sql from cohort_id
 
 version <- ROhdsiWebApi:::getWebApiVersion(baseUrl = baseUrl)
@@ -174,27 +175,42 @@ d=getDefinitionsMetadata(baseUrl,category = 'cohort')
 aa=getCohortDefinition(cohortId,baseUrl)
 sql=getCohortSql(aa,baseUrl)
 
-sql2= gsub("@cdm_database_schema", "@cdmDatabaseSchema", sql)
-#Remove result schema since not present
-sql2= gsub("@results_database_schema.", "", sql2)
-#declare vocabulary schema as same as database schema
-sql2= gsub("@vocabulary_database_schema", "@cdmDatabaseSchema", sql2)
-#Remove deletion since table does not already exist
-sql2=gsub("DELETE FROM @target_database_schema.@target_cohort_table where cohort_definition_id = @target_cohort_id;","",sql2)
-#create final table with select statment
-sql2=gsub("select @target_cohort_id as cohort_definition_id, person_id, start_date, end_date", "create temp table #target_cohort_table AS (select cohort_definition_id as target_cohort_id, co.person_id as subject_id, co.start_date as cohort_start_date, co.end_date as 
-cohort_end_date ", sql2) 
-# Add parentheses at end of table creation
-sql2=gsub("FROM #final_cohort CO", "FROM #final_cohort CO)", sql2)
-# Remove irrelevent parts
-sql2=gsub("delete from cohort_censor_stats where cohort_definition_id = @target_cohort_id;","",sql2)
-#generate output since no result schema exist
-sql2= paste(sql2, "
-select * from #target_cohort_table")
-sql2=gsub("INSERT INTO @target_database_schema.@target_cohort_table ","",sql2)
-sql2=gsub("\\(cohort_definition_id, subject_id, cohort_start_date, cohort_end_date)","",sql2)
+#prep the temp table (compensate for lack of result schema here    - ^ step
+  #cohort sensor table, target_cohort_table (always call 
+  #@target_database_schema
+  #@target_cohort_table  
+  
+#create pseudoresult table targetCohortTable  
+TargetCohortTable  = cohortId
+  
+#modify slighly the SQL  
+        sql2= gsub("@cdm_database_schema", "@cdmDatabaseSchema", sql)
+        #Remove result schema since not present
+        sql2= gsub("@results_database_schema.", "", sql2)
+        #declare vocabulary schema as same as database schema
+        sql2= gsub("@vocabulary_database_schema", "@cdmDatabaseSchema", sql2)
+
+        #Remove deletion since table does not already exist   (vh: maybe leave it there and use ^ step)
+        sql2=gsub("DELETE FROM @target_database_schema.@target_cohort_table where cohort_definition_id = @target_cohort_id;","",sql2)
 
 
+        #create final table with select statment
+        sql2=gsub("select @target_cohort_id as cohort_definition_id, person_id, start_date, end_date", "create temp table #target_cohort_table AS (select cohort_definition_id as target_cohort_id, co.person_id as subject_id, co.start_date as cohort_start_date, co.end_date as 
+        cohort_end_date ", sql2) 
+        # Add parentheses at end of table creation
+        sql2=gsub("FROM #final_cohort CO", "FROM #final_cohort CO)", sql2)
+        # Remove irrelevent parts
+        sql2=gsub("delete from cohort_censor_stats where cohort_definition_id = @target_cohort_id;","",sql2)
+        #generate output since no result schema exist
+        sql2= paste(sql2, "--aou modification
+        select * from #target_cohort_table;")
+
+        #if carrot step, mabye also dont make this modification at all  
+        sql2=gsub("INSERT INTO @target_database_schema.@target_cohort_table ","",sql2)
+        sql2=gsub("\\(cohort_definition_id, subject_id, cohort_start_date, cohort_end_date)","",sql2)
+
+
+#let's VH: provide all the expected parameters here
 sql3rendered <- SqlRender::render(sql2,cdmDatabaseSchema=cdmDatabaseSchemaInternal,target_cohort_id=cohortId)
 
 #switching to not a calling aou_run at all here 
