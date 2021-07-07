@@ -186,41 +186,34 @@ TargetCohortTable  = cohortId
 #modify slighly the SQL  
         sql2= gsub("@cdm_database_schema", "@cdmDatabaseSchema", sql)
         #Remove result schema since not present
-        sql2= gsub("@results_database_schema.", "", sql2)
-        #declare vocabulary schema as same as database schema
-        sql2= gsub("@vocabulary_database_schema", "@cdmDatabaseSchema", sql2)
+        sql2= gsub("@results_database_schema.", "", sql)
+#declare vocabulary schema as same as database schema
+sql2= gsub("@vocabulary_database_schema", "@cdm_database_schema", sql2)
+sql2= gsub("@target_database_schema.", "", sql2)
+sql2=gsub("delete from cohort_censor_stats where cohort_definition_id = @target_cohort_id;","",sql2)
+sql2=gsub("cohort_definition_id","@cohort_definition_id",sql2)
 
-        #Remove deletion since table does not already exist   (vh: maybe leave it there and use ^ step)
-        sql2=gsub("DELETE FROM @target_database_schema.@target_cohort_table where cohort_definition_id = @target_cohort_id;","",sql2)
-
-
-        #create final table with select statment
-        sql2=gsub("select @target_cohort_id as cohort_definition_id, person_id, start_date, end_date", "create temp table #target_cohort_table AS (select cohort_definition_id as target_cohort_id, co.person_id as subject_id, co.start_date as cohort_start_date, co.end_date as 
-        cohort_end_date ", sql2) 
-        # Add parentheses at end of table creation
-        sql2=gsub("FROM #final_cohort CO", "FROM #final_cohort CO)", sql2)
-        # Remove irrelevent parts
-        sql2=gsub("delete from cohort_censor_stats where cohort_definition_id = @target_cohort_id;","",sql2)
-        #generate output since no result schema exist
-        sql2= paste(sql2, "--aou modification
+# Add parentheses at end of table creation
+#generate output since no result schema exist
+sql2= paste(sql2, "
         select * from #target_cohort_table;")
+#create final table with select statment
+  sql2=paste("CREATE temp TABLE #target_cohort_table (
+  cohort_definition_id INT64 not null, subject_id INT64 not null, cohort_start_date DATE, cohort_end_date DATE)
+;", sql2)
 
-        #if carrot step, mabye also dont make this modification at all  
-        sql2=gsub("INSERT INTO @target_database_schema.@target_cohort_table ","",sql2)
-        sql2=gsub("\\(cohort_definition_id, subject_id, cohort_start_date, cohort_end_date)","",sql2)
-
-
-#let's VH: provide all the expected parameters here
-sql3rendered <- SqlRender::render(sql2,cdmDatabaseSchema=cdmDatabaseSchemaInternal,target_cohort_id=cohortId)
+sql3rendered <- SqlRender::render(sql2,cdm_database_schema=cdmDatabaseSchema,cohort_definition_id=cohortId, target_cohort_table= '#target_cohort_table')
 
 #switching to not a calling aou_run at all here 
 #step TWO - translating
 sql4translated <- SqlRender::translate(sql3rendered,targetDialect = 'bigquery')
 
-
 sql5= gsub("create table", "CREATE TEMP TABLE", sql4translated)
 sql5= gsub("CREATE TABLE", "CREATE TEMP TABLE", sql5)
+sql5=gsub("and e.end_date >= c.start_date","",sql5)
+
 sql5=stringr::str_replace_all(sql5,'r2020q4r3','R2020Q4R3')
+#run and export results
 q <- bigrquery::bq_project_query(billing, sql5)
 out<-bigrquery::bq_table_download(q)
 output<-list(query=sql5,result=out)
