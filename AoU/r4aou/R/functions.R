@@ -202,7 +202,7 @@ sql2= paste(sql2, "
   cohort_definition_id INT64 not null, subject_id INT64 not null, cohort_start_date DATE, cohort_end_date DATE)
 ;", sql2)
 
-sql3rendered <- SqlRender::render(sql2,cdm_database_schema=cdmDatabaseSchema,cohort_definition_id=cohortId, target_cohort_table= '#target_cohort_table')
+sql3rendered <- SqlRender::render(sql2,cdm_database_schema=cdmDatabaseSchema,target_cohort_id=cohortId, target_cohort_table= '#target_cohort_table')
 
 #switching to not a calling aou_run at all here 
 #step TWO - translating
@@ -210,7 +210,7 @@ sql4translated <- SqlRender::translate(sql3rendered,targetDialect = 'bigquery')
 
 sql5= gsub("create table", "CREATE TEMP TABLE", sql4translated)
 sql5= gsub("CREATE TABLE", "CREATE TEMP TABLE", sql5)
-sql5=gsub("and e.end_date >= c.start_date","",sql5)
+sql5=gsub("and e.end_date >= i.start_date","",sql5)
 
 sql5=stringr::str_replace_all(sql5,'r2020q4r3','R2020Q4R3')
 #run and export results
