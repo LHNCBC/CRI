@@ -192,7 +192,8 @@ sql2= gsub("@vocabulary_database_schema", "@cdm_database_schema", sql2)
 sql2= gsub("@target_database_schema.", "", sql2)
 sql2=gsub("delete from cohort_censor_stats where cohort_definition_id = @target_cohort_id;","",sql2)
 sql2=gsub("cohort_definition_id","@cohort_definition_id",sql2)
-
+sql2=gsub("@cdm_database_schema.observation_period","#observation_period2",sql2)
+  
 # Add parentheses at end of table creation
 #generate output since no result schema exist
 sql2= paste(sql2, "
@@ -201,6 +202,13 @@ sql2= paste(sql2, "
   sql2=paste("CREATE temp TABLE #target_cohort_table (
   cohort_definition_id INT64 not null, subject_id INT64 not null, cohort_start_date DATE, cohort_end_date DATE)
 ;", sql2)
+  
+  sql2= paste( "
+CREATE temp TABLE #observation_period2 as (select
+  person_id, cast('1900-01-01' as DATE) as observation_period_start_date , cast('2100-01-01' as DATE) as observation_period_end_date
+from @cdm_database_schema.person);
+",sql2)
+  
 
 sql3rendered <- SqlRender::render(sql2,cdm_database_schema=cdmDatabaseSchema,target_cohort_id=cohortId, target_cohort_table= '#target_cohort_table')
 
