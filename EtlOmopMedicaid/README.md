@@ -13,8 +13,11 @@ The data dictionary of the TMSIS Analytic Files (TAF) data format is availabe at
 
 For OMOP model, see here: [https://ohdsi.github.io/CommonDataModel](https://ohdsi.github.io/CommonDataModel)
 
+# Project
+This work is part of this HHS ASPE project: https://aspe.hhs.gov/making-medicaid-data-more-accessible-through-common-data-models-fhir-apis 
+
 ## Duration
-ETL: June 2021 - December 2022
+ETL: Aug 2021 - Aug 2022
 
 # Architecture
 - combine tables (by year or by month) into large views  ('feeder tables')
