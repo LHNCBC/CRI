@@ -1,11 +1,16 @@
 -- Databricks notebook source
-create widget text job default "1s1m";
+insert into dua_052538_nwi388.log values('$job_id','DDL','0','start DDL',current_timestamp(),null);
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.PERSON_$job;
-create table dua_052538_nwi388.PERSON_$job (
-  person_id bigint,
+create widget text job_id default "101";
+
+-- COMMAND ----------
+
+
+drop table if exists dua_052538_nwi388.PERSON;
+create table dua_052538_nwi388.PERSON (
+  person_id string,
   gender_concept_id bigint,
   year_of_birth bigint,
   month_of_birth bigint,
@@ -27,14 +32,22 @@ create table dua_052538_nwi388.PERSON_$job (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.OBSERVATION_PERIOD_$job;
-create table dua_052538_nwi388.OBSERVATION_PERIOD_$job (
+insert into dua_052538_nwi388.log values('$job_id','DDL','1','create ddl person',current_timestamp(),null);
+
+-- COMMAND ----------
+
+drop table if exists dua_052538_nwi388.OBSERVATION_PERIOD;
+create table dua_052538_nwi388.OBSERVATION_PERIOD (
   observation_period_id bigint,
-  person_id bigint,
+  person_id string,
   observation_period_start_date date,
   observation_period_end_date date,
   period_type_concept_id bigint
 );
+
+-- COMMAND ----------
+
+insert into dua_052538_nwi388.log values('$job_id','DDL','2','create ddl observation_period',current_timestamp(),null);
 
 -- COMMAND ----------
 
@@ -44,8 +57,8 @@ create table dua_052538_nwi388.OBSERVATION_PERIOD_$job (
 -- Cannot safely cast 'gender_concept_id': string to bigint
 -- Cannot safely cast 'specialty_source_concept_id': string to bigint
 -- Cannot safely cast 'gender_source_concept_id': string to bigint;
-drop table if exists dua_052538_nwi388.provider_$job;
-create table dua_052538_nwi388.PROVIDER_$job 
+drop table if exists dua_052538_nwi388.provider;
+create table dua_052538_nwi388.PROVIDER 
 (
   npi string,
   provider_id bigint,
@@ -64,11 +77,15 @@ create table dua_052538_nwi388.PROVIDER_$job
 
 -- COMMAND ----------
 
+insert into dua_052538_nwi388.log values('$job_id','DDL','3','create ddl provider',current_timestamp(), null);
+
+-- COMMAND ----------
+
 --Cannot safely cast 'admitting_source_concept_id': string to bigint;
-drop table if exists dua_052538_nwi388.VISIT_OCCURRENCE_$job;
-create table dua_052538_nwi388.VISIT_OCCURRENCE_$job (
-  visit_occurrence_id bigint,
-  person_id bigint,
+drop table if exists dua_052538_nwi388.VISIT_OCCURRENCE;
+create table dua_052538_nwi388.VISIT_OCCURRENCE (
+  visit_occurrence_id string,
+  person_id string,
   visit_concept_id bigint,
   visit_start_date date,
   visit_start_datetime string,
@@ -83,15 +100,19 @@ create table dua_052538_nwi388.VISIT_OCCURRENCE_$job (
   admitting_source_value string,
   discharge_to_concept_id bigint,
   discharge_to_source_value string,
-  preceding_visit_occurrence_id bigint
+  preceding_visit_occurrence_id string
 );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.VISIT_DETAIL_$job;
-create table dua_052538_nwi388.VISIT_DETAIL_$job (
-  visit_detail_id bigint,
-  person_id bigint,
+insert into dua_052538_nwi388.log values('$job_id','DDL','4','create ddl visit_occurrence',current_timestamp(), null);
+
+-- COMMAND ----------
+
+drop table if exists dua_052538_nwi388.VISIT_DETAIL;
+create table dua_052538_nwi388.VISIT_DETAIL (
+  visit_detail_id string,
+  person_id string,
   visit_detail_concept_id bigint,
   visit_detail_start_date date,
   visit_detail_start_datetime string,
@@ -101,68 +122,80 @@ create table dua_052538_nwi388.VISIT_DETAIL_$job (
   provider_id bigint,
   care_site_id bigint,
   visit_detail_source_value string,
-  visit_detail_source_concept_id bigint,
+  visit_detail_source_concept_id string,
   admitting_source_value string,
-  admitting_source_concept_id bigint,
+  admitting_source_concept_id string,
   discharge_to_source_value string,
-  discharge_to_concept_id bigint,
-  preceding_visit_detail_id bigint,
-  visit_detail_parent_id bigint,
-  visit_occurrence_id bigint
+  discharge_to_concept_id string,
+  preceding_visit_detail_id string,
+  visit_detail_parent_id string,
+  visit_occurrence_id string
 );
 
 -- COMMAND ----------
 
+insert into dua_052538_nwi388.log values('$job_id','DDL','5','create ddl visit_detail',current_timestamp(), null);
+
+-- COMMAND ----------
+
 -- Cannot safely cast 'provider_id': string to bigint;
-drop table if exists dua_052538_nwi388.PROCEDURE_OCCURRENCE_$job;
-create table dua_052538_nwi388.PROCEDURE_OCCURRENCE_$job (
+drop table if exists dua_052538_nwi388.PROCEDURE_OCCURRENCE;
+create table dua_052538_nwi388.PROCEDURE_OCCURRENCE (
   procedure_occurrence_id bigint,
-  person_id bigint,
-  procedure_concept_id bigint,
+  person_id string,
+  procedure_concept_id string,
   procedure_date date,
   procedure_datetime string,
-  procedure_type_concept_id bigint,
+  procedure_type_concept_id string,
   modifier_concept_id string,
   quantity bigint,
   provider_id string,
-  visit_occurrence_id bigint,
-  visit_detail_id bigint,
+  visit_occurrence_id string,
+  visit_detail_id string,
   procedure_source_value string,
-  procedure_source_concept_id bigint,
+  procedure_source_concept_id string,
   modifier_source_value string
 );
 
 -- COMMAND ----------
 
+insert into dua_052538_nwi388.log values('$job_id','DDL','6','create ddl procedure_occurrence',current_timestamp(), null);
+
+-- COMMAND ----------
+
 -- Cannot safely cast 'provider_id': string to bigint;
-drop table if exists dua_052538_nwi388.CONDITION_OCCURRENCE_$job;
-create table dua_052538_nwi388.CONDITION_OCCURRENCE_$job (
+drop table if exists dua_052538_nwi388.CONDITION_OCCURRENCE;
+create table dua_052538_nwi388.CONDITION_OCCURRENCE (
   condition_occurrence_id bigint,
-  person_id bigint,
+  person_id string,
   condition_concept_id bigint,
   condition_start_date date,
   condition_start_datetime string,
   condition_end_date date,
   condition_end_datetime string,
-  condition_type_concept_id bigint,
-  condition_status_concept_id bigint,
+  condition_type_concept_id string,
+  condition_status_concept_id string,
   stop_reason string,
   provider_id string,
-  visit_occurrence_id bigint,
-  visit_detail_id bigint,
+  visit_occurrence_id string,
+  visit_detail_id string,
   condition_source_value string,
-  condition_source_concept_id bigint,
+  condition_source_concept_id string,
   condition_status_source_value string
 );
 
 -- COMMAND ----------
 
+insert into dua_052538_nwi388.log values('$job_id','DDL','7','create ddl condition_occurrence',current_timestamp(), null);
+
+-- COMMAND ----------
+
 -- Cannot safely cast 'refills': string to bigint
 -- Cannot safely cast 'provider_id': string to bigint;
-drop table if exists dua_052538_nwi388.DRUG_EXPOSURE_$job;
-create table dua_052538_nwi388.DRUG_EXPOSURE_$job (
+drop table if exists dua_052538_nwi388.DRUG_EXPOSURE;
+create table dua_052538_nwi388.DRUG_EXPOSURE (
   drug_exposure_id bigint,
-  person_id bigint,
+  person_id string,
   drug_concept_id bigint,
   drug_exposure_start_date date,
   drug_exposure_start_datetime string,
@@ -173,12 +206,12 @@ create table dua_052538_nwi388.DRUG_EXPOSURE_$job (
   stop_reason string,
   refills string,
   quantity string,
-  days_supply int,
+  days_supply string,
   sig string,
   route_concept_id bigint,
   lot_number string,
   provider_id string,
-  visit_occurrence_id bigint,
+  visit_occurrence_id string,
   visit_detail_id bigint,
   drug_source_value string,
   drug_source_concept_id bigint,
@@ -188,10 +221,14 @@ create table dua_052538_nwi388.DRUG_EXPOSURE_$job (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.DEVICE_EXPOSURE_$job;
-create table dua_052538_nwi388.DEVICE_EXPOSURE_$job (
+insert into dua_052538_nwi388.log values('$job_id','DDL','8','create ddl drug_exposure',current_timestamp(), null);
+
+-- COMMAND ----------
+
+drop table if exists dua_052538_nwi388.DEVICE_EXPOSURE;
+create table dua_052538_nwi388.DEVICE_EXPOSURE (
   device_exposure_id bigint,
-  person_id bigint,
+  person_id string,
   device_concept_id bigint,
   device_exposure_start_date date,
   device_exposure_start_datetime string,
@@ -201,7 +238,7 @@ create table dua_052538_nwi388.DEVICE_EXPOSURE_$job (
   unique_device_id string,
   quantity bigint,
   provider_id bigint,
-  visit_occurrence_id bigint,
+  visit_occurrence_id string,
   visit_detail_id bigint,
   device_source_value string,
   device_source_concept_id bigint
@@ -209,11 +246,16 @@ create table dua_052538_nwi388.DEVICE_EXPOSURE_$job (
 
 -- COMMAND ----------
 
+insert into dua_052538_nwi388.log values('$job_id','DDL','9','create ddl device_exposure',current_timestamp(), null);
+
+-- COMMAND ----------
+
 --- Cannot safely cast 'provider_id': string to bigint;
-drop table if exists dua_052538_nwi388.MEASUREMENT_$job;
-create table dua_052538_nwi388.MEASUREMENT_$job (
+
+drop table if exists dua_052538_nwi388.MEASUREMENT;
+create table dua_052538_nwi388.MEASUREMENT (
   measurement_id bigint,
-  person_id bigint,
+  person_id string,
   measurement_concept_id bigint,
   measurement_date date,
   measurement_datetime string,
@@ -226,7 +268,7 @@ create table dua_052538_nwi388.MEASUREMENT_$job (
   range_low string,
   range_high string,
   provider_id string,
-  visit_occurrence_id bigint,
+  visit_occurrence_id string,
   visit_detail_id bigint,
   measurement_source_value string,
   measurement_source_concept_id bigint,
@@ -236,11 +278,18 @@ create table dua_052538_nwi388.MEASUREMENT_$job (
 
 -- COMMAND ----------
 
+insert into dua_052538_nwi388.log values('$job_id','DDL','10','create ddl measurement',current_timestamp(), null);
+
+-- COMMAND ----------
+
 -- Cannot safely cast 'provider_id': string to bigint;
-drop table if exists dua_052538_nwi388.OBSERVATION_$job;
-create table dua_052538_nwi388.OBSERVATION_$job (
+
+
+
+drop table if exists dua_052538_nwi388.OBSERVATION;
+create table dua_052538_nwi388.OBSERVATION(
   observation_id bigint,
-  person_id bigint,
+  person_id string,
   observation_concept_id bigint,
   observation_date date,
   observation_datetime string,
@@ -251,7 +300,7 @@ create table dua_052538_nwi388.OBSERVATION_$job (
   qualifier_concept_id bigint,
   unit_concept_id bigint,
   provider_id string,
-  visit_occurrence_id bigint,
+  visit_occurrence_id string,
   visit_detail_id bigint,
   observation_source_value string,
   observation_source_concept_id bigint,
@@ -261,23 +310,32 @@ create table dua_052538_nwi388.OBSERVATION_$job (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.death_$job;
-create table dua_052538_nwi388.DEATH_$job (
-  person_id bigint,
+insert into dua_052538_nwi388.log values('$job_id','DDL','11','create ddl observation',current_timestamp(), null);
+
+-- COMMAND ----------
+
+drop table if exists
+dua_052538_nwi388.route_death;
+create table  
+dua_052538_nwi388.route_death 
+( person_id bigint,
   death_date date,
   death_datetime string,
   death_type_concept_id bigint,
   cause_concept_id bigint,
   cause_source_value string,
-  cause_source_concept_id bigint
-);
+  cause_source_concept_id bigint);
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.note_$job;
-create table dua_052538_nwi388.NOTE_$job (
+insert into dua_052538_nwi388.log values('$job_id','DDL','12','create ddl death',current_timestamp(), null);
+
+-- COMMAND ----------
+
+drop table if exists dua_052538_nwi388.note;
+create table dua_052538_nwi388.NOTE (
   note_id bigint,
-  person_id bigint,
+  person_id string,
   note_date date,
   note_datetime string,
   note_type_concept_id bigint,
@@ -287,15 +345,19 @@ create table dua_052538_nwi388.NOTE_$job (
   encoding_concept_id bigint,
   language_concept_id bigint,
   provider_id bigint,
-  visit_occurrence_id bigint,
-  visit_detail_id bigint,
+  visit_occurrence_id string,
+  visit_detail_id string,
   note_source_value string
 );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.NOTE_NLP_$job;
-create table dua_052538_nwi388.NOTE_NLP_$job (
+insert into dua_052538_nwi388.log values('$job_id','DDL','13','create ddl note',current_timestamp(), null);
+
+-- COMMAND ----------
+
+drop table if exists dua_052538_nwi388.NOTE_NLP;
+create table dua_052538_nwi388.NOTE_NLP (
   note_nlp_id bigint,
   note_id bigint,
   section_concept_id bigint,
@@ -314,10 +376,14 @@ create table dua_052538_nwi388.NOTE_NLP_$job (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.SPECIMEN_$job;
-create table dua_052538_nwi388.SPECIMEN_$job (
+insert into dua_052538_nwi388.log values('$job_id','DDL','14','create ddl note_nlp',current_timestamp(), null);
+
+-- COMMAND ----------
+
+drop table if exists dua_052538_nwi388.SPECIMEN;
+create table dua_052538_nwi388.SPECIMEN (
   specimen_id bigint,
-  person_id bigint,
+  person_id string,
   specimen_concept_id bigint,
   specimen_type_concept_id bigint,
   specimen_date date,
@@ -335,19 +401,12 @@ create table dua_052538_nwi388.SPECIMEN_$job (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.FACT_RELATIONSHIP_$job;
-create table dua_052538_nwi388.FACT_RELATIONSHIP_$job (
-  domain_concept_id_1 bigint,
-  fact_id_1 bigint,
-  domain_concept_id_2 bigint,
-  fact_id_2 bigint,
-  relationship_concept_id bigint
-);
+insert into dua_052538_nwi388.log values('$job_id','DDL','15','create ddl specimen',current_timestamp(), null);
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.LOCATION_$job;
-create table dua_052538_nwi388.LOCATION_$job (
+drop table if exists dua_052538_nwi388.LOCATION;
+create table dua_052538_nwi388.LOCATION (
   location_id bigint,
   address_1 string,
   address_2 string,
@@ -360,8 +419,12 @@ create table dua_052538_nwi388.LOCATION_$job (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.care_site_$job;
-create table dua_052538_nwi388.CARE_SITE_$job (
+insert into dua_052538_nwi388.log values('$job_id','DDL','16','create ddl location',current_timestamp(), null);
+
+-- COMMAND ----------
+
+drop table if exists dua_052538_nwi388.care_site;
+create table dua_052538_nwi388.CARE_SITE (
   care_site_id bigint,
   care_site_name string,
   place_of_service_concept_id bigint,
@@ -372,10 +435,14 @@ create table dua_052538_nwi388.CARE_SITE_$job (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.payer_plan_period_$job;
-create table dua_052538_nwi388.PAYER_PLAN_PERIOD_$job (
+insert into dua_052538_nwi388.log values('$job_id','DDL','17','create ddl care_site',current_timestamp(), null);
+
+-- COMMAND ----------
+
+drop table if exists dua_052538_nwi388.payer_plan_period;
+create table dua_052538_nwi388.PAYER_PLAN_PERIOD (
   payer_plan_period_id bigint,
-  person_id bigint,
+  person_id string,
   payer_plan_period_start_date date,
   payer_plan_period_end_date date,
   payer_concept_id bigint,
@@ -395,8 +462,12 @@ create table dua_052538_nwi388.PAYER_PLAN_PERIOD_$job (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.cost_$job;
-create table dua_052538_nwi388.COST_$job (
+insert into dua_052538_nwi388.log values('$job_id','DDL','18','create ddl payer_plan_period',current_timestamp(), null);
+
+-- COMMAND ----------
+
+drop table if exists dua_052538_nwi388.cost;
+create table dua_052538_nwi388.COST (
   cost_id bigint,
   cost_event_id bigint,
   cost_domain_id string,
@@ -423,10 +494,14 @@ create table dua_052538_nwi388.COST_$job (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.drug_era_$job;
-create table dua_052538_nwi388.DRUG_ERA_$job (
+insert into dua_052538_nwi388.log values('$job_id','DDL','19','create ddl cost',current_timestamp(), null);
+
+-- COMMAND ----------
+
+drop table if exists dua_052538_nwi388.drug_era;
+create table dua_052538_nwi388.DRUG_ERA (
   drug_era_id bigint,
-  person_id bigint,
+  person_id string,
   drug_concept_id bigint,
   drug_era_start_date string,
   drug_era_end_date string,
@@ -436,10 +511,14 @@ create table dua_052538_nwi388.DRUG_ERA_$job (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.dose_era_$job;
-create table dua_052538_nwi388.DOSE_ERA_$job (
+insert into dua_052538_nwi388.log values('$job_id','DDL','20','create ddl drug_era',current_timestamp(), null);
+
+-- COMMAND ----------
+
+drop table if exists dua_052538_nwi388.dose_era;
+create table dua_052538_nwi388.DOSE_ERA (
   dose_era_id bigint,
-  person_id bigint,
+  person_id string,
   drug_concept_id bigint,
   unit_concept_id bigint,
   dose_value string,
@@ -449,186 +528,42 @@ create table dua_052538_nwi388.DOSE_ERA_$job (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.CONDITION_ERA_$job;
-create table dua_052538_nwi388.CONDITION_ERA_$job (
+insert into dua_052538_nwi388.log values('$job_id','DDL','21','create ddl dose_era',current_timestamp(), null);
+
+-- COMMAND ----------
+
+drop table if exists dua_052538_nwi388.condition_era;
+create table dua_052538_nwi388.condition_era(
   condition_era_id bigint,
-  person_id bigint,
+  person_id string,
   condition_concept_id bigint,
-  condition_era_start_date string,
-  condition_era_end_date string,
+  condition_era_start_date date,
+  condition_era_end_date date,
   condition_occurrence_count bigint
 );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.METADATA;
-create table dua_052538_nwi388.METADATA (
-  metadata_concept_id bigint,
-  metadata_type_concept_id bigint,
-  name string,
-  value_as_string string,
-  value_as_concept_id bigint,
-  metadata_date date,
-  metadata_datetime string
+insert into dua_052538_nwi388.log values('$job_id','DDL','22','create ddl conditon_era',current_timestamp(), null);
+
+-- COMMAND ----------
+
+drop table if exists dua_052538_nwi388.FACT_RELATIONSHIP;
+create table dua_052538_nwi388.FACT_RELATIONSHIP (
+  domain_concept_id_1 string,
+  fact_id_1  string,
+  domain_concept_id_2 string,
+  fact_id_2  string,
+  domain_concept_id_3 string,
+  fact_id_3  string,
+  relationship_concept_id string
+  
 );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.CDM_SOURCE;
-create table dua_052538_nwi388.CDM_SOURCE (
-  cdm_source_name string,
-  cdm_source_abbreviation string,
-  cdm_holder string,
-  source_description string,
-  source_documentation_reference string,
-  cdm_etl_reference string,
-  source_release_date date,
-  cdm_release_date date,
-  cdm_version string,
-  vocabulary_version string
-);
+insert into dua_052538_nwi388.log values('$job_id','DDL','23','create ddl fact_relationship',current_timestamp(),null);
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.CONCEPT;
-create table dua_052538_nwi388.CONCEPT (
-  concept_id bigint,
-  concept_name string,
-  domain_id string,
-  vocabulary_id string,
-  concept_class_id string,
-  standard_concept string,
-  concept_code string,
-  valid_start_date date,
-  valid_end_date date,
-  invalid_reason string
-);
-
--- COMMAND ----------
-
-drop table if exists dua_052538_nwi388.VOCABULARY;
-create table dua_052538_nwi388.VOCABULARY (
-  vocabulary_id string,
-  vocabulary_name string,
-  vocabulary_reference string,
-  vocabulary_version string,
-  vocabulary_concept_id bigint
-);
-
--- COMMAND ----------
-
-drop table if exists dua_052538_nwi388.DOMAIN;
-create table dua_052538_nwi388.DOMAIN (
-  domain_id string,
-  domain_name string,
-  domain_concept_id bigint
-);
-
--- COMMAND ----------
-
-drop table if exists dua_052538_nwi388.CONCEPT_CLASS;
-create table dua_052538_nwi388.CONCEPT_CLASS (
-  concept_class_id string,
-  concept_class_name string,
-  concept_class_concept_id bigint
-);
-
--- COMMAND ----------
-
-drop table if exists dua_052538_nwi388.CONCEPT_RELATIONSHIP;
-create table dua_052538_nwi388.CONCEPT_RELATIONSHIP (
-  concept_id_1 bigint,
-  concept_id_2 bigint,
-  relationship_id string,
-  valid_start_date date,
-  valid_end_date date,
-  invalid_reason string
-);
-
--- COMMAND ----------
-
-drop table if exists dua_052538_nwi388.RELATIONSHIP;
-create table dua_052538_nwi388.RELATIONSHIP (
-  relationship_id string,
-  relationship_name string,
-  is_hierarchical string,
-  defines_ancestry string,
-  reverse_relationship_id string,
-  relationship_concept_id bigint
-);
-
--- COMMAND ----------
-
-drop table if exists dua_052538_nwi388.CONCEPT_SYNONYM;
-create table dua_052538_nwi388.CONCEPT_SYNONYM (
-  concept_id bigint,
-  concept_synonym_name string,
-  language_concept_id bigint
-);
-
--- COMMAND ----------
-
-drop table if exists dua_052538_nwi388.CONCEPT_ANCESTOR;
-create table dua_052538_nwi388.CONCEPT_ANCESTOR (
-  ancestor_concept_id bigint,
-  descendant_concept_id bigint,
-  min_levels_of_separation bigint,
-  max_levels_of_separation bigint
-);
-
--- COMMAND ----------
-
-drop table if exists dua_052538_nwi388.SOURCE_TO_CONCEPT_MAP;
-create table dua_052538_nwi388.SOURCE_TO_CONCEPT_MAP (
-  source_code string,
-  source_concept_id bigint,
-  source_vocabulary_id string,
-  source_code_description string,
-  target_concept_id bigint,
-  target_vocabulary_id string,
-  valid_start_date date,
-  valid_end_date date,
-  invalid_reason string
-);
-
--- COMMAND ----------
-
-drop table if exists dua_052538_nwi388.DRUG_STRENGTH;
-create table dua_052538_nwi388.DRUG_STRENGTH (
-  drug_concept_id bigint,
-  ingredient_concept_id bigint,
-  amount_value string,
-  amount_unit_concept_id bigint,
-  numerator_value string,
-  numerator_unit_concept_id bigint,
-  denominator_value string,
-  denominator_unit_concept_id bigint,
-  box_size bigint,
-  valid_start_date date,
-  valid_end_date date,
-  invalid_reason string
-);
-
--- COMMAND ----------
-
-drop table if exists dua_052538_nwi388.COHORT_DEFINITION;
-create table dua_052538_nwi388.COHORT_DEFINITION (
-  cohort_definition_id bigint,
-  cohort_definition_name string,
-  cohort_definition_description string,
-  definition_type_concept_id bigint,
-  cohort_definition_syntax string,
-  subject_concept_id bigint,
-  cohort_initiation_date date
-);
-
--- COMMAND ----------
-
-drop table if exists dua_052538_nwi388.ATTRIBUTE_DEFINITION;
-create table dua_052538_nwi388.ATTRIBUTE_DEFINITION (
-  attribute_definition_id bigint,
-  attribute_name string,
-  attribute_description string,
-  attribute_type_concept_id bigint,
-  attribute_syntax string
-);
+insert into dua_052538_nwi388.log values('$job_id','DDL','24','end ddl',current_timestamp(), null);
