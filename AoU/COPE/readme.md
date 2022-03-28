@@ -2,7 +2,7 @@
 
 See the appendix file above for additional information.
 
-## File Description
+## File Descriptions
 - Change_after_COVID: COPE survey response changes by participants who had COVID by participant count for each question.
 - before_after_covid_comp: Comparison of COPE survey responses by the cohort of COVID participants before and after COVID for the whole cohort.
 - covid_cohort_response: OVerall COPE survey responses by the cohort of COVID participants.
