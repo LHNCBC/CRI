@@ -13,8 +13,7 @@ select
   bene_id as person_id,
   enrlmt_start_dt as observation_period_start_date,
   enrlmt_end_dt as observation_period_end_date,
-  --hardcode
-  32817 as period_type_concept_id --|EHR no claims concept? 32810?
+  state_cd as period_type_concept_id 
 from
 dua_052538_nwi388.demog_elig_dates;
 

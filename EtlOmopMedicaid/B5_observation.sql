@@ -22,14 +22,13 @@ select
 ROW_NUMBER() OVER(
     ORDER BY
       bene_id
-  ) as obsercation_id,
+  ) as observation_id,
 bene_id as person_id,
 case when 
 concept_id='' then 0
 else concept_id end as observation_concept_id,
 event_start_date as observation_date,
 null as observation_datetime,
---hardcode
 32810 as observation_type_concept_id,--ehr
 null as value_as_number,
 null as value_as_string,

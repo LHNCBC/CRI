@@ -38,11 +38,11 @@ insert into dua_052538_nwi388.log values('$job_id','DDL','1','create ddl person'
 
 drop table if exists dua_052538_nwi388.OBSERVATION_PERIOD;
 create table dua_052538_nwi388.OBSERVATION_PERIOD (
-  observation_period_id bigint,
+  observation_period_id double,
   person_id string,
   observation_period_start_date date,
   observation_period_end_date date,
-  period_type_concept_id bigint
+  period_type_concept_id string
 );
 
 -- COMMAND ----------
@@ -51,12 +51,6 @@ insert into dua_052538_nwi388.log values('$job_id','DDL','2','create ddl observa
 
 -- COMMAND ----------
 
--- Cannot safely cast 'specialty_concept_id': string to bigint
--- Cannot safely cast 'care_site_id': string to bigint
--- Cannot safely cast 'year_of_birth': string to bigint
--- Cannot safely cast 'gender_concept_id': string to bigint
--- Cannot safely cast 'specialty_source_concept_id': string to bigint
--- Cannot safely cast 'gender_source_concept_id': string to bigint;
 drop table if exists dua_052538_nwi388.provider;
 create table dua_052538_nwi388.PROVIDER 
 (
@@ -81,7 +75,6 @@ insert into dua_052538_nwi388.log values('$job_id','DDL','3','create ddl provide
 
 -- COMMAND ----------
 
---Cannot safely cast 'admitting_source_concept_id': string to bigint;
 drop table if exists dua_052538_nwi388.VISIT_OCCURRENCE;
 create table dua_052538_nwi388.VISIT_OCCURRENCE (
   visit_occurrence_id string,
@@ -138,7 +131,6 @@ insert into dua_052538_nwi388.log values('$job_id','DDL','5','create ddl visit_d
 
 -- COMMAND ----------
 
--- Cannot safely cast 'provider_id': string to bigint;
 drop table if exists dua_052538_nwi388.PROCEDURE_OCCURRENCE;
 create table dua_052538_nwi388.PROCEDURE_OCCURRENCE (
   procedure_occurrence_id bigint,
@@ -163,7 +155,6 @@ insert into dua_052538_nwi388.log values('$job_id','DDL','6','create ddl procedu
 
 -- COMMAND ----------
 
--- Cannot safely cast 'provider_id': string to bigint;
 drop table if exists dua_052538_nwi388.CONDITION_OCCURRENCE;
 create table dua_052538_nwi388.CONDITION_OCCURRENCE (
   condition_occurrence_id bigint,
@@ -190,8 +181,6 @@ insert into dua_052538_nwi388.log values('$job_id','DDL','7','create ddl conditi
 
 -- COMMAND ----------
 
--- Cannot safely cast 'refills': string to bigint
--- Cannot safely cast 'provider_id': string to bigint;
 drop table if exists dua_052538_nwi388.DRUG_EXPOSURE;
 create table dua_052538_nwi388.DRUG_EXPOSURE (
   drug_exposure_id bigint,
@@ -250,7 +239,6 @@ insert into dua_052538_nwi388.log values('$job_id','DDL','9','create ddl device_
 
 -- COMMAND ----------
 
---- Cannot safely cast 'provider_id': string to bigint;
 
 drop table if exists dua_052538_nwi388.MEASUREMENT;
 create table dua_052538_nwi388.MEASUREMENT (
@@ -282,10 +270,6 @@ insert into dua_052538_nwi388.log values('$job_id','DDL','10','create ddl measur
 
 -- COMMAND ----------
 
--- Cannot safely cast 'provider_id': string to bigint;
-
-
-
 drop table if exists dua_052538_nwi388.OBSERVATION;
 create table dua_052538_nwi388.OBSERVATION(
   observation_id bigint,
@@ -314,21 +298,17 @@ insert into dua_052538_nwi388.log values('$job_id','DDL','11','create ddl observ
 
 -- COMMAND ----------
 
-drop table if exists
-dua_052538_nwi388.route_death;
-create table  
-dua_052538_nwi388.route_death 
-( person_id bigint,
+
+drop table if exists dua_052538_nwi388.death;
+create table dua_052538_nwi388.DEATH (
+  person_id string,
   death_date date,
   death_datetime string,
   death_type_concept_id bigint,
   cause_concept_id bigint,
   cause_source_value string,
-  cause_source_concept_id bigint);
-
--- COMMAND ----------
-
-insert into dua_052538_nwi388.log values('$job_id','DDL','12','create ddl death',current_timestamp(), null);
+  cause_source_concept_id bigint
+);
 
 -- COMMAND ----------
 
@@ -349,6 +329,10 @@ create table dua_052538_nwi388.NOTE (
   visit_detail_id string,
   note_source_value string
 );
+
+-- COMMAND ----------
+
+
 
 -- COMMAND ----------
 

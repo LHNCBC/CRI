@@ -10,14 +10,11 @@ insert into dua_052538_nwi388.log values('$job_id','condition occurrence','1','s
 
 -- COMMAND ----------
 
---widget
 create widget text job_id default "102";
-
 
 -- COMMAND ----------
 
 drop view if exists lkup_dx;
---consider including icd9cm?
 create view lkup_dx as
 select
   concept_id,
@@ -61,13 +58,13 @@ select
   a.DGNS_CD_1 as event_source_value,
   SRVC_BGN_DT as event_start_date,
   SRVC_END_DT as event_end_date,
-  concat(clm_id, state_cd, 32861) as forign_key,--outpatient claim header
+  concat(clm_id,'_',state_cd,'_',year,'_', 32861) as forign_key,
   BLG_PRVDR_NPI as npi,
-  32861 as condition_type_concept_id,--outpatient claim header
+  32861 as condition_type_concept_id,
   concept_id,
   domain_id 
 from
- dua_052538_nwi388.other_services_header a
+ dua_052538_nwi388.other_services_Header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_1 = c.concept_code
@@ -91,13 +88,13 @@ select
   a.DGNS_CD_2 as event_source_value,
   SRVC_BGN_DT as event_start_date,
   SRVC_END_DT as event_end_date,
-  concat(clm_id, state_cd, 32861) as forign_key,--outpatient claim header
+  concat(clm_id,'_',state_cd,'_',year,'_', 32861) as forign_key,
   BLG_PRVDR_NPI as npi,
-  32861 as condition_type_concept_id,--outpatient claim header
+  32861 as condition_type_concept_id,
   concept_id,
   domain_id 
 from
- dua_052538_nwi388.other_services_header  a
+ dua_052538_nwi388.other_services_Header_$year  a
 left join lkup_dx c 
 on 
 a.DGNS_CD_2 = c.concept_code
@@ -120,13 +117,13 @@ select
   a.ADMTG_DGNS_CD as event_source_value,
   SRVC_BGN_DT as event_start_date,
   SRVC_END_DT as event_end_date,
-  concat(clm_id, state_cd, 32855) as forign_key,--Inpatient Header Claim
+  concat(clm_id,'_',state_cd,'_',year,'_', 32855) as forign_key,
   BLG_PRVDR_NPI as npi,
-  32855 as condition_type_concept_id,--Inpatient Header Claim
+  32855 as condition_type_concept_id,
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header   a
+dua_052538_nwi388.inpatient_header_$year   a
 left join lkup_dx c 
 on 
 a.ADMTG_DGNS_CD = c.concept_code
@@ -149,13 +146,13 @@ select
   a.DGNS_CD_1 as event_source_value,
   SRVC_BGN_DT as event_start_date,
   SRVC_END_DT as event_end_date,
-  concat(clm_id, state_cd, 32855) as forign_key,--Inpatient Header Claim
+  concat(clm_id,'_',state_cd,'_',year,'_', 32855) as forign_key,
   BLG_PRVDR_NPI as npi,
-  32855 as condition_type_concept_id,--Inpatient Header Claim
+  32855 as condition_type_concept_id,
   concept_id,
   domain_id 
 from
- dua_052538_nwi388.inpatient_header a
+ dua_052538_nwi388.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_1= c.concept_code
@@ -180,13 +177,13 @@ select
   a.DGNS_CD_2 as event_source_value,
   SRVC_BGN_DT as event_start_date,
   SRVC_END_DT as event_end_date,
-  concat(clm_id, state_cd, 32855) as forign_key,--Inpatient Header Claim
+  concat(clm_id,'_',state_cd,'_',year,'_',32855) as forign_key,
   BLG_PRVDR_NPI as npi,
-  32855 as condition_type_concept_id,--Inpatient Header Claim
+  32855 as condition_type_concept_id,
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header a
+dua_052538_nwi388.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_2= c.concept_code
@@ -210,13 +207,13 @@ select
  a.DGNS_CD_3 as event_source_value,
   SRVC_BGN_DT as event_start_date,
   SRVC_END_DT as event_end_date,
-  concat(clm_id, state_cd, 32855) as forign_key,--Inpatient Header Claim
+  concat(clm_id,'_',state_cd,'_',year,'_', 32855) as forign_key,
   BLG_PRVDR_NPI as npi,
-  32855 as condition_type_concept_id,--Inpatient Header Claim
+  32855 as condition_type_concept_id,
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header a
+dua_052538_nwi388.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_3= c.concept_code
@@ -239,13 +236,13 @@ select
   a.DGNS_CD_4 as event_source_value,
   SRVC_BGN_DT as event_start_date,
   SRVC_END_DT as event_end_date,
-  concat(clm_id, state_cd, 32855) as forign_key,--Inpatient Header Claim
+  concat(clm_id,'_',state_cd,'_',year,'_', 32855) as forign_key,
   BLG_PRVDR_NPI as npi,
  32855 as condition_type_concept_id,
 concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header a
+dua_052538_nwi388.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_4= c.concept_code
@@ -269,13 +266,13 @@ select
   DGNS_CD_5 as event_source_value,
   SRVC_BGN_DT as event_start_date,
   SRVC_END_DT as event_end_date,
-  concat(clm_id, state_cd, 32855) as forign_key,--Inpatient Header Claim
+  concat(clm_id,'_',state_cd,'_',year,'_', 32855) as forign_key,
   BLG_PRVDR_NPI as npi,
   32855 as condition_type_concept_id,
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header a
+dua_052538_nwi388.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_5= c.concept_code
@@ -299,13 +296,13 @@ select
   a.DGNS_CD_6 as event_source_value,
   SRVC_BGN_DT as event_start_date,
   SRVC_END_DT as event_end_date,
-    concat(clm_id, state_cd, 32855) as forign_key,--Inpatient Header Claim
+    concat(clm_id,'_',state_cd,'_',year,'_', 32855) as forign_key,
   BLG_PRVDR_NPI as npi,
   32855 as condition_type_concept_id,
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header a
+dua_052538_nwi388.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_6= c.concept_code
@@ -328,13 +325,13 @@ select
   a.DGNS_CD_7 as event_source_value,
   SRVC_BGN_DT as event_start_date,
   SRVC_END_DT as event_end_date,
-  concat(clm_id, state_cd, 32855) as forign_key,--Inpatient Header Claim
+  concat(clm_id,'_',state_cd,'_',year,'_', 32855) as forign_key,
   BLG_PRVDR_NPI as npi,
   32855 as condition_type_concept_id,
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header a
+dua_052538_nwi388.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_7= c.concept_code
@@ -357,13 +354,13 @@ select
   a.DGNS_CD_8 as event_source_value,
   SRVC_BGN_DT as event_start_date,
   SRVC_END_DT as event_end_date,
-  concat(clm_id, state_cd, 32855) as forign_key,--Inpatient Header Claim
+  concat(clm_id,'_',state_cd,'_',year,'_', 32855) as forign_key,
   BLG_PRVDR_NPI as npi,
   32855 as condition_type_concept_id,
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header a
+dua_052538_nwi388.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_8= c.concept_code
@@ -389,14 +386,14 @@ select
   a.DGNS_CD_9 as event_source_value,
   SRVC_BGN_DT as event_start_date,
   SRVC_END_DT as event_end_date,
-  concat(clm_id, state_cd, 32855) as forign_key,--Inpatient Header Claim
+  concat(clm_id,'_',state_cd,'_',year,'_', 32855) as forign_key,
   BLG_PRVDR_NPI as npi,
   32855 as condition_type_concept_id,
   concept_id,
   domain_id 
   
 from
-dua_052538_nwi388.inpatient_header a
+dua_052538_nwi388.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_9= c.concept_code
@@ -422,13 +419,13 @@ select
   a.DGNS_CD_10 as event_source_value,
   SRVC_BGN_DT as event_start_date,
   SRVC_END_DT as event_end_date,
-  concat(clm_id, state_cd, 32855) as forign_key,--Inpatient Header Claim
+  concat(clm_id,'_',state_cd,'_',year,'_',  32855) as forign_key,
   BLG_PRVDR_NPI as npi,
-  32855 as condition_type_concept_id,--Inpatient Header Claim
+  32855 as condition_type_concept_id,
 concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header a
+dua_052538_nwi388.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_10= c.concept_code
@@ -451,14 +448,13 @@ select
   a.DGNS_CD_11 as event_source_value,
   SRVC_BGN_DT as event_start_date,
   SRVC_END_DT as event_end_date,
-  --hardcode
-  concat(clm_id, state_cd, 32855) as forign_key,--Inpatient Header Claim
+  concat(clm_id,'_',state_cd,'_',year,'_',  32855) as forign_key,
   BLG_PRVDR_NPI as npi,
   32855 as condition_type_concept_id,
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header a
+dua_052538_nwi388.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_11= c.concept_code
@@ -481,13 +477,13 @@ select
   a.DGNS_CD_12 as event_source_value,
   SRVC_BGN_DT as event_start_date,
   SRVC_END_DT as event_end_date,
-  concat(clm_id, state_cd, 32855) as forign_key,--Inpatient Header Claim
+  concat(clm_id,'_',state_cd,'_',year,'_',  32855) as forign_key,
   BLG_PRVDR_NPI as npi,
   32855 as condition_type_concept_id,
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header a
+dua_052538_nwi388.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_12= c.concept_code 
@@ -510,13 +506,13 @@ select
   a.drg_cd as event_source_value,
   SRVC_BGN_DT as event_start_date,
   SRVC_END_DT as event_end_date,
-  concat(clm_id, state_cd, 32855) as forign_key,--Inpatient Header Claim
+  concat(clm_id,'_',state_cd,'_',year,'_',  32855) as forign_key,
   BLG_PRVDR_NPI as npi,
   32855 as condition_type_concept_id,
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header a
+dua_052538_nwi388.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.drg_cd= c.concept_code 
@@ -539,13 +535,13 @@ select
   a.DGNS_CD_1 as event_source_value,
   SRVC_BGN_DT as event_start_date,
   SRVC_END_DT as event_end_date,
-  concat(clm_id, state_cd, 32846) asforign_key,--Facility claim header
+  concat(clm_id,'_',state_cd,'_',year,'_',  32846) asforign_key,
   BLG_PRVDR_NPI as npi,
   32846 as condition_type_concept_id,
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.long_term_header a
+dua_052538_nwi388.long_term_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_1= c.concept_code 
@@ -568,14 +564,13 @@ select
   a.DGNS_CD_2 as event_source_value,
   SRVC_BGN_DT as event_start_date,
   SRVC_END_DT as event_end_date,
-  --hardcode
-  concat(clm_id, state_cd, 32846) as forign_key,--Facility claim header
+  concat(clm_id,'_',state_cd,'_',year,'_',  32846) as forign_key,
   BLG_PRVDR_NPI as npi,
   32846 as condition_type_concept_id, 
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.long_term_header a
+dua_052538_nwi388.long_term_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_2= c.concept_code 
@@ -598,14 +593,13 @@ select
   a.DGNS_CD_3 as event_source_value,
   SRVC_BGN_DT as event_start_date,
   SRVC_END_DT as event_end_date,
-  --hardcode
-  concat(clm_id, state_cd, 32846) as forign_key,--Facility claim header
+  concat(clm_id,'_',state_cd,'_',year,'_',  32846) as forign_key,
   BLG_PRVDR_NPI as npi,
    32846 as condition_type_concept_id,
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.long_term_header a
+dua_052538_nwi388.long_term_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_3= c.concept_code 
@@ -628,15 +622,13 @@ select
   a.DGNS_CD_4 as event_source_value,
   SRVC_BGN_DT as event_start_date,
   SRVC_END_DT as event_end_date,
-  --hardcode
-  concat(clm_id, state_cd, 32846) as forign_key,--Facility claim header
+  concat(clm_id,'_',state_cd,'_',year,'_',  32846) as forign_key,
   BLG_PRVDR_NPI as npi,
-  --hardcode
   32846 as condition_type_concept_id,
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.long_term_header a
+dua_052538_nwi388.long_term_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_4= c.concept_code 
@@ -660,13 +652,13 @@ select
   a.DGNS_CD_5 as event_source_value,
   SRVC_BGN_DT as event_start_date,
   SRVC_END_DT as event_end_date,
-  concat(clm_id, state_cd, 32846) as forign_key,--Facility claim header
+  concat(clm_id,'_',state_cd,'_',year,'_',  32846) as forign_key,
   BLG_PRVDR_NPI as npi,
   32846 as condition_type_concept_id,
   concept_id,
   domain_id 
 from
- dua_052538_nwi388.long_term_header a
+ dua_052538_nwi388.long_term_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_5= c.concept_code 
@@ -688,14 +680,13 @@ select
   a.ADMTG_DGNS_CD as event_source_value,
   SRVC_BGN_DT as event_start_date,
   SRVC_END_DT as event_end_date,
-  --hardcode
-  concat(clm_id, state_cd, 32846) as forign_key,--Facility claim header
+  concat(clm_id,'_',state_cd,'_',year,'_',32846) as forign_key,
   BLG_PRVDR_NPI as npi,
   32846 as condition_type_concept_id,
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.long_term_header a
+dua_052538_nwi388.long_term_header_$year a
 left join lkup_dx c 
 on 
 a.ADMTG_DGNS_CD= c.concept_code 
@@ -711,15 +702,15 @@ insert into dua_052538_nwi388.log values('$job_id','condition occurrence','23','
 insert into
   dua_052538_nwi388.condition_occurrence
 select
-  rand() condition_occurrence_id,
+  rand() as condition_occurrence_id,
   bene_id as person_id,
   case   when concept_id !='' then concept_id else 0  end as condition_concept_id,
   event_start_date as condition_start_date,
   null as condition_start_datetime,
   event_end_date as condition_end_date,
   null as condition_end_datetime,
-  condition_type_concept_id,--file type
-  null condition_status_concept_id,--this could be solved with admt dx codes
+  condition_type_concept_id,
+  null condition_status_concept_id,
   null as stop_reason,
   npi as provider_id,
   forign_key as visit_occurrence_id,

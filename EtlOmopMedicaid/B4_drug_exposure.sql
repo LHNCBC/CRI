@@ -46,12 +46,12 @@ select
   'NULL' as route_source_value,
   LINE_SRVC_BGN_DT as event_start_date,
   LINE_SRVC_END_DT as event_end_date,
-  concat(clm_id, state_cd, 32861) as forign_key,--outpatient claim header
+  concat(clm_id,'_',state_cd,'_',year,'_', 32861) as forign_key,--outpatient claim header
   bene_id,
   srvc_prvdr_npi,
   concept_id
 from
-dua_052538_nwi388.other_services_line a
+dua_052538_nwi388.other_services_line_$year a
 left join lkup_ndc b 
   on a.ndc = b.concept_code
   where ndc is not null;
@@ -77,13 +77,12 @@ select
   'NULL' as route_source_value,
   LINE_SRVC_BGN_DT as event_start_date,
   LINE_SRVC_END_DT as event_end_date,
-  --hardcode
-  concat(clm_id, state_cd, 32855) as forign_key,--Inpatient Header Claim
+  concat(clm_id,'_',state_cd,'_',year,'_', 32855) as forign_key,--Inpatient Header Claim
   bene_id,
   srvc_prvdr_npi,
   concept_id
 from
-dua_052538_nwi388.inpatient_line a
+dua_052538_nwi388.inpatient_line_$year a
 left join lkup_ndc b 
   on a.ndc = b.concept_code
   where ndc is not null;
@@ -113,11 +112,11 @@ select
   c.PRSCRBNG_PRVDR_NPI,
   b.concept_id
 from
-dua_052538_nwi388.rx_line a
+dua_052538_nwi388.rx_line_$year a
 left join lkup_ndc b 
   on a.ndc = b.concept_code
   left join 
- dua_052538_nwi388.rx_header c 
+ dua_052538_nwi388.rx_header_$year c 
  on a.clm_id = c.clm_id
   where ndc is not null;
 
@@ -141,13 +140,12 @@ select
   'NULL' as route_source_value,
   LINE_SRVC_BGN_DT as event_start_date,
   LINE_SRVC_END_DT as event_end_date,
-  --hardcode
-  concat(clm_id, state_cd, 32846) as forign_key,--Facility claim header
+  concat(clm_id,'_',state_cd,'_',year,'_', 32846) as forign_key,--Facility claim header
   bene_id,
   SRVC_PRVDR_NPI,
   concept_id
 from
-dua_052538_nwi388.long_term_line a
+dua_052538_nwi388.long_term_line_$year a
 left join lkup_ndc b 
   on a.ndc = b.concept_code
   where ndc is not null;

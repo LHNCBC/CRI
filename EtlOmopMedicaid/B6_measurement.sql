@@ -29,7 +29,6 @@ create widget text job_id default "102";
   else concept_id end as measurement_concept_id,
   event_start_date as measurement_date,
   null as measurement_time,
-  --hardcode
   32810 as measurement_type_concept_id,--ehr
   null as operator_concept_id,
   null as value_as_number,

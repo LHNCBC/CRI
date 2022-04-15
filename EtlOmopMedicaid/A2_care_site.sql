@@ -10,7 +10,7 @@ insert into dua_052538_nwi388.log values('$job_id','care site','1','start care s
 
 -- COMMAND ----------
 
---widget
+
 create widget text job_id default "102";
 
 -- COMMAND ----------

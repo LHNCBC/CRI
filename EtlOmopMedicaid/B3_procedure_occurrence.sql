@@ -16,6 +16,7 @@ insert into dua_052538_nwi388.log values('$job_id','procedure occurrence','1','s
 create widget text job_id default "102";
 
 
+
 -- COMMAND ----------
 
 drop view if exists lkup_px;
@@ -31,7 +32,7 @@ select
 from
   dua_052538_nwi388.concept a
 inner join
-dua_052538_nwi388.px_handshake b--from dictionary notebook
+dua_052538_nwi388.px_handshake b
 on
 a.vocabulary_id=b.vocabulary_id
 ;
@@ -73,13 +74,13 @@ create table
   "na" as modifier_concept_id,
   a.prcdr_cd_1 as event_source_value,
   a.prcdr_cd_dt_1 as event_start_date,
-  concat(a.clm_id, a.state_cd, 32855) as forign_key,--Inpatient Header Claim
+  concat(a.clm_id,'_',a.state_cd,'_',a.year,'_',  32855) as forign_key,--Inpatient Header Claim
   blg_prvdr_npi as npi,
   a.PRCDR_CD_SYS_1 as vocabulary_id_b,
   a.blg_prvdr_npi as provider_id,
   c.concept_id
 from
- dua_052538_nwi388.inpatient_header a
+ dua_052538_nwi388.inpatient_header_$year a
 --left join dua_052538_nwi388.provider_id_for_dxpxrx b
 --on 
 --a.blg_prvdr_npi = b.npi_a
@@ -107,13 +108,13 @@ insert into
   null as modifier_concept_id,
   a.prcdr_cd_2 as event_source_value,
   a.prcdr_cd_dt_2 as event_start_date,
-  concat(a.clm_id, a.state_cd, 32855) as forign_key,--Inpatient Header Claim
+  concat(a.clm_id,'_',a.state_cd,'_',a.year,'_',  32855) as forign_key,--Inpatient Header Claim
   a.blg_prvdr_npi as npi,
   a.PRCDR_CD_SYS_2 as vocabulary_id_b,
   a.blg_prvdr_npi as provider_id,
   c.concept_id
 from
- dua_052538_nwi388.inpatient_header a
+ dua_052538_nwi388.inpatient_header_$year a
 left join lkup_px c 
 on 
 a.prcdr_cd_2 = c.concept_code
@@ -138,13 +139,13 @@ insert into
   null as modifier_concept_id,
   a.prcdr_cd_3 as event_source_value,
   a.prcdr_cd_dt_3 as event_start_date,
-  concat(a.clm_id, a.state_cd, 32855) as forign_key,--Inpatient Header Claim
+  concat(a.clm_id,'_',a.state_cd,'_',a.year,'_',  32855) as forign_key,--Inpatient Header Claim
   a.blg_prvdr_npi as npi,
   a.PRCDR_CD_SYS_3 as vocabulary_id_b,
   a.blg_prvdr_npi as provider_id,
   c.concept_id
 from
-dua_052538_nwi388.inpatient_header a
+dua_052538_nwi388.inpatient_header_$year a
 left join lkup_px c 
 on 
 a.prcdr_cd_3 = c.concept_code
@@ -169,13 +170,13 @@ insert into
   null as modifier_concept_id,
   a.prcdr_cd_4 as event_source_value,
   a.prcdr_cd_dt_4 as event_start_date,
-  concat(a.clm_id, a.state_cd, 32855) as forign_key,--Inpatient Header Claim
+  concat(a.clm_id,'_',a.state_cd,'_',a.year,'_',  32855) as forign_key,--Inpatient Header Claim
   a.blg_prvdr_npi as npi,
   a.PRCDR_CD_SYS_4 as vocabulary_id_b,
   a.blg_prvdr_npi as provider_id,
   c.concept_id
 from
-dua_052538_nwi388.inpatient_header a
+dua_052538_nwi388.inpatient_header_$year a
 
 left join lkup_px c 
 on 
@@ -201,13 +202,13 @@ insert into
   null as modifier_concept_id,
   a.prcdr_cd_5 as event_source_value,
   a.prcdr_cd_dt_5 as event_start_date,
-  concat(a.clm_id, a.state_cd, 32855) as forign_key,--Inpatient Header Claim
+  concat(a.clm_id,'_',a.state_cd,'_',a.year,'_',  32855) as forign_key,--Inpatient Header Claim
   a.blg_prvdr_npi as npi,
   a.PRCDR_CD_SYS_5 as vocabulary_id_b,
   a.blg_prvdr_npi as provider_id,
   c.concept_id
 from
-dua_052538_nwi388.inpatient_header a
+dua_052538_nwi388.inpatient_header_$year a
 
 left join lkup_px c 
 on a.prcdr_cd_5 = c.concept_code
@@ -232,13 +233,13 @@ insert into
   null as modifier_concept_id,
   a.prcdr_cd_6 as event_source_value,
   a.prcdr_cd_dt_6 as event_start_date,
-  concat(a.clm_id, a.state_cd, 32855) as forign_key,--Inpatient Header Claim
+  concat(a.clm_id,'_',a.state_cd,'_',a.year,'_',  32855) as forign_key,--Inpatient Header Claim
   a.blg_prvdr_npi as npi,
   a.PRCDR_CD_SYS_6 as vocabulary_id_b,
   a.blg_prvdr_npi as provider_id,
   c.concept_id
 from
-dua_052538_nwi388.inpatient_header a
+dua_052538_nwi388.inpatient_header_$year a
 
 left join lkup_px c 
 on
@@ -260,18 +261,17 @@ select
   a.clm_id,
   "other_services_line" as origin_table,
   a.state_cd as origin,
-    --hardcode
   32861 as procedure_type_concept_id,--outpatient claim header
   null as modifier_concept_id,
   a.LINE_PRCDR_CD as event_source_value,
   a.LINE_SRVC_BGN_DT as event_start_date,
-  concat(a.clm_id, a.state_cd, 32861) as forign_key,--outpatient claim header
+  concat(a.clm_id,'_',a.state_cd,'_',a.year,'_',  32861) as forign_key,--outpatient claim header
   a.srvc_prvdr_npi as npi,
   a.LINE_PRCDR_CD_SYS as vocabulary_id_b,
   a.srvc_prvdr_npi as provider_id,
   c.concept_id
 from
-dua_052538_nwi388.other_services_line a
+dua_052538_nwi388.other_services_line_$year a
 left join lkup_px c 
 on 
 a.LINE_PRCDR_CD = c.concept_code
@@ -293,18 +293,16 @@ select
   clm_id,
   "other_services_line" as origin_table,
   state_cd as origin,
-    --hardcode
   32861 as procedure_type_concept_id,--outpatient claim header
   LINE_PRCDR_CD as event_source_value,
   TOOTH_NUM,
   TOOTH_SRFC_CD,
   LINE_SRVC_BGN_DT as event_start_date,
-    --hardcode
-  concat(clm_id, state_cd, 32861) as forign_key,--outpatient claim header
+  concat(clm_id,'_',state_cd,'_',year,'_',  32861) as forign_key,--outpatient claim header
   srvc_prvdr_npi as npi,
   LINE_PRCDR_CD_SYS as vocabulary_id_b
 from
- dua_052538_nwi388.other_services_line
+ dua_052538_nwi388.other_services_line_$year
 where
   LINE_PRCDR_CD is not null
   and line_prcdr_cd like 'D%';
@@ -358,18 +356,18 @@ insert into dua_052538_nwi388.log values('$job_id','procedure occurrence','12','
 insert into
   dua_052538_nwi388.hold_procedure_occurrence
 select
-  a.bene_id,
-  a.clm_id,
-  a.origin_table,
-  a.origin,
-  a.procedure_type_concept_id,
-  a.mod_tooth as modifier_concept_id,
-  a.event_source_value,
-  a.event_start_date,
-  a.forign_key,
-  a.npi,
-  a.vocabulary_id_b,
-  a.npi as provider_id,
+  bene_id,
+  clm_id,
+  origin_table,
+  origin,
+  procedure_type_concept_id,
+  mod_tooth as modifier_concept_id,
+  event_source_value,
+  event_start_date,
+  forign_key,
+  npi,
+  vocabulary_id_b,
+  npi as provider_id,
   0 as concept_id
 from
   dua_052538_nwi388.transform_procedure_occurrence_d1;

@@ -3,7 +3,7 @@ insert into dua_052538_nwi388.log values('$job_id','Person','1','start person',c
 
 -- COMMAND ----------
 
---widget
+
 create widget text job_id default "102";
 
 
@@ -27,7 +27,7 @@ drop view if exists route_person;
 create view route_person as
 select
   BENE_ID,
-  case --hardcode
+  case 
     when SEX_CD = 'F' then 8532--Female|Female
     when SEX_CD = 'M' then 8507--Male|Male
     else 0--|blank
@@ -35,7 +35,7 @@ select
   year(BIRTH_DT) as year_of_birth,
   month(BIRTH_DT) as month_of_birth,
   day(BIRTH_DT) as day_of_birth,
-    case--hardcode
+    case
     when RACE_ETHNCTY_CD = 1 then 8527--White|White
     when RACE_ETHNCTY_CD = 2 then 8516--Black|Black
     when RACE_ETHNCTY_CD = 3 then 8515--Asian|Asian
@@ -45,7 +45,7 @@ select
     when RACE_ETHNCTY_CD = 7 then 38003563--|Hispanic
     else 0--|Blank
   end as race_concept_id,
-  case--hardcode
+  case
     when ETHNCTY_CD = 0 then 38003564--|Not Hispanic
     when ETHNCTY_CD > 0 then 38003563--|Hispanic
     else 0 --|Blank

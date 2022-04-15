@@ -10,25 +10,19 @@ insert into dua_052538_nwi388.log values('$job_id','Provider','1','start provide
 
 -- COMMAND ----------
 
---widget
-create widget text job_id default "102";
-
-
--- COMMAND ----------
-
-drop table if exists dua_052538_nwi388.hold_provider1;
+drop table if exists dua_052538_nwi388.hold_provider2;
 
   create table
-  dua_052538_nwi388.hold_provider1 as
+  dua_052538_nwi388.hold_provider2 as
 select
-  concat(clm_id, state_cd, 32855) as forign_key,               --Inpatient Header Claim
+  concat(clm_id, state_cd, 32855) as forign_key,              
   concat(state_cd, clm_id, "inpatient_header") as primary_key,
   BLG_PRVDR_NPI as npi,
   BLG_PRVDR_SPCLTY_CD as specialty_source_value,
   "BLG" as class,
   "inpatient_header" as origin_file
 from
-dua_052538_nwi388.inpatient_header;
+dua_052538_nwi388.inpatient_header_$year;
 
 -- COMMAND ----------
 
@@ -37,17 +31,17 @@ insert into dua_052538_nwi388.log values('$job_id','Provider','2','create hold p
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.hold_provider1
+  dua_052538_nwi388.hold_provider2
 select
---hardcode
-  concat(clm_id, state_cd, 32855) as forign_key,--Inpatient Header Claim
+
+  concat(clm_id, state_cd, 32855) as forign_key,
   concat(state_cd, clm_id, "inpatient_line") as primary_key,
   SRVC_PRVDR_NPI as npi,
   SRVC_PRVDR_SPCLTY_CD as specialty_source_value,
   "SRVC" as class,
   "inpatient_line" as origin_file
 from
-dua_052538_nwi388.inpatient_line;
+dua_052538_nwi388.inpatient_line_$year;
 
 -- COMMAND ----------
 
@@ -57,17 +51,16 @@ insert into dua_052538_nwi388.log values('$job_id','Provider','3','inpt line to 
 
 
 insert into
-  dua_052538_nwi388.hold_provider1
+  dua_052538_nwi388.hold_provider2
 select
-  --hardcode
-  concat(clm_id, state_cd, 32861) as forign_key, --outpatient claim header
+  concat(clm_id, state_cd, 32861) as forign_key, 
   concat(state_cd, clm_id, "other_services_header") as primary_key,
   BLG_PRVDR_NPI as npi,
   BLG_PRVDR_SPCLTY_CD as specialty_source_value,
   "BLG" as class,
   "other_services_header" as origin_file
 from
-dua_052538_nwi388.other_services_header;
+dua_052538_nwi388.other_services_header_$year;
 
 -- COMMAND ----------
 
@@ -76,17 +69,17 @@ insert into dua_052538_nwi388.log values('$job_id','Provider','4','ot header to 
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.hold_provider1
+  dua_052538_nwi388.hold_provider2
 select
-  --hardcode
-  concat(clm_id, state_cd, 32861) as forign_key,--outpatient claim header
+
+  concat(clm_id, state_cd, 32861) as forign_key,
   concat(state_cd, clm_id, "other_services_line") as primary_key,
   SRVC_PRVDR_NPI as npi,
   SRVC_PRVDR_SPCLTY_CD as specialty_source_value,
   "SRVC" as class,
   "other_services_line" as origin_file
 from
-dua_052538_nwi388.other_services_line;
+dua_052538_nwi388.other_services_line_$year;
 
 -- COMMAND ----------
 
@@ -95,9 +88,9 @@ insert into dua_052538_nwi388.log values('$job_id','Provider','4','ot line to ho
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.hold_provider1
+  dua_052538_nwi388.hold_provider2
 select
-  --hardcode
+  
   concat(clm_id,state_cd, 32846) as forign_key,--Facility claim header
   concat(state_cd, clm_id, "long_term_header") as primary_key,
   BLG_PRVDR_NPI as npi,
@@ -105,7 +98,7 @@ select
   "BLG" as class,
   "long_term_header" as origin_file
 from
-dua_052538_nwi388.long_term_header;
+dua_052538_nwi388.long_term_header_$year;
 
 -- COMMAND ----------
 
@@ -114,9 +107,9 @@ insert into dua_052538_nwi388.log values('$job_id','Provider','5','lt header to 
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.hold_provider1
+  dua_052538_nwi388.hold_provider2
 select
-  --hardcode
+  
   concat(clm_id, state_cd, 32846) as forign_key,--Facility claim header
   concat(state_cd, clm_id, "long_term_line") as primary_key,
   SRVC_PRVDR_NPI as npi,
@@ -124,7 +117,7 @@ select
   "SRVC" as class,
   "long_term_line" as origin_file
 from
-dua_052538_nwi388.long_term_line;
+dua_052538_nwi388.long_term_line_$year;
 
 -- COMMAND ----------
 
@@ -133,9 +126,9 @@ insert into dua_052538_nwi388.log values('$job_id','Provider','6','lt line to ho
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.hold_provider1
+  dua_052538_nwi388.hold_provider2
 select
---hardcode
+
   concat(clm_id, state_cd, 32869) as forign_key,--Pharmacy claim
   concat(state_cd, clm_id, "rx_header") as primary_key,
   BLG_PRVDR_NPI as npi,
@@ -143,7 +136,7 @@ select
   "BLG" as class,
   "rx_header" as origin_file
 from
-dua_052538_nwi388.rx_header;
+dua_052538_nwi388.rx_header_$year;
 
 -- COMMAND ----------
 
@@ -152,9 +145,9 @@ insert into dua_052538_nwi388.log values('$job_id','Provider','7','rx header 1 t
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.hold_provider1
+  dua_052538_nwi388.hold_provider2
 select
---hardcode
+
   concat(clm_id, state_cd, 32869) as forign_key,--Pharmacy claim
   concat(state_cd, clm_id, "rx_header") as primary_key,
   PRSCRBNG_PRVDR_NPI as npi,
@@ -162,7 +155,7 @@ select
   "PRSCRBING" as class,
   "rx_header" as origin_file
 from
-dua_052538_nwi388.rx_header;
+dua_052538_nwi388.rx_header_$year;
 
 -- COMMAND ----------
 
@@ -171,9 +164,9 @@ insert into dua_052538_nwi388.log values('$job_id','Provider','8','rx header 2 t
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.hold_provider1
+  dua_052538_nwi388.hold_provider2
 select
---hardcode
+
   concat(clm_id, state_cd, 32869) as forign_key,--Pharmacy claim
   concat(state_cd, clm_id, "rx_header") as primary_key,
   DSPNSNG_PRVDR_NPI as npi,
@@ -181,7 +174,7 @@ select
   "DSPNSNG" as class,
   "rx_header" as origin_file
 from
-dua_052538_nwi388.rx_header;
+dua_052538_nwi388.rx_header_$year;
 
 -- COMMAND ----------
 
@@ -189,11 +182,7 @@ insert into dua_052538_nwi388.log values('$job_id','Provider','9','rx header 3 t
 
 -- COMMAND ----------
 
-optimize  dua_052538_nwi388.hold_provider1 ZORDER by(npi);
-
--- COMMAND ----------
-
-insert into dua_052538_nwi388.log values('$job_id','Provider','10','optimize hold provider',current_timestamp(), null);
+----optimize  dua_052538_nwi388.hold_provider2 ZORDER by(npi);
 
 -- COMMAND ----------
 
@@ -203,7 +192,7 @@ create table  dua_052538_nwi388.transform_provider using delta as
 select
   distinct npi
 from
-  dua_052538_nwi388.hold_provider1;
+  dua_052538_nwi388.hold_provider2;
 
 -- COMMAND ----------
 
@@ -211,7 +200,7 @@ insert into dua_052538_nwi388.log values('$job_id','Provider','11','create trans
 
 -- COMMAND ----------
 
-optimize  dua_052538_nwi388.transform_provider ZORDER by(npi);
+--optimize  dua_052538_nwi388.transform_provider ZORDER by(npi);
 
 -- COMMAND ----------
 
@@ -245,7 +234,7 @@ select
   distinct npi as npi_b,
   specialty_source_value
 from
-  dua_052538_nwi388.hold_provider1
+  dua_052538_nwi388.hold_provider2
 where
   npi is not null
   and specialty_source_value is not null
@@ -257,7 +246,7 @@ insert into dua_052538_nwi388.log values('$job_id','Provider','14','create trans
 
 -- COMMAND ----------
 
-optimize  dua_052538_nwi388.transform_provider_specialty ZORDER by(npi_b);
+--optimize  dua_052538_nwi388.transform_provider_specialty ZORDER by(npi_b);
 
 -- COMMAND ----------
 
@@ -339,7 +328,7 @@ insert into dua_052538_nwi388.log values('$job_id','Provider','19','create provi
 
 -- COMMAND ----------
 
-optimize  dua_052538_nwi388.provider_detail_all zorder by(npi);
+--optimize  dua_052538_nwi388.provider_detail_all zorder by(npi);
 
 -- COMMAND ----------
 
