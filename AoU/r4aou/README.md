@@ -1,4 +1,4 @@
-# OLD VERSION
+# This is an OLD VERSION
 For the most recent version visit: 
 [r4AOU Full Github page](https://github.com/cmayer2/r4aou)
 
