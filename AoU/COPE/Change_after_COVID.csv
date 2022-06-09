@@ -1,30 +1,30 @@
-question_concept_id,Question,Total_Participants,Participant_Changed_Resposne,Proportion_changed
-1332748,"Thinking about your current social habits, in the last 5 days: I have stayed home all day (aside from time spent outdoors, but never closer than 6 feet from people who are not from my home).",301,224,0.744186047
-1333102,"In the past month, have recommendations for socially distancing caused stress for you?",301,209,0.694352159
-1333301,"Thinking about your current social habits, in the last 5 days: I have been in close contact with someone who is in a risk group for COVID-19. This includes someone inside or outside of your household.",301,199,0.661129568
-1333156,Do you think you have had COVID-19?,301,159,0.528239203
-1332735,"Thinking about your current social habits, in the last 5 days: I have attended social gatherings outside my home of LESS than 10 people.",301,157,0.521594684
-1333119,"Thinking about these activities in the last 5 days, my social interaction with people outside my home was.",301,147,0.488372093
-1333105,"Thinking about your current social habits, in the last 5 days: I have gone to my workplace or volunteer site that is outside my home.",301,136,0.451827243
-1333300,"Now, thinking about the COVID-19 recommendations and mandates...How often in the past month are you doing the recommended pandemic hygiene?",301,135,0.448504983
-1332738,"Thinking about your current social habits, in the last 5 days: I have gone on shopping trips or outings that were ""just for fun"".",301,114,0.378737542
-1333325,"In the past month, have you been sick for more than one day with a new illness related to COVID-19 or flu-like symptoms?",301,99,0.328903654
-1332734,"Thinking about your current social habits, in the last 5 days: I have attended social gatherings outside my home of MORE than 10 people.",301,70,0.23255814
-1333303,"In the past 7 days, I thought about COVID-19 when I didn't mean to.",301,54,0.179401993
-1332866,"In the past 7 days, other things kept making me think about COVID-19.",301,49,0.162790698
-1333292,"In the past 7 days, I felt watchful or on-guard.",301,48,0.159468439
-1333024,Please select the response that best reflects your behavior in the past month. I look for creative ways to alter difficult situations.,301,47,0.156146179
-1333296,"In the past 7 days, I tried not to think about COVID-19.",301,46,0.15282392
-1333120,Choose the answer that is true for you in the past month. I am unhappy being so withdrawn.,301,45,0.149501661
-1332848,Please select the response that best reflects your behavior in the past month. I believe I can grow in positive ways by dealing with difficult situations.,301,43,0.142857143
-1332741,Please select the response that best reflects your behavior in the past month. I actively look for ways to replace the losses I encounter in life.,301,42,0.139534884
-1332750,Choose the answer that best describes how you felt in the past month. To what extent do you feel your life to be meaningful?,301,41,0.136212625
-1333295,"In the past 7 days, I was aware that I still had a lot of feelings about COVID-19, but I didn't deal with them.",301,40,0.132890365
-1332835,"Choose the answer that best describes how you felt in the past month. In uncertain times, I usually expect the best.",301,38,0.126245847
-1332739,"Please select the response that best reflects your behavior in the past month. Regardless of what happens to me, I believe I can control my reaction to it.",301,37,0.122923588
-1332749,"Choose the answer that best describes how you felt in the past month. In general, how happy are you?",301,37,0.122923588
-1333121,"In the past 2 weeks, how often have you been bothered by the following problem? Becoming easily annoyed or irritable.",301,31,0.102990033
-1333297,Do you personally know someone who has died of COVID-19?,301,28,0.093023256
-1333221,Choose the answer that is true for you in the past month. I am an outgoing person.,301,26,0.086378738
-1333328,"In your day-to-day life, how often did this happen to you during the past month? You are treated with less courtesy than other people are.",301,25,0.083056478
-1333311,"In your day-to-day life, how often did this happen to you during the past month? You are treated with less respect than other people are.",301,24,0.079734219
+question_concept_id,Question,Total_Participants,Participant_Changed_Resposne,Proportion_changed,pt_lower_confidence_interval,pt_upper_confidence_interval
+1332748,"Thinking about your current social habits, in the last 5 days: I have stayed home all day (aside from time spent outdoors, but never closer than 6 feet from people who are not from my home).",301,224,0.744186047,0.694895036,0.793477058
+1333102,"In the past month, have recommendations for socially distancing caused stress for you?",301,209,0.694352159,0.642308789,0.746395529
+1333301,"Thinking about your current social habits, in the last 5 days: I have been in close contact with someone who is in a risk group for COVID-19. This includes someone inside or outside of your household.",301,199,0.661129568,0.607657747,0.714601389
+1333156,Do you think you have had COVID-19?,301,159,0.528239203,0.47184414,0.584634266
+1332735,"Thinking about your current social habits, in the last 5 days: I have attended social gatherings outside my home of LESS than 10 people.",301,157,0.521594684,0.465162167,0.578027201
+1333119,"Thinking about these activities in the last 5 days, my social interaction with people outside my home was.",301,147,0.488372093,0.431902146,0.54484204
+1333105,"Thinking about your current social habits, in the last 5 days: I have gone to my workplace or volunteer site that is outside my home.",301,136,0.451827243,0.395604792,0.508049694
+1333300,"Now, thinking about the COVID-19 recommendations and mandates...How often in the past month are you doing the recommended pandemic hygiene?",301,135,0.448504983,0.392320126,0.50468984
+1332738,"Thinking about your current social habits, in the last 5 days: I have gone on shopping trips or outings that were ""just for fun"".",301,114,0.378737542,0.323938675,0.433536409
+1333325,"In the past month, have you been sick for more than one day with a new illness related to COVID-19 or flu-like symptoms?",301,99,0.328903654,0.275828455,0.381978853
+1332734,"Thinking about your current social habits, in the last 5 days: I have attended social gatherings outside my home of MORE than 10 people.",301,70,0.23255814,0.184832324,0.280283956
+1333303,"In the past 7 days, I thought about COVID-19 when I didn't mean to.",301,54,0.179401993,0.136056524,0.222747462
+1332866,"In the past 7 days, other things kept making me think about COVID-19.",301,49,0.162790698,0.121084878,0.204496518
+1333292,"In the past 7 days, I felt watchful or on-guard.",301,48,0.159468439,0.118108563,0.200828315
+1333024,Please select the response that best reflects your behavior in the past month. I look for creative ways to alter difficult situations.,301,47,0.156146179,0.115138599,0.197153759
+1333296,"In the past 7 days, I tried not to think about COVID-19.",301,46,0.15282392,0.112175155,0.193472685
+1333120,Choose the answer that is true for you in the past month. I am unhappy being so withdrawn.,301,45,0.149501661,0.109218403,0.189784919
+1332848,Please select the response that best reflects your behavior in the past month. I believe I can grow in positive ways by dealing with difficult situations.,301,43,0.142857143,0.103325721,0.182388565
+1332741,Please select the response that best reflects your behavior in the past month. I actively look for ways to replace the losses I encounter in life.,301,42,0.139534884,0.100390192,0.178679576
+1332750,Choose the answer that best describes how you felt in the past month. To what extent do you feel your life to be meaningful?,301,41,0.136212625,0.097462157,0.174963093
+1333295,"In the past 7 days, I was aware that I still had a lot of feelings about COVID-19, but I didn't deal with them.",301,40,0.132890365,0.094541846,0.171238884
+1332835,"Choose the answer that best describes how you felt in the past month. In uncertain times, I usually expect the best.",301,38,0.126245847,0.088725398,0.163766296
+1332739,"Please select the response that best reflects your behavior in the past month. Regardless of what happens to me, I believe I can control my reaction to it.",301,37,0.122923588,0.085829801,0.160017375
+1332749,"Choose the answer that best describes how you felt in the past month. In general, how happy are you?",301,37,0.122923588,0.085829801,0.160017375
+1333121,"In the past 2 weeks, how often have you been bothered by the following problem? Becoming easily annoyed or irritable.",301,31,0.102990033,0.068653133,0.137326933
+1333297,Do you personally know someone who has died of COVID-19?,301,28,0.093023256,0.060209293,0.125837219
+1333221,Choose the answer that is true for you in the past month. I am an outgoing person.,301,26,0.086378738,0.054642798,0.118114678
+1333328,"In your day-to-day life, how often did this happen to you during the past month? You are treated with less courtesy than other people are.",301,25,0.083056478,0.051880298,0.114232658
+1333311,"In your day-to-day life, how often did this happen to you during the past month? You are treated with less respect than other people are.",301,24,0.079734219,0.049132639,0.110335799
