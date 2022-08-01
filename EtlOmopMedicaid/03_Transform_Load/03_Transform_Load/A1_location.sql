@@ -1,23 +1,17 @@
 -- Databricks notebook source
-insert into dua_052538_nwi388.log values('$job_id','Location','1','start location',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','Location','1','start location',current_timestamp() );
 
 -- COMMAND ----------
 
 -- MAGIC %python
 -- MAGIC #server terms
 -- MAGIC spark.conf.set("spark.databricks.io.cache.enabled", "True");
--- MAGIC spark.conf.set("spark.sql.shuffle.partitions",7000)
+-- MAGIC spark.conf.set("spark.sql.shuffle.partitions",8000)
 
 -- COMMAND ----------
 
---widget
-create widget text job_id default "102";
-
--- COMMAND ----------
-
---hold location
-drop table if exists dua_052538_nwi388.hold_location;
-create table dua_052538_nwi388.hold_location (
+drop table if exists <write_bucket>.hold_location;
+create table <write_bucket>.hold_location (
   id string,
   address_1 string,
   address_2 string,
@@ -32,7 +26,7 @@ create table dua_052538_nwi388.hold_location (
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','create hold location','2','start location',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','create hold location','2','start location',current_timestamp() );
 
 -- COMMAND ----------
 
@@ -50,11 +44,11 @@ select
   "demog" as type,
   RFRNC_YR
 from
-  dua_052538_nwi388.demog_elig_base;
+  <write_bucket>.demog_elig_base;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','create hold location a','3','start location',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','Location','3','create hold location a',current_timestamp() );
 
 -- COMMAND ----------
 
@@ -72,16 +66,16 @@ select
   entity_type_code as type,
   null as RFRNC_YR
 from
-  dua_052538_nwi388.npi_place;
+  <write_bucket>.npi_place;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','Location','4','create hold location b',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','Location','4','create hold location b',current_timestamp() );
 
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.hold_location
+  <write_bucket>.hold_location
 select
   distinct id,
   address_1,
@@ -109,12 +103,12 @@ group by
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','Location','5','hold location a to hold location',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','Location','5','hold location a to hold location',current_timestamp() );
 
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.hold_location
+  <write_bucket>.hold_location
 select
   distinct id,
   address_1,
@@ -144,7 +138,7 @@ group by
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','Location','6','hold location b to hold location',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','Location','6','hold location b to hold location',current_timestamp() );
 
 -- COMMAND ----------
 
@@ -162,7 +156,7 @@ select
   state,
   county
 from
-  dua_052538_nwi388.hold_location
+  <write_bucket>.hold_location
 group by
   zip,
   county,
@@ -176,12 +170,12 @@ order by
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','Location','7','create transform location',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','Location','7','create transform location',current_timestamp() );
 
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.location
+  <write_bucket>.location
 select
   location_id,
   address_1,
@@ -196,8 +190,8 @@ from
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','Location','8','transform location to final cdm',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','Location','8','transform location to final cdm',current_timestamp() );
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','Location','9','end location',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','Location','9','end location',current_timestamp() );

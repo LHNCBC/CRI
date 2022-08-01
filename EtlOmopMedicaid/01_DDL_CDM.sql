@@ -1,16 +1,14 @@
 -- Databricks notebook source
-insert into dua_052538_nwi388.log values('$job_id','DDL','0','start DDL',current_timestamp(),null);
+insert into <write_bucket>.log values('$job_id','DDL','0','start DDL',current_timestamp() );
+
+
 
 -- COMMAND ----------
 
-create widget text job_id default "101";
 
--- COMMAND ----------
-
-
-drop table if exists dua_052538_nwi388.PERSON;
-create table dua_052538_nwi388.PERSON (
-  person_id string,
+drop table if exists <write_bucket>.PERSON;
+create table <write_bucket>.PERSON (
+  person_id bigint,
   gender_concept_id bigint,
   year_of_birth bigint,
   month_of_birth bigint,
@@ -32,14 +30,15 @@ create table dua_052538_nwi388.PERSON (
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','DDL','1','create ddl person',current_timestamp(),null);
+insert into <write_bucket>.log values('$job_id','DDL','1','create ddl person',current_timestamp() );
+
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.OBSERVATION_PERIOD;
-create table dua_052538_nwi388.OBSERVATION_PERIOD (
+drop table if exists <write_bucket>.OBSERVATION_PERIOD;
+create table <write_bucket>.OBSERVATION_PERIOD (
   observation_period_id double,
-  person_id string,
+  person_id bigint,
   observation_period_start_date date,
   observation_period_end_date date,
   period_type_concept_id string
@@ -47,12 +46,13 @@ create table dua_052538_nwi388.OBSERVATION_PERIOD (
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','DDL','2','create ddl observation_period',current_timestamp(),null);
+insert into <write_bucket>.log values('$job_id','DDL','2','create ddl observation_period',current_timestamp() );
+
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.provider;
-create table dua_052538_nwi388.PROVIDER 
+drop table if exists <write_bucket>.provider;
+create table <write_bucket>.PROVIDER 
 (
   npi string,
   provider_id bigint,
@@ -71,14 +71,14 @@ create table dua_052538_nwi388.PROVIDER
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','DDL','3','create ddl provider',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','DDL','3','create ddl provider',current_timestamp() );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.VISIT_OCCURRENCE;
-create table dua_052538_nwi388.VISIT_OCCURRENCE (
+drop table if exists <write_bucket>.VISIT_OCCURRENCE;
+create table <write_bucket>.VISIT_OCCURRENCE (
   visit_occurrence_id string,
-  person_id string,
+  person_id bigint,
   visit_concept_id bigint,
   visit_start_date date,
   visit_start_datetime string,
@@ -98,14 +98,14 @@ create table dua_052538_nwi388.VISIT_OCCURRENCE (
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','DDL','4','create ddl visit_occurrence',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','DDL','4','create ddl visit_occurrence',current_timestamp() );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.VISIT_DETAIL;
-create table dua_052538_nwi388.VISIT_DETAIL (
+drop table if exists <write_bucket>.VISIT_DETAIL;
+create table <write_bucket>.VISIT_DETAIL (
   visit_detail_id string,
-  person_id string,
+  person_id bigint,
   visit_detail_concept_id bigint,
   visit_detail_start_date date,
   visit_detail_start_datetime string,
@@ -127,14 +127,14 @@ create table dua_052538_nwi388.VISIT_DETAIL (
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','DDL','5','create ddl visit_detail',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','DDL','5','create ddl visit_detail',current_timestamp() );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.PROCEDURE_OCCURRENCE;
-create table dua_052538_nwi388.PROCEDURE_OCCURRENCE (
+drop table if exists <write_bucket>.PROCEDURE_OCCURRENCE;
+create table <write_bucket>.PROCEDURE_OCCURRENCE (
   procedure_occurrence_id bigint,
-  person_id string,
+  person_id bigint,
   procedure_concept_id string,
   procedure_date date,
   procedure_datetime string,
@@ -151,14 +151,14 @@ create table dua_052538_nwi388.PROCEDURE_OCCURRENCE (
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','DDL','6','create ddl procedure_occurrence',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','DDL','6','create ddl procedure_occurrence',current_timestamp() );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.CONDITION_OCCURRENCE;
-create table dua_052538_nwi388.CONDITION_OCCURRENCE (
+drop table if exists <write_bucket>.CONDITION_OCCURRENCE;
+create table <write_bucket>.CONDITION_OCCURRENCE (
   condition_occurrence_id bigint,
-  person_id string,
+  person_id bigint,
   condition_concept_id bigint,
   condition_start_date date,
   condition_start_datetime string,
@@ -177,14 +177,14 @@ create table dua_052538_nwi388.CONDITION_OCCURRENCE (
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','DDL','7','create ddl condition_occurrence',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','DDL','7','create ddl condition_occurrence',current_timestamp() );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.DRUG_EXPOSURE;
-create table dua_052538_nwi388.DRUG_EXPOSURE (
+drop table if exists <write_bucket>.DRUG_EXPOSURE;
+create table <write_bucket>.DRUG_EXPOSURE (
   drug_exposure_id bigint,
-  person_id string,
+  person_id bigint,
   drug_concept_id bigint,
   drug_exposure_start_date date,
   drug_exposure_start_datetime string,
@@ -210,14 +210,14 @@ create table dua_052538_nwi388.DRUG_EXPOSURE (
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','DDL','8','create ddl drug_exposure',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','DDL','8','create ddl drug_exposure',current_timestamp() );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.DEVICE_EXPOSURE;
-create table dua_052538_nwi388.DEVICE_EXPOSURE (
+drop table if exists <write_bucket>.DEVICE_EXPOSURE;
+create table <write_bucket>.DEVICE_EXPOSURE (
   device_exposure_id bigint,
-  person_id string,
+  person_id bigint,
   device_concept_id bigint,
   device_exposure_start_date date,
   device_exposure_start_datetime string,
@@ -235,15 +235,15 @@ create table dua_052538_nwi388.DEVICE_EXPOSURE (
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','DDL','9','create ddl device_exposure',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','DDL','9','create ddl device_exposure',current_timestamp() );
 
 -- COMMAND ----------
 
 
-drop table if exists dua_052538_nwi388.MEASUREMENT;
-create table dua_052538_nwi388.MEASUREMENT (
+drop table if exists <write_bucket>.MEASUREMENT;
+create table <write_bucket>.MEASUREMENT (
   measurement_id bigint,
-  person_id string,
+  person_id bigint,
   measurement_concept_id bigint,
   measurement_date date,
   measurement_datetime string,
@@ -266,14 +266,14 @@ create table dua_052538_nwi388.MEASUREMENT (
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','DDL','10','create ddl measurement',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','DDL','10','create ddl measurement',current_timestamp() );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.OBSERVATION;
-create table dua_052538_nwi388.OBSERVATION(
+drop table if exists <write_bucket>.OBSERVATION;
+create table <write_bucket>.OBSERVATION(
   observation_id bigint,
-  person_id string,
+  person_id bigint,
   observation_concept_id bigint,
   observation_date date,
   observation_datetime string,
@@ -294,14 +294,14 @@ create table dua_052538_nwi388.OBSERVATION(
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','DDL','11','create ddl observation',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','DDL','11','create ddl observation',current_timestamp() );
 
 -- COMMAND ----------
 
 
-drop table if exists dua_052538_nwi388.death;
-create table dua_052538_nwi388.DEATH (
-  person_id string,
+drop table if exists <write_bucket>.death;
+create table <write_bucket>.DEATH (
+  person_id bigint,
   death_date date,
   death_datetime string,
   death_type_concept_id bigint,
@@ -312,10 +312,10 @@ create table dua_052538_nwi388.DEATH (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.note;
-create table dua_052538_nwi388.NOTE (
+drop table if exists <write_bucket>.note;
+create table <write_bucket>.NOTE (
   note_id bigint,
-  person_id string,
+  person_id bigint,
   note_date date,
   note_datetime string,
   note_type_concept_id bigint,
@@ -336,12 +336,12 @@ create table dua_052538_nwi388.NOTE (
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','DDL','13','create ddl note',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','DDL','13','create ddl note',current_timestamp() );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.NOTE_NLP;
-create table dua_052538_nwi388.NOTE_NLP (
+drop table if exists <write_bucket>.NOTE_NLP;
+create table <write_bucket>.NOTE_NLP (
   note_nlp_id bigint,
   note_id bigint,
   section_concept_id bigint,
@@ -360,14 +360,14 @@ create table dua_052538_nwi388.NOTE_NLP (
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','DDL','14','create ddl note_nlp',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','DDL','14','create ddl note_nlp',current_timestamp() );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.SPECIMEN;
-create table dua_052538_nwi388.SPECIMEN (
+drop table if exists <write_bucket>.SPECIMEN;
+create table <write_bucket>.SPECIMEN (
   specimen_id bigint,
-  person_id string,
+  person_id bigint,
   specimen_concept_id bigint,
   specimen_type_concept_id bigint,
   specimen_date date,
@@ -385,12 +385,12 @@ create table dua_052538_nwi388.SPECIMEN (
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','DDL','15','create ddl specimen',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','DDL','15','create ddl specimen',current_timestamp() );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.LOCATION;
-create table dua_052538_nwi388.LOCATION (
+drop table if exists <write_bucket>.LOCATION;
+create table <write_bucket>.LOCATION (
   location_id bigint,
   address_1 string,
   address_2 string,
@@ -403,12 +403,12 @@ create table dua_052538_nwi388.LOCATION (
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','DDL','16','create ddl location',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','DDL','16','create ddl location',current_timestamp() );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.care_site;
-create table dua_052538_nwi388.CARE_SITE (
+drop table if exists <write_bucket>.care_site;
+create table <write_bucket>.CARE_SITE (
   care_site_id bigint,
   care_site_name string,
   place_of_service_concept_id bigint,
@@ -419,14 +419,14 @@ create table dua_052538_nwi388.CARE_SITE (
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','DDL','17','create ddl care_site',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','DDL','17','create ddl care_site',current_timestamp() );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.payer_plan_period;
-create table dua_052538_nwi388.PAYER_PLAN_PERIOD (
+drop table if exists <write_bucket>.payer_plan_period;
+create table <write_bucket>.PAYER_PLAN_PERIOD (
   payer_plan_period_id bigint,
-  person_id string,
+  person_id bigint,
   payer_plan_period_start_date date,
   payer_plan_period_end_date date,
   payer_concept_id bigint,
@@ -446,12 +446,12 @@ create table dua_052538_nwi388.PAYER_PLAN_PERIOD (
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','DDL','18','create ddl payer_plan_period',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','DDL','18','create ddl payer_plan_period',current_timestamp() );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.cost;
-create table dua_052538_nwi388.COST (
+drop table if exists <write_bucket>.cost;
+create table <write_bucket>.COST (
   cost_id bigint,
   cost_event_id bigint,
   cost_domain_id string,
@@ -478,48 +478,48 @@ create table dua_052538_nwi388.COST (
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','DDL','19','create ddl cost',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','DDL','19','create ddl cost',current_timestamp() );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.drug_era;
-create table dua_052538_nwi388.DRUG_ERA (
+drop table if exists <write_bucket>.drug_era;
+create table <write_bucket>.DRUG_ERA (
   drug_era_id bigint,
-  person_id string,
+  person_id bigint,
   drug_concept_id bigint,
-  drug_era_start_date string,
-  drug_era_end_date string,
+  drug_era_start_date date,
+  drug_era_end_date date,
   drug_exposure_count bigint,
   gap_days bigint
 );
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','DDL','20','create ddl drug_era',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','DDL','20','create ddl drug_era',current_timestamp() );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.dose_era;
-create table dua_052538_nwi388.DOSE_ERA (
+drop table if exists <write_bucket>.dose_era;
+create table <write_bucket>.DOSE_ERA (
   dose_era_id bigint,
-  person_id string,
+  person_id bigint,
   drug_concept_id bigint,
   unit_concept_id bigint,
   dose_value string,
-  dose_era_start_date string,
-  dose_era_end_date string
+  dose_era_start_date date,
+  dose_era_end_date date
 );
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','DDL','21','create ddl dose_era',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','DDL','21','create ddl dose_era',current_timestamp() );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.condition_era;
-create table dua_052538_nwi388.condition_era(
+drop table if exists <write_bucket>.condition_era;
+create table <write_bucket>.condition_era(
   condition_era_id bigint,
-  person_id string,
+  person_id bigint,
   condition_concept_id bigint,
   condition_era_start_date date,
   condition_era_end_date date,
@@ -528,12 +528,12 @@ create table dua_052538_nwi388.condition_era(
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','DDL','22','create ddl conditon_era',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','DDL','22','create ddl conditon_era',current_timestamp() );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.FACT_RELATIONSHIP;
-create table dua_052538_nwi388.FACT_RELATIONSHIP (
+drop table if exists <write_bucket>.FACT_RELATIONSHIP;
+create table <write_bucket>.FACT_RELATIONSHIP (
   domain_concept_id_1 string,
   fact_id_1  string,
   domain_concept_id_2 string,
@@ -546,8 +546,9 @@ create table dua_052538_nwi388.FACT_RELATIONSHIP (
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','DDL','23','create ddl fact_relationship',current_timestamp(),null);
+insert into <write_bucket>.log values('$job_id','DDL','23','create ddl fact_relationship',current_timestamp() );
+
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','DDL','24','end ddl',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','DDL','24','end ddl',current_timestamp() );

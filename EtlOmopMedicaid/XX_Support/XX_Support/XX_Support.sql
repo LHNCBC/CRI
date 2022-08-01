@@ -1,23 +1,18 @@
 -- Databricks notebook source
-create widget text job_id default "000";
-
-
--- COMMAND ----------
 
 --start log
 
 -- COMMAND ----------
 
---
-drop table if exists dua_052538_nwi388.log;
-create table dua_052538_nwi388.log
+
+drop table if exists <write_bucket>.log;
+create table <write_bucket>.log
 (
 job_id string,
 notebook string,
 command string,
 task string,
-time string,
-row_count string);
+time string);
 
 
 -- COMMAND ----------
@@ -30,8 +25,8 @@ row_count string);
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.METADATA;
-create table dua_052538_nwi388.METADATA (
+drop table if exists <write_bucket>.METADATA;
+create table <write_bucket>.METADATA (
   metadata_concept_id bigint,
   metadata_type_concept_id bigint,
   name string,
@@ -43,8 +38,8 @@ create table dua_052538_nwi388.METADATA (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.CDM_SOURCE;
-create table dua_052538_nwi388.CDM_SOURCE (
+drop table if exists <write_bucket>.CDM_SOURCE;
+create table <write_bucket>.CDM_SOURCE (
   cdm_source_name string,
   cdm_source_abbreviation string,
   cdm_holder string,
@@ -59,8 +54,8 @@ create table dua_052538_nwi388.CDM_SOURCE (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.CONCEPT;
-create table dua_052538_nwi388.CONCEPT
+drop table if exists <write_bucket>.CONCEPT;
+create table <write_bucket>.CONCEPT
 
 
 (
@@ -80,8 +75,8 @@ create table dua_052538_nwi388.CONCEPT
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.VOCABULARY;
-create table dua_052538_nwi388.VOCABULARY (
+drop table if exists <write_bucket>.VOCABULARY;
+create table <write_bucket>.VOCABULARY (
   vocabulary_id string,
   vocabulary_name string,
   vocabulary_reference string,
@@ -91,8 +86,8 @@ create table dua_052538_nwi388.VOCABULARY (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.DOMAIN;
-create table dua_052538_nwi388.DOMAIN (
+drop table if exists <write_bucket>.DOMAIN;
+create table <write_bucket>.DOMAIN (
   domain_id string,
   domain_name string,
   domain_concept_id bigint
@@ -100,8 +95,8 @@ create table dua_052538_nwi388.DOMAIN (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.CONCEPT_CLASS;
-create table dua_052538_nwi388.CONCEPT_CLASS (
+drop table if exists <write_bucket>.CONCEPT_CLASS;
+create table <write_bucket>.CONCEPT_CLASS (
   concept_class_id string,
   concept_class_name string,
   concept_class_concept_id bigint
@@ -109,8 +104,8 @@ create table dua_052538_nwi388.CONCEPT_CLASS (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.CONCEPT_RELATIONSHIP;
-create table dua_052538_nwi388.CONCEPT_RELATIONSHIP (
+drop table if exists <write_bucket>.CONCEPT_RELATIONSHIP;
+create table <write_bucket>.CONCEPT_RELATIONSHIP (
   concept_id_1 bigint,
   concept_id_2 bigint,
   relationship_id string,
@@ -123,8 +118,8 @@ create table dua_052538_nwi388.CONCEPT_RELATIONSHIP (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.RELATIONSHIP;
-create table dua_052538_nwi388.RELATIONSHIP (
+drop table if exists <write_bucket>.RELATIONSHIP;
+create table <write_bucket>.RELATIONSHIP (
   relationship_id string,
   relationship_name string,
   is_hierarchical string,
@@ -135,8 +130,8 @@ create table dua_052538_nwi388.RELATIONSHIP (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.CONCEPT_SYNONYM;
-create table dua_052538_nwi388.CONCEPT_SYNONYM (
+drop table if exists <write_bucket>.CONCEPT_SYNONYM;
+create table <write_bucket>.CONCEPT_SYNONYM (
   concept_id bigint,
   concept_synonym_name string,
   language_concept_id bigint
@@ -144,8 +139,8 @@ create table dua_052538_nwi388.CONCEPT_SYNONYM (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.CONCEPT_ANCESTOR;
-create table dua_052538_nwi388.CONCEPT_ANCESTOR (
+drop table if exists <write_bucket>.CONCEPT_ANCESTOR;
+create table <write_bucket>.CONCEPT_ANCESTOR (
   ancestor_concept_id bigint,
   descendant_concept_id bigint,
   min_levels_of_separation bigint,
@@ -154,8 +149,8 @@ create table dua_052538_nwi388.CONCEPT_ANCESTOR (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.SOURCE_TO_CONCEPT_MAP;
-create table dua_052538_nwi388.SOURCE_TO_CONCEPT_MAP (
+drop table if exists <write_bucket>.SOURCE_TO_CONCEPT_MAP;
+create table <write_bucket>.SOURCE_TO_CONCEPT_MAP (
   source_code string,
   source_concept_id bigint,
   source_vocabulary_id string,
@@ -169,8 +164,8 @@ create table dua_052538_nwi388.SOURCE_TO_CONCEPT_MAP (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.DRUG_STRENGTH;
-create table dua_052538_nwi388.DRUG_STRENGTH (
+drop table if exists <write_bucket>.DRUG_STRENGTH;
+create table <write_bucket>.DRUG_STRENGTH (
   drug_concept_id bigint,
   ingredient_concept_id bigint,
   amount_value string,
@@ -187,8 +182,8 @@ create table dua_052538_nwi388.DRUG_STRENGTH (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.COHORT_DEFINITION;
-create table dua_052538_nwi388.COHORT_DEFINITION (
+drop table if exists <write_bucket>.COHORT_DEFINITION;
+create table <write_bucket>.COHORT_DEFINITION (
   cohort_definition_id bigint,
   cohort_definition_name string,
   cohort_definition_description string,
@@ -200,8 +195,8 @@ create table dua_052538_nwi388.COHORT_DEFINITION (
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.ATTRIBUTE_DEFINITION;
-create table dua_052538_nwi388.ATTRIBUTE_DEFINITION (
+drop table if exists <write_bucket>.ATTRIBUTE_DEFINITION;
+create table <write_bucket>.ATTRIBUTE_DEFINITION (
   attribute_definition_id bigint,
   attribute_name string,
   attribute_description string,
@@ -234,7 +229,7 @@ create table dua_052538_nwi388.ATTRIBUTE_DEFINITION (
 -- MAGIC            valid_end_date="date",
 -- MAGIC            invalid_reason="character")
 -- MAGIC 
--- MAGIC CONCEPT_RELATIONSHIP<-spark_read_csv(sc, "dbfs:/FileStore/shared_uploads/NWI388/CONCEPT_RELATIONSHIP-2.csv",
+-- MAGIC CONCEPT_RELATIONSHIP<-spark_read_csv(sc, "dbfs:/FileStore/shared_uploads/<user_id>/CONCEPT_RELATIONSHIP-2.csv",
 -- MAGIC                                      memory = FALSE,
 -- MAGIC                                      header = TRUE,
 -- MAGIC                                      columns=cr_schema,
@@ -245,14 +240,14 @@ create table dua_052538_nwi388.ATTRIBUTE_DEFINITION (
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.CONCEPT_RELATIONSHIP
+  <write_bucket>.CONCEPT_RELATIONSHIP
 select
   *
 from
   CONCEPT_RELATIONSHIP;
   
   
-optimize dua_052538_nwi388.CONCEPT_RELATIONSHIP  ZORDER by(concept_id_1);
+optimize <write_bucket>.CONCEPT_RELATIONSHIP  ZORDER by(concept_id_1);
 
 
 -- COMMAND ----------
@@ -270,7 +265,7 @@ optimize dua_052538_nwi388.CONCEPT_RELATIONSHIP  ZORDER by(concept_id_1);
 -- MAGIC                  invalid_reason="character")
 -- MAGIC 
 -- MAGIC CONCEPT<-spark_read_csv(sc,
--- MAGIC                         "dbfs:/FileStore/shared_uploads/NWI388/CONCEPT-3.csv",
+-- MAGIC                         "dbfs:/FileStore/shared_uploads/<user_id>/CONCEPT-3.csv",
 -- MAGIC                         memory = FALSE,
 -- MAGIC                         header = TRUE,
 -- MAGIC                         columns=concept_schema,
@@ -281,19 +276,19 @@ optimize dua_052538_nwi388.CONCEPT_RELATIONSHIP  ZORDER by(concept_id_1);
 
 --Athena provides dx-px-rx code to ohdsi concept ids
 insert into
-  dua_052538_NWI388.concept
+  <write_bucket>.concept
 select
   *
 from
   CONCEPT;
   
-optimize dua_052538_nwi388.concept  ZORDER by(concept_id);
+optimize <write_bucket>.concept  ZORDER by(concept_id);
 
 -- COMMAND ----------
 
 -- MAGIC %r
 -- MAGIC CONCEPT_ANCESTOR<-spark_read_csv(sc,
--- MAGIC                                  "dbfs:/FileStore/shared_uploads/NWI388/CONCEPT_ANCESTOR-1.csv",
+-- MAGIC                                  "dbfs:/FileStore/shared_uploads/<user_id>/CONCEPT_ANCESTOR-1.csv",
 -- MAGIC                                  memory = FALSE,
 -- MAGIC                                  header = TRUE,
 -- MAGIC                                  infer_schema = TRUE,
@@ -304,7 +299,7 @@ optimize dua_052538_nwi388.concept  ZORDER by(concept_id);
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.CONCEPT_ANCESTOR
+  <write_bucket>.CONCEPT_ANCESTOR
 select
   *
 from
@@ -315,7 +310,7 @@ from
 
 -- MAGIC %r
 -- MAGIC RELATIONSHIP<-spark_read_csv(sc,
--- MAGIC                              "dbfs:/FileStore/shared_uploads/NWI388/RELATIONSHIP-2.csv",
+-- MAGIC                              "dbfs:/FileStore/shared_uploads/<user_id>/RELATIONSHIP-2.csv",
 -- MAGIC                              memory = FALSE,
 -- MAGIC                              header = TRUE,
 -- MAGIC                              infer_schema = TRUE,
@@ -326,7 +321,7 @@ from
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.RELATIONSHIP
+  <write_bucket>.RELATIONSHIP
 select
   *
 from
@@ -336,7 +331,7 @@ from
 
 -- MAGIC %r
 -- MAGIC VOCABULARY<-spark_read_csv(sc, 
--- MAGIC                            "dbfs:/FileStore/shared_uploads/NWI388/VOCABULARY-1.csv",
+-- MAGIC                            "dbfs:/FileStore/shared_uploads/<user_id>/VOCABULARY-1.csv",
 -- MAGIC                            memory = FALSE,
 -- MAGIC                            header = TRUE,
 -- MAGIC                            infer_schema = TRUE,
@@ -348,7 +343,7 @@ from
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.VOCABULARY
+  <write_bucket>.VOCABULARY
 select
   *
 from
@@ -362,7 +357,7 @@ from
 -- MAGIC 
 -- MAGIC handshake<-c(vocabulary_id_a="character",vocabulary_id="character")
 -- MAGIC px_handshake<-spark_read_csv(sc,
--- MAGIC                              "dbfs:/FileStore/shared_uploads/NWI388/px_handshake-1.csv",
+-- MAGIC                              "dbfs:/FileStore/shared_uploads/<user_id>/px_handshake-1.csv",
 -- MAGIC                              memory = FALSE,
 -- MAGIC                              header = TRUE,
 -- MAGIC                              columns=handshake,
@@ -372,8 +367,8 @@ from
 
 -- COMMAND ----------
 
-drop table if exists  dua_052538_nwi388.px_handshake;
-create table  dua_052538_nwi388.px_handshake as
+drop table if exists  <write_bucket>.px_handshake;
+create table  <write_bucket>.px_handshake as
 select * from px_handshake;
 
 
@@ -395,7 +390,7 @@ select * from px_handshake;
 -- MAGIC                  invalid_reason="character")
 -- MAGIC 
 -- MAGIC CONCEPT_ccw<-spark_read_csv(sc,
--- MAGIC                         "dbfs:/FileStore/shared_uploads/NWI388/ccw_concept.csv",
+-- MAGIC                         "dbfs:/FileStore/shared_uploads/<user_id>/ccw_concept.csv",
 -- MAGIC                         memory = FALSE,
 -- MAGIC                         header = TRUE,
 -- MAGIC                         columns=concept_schema,
@@ -404,7 +399,7 @@ select * from px_handshake;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.concept
+insert into <write_bucket>.concept
 select * from 
 CONCEPT_ccw;
 
@@ -420,7 +415,7 @@ CONCEPT_ccw;
 -- MAGIC            invalid_reason="character")
 -- MAGIC 
 -- MAGIC CONCEPT_RELATIONSHIP_ccw<-spark_read_csv(sc, 
--- MAGIC                                      "dbfs:/FileStore/shared_uploads/NWI388/ccw_relationship.csv",
+-- MAGIC                                      "dbfs:/FileStore/shared_uploads/<user_id>/ccw_relationship.csv",
 -- MAGIC                                      memory = FALSE,
 -- MAGIC                                      header = TRUE,
 -- MAGIC                                      columns=cr_schema,
@@ -431,7 +426,7 @@ CONCEPT_ccw;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.concept_relationship
+insert into <write_bucket>.concept_relationship
 select * from
 CONCEPT_RELATIONSHIP_ccw
 
@@ -450,7 +445,7 @@ CONCEPT_RELATIONSHIP_ccw
 -- MAGIC 
 -- MAGIC library(sparklyr)
 -- MAGIC sc<-spark_connect(method='databricks')
--- MAGIC NPI_place<-spark_read_csv(sc,"dbfs:/FileStore/shared_uploads/NWI388/npi_place.csv", 
+-- MAGIC NPI_place<-spark_read_csv(sc,"dbfs:/FileStore/shared_uploads/<user_id>/npi_place.csv", 
 -- MAGIC memory = FALSE,header = TRUE,infer_schema = TRUE,delimiter = ",")
 -- MAGIC head (NPI_place)
 -- MAGIC sdf_register(NPI_place,"NPI_place")
@@ -468,7 +463,7 @@ CONCEPT_RELATIONSHIP_ccw
 -- MAGIC library(sparklyr)
 -- MAGIC sc<-spark_connect(method='databricks')
 -- MAGIC 
--- MAGIC NPI<-spark_read_csv(sc,"dbfs:/FileStore/shared_uploads/NWI388/npidata_pfile.csv", 
+-- MAGIC NPI<-spark_read_csv(sc,"dbfs:/FileStore/shared_uploads/<user_id>/npidata_pfile.csv", 
 -- MAGIC                           
 -- MAGIC                            memory = FALSE,
 -- MAGIC                            header = TRUE,
@@ -479,21 +474,22 @@ CONCEPT_RELATIONSHIP_ccw
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.NPI_provider;
-create table dua_052538_nwi388.NPI_provider using delta as
+drop table if exists <write_bucket>.NPI_provider;
+create table <write_bucket>.NPI_provider using delta as
 select
   *
 from
   NPI;
   
 --parse npi into spark sql view Provider name and care site are learnded from this dictionary drop view if exists NPI_provider;
-optimize dua_052538_nwi388.npi_provider  ZORDER by(npi);
+optimize <write_bucket>.npi_provider  ZORDER by(npi);
+
 drop view if exists NPI_provider;
 create view NPI_provider as
 select
   *
 from
-  dua_052538_nwi388.NPI;
+  <write_bucket>.NPI;
 
 -- COMMAND ----------
 
@@ -501,7 +497,7 @@ from
 -- MAGIC 
 -- MAGIC library(sparklyr)
 -- MAGIC sc<-spark_connect(method='databricks')
--- MAGIC NPI_place<-spark_read_csv(sc,"dbfs:/FileStore/shared_uploads/NWI388/npi_place.csv", 
+-- MAGIC NPI_place<-spark_read_csv(sc,"dbfs:/FileStore/shared_uploads/<user_id>/npi_place.csv", 
 -- MAGIC memory = FALSE,header = TRUE,infer_schema = TRUE,delimiter = ",")
 -- MAGIC head (NPI_place)
 -- MAGIC sdf_register(NPI_place,"NPI_place")
@@ -509,4 +505,3 @@ from
 -- COMMAND ----------
 
 --NPI Ends
-

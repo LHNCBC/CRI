@@ -1,5 +1,5 @@
 -- Databricks notebook source
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','1','start condition occurrence',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','1','start condition occurrence',current_timestamp() );
 
 -- COMMAND ----------
 
@@ -10,7 +10,7 @@ insert into dua_052538_nwi388.log values('$job_id','condition occurrence','1','s
 
 -- COMMAND ----------
 
-create widget text job_id default "102";
+
 
 -- COMMAND ----------
 
@@ -28,28 +28,28 @@ select
   valid_end_date,
   invalid_reason
 from
-  dua_052538_nwi388.concept
+  <write_bucket>.concept
 where
   vocabulary_id in( 'ICD10CM', 'ICD9CM')
 union
 select
   *
 from
-  dua_052538_nwi388.concept
+  <write_bucket>.concept
 where
   vocabulary_id = 'DRG';
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','2','create lkup dx',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','2','create lkup dx',current_timestamp() );
 
 -- COMMAND ----------
 
 
-drop table if exists dua_052538_nwi388.hold_condition_occurrence;
+drop table if exists <write_bucket>.hold_condition_occurrence;
 
 create table 
-dua_052538_nwi388.hold_condition_occurrence using delta as
+<write_bucket>.hold_condition_occurrence using delta as
 select
   bene_id,
   clm_id,
@@ -64,7 +64,7 @@ select
   concept_id,
   domain_id 
 from
- dua_052538_nwi388.other_services_Header_$year a
+ <write_bucket>.other_services_Header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_1 = c.concept_code
@@ -73,13 +73,13 @@ where a.DGNS_CD_1 is not null
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','3','ot header dx 1 into condition hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','3','ot header dx 1 into hold condition',current_timestamp() );
 
 -- COMMAND ----------
 
 
 insert into
-  dua_052538_nwi388.hold_condition_occurrence
+  <write_bucket>.hold_condition_occurrence
 select
   bene_id,
   clm_id,
@@ -94,7 +94,7 @@ select
   concept_id,
   domain_id 
 from
- dua_052538_nwi388.other_services_Header_$year  a
+ <write_bucket>.other_services_Header_$year  a
 left join lkup_dx c 
 on 
 a.DGNS_CD_2 = c.concept_code
@@ -102,13 +102,13 @@ where a.DGNS_CD_2 is not null;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','4','ot header dx 2 into condition hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','4','ot header dx 2 into hold condition',current_timestamp() );
 
 -- COMMAND ----------
 
 
 insert into
-  dua_052538_nwi388.hold_condition_occurrence
+  <write_bucket>.hold_condition_occurrence
 select
   bene_id,
   clm_id,
@@ -123,7 +123,7 @@ select
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header_$year   a
+<write_bucket>.inpatient_header_$year   a
 left join lkup_dx c 
 on 
 a.ADMTG_DGNS_CD = c.concept_code
@@ -131,13 +131,13 @@ where a.ADMTG_DGNS_CD is not null;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','5','ip header admit dx into condition hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','5','ip header admit dx into hold condition',current_timestamp() );
 
 -- COMMAND ----------
 
 
 insert into
-  dua_052538_nwi388.hold_condition_occurrence
+  <write_bucket>.hold_condition_occurrence
 select
   bene_id,
   clm_id,
@@ -152,7 +152,7 @@ select
   concept_id,
   domain_id 
 from
- dua_052538_nwi388.inpatient_header_$year a
+ <write_bucket>.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_1= c.concept_code
@@ -162,13 +162,13 @@ where a.DGNS_CD_1 is not null;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','6','ip header dx 1 into condition hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','6','ip header dx 1 into hold condition',current_timestamp() );
 
 -- COMMAND ----------
 
 
 insert into
-  dua_052538_nwi388.hold_condition_occurrence
+  <write_bucket>.hold_condition_occurrence
 select
   bene_id,
   clm_id,
@@ -183,7 +183,7 @@ select
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header_$year a
+<write_bucket>.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_2= c.concept_code
@@ -192,13 +192,13 @@ where a.DGNS_CD_2 is not null;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','7','ip header dx 2 into condition hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','7','ip header dx 2 into hold condition',current_timestamp() );
 
 -- COMMAND ----------
 
 
 insert into
-  dua_052538_nwi388.hold_condition_occurrence
+  <write_bucket>.hold_condition_occurrence
 select
   bene_id,
   clm_id,
@@ -213,7 +213,7 @@ select
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header_$year a
+<write_bucket>.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_3= c.concept_code
@@ -221,13 +221,13 @@ where a.DGNS_CD_3 is not null;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','8','ip header dx 3 into condition hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','8','ip header dx 3 into hold condition',current_timestamp() );
 
 -- COMMAND ----------
 
 
 insert into
-  dua_052538_nwi388.hold_condition_occurrence
+  <write_bucket>.hold_condition_occurrence
 select
   bene_id,
   clm_id,
@@ -242,7 +242,7 @@ select
 concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header_$year a
+<write_bucket>.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_4= c.concept_code
@@ -251,13 +251,13 @@ where a.DGNS_CD_4 is not null
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','9','ip header dx 4 into condition hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','9','ip header dx 4 into hold condition',current_timestamp() );
 
 -- COMMAND ----------
 
 
 insert into
-  dua_052538_nwi388.hold_condition_occurrence
+  <write_bucket>.hold_condition_occurrence
 select
   bene_id,
   clm_id,
@@ -272,7 +272,7 @@ select
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header_$year a
+<write_bucket>.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_5= c.concept_code
@@ -281,13 +281,13 @@ where a.DGNS_CD_5 is not null
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','10','ip header dx 5 into condition hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','10','ip header dx 5 into hold condition',current_timestamp() );
 
 -- COMMAND ----------
 
 
 insert into
-  dua_052538_nwi388.hold_condition_occurrence
+  <write_bucket>.hold_condition_occurrence
 select
   bene_id,
   clm_id,
@@ -302,7 +302,7 @@ select
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header_$year a
+<write_bucket>.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_6= c.concept_code
@@ -311,12 +311,12 @@ where a.DGNS_CD_6 is not null
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','11','ip header dx 6 into condition hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','11','ip header dx 6 into hold condition',current_timestamp() );
 
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.hold_condition_occurrence
+  <write_bucket>.hold_condition_occurrence
 select
   bene_id,
   clm_id,
@@ -331,7 +331,7 @@ select
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header_$year a
+<write_bucket>.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_7= c.concept_code
@@ -339,13 +339,13 @@ where a.DGNS_CD_7 is not null;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','12','ip header dx 7 into condition hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','12','ip header dx 7 into hold condition',current_timestamp() );
 
 -- COMMAND ----------
 
 
 insert into
-  dua_052538_nwi388.hold_condition_occurrence
+  <write_bucket>.hold_condition_occurrence
 select
   bene_id,
   clm_id,
@@ -360,7 +360,7 @@ select
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header_$year a
+<write_bucket>.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_8= c.concept_code
@@ -371,13 +371,13 @@ where a.DGNS_CD_8 is not null
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','13','ip header dx 8 into condition hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','13','ip header dx 8 into hold condition',current_timestamp() );
 
 -- COMMAND ----------
 
 
 insert into
-  dua_052538_nwi388.hold_condition_occurrence
+  <write_bucket>.hold_condition_occurrence
 select
   bene_id,
   clm_id,
@@ -393,7 +393,7 @@ select
   domain_id 
   
 from
-dua_052538_nwi388.inpatient_header_$year a
+<write_bucket>.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_9= c.concept_code
@@ -404,13 +404,13 @@ where a.DGNS_CD_9 is not null
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','14','ip header dx 9 into condition hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','14','ip header dx 9 into hold condition',current_timestamp() );
 
 -- COMMAND ----------
 
 
 insert into
-  dua_052538_nwi388.hold_condition_occurrence
+  <write_bucket>.hold_condition_occurrence
 select
   bene_id,
   clm_id,
@@ -425,7 +425,7 @@ select
 concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header_$year a
+<write_bucket>.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_10= c.concept_code
@@ -433,13 +433,13 @@ where a.DGNS_CD_10 is not null;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','15','ip header dx 10 into condition hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','15','ip header dx 10 into hold condition',current_timestamp() );
 
 -- COMMAND ----------
 
 
 insert into
-  dua_052538_nwi388.hold_condition_occurrence
+  <write_bucket>.hold_condition_occurrence
 select
   bene_id,
   clm_id,
@@ -454,7 +454,7 @@ select
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header_$year a
+<write_bucket>.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_11= c.concept_code
@@ -462,13 +462,13 @@ where a.DGNS_CD_11 is not null;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','16','ip header dx 11 into condition hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','16','ip header dx 11 into hold condition',current_timestamp() );
 
 -- COMMAND ----------
 
 
 insert into
-  dua_052538_nwi388.hold_condition_occurrence
+  <write_bucket>.hold_condition_occurrence
 select
   bene_id,
   clm_id,
@@ -483,7 +483,7 @@ select
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header_$year a
+<write_bucket>.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_12= c.concept_code 
@@ -491,13 +491,13 @@ where a.DGNS_CD_12 is not null;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','17','ip header dx 12 into condition hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','17','ip header dx 12 into hold condition',current_timestamp() );
 
 -- COMMAND ----------
 
 
 insert into
-  dua_052538_nwi388.hold_condition_occurrence
+  <write_bucket>.hold_condition_occurrence
 select
   bene_id,
   clm_id,
@@ -512,7 +512,7 @@ select
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.inpatient_header_$year a
+<write_bucket>.inpatient_header_$year a
 left join lkup_dx c 
 on 
 a.drg_cd= c.concept_code 
@@ -520,13 +520,13 @@ where a.drg_cd is not null;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','18','ip header drg into condition hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','18','ip header drg into hold condition',current_timestamp() );
 
 -- COMMAND ----------
 
 
 insert into
-  dua_052538_nwi388.hold_condition_occurrence
+  <write_bucket>.hold_condition_occurrence
 select
   bene_id,
   clm_id,
@@ -541,7 +541,7 @@ select
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.long_term_header_$year a
+<write_bucket>.long_term_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_1= c.concept_code 
@@ -549,13 +549,13 @@ where a.DGNS_CD_1 is not null;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','18','lt header dx 1 into condition hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','18','lt header dx 1 into hold condition',current_timestamp() );
 
 -- COMMAND ----------
 
 
 insert into
-  dua_052538_nwi388.hold_condition_occurrence
+  <write_bucket>.hold_condition_occurrence
 select
   bene_id,
   clm_id,
@@ -570,7 +570,7 @@ select
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.long_term_header_$year a
+<write_bucket>.long_term_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_2= c.concept_code 
@@ -578,13 +578,13 @@ where a.DGNS_CD_2 is not null
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','19','lt header dx 2 into condition hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','19','lt header dx 2 into hold condition',current_timestamp() );
 
 -- COMMAND ----------
 
 
 insert into
-  dua_052538_nwi388.hold_condition_occurrence
+  <write_bucket>.hold_condition_occurrence
 select
   bene_id,
   clm_id,
@@ -599,7 +599,7 @@ select
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.long_term_header_$year a
+<write_bucket>.long_term_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_3= c.concept_code 
@@ -607,13 +607,13 @@ where a.DGNS_CD_3 is not null;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','20','lt header dx 3 into condition hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','20','lt header dx 3 into hold condition',current_timestamp() );
 
 -- COMMAND ----------
 
 
 insert into
-  dua_052538_nwi388.hold_condition_occurrence
+  <write_bucket>.hold_condition_occurrence
 select
   bene_id,
   clm_id,
@@ -628,7 +628,7 @@ select
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.long_term_header_$year a
+<write_bucket>.long_term_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_4= c.concept_code 
@@ -637,13 +637,13 @@ where a.DGNS_CD_4 is not null
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','21','lt header dx 4 into condition hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','21','lt header dx 4 into hold condition',current_timestamp() );
 
 -- COMMAND ----------
 
 
 insert into
-  dua_052538_nwi388.hold_condition_occurrence
+  <write_bucket>.hold_condition_occurrence
 select
   bene_id,
   clm_id,
@@ -658,7 +658,7 @@ select
   concept_id,
   domain_id 
 from
- dua_052538_nwi388.long_term_header_$year a
+ <write_bucket>.long_term_header_$year a
 left join lkup_dx c 
 on 
 a.DGNS_CD_5= c.concept_code 
@@ -666,12 +666,12 @@ where a.DGNS_CD_5 is not null;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','22','lt header dx 5 into condition hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','22','lt header dx 5 into hold condition',current_timestamp() );
 
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.hold_condition_occurrence
+  <write_bucket>.hold_condition_occurrence
 select
   bene_id,
   clm_id,
@@ -686,7 +686,7 @@ select
   concept_id,
   domain_id 
 from
-dua_052538_nwi388.long_term_header_$year a
+<write_bucket>.long_term_header_$year a
 left join lkup_dx c 
 on 
 a.ADMTG_DGNS_CD= c.concept_code 
@@ -695,12 +695,12 @@ where a.ADMTG_DGNS_CD is not null;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','23','lt header admit dx into condition hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','23','lt header admit dx into hold condition',current_timestamp() );
 
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.condition_occurrence
+  <write_bucket>.condition_occurrence
 select
   rand() as condition_occurrence_id,
   bene_id as person_id,
@@ -719,14 +719,14 @@ select
   concept_id as condition_source_concept_id,
   null condition_status_source_value
 from
-    dua_052538_nwi388.hold_condition_occurrence
+    <write_bucket>.hold_condition_occurrence
 where
   domain_id = 'Condition';
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','24','conditon hold to condition occurrence cdm',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','24','conditon hold to condition occurrence cdm',current_timestamp() );
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','condition occurrence','25','end condition occurrence',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','condition occurrence','25','end condition occurrence',current_timestamp() );

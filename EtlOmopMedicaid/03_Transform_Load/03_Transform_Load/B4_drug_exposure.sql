@@ -1,5 +1,5 @@
 -- Databricks notebook source
-insert into dua_052538_nwi388.log values('$job_id','drug exposure','1','start drug exposure start',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','drug exposure','1','start drug exposure start',current_timestamp() );
 
 -- COMMAND ----------
 
@@ -8,10 +8,7 @@ insert into dua_052538_nwi388.log values('$job_id','drug exposure','1','start dr
 -- MAGIC spark.conf.set("spark.sql.shuffle.partitions",7000);
 -- MAGIC spark.conf.set("spark.databricks.io.cache.enabled", "True");
 
--- COMMAND ----------
 
---widget
-create widget text job_id default "102";
 
 -- COMMAND ----------
 
@@ -21,19 +18,22 @@ create view lkup_NDC as
 select
   *
 from
-  dua_052538_nwi388.concept
+  <write_bucket>.concept
 where
   vocabulary_id = 'NDC';
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','drug exposure','2','create lkup ndc',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','drug exposure','2','create lkup ndc',current_timestamp() );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.hold_drug_exposure;
+drop table if exists <write_bucket>.hold_drug_exposure;
+
+-- COMMAND ----------
+
 create table 
-  dua_052538_nwi388.hold_drug_exposure using delta
+  <write_bucket>.hold_drug_exposure using delta
 select
   clm_id,
   "other_services_line" as origin_table,
@@ -46,25 +46,25 @@ select
   'NULL' as route_source_value,
   LINE_SRVC_BGN_DT as event_start_date,
   LINE_SRVC_END_DT as event_end_date,
-  concat(clm_id,'_',state_cd,'_',year,'_', 32861) as forign_key,--outpatient claim header
+  concat(clm_id,'_',state_cd,'_',year,'_', 32861) as forign_key,--Outpatient claim header
   bene_id,
   srvc_prvdr_npi,
   concept_id
 from
-dua_052538_nwi388.other_services_line_$year a
+<write_bucket>.other_services_line_$year a
 left join lkup_ndc b 
   on a.ndc = b.concept_code
   where ndc is not null;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','drug exposure','3','ot line to rx hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','drug exposure','3','ot line to rx hold',current_timestamp() );
 
 -- COMMAND ----------
 
 
 insert into
-  dua_052538_nwi388.hold_drug_exposure
+  <write_bucket>.hold_drug_exposure
 select
   clm_id,
   "inpatient_line" as origin_table,
@@ -82,52 +82,52 @@ select
   srvc_prvdr_npi,
   concept_id
 from
-dua_052538_nwi388.inpatient_line_$year a
+<write_bucket>.inpatient_line_$year a
 left join lkup_ndc b 
   on a.ndc = b.concept_code
   where ndc is not null;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','drug exposure','4','ip line to rx hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','drug exposure','4','ip line to rx hold',current_timestamp() );
 
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.hold_drug_exposure
+  <write_bucket>.hold_drug_exposure
 select
-  a.clm_id,
+ a.clm_id,
   "rx_line" as origin_table,
   a.state_cd as origin,
   a.ndc as event_source_value,
-  NDC_UOM_CD as dose_unit_source_value,
-  NDC_QTY as quantity,
-  NEW_RX_REFILL_NUM as refills,
-  DAYS_SUPPLY as days_supply,
-  DOSAGE_FORM_CD as route_source_value,
-  RX_FILL_DT as event_start_date,
-  date('01/01/0001') as event_end_date,
-  concat(a.clm_id, a.state_cd, 32869) as forign_key,--Pharmacy claim
-  a.bene_id,
+  a.NDC_UOM_CD as dose_unit_source_value,
+  a.NDC_QTY as quantity,
+  a.NEW_RX_REFILL_NUM as refills,
+  a.DAYS_SUPPLY as days_supply,
+  a.DOSAGE_FORM_CD as route_source_value,
+  c.RX_FILL_DT as event_start_date,
+  null as event_end_date,
+  concat(a.clm_id,'_',a.state_cd,'_',a.year,'_',32869) as forign_key,--Pharmacy claim
+  a.bene_id ,
   c.PRSCRBNG_PRVDR_NPI,
   b.concept_id
 from
-dua_052538_nwi388.rx_line_$year a
+<write_bucket>.rx_line_$year a
 left join lkup_ndc b 
   on a.ndc = b.concept_code
   left join 
- dua_052538_nwi388.rx_header_$year c 
+ <write_bucket>.rx_header_$year c 
  on a.clm_id = c.clm_id
-  where ndc is not null;
+  where a.ndc is not null;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','drug exposure','5','rx to rx hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','drug exposure','5','rx to rx hold',current_timestamp() );
 
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.hold_drug_exposure
+  <write_bucket>.hold_drug_exposure
 select
   clm_id,
   "long_term_line" as origin_table,
@@ -140,12 +140,13 @@ select
   'NULL' as route_source_value,
   LINE_SRVC_BGN_DT as event_start_date,
   LINE_SRVC_END_DT as event_end_date,
+  
   concat(clm_id,'_',state_cd,'_',year,'_', 32846) as forign_key,--Facility claim header
   bene_id,
   SRVC_PRVDR_NPI,
   concept_id
 from
-dua_052538_nwi388.long_term_line_$year a
+<write_bucket>.long_term_line_$year a
 left join lkup_ndc b 
   on a.ndc = b.concept_code
   where ndc is not null;
@@ -154,17 +155,17 @@ left join lkup_ndc b
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','drug exposure','6','lt to rx hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','drug exposure','6','lt to rx hold',current_timestamp() );
 
 -- COMMAND ----------
 
 
 insert into
-  dua_052538_nwi388.DRUG_EXPOSURE
+  <write_bucket>.DRUG_EXPOSURE
 select
-  rand() as drug_exposure_id,
+  null as drug_exposure_id,
   bene_id as person_id,
-  case  when concept_id='' then 0    --case where to set null ids to 0
+  case  when concept_id='' then 0  
   else concept_id end as drug_concept_id,
   event_start_date as drug_exposure_start_date,
   null as drug_exposure_start_datetime,
@@ -187,12 +188,12 @@ select
   route_source_value,
   dose_unit_source_value
 from
-   dua_052538_nwi388.hold_drug_exposure;
+   <write_bucket>.hold_drug_exposure;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','drug exposure','6','rx to drug exposure cdm',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','drug exposure','6','rx to drug exposure cdm',current_timestamp() );
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','drug exposure','7','rxend',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','drug exposure','7','rx end',current_timestamp() );

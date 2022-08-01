@@ -1,5 +1,5 @@
 -- Databricks notebook source
-insert into dua_052538_nwi388.log values('$job_id','procedure occurrence','1','start procuedure occurrence',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','procedure occurrence','1','start procuedure occurrence',current_timestamp() );
 
 -- COMMAND ----------
 
@@ -10,10 +10,6 @@ insert into dua_052538_nwi388.log values('$job_id','procedure occurrence','1','s
 
 -- MAGIC %python
 -- MAGIC spark.conf.set("spark.sql.shuffle.partitions",7000)
-
--- COMMAND ----------
-
-create widget text job_id default "102";
 
 
 
@@ -30,9 +26,9 @@ select
   domain_id,
   standard_concept
 from
-  dua_052538_nwi388.concept a
+  <write_bucket>.concept a
 inner join
-dua_052538_nwi388.px_handshake b
+<write_bucket>.px_handshake b
 on
 a.vocabulary_id=b.vocabulary_id
 ;
@@ -40,31 +36,31 @@ a.vocabulary_id=b.vocabulary_id
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','procedure occurrence','2','create lkup px',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','procedure occurrence','2','create lkup px',current_timestamp() );
 
 -- COMMAND ----------
 
 
-drop table if exists dua_052538_nwi388.provider_id_for_dxpxrx;
-create table dua_052538_nwi388.provider_id_for_dxpxrx using delta as
+drop table if exists <write_bucket>.provider_id_for_dxpxrx;
+create table <write_bucket>.provider_id_for_dxpxrx using delta as
 select
  provider_id,
  npi as npi_a
 from
-   dua_052538_nwi388.provider;
+   <write_bucket>.provider;
   
-optimize   dua_052538_nwi388.provider_id_for_dxpxrx ZORDER by(npi_a);
+optimize   <write_bucket>.provider_id_for_dxpxrx ZORDER by(npi_a);
 
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','procedure occurrence','3','create provider id for dxpxrx',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','procedure occurrence','3','create provider id for dxpxrx',current_timestamp() );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.hold_procedure_occurrence;
+drop table if exists <write_bucket>.hold_procedure_occurrence;
 create table
-  dua_052538_nwi388.hold_procedure_occurrence using delta as
+  <write_bucket>.hold_procedure_occurrence using delta as
   select
   a.bene_id,
   a.clm_id,
@@ -80,10 +76,8 @@ create table
   a.blg_prvdr_npi as provider_id,
   c.concept_id
 from
- dua_052538_nwi388.inpatient_header_$year a
---left join dua_052538_nwi388.provider_id_for_dxpxrx b
---on 
---a.blg_prvdr_npi = b.npi_a
+ <write_bucket>.inpatient_header_$year a
+
 left join lkup_px c 
 on 
 a.prcdr_cd_1 = c.concept_code
@@ -93,12 +87,12 @@ where prcdr_cd_1 is not null;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','procedure occurrence','4','inpt px1 to hold procuedure ',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','procedure occurrence','4','inpt px1 to hold procuedure ',current_timestamp() );
 
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.hold_procedure_occurrence
+  <write_bucket>.hold_procedure_occurrence
   select
   a.bene_id,
   a.clm_id,
@@ -114,7 +108,7 @@ insert into
   a.blg_prvdr_npi as provider_id,
   c.concept_id
 from
- dua_052538_nwi388.inpatient_header_$year a
+ <write_bucket>.inpatient_header_$year a
 left join lkup_px c 
 on 
 a.prcdr_cd_2 = c.concept_code
@@ -124,12 +118,12 @@ where prcdr_cd_2 is not null;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','procedure occurrence','5','inpt px2 to hold procuedure ',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','procedure occurrence','5','inpt px2 to hold procuedure ',current_timestamp() );
 
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.hold_procedure_occurrence
+  <write_bucket>.hold_procedure_occurrence
   select
   a.bene_id,
   a.clm_id,
@@ -145,7 +139,7 @@ insert into
   a.blg_prvdr_npi as provider_id,
   c.concept_id
 from
-dua_052538_nwi388.inpatient_header_$year a
+<write_bucket>.inpatient_header_$year a
 left join lkup_px c 
 on 
 a.prcdr_cd_3 = c.concept_code
@@ -155,12 +149,12 @@ where prcdr_cd_3 is not null;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','procedure occurrence','6','inpt px3 to hold procuedure ',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','procedure occurrence','6','inpt px3 to hold procuedure ',current_timestamp() );
 
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.hold_procedure_occurrence
+  <write_bucket>.hold_procedure_occurrence
   select
   a.bene_id,
   a.clm_id,
@@ -176,7 +170,7 @@ insert into
   a.blg_prvdr_npi as provider_id,
   c.concept_id
 from
-dua_052538_nwi388.inpatient_header_$year a
+<write_bucket>.inpatient_header_$year a
 
 left join lkup_px c 
 on 
@@ -187,12 +181,12 @@ where prcdr_cd_4 is not null;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','procedure occurrence','7','inpt px4 to hold procuedure ',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','procedure occurrence','7','inpt px4 to hold procuedure ',current_timestamp() );
 
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.hold_procedure_occurrence
+  <write_bucket>.hold_procedure_occurrence
   select
   a.bene_id,
   a.clm_id,
@@ -208,7 +202,7 @@ insert into
   a.blg_prvdr_npi as provider_id,
   c.concept_id
 from
-dua_052538_nwi388.inpatient_header_$year a
+<write_bucket>.inpatient_header_$year a
 
 left join lkup_px c 
 on a.prcdr_cd_5 = c.concept_code
@@ -218,12 +212,12 @@ where prcdr_cd_5 is not null;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','procedure occurrence','8','inpt px5 to hold procuedure ',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','procedure occurrence','8','inpt px5 to hold procuedure ',current_timestamp() );
 
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.hold_procedure_occurrence
+  <write_bucket>.hold_procedure_occurrence
   select
   a.bene_id,
   a.clm_id,
@@ -239,7 +233,7 @@ insert into
   a.blg_prvdr_npi as provider_id,
   c.concept_id
 from
-dua_052538_nwi388.inpatient_header_$year a
+<write_bucket>.inpatient_header_$year a
 
 left join lkup_px c 
 on
@@ -250,17 +244,18 @@ where prcdr_cd_6 is not null;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','procedure occurrence','9','inpt px6 to hold procuedure ',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','procedure occurrence','9','inpt px6 to hold procuedure ',current_timestamp() );
 
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.hold_procedure_occurrence
+  <write_bucket>.hold_procedure_occurrence
 select
   a.bene_id,
   a.clm_id,
   "other_services_line" as origin_table,
   a.state_cd as origin,
+    
   32861 as procedure_type_concept_id,--outpatient claim header
   null as modifier_concept_id,
   a.LINE_PRCDR_CD as event_source_value,
@@ -271,7 +266,7 @@ select
   a.srvc_prvdr_npi as provider_id,
   c.concept_id
 from
-dua_052538_nwi388.other_services_line_$year a
+<write_bucket>.other_services_line_$year a
 left join lkup_px c 
 on 
 a.LINE_PRCDR_CD = c.concept_code
@@ -282,39 +277,41 @@ a.LINE_PRCDR_CD_SYS=c.vocabulary_id_a
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','procedure occurrence','10','ot line to procedure hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','procedure occurrence','10','ot line to procedure hold',current_timestamp() );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.hold_procedure_occurrence_d;
-create table dua_052538_nwi388.hold_procedure_occurrence_d as
+drop table if exists <write_bucket>.hold_procedure_occurrence_d;
+create table <write_bucket>.hold_procedure_occurrence_d as
 select
   bene_id,
   clm_id,
   "other_services_line" as origin_table,
   state_cd as origin,
+    
   32861 as procedure_type_concept_id,--outpatient claim header
   LINE_PRCDR_CD as event_source_value,
   TOOTH_NUM,
   TOOTH_SRFC_CD,
   LINE_SRVC_BGN_DT as event_start_date,
+    
   concat(clm_id,'_',state_cd,'_',year,'_',  32861) as forign_key,--outpatient claim header
   srvc_prvdr_npi as npi,
   LINE_PRCDR_CD_SYS as vocabulary_id_b
 from
- dua_052538_nwi388.other_services_line_$year
+ <write_bucket>.other_services_line_$year
 where
   LINE_PRCDR_CD is not null
   and line_prcdr_cd like 'D%';
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','procedure occurrence','11','dental extract',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','procedure occurrence','11','dental extract',current_timestamp() );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.transform_procedure_occurrence_d1;
-create table dua_052538_nwi388.transform_procedure_occurrence_d1 as
+drop table if exists <write_bucket>.transform_procedure_occurrence_d1;
+create table <write_bucket>.transform_procedure_occurrence_d1 as
 select
   bene_id,
   clm_id,
@@ -336,25 +333,25 @@ select
   c.vocabulary_id as VI_TS,
   concat(d.concept_id_2, "_", e.concept_id_2) as mod_tooth
 from
-  dua_052538_nwi388.hold_procedure_occurrence_d a
-  left join dua_052538_nwi388.concept b
+  <write_bucket>.hold_procedure_occurrence_d a
+  left join <write_bucket>.concept b
   on a.tooth_num = b.concept_code
   and b.vocabulary_id = "CCW_Tooth_Number"
-  left join dua_052538_nwi388.concept c 
+  left join <write_bucket>.concept c 
   on a.tooth_srfc_cd = c.concept_code
   and c.vocabulary_id = "CCW_Tooth_Surface"
-  left join dua_052538_nwi388.concept_relationship d on b.concept_id = d.concept_id_1
-  left join dua_052538_nwi388.concept_relationship e on c.concept_id = e.concept_id_1;
+  left join <write_bucket>.concept_relationship d on b.concept_id = d.concept_id_1
+  left join <write_bucket>.concept_relationship e on c.concept_id = e.concept_id_1;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','procedure occurrence','12','dental transform',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','procedure occurrence','12','dental transform',current_timestamp() );
 
 -- COMMAND ----------
 
 
 insert into
-  dua_052538_nwi388.hold_procedure_occurrence
+  <write_bucket>.hold_procedure_occurrence
 select
   bene_id,
   clm_id,
@@ -370,15 +367,15 @@ select
   npi as provider_id,
   0 as concept_id
 from
-  dua_052538_nwi388.transform_procedure_occurrence_d1;
+  <write_bucket>.transform_procedure_occurrence_d1;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','procedure occurrence','13','dental to procedure hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','procedure occurrence','13','dental to procedure hold',current_timestamp() );
 
 -- COMMAND ----------
 
- insert into dua_052538_nwi388.procedure_occurrence
+ insert into <write_bucket>.procedure_occurrence
     select
   rand()  as procedure_occurrence_id,
   bene_id as person_id,
@@ -394,13 +391,13 @@ insert into dua_052538_nwi388.log values('$job_id','procedure occurrence','13','
   event_source_value as procedure_source_value,
   null as procedure_source_concept_id,
   null as modifier_source_value 
-from dua_052538_nwi388.hold_procedure_occurrence 
+from <write_bucket>.hold_procedure_occurrence 
   ;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','procedure occurrence','14','hold procedure to procedure occurrence cdm',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','procedure occurrence','14','hold procedure to procedure occurrence cdm',current_timestamp() );
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','procedure occurrence','15','end procedure occurrence',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','procedure occurrence','15','end procedure occurrence',current_timestamp() );

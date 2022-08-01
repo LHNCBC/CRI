@@ -1,5 +1,5 @@
 -- Databricks notebook source
-insert into dua_052538_nwi388.log values('$job_id','Visit occurrence','1','start visit occurrence',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','Visit occurrence','1','start visit occurrence',current_timestamp() );
 
 -- COMMAND ----------
 
@@ -8,17 +8,13 @@ insert into dua_052538_nwi388.log values('$job_id','Visit occurrence','1','start
 -- MAGIC spark.conf.set("spark.sql.shuffle.partitions",7000);
 -- MAGIC spark.conf.set("spark.databricks.io.cache.enabled", "True");
 
--- COMMAND ----------
-
---widget
-create widget text job_id default "102";
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.hold_visit_occurrence;
+drop table if exists <write_bucket>.hold_visit_occurrence;
 
 create table 
-  dua_052538_nwi388.hold_visit_occurrence using delta as
+  <write_bucket>.hold_visit_occurrence using delta as
 select
   bene_id,
   SRVC_BGN_DT as visit_start_date,
@@ -51,16 +47,16 @@ select
   end as admitting_source_concept_id,
   concat(clm_id,'_',state_cd,'_',year,'_', 32855) as forign_key --inpatient claim header
 from
-dua_052538_nwi388.inpatient_header_$year;
+<write_bucket>.inpatient_header_$year;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','create hold visit occurrence ip header','2','stat visit occurrence',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','Visit occurrence','2','inpt header to hold visit occurrence',current_timestamp() );
 
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.hold_visit_occurrence
+  <write_bucket>.hold_visit_occurrence
 select
   bene_id,
   SRVC_BGN_DT as visit_start_date,
@@ -75,11 +71,11 @@ select
   0 as admitting_source_concept_id,
   concat(clm_id,'_',state_cd,'_',year,'_', 32846) as forign_key
 from
-dua_052538_nwi388.long_term_header_$year;
+<write_bucket>.long_term_header_$year;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','Visit occurrence','3','lt header to hold visit occurrence',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','Visit occurrence','3','lt header to hold visit occurrence',current_timestamp() );
 
 -- COMMAND ----------
 
@@ -88,18 +84,18 @@ create view lkup_cmspos as
 select
   *
 from
-dua_052538_nwi388.concept
+<write_bucket>.concept
 where
   vocabulary_id = 'CMS Place of Service';
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','Visit occurrence','4','create lkup cms pos',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','Visit occurrence','4','create lkup cms pos',current_timestamp() );
 
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.hold_visit_occurrence
+  <write_bucket>.hold_visit_occurrence
 select
   a.bene_id,
   a.srvc_bgn_dt as visit_start_date,
@@ -114,19 +110,19 @@ select
   null as admitting_source_concept_id,
   concat(a.clm_id,'_',a.state_cd,'_',a.year,'_', 32861) as forign_key
 from
-dua_052538_nwi388.other_services_header_$year a
+<write_bucket>.other_services_header_$year a
   left join 
  lkup_cmspos b on a.POS_CD = b.concept_code
     ;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','Visit occurrence','5','ot head to hold visit occurrence',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','Visit occurrence','5','ot head to hold visit occurrence',current_timestamp() );
 
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.hold_visit_occurrence
+  <write_bucket>.hold_visit_occurrence
 select
   bene_id,
   RX_FILL_DT as visit_start_date,
@@ -141,36 +137,36 @@ select
   null as admitting_source_concept_id,
   concat(clm_id,'_',state_cd,'_',year,'_',581458) as forign_key
 from
-dua_052538_nwi388.rx_header_$year;
+<write_bucket>.rx_header_$year;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','Visit occurrence','6','rx head to visit occurrence hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','Visit occurrence','6','rx head to visit occurrence hold',current_timestamp() );
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','Visit occurrence','7','optimize visit occurrence hold',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','Visit occurrence','7','optimize visit occurrence hold',current_timestamp() );
 
 -- COMMAND ----------
 
-drop table if exists dua_052538_nwi388.provider_id_for_visit_occurrence;
-create table dua_052538_nwi388.provider_id_for_visit_occurrence as
+drop table if exists <write_bucket>.provider_id_for_visit_occurrence;
+create table <write_bucket>.provider_id_for_visit_occurrence as
 select
   npi,
   provider_id
 from
-  dua_052538_nwi388.provider_detail_all;
+  <write_bucket>.provider_detail_all;
 
-optimize   dua_052538_nwi388.provider_id_for_visit_occurrence ZORDER by(npi);
+optimize   <write_bucket>.provider_id_for_visit_occurrence ZORDER by(npi);
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','Visit occurrence','8','create provider id for visit occurrence',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','Visit occurrence','8','create provider id for visit occurrence',current_timestamp() );
 
 -- COMMAND ----------
 
 insert into
-  dua_052538_nwi388.visit_occurrence 
+  <write_bucket>.visit_occurrence 
 select
   forign_key as visit_occurrence_id,
   a.bene_id as person_id,
@@ -190,16 +186,16 @@ select
   null as discharge_to_source_value, 
   null as preceding_visit_occurrence_id 
 from
-  dua_052538_nwi388.hold_visit_occurrence a
+  <write_bucket>.hold_visit_occurrence a
   left join 
-  dua_052538_nwi388.provider_id_for_visit_occurrence c 
+  <write_bucket>.provider_id_for_visit_occurrence c 
   on a.BLG_PRVDR_NPI = c.npi
   ;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','Visit occurrence','9','hold to visit occurrence cdm',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','Visit occurrence','9','hold to visit occurrence cdm',current_timestamp() );
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','Visit occurrence','10','end visit occurrence',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','Visit occurrence','10','end visit occurrence',current_timestamp() );

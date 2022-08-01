@@ -1,10 +1,6 @@
 -- Databricks notebook source
-insert into dua_052538_nwi388.log values('$job_id','Person','1','start person',current_timestamp(),null);
+insert into <write_bucket>.log values('$job_id','Person','1','start person',current_timestamp() );
 
--- COMMAND ----------
-
-
-create widget text job_id default "102";
 
 
 -- COMMAND ----------
@@ -14,12 +10,12 @@ create view person_distinct as
 SELECT *
   FROM (SELECT bene_id, rfrnc_yr, age,bene_state_cd,birth_dt,death_dt,ethncty_cd,race_ethncty_cd,sex_cd,state_cd,bene_cnty_cd,bene_zip_cd,
                ROW_NUMBER() OVER (PARTITION BY bene_id ORDER BY rfrnc_yr DESC) rank
-          FROM dua_052538_nwi388.demog_elig_base) a
+          FROM <write_bucket>.demog_elig_base) a
  WHERE a.rank = 1 ;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','Person','2','make person distinct',current_timestamp(),null);
+insert into <write_bucket>.log values('$job_id','Person','2','make person distinct',current_timestamp() );
 
 -- COMMAND ----------
 
@@ -59,11 +55,11 @@ select
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','Person','3','route person',current_timestamp(),null);
+insert into <write_bucket>.log values('$job_id','Person','3','route person',current_timestamp() );
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.person select 
+insert into <write_bucket>.person select 
   BENE_ID as person_id,
   gender_concept_id,
   year_of_birth,
@@ -86,8 +82,8 @@ insert into dua_052538_nwi388.person select
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','Person','4','route person to person cdm',current_timestamp(),null);
+insert into <write_bucket>.log values('$job_id','Person','4','route person to person cdm',current_timestamp() );
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','Person','5','end person',current_timestamp(),null);
+insert into <write_bucket>.log values('$job_id','Person','5','end person',current_timestamp() );

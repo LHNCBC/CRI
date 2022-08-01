@@ -1,5 +1,5 @@
 -- Databricks notebook source
-insert into dua_052538_nwi388.log values('$job_id','care site','1','start care site',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','care site','1','start care site',current_timestamp() );
 
 -- COMMAND ----------
 
@@ -11,13 +11,8 @@ insert into dua_052538_nwi388.log values('$job_id','care site','1','start care s
 -- COMMAND ----------
 
 
-create widget text job_id default "102";
-
--- COMMAND ----------
-
-
-drop table if exists  dua_052538_nwi388.hold_care_site ;
-create table dua_052538_nwi388.hold_care_site as
+drop table if exists  <write_bucket>.hold_care_site ;
+create table <write_bucket>.hold_care_site as
 select
 npi,
 Provider_Organization_Name_Legal_Business_Name,
@@ -30,7 +25,7 @@ state,
 zip
 from hold_location_b
 left join
-dua_052538_nwi388.npi_provider
+<write_bucket>.npi_provider
 on
 id=npi
 where entity_type_code=2;
@@ -38,7 +33,7 @@ where entity_type_code=2;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','care site','2','create hold care site',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','care site','2','create hold care site',current_timestamp() );
 
 -- COMMAND ----------
 
@@ -56,9 +51,31 @@ b.location_id,
 null as care_site_source_value,
 Healthcare_Provider_Taxonomy_Group_1 as place_of_service_source_value
 from
-dua_052538_nwi388.hold_care_site a
+<write_bucket>.hold_care_site a
 left join
-dua_052538_nwi388.location b
+<write_bucket>.location b
+on
+a.address_1=b.address_1 and
+a.address_2=b.address_2 and
+a.city=b.city and
+a.state=b.state and
+a.zip=b.zip;
+
+
+drop view if exists route_care_site1;
+create view route_care_site1
+as
+select
+ROW_NUMBER() OVER (
+    ORDER BY
+      (npi)
+) as care_site_id,
+npi,
+b.location_id
+from
+<write_bucket>.hold_care_site a
+left join
+<write_bucket>.location b
 on
 a.address_1=b.address_1 and
 a.address_2=b.address_2 and
@@ -70,12 +87,12 @@ a.zip=b.zip;
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','care site','3','create route care site',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','care site','3','create route care site',current_timestamp() );
 
 -- COMMAND ----------
 
 
-insert into dua_052538_nwi388.care_site
+insert into <write_bucket>.care_site
 select
  care_site_id,
   care_site_name,
@@ -89,8 +106,8 @@ from route_care_site
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','care site','4','route care site to care site cdm',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','care site','4','route care site to care site cdm',current_timestamp() );
 
 -- COMMAND ----------
 
-insert into dua_052538_nwi388.log values('$job_id','care site','5','end care site',current_timestamp(), null);
+insert into <write_bucket>.log values('$job_id','care site','5','end care site',current_timestamp() );
