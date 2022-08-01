@@ -17,7 +17,7 @@ spark.conf.set("spark.sql.shuffle.partitions",8000);
 # COMMAND ----------
 
 dbutils.notebook.run(
-  "/Users/NWI388/01_DDL_CDM/01_ddl",
+  "/Users/<user_id>/01_DDL_CDM/01_ddl",
   timeout_seconds = 600,
   arguments = {"job_id": "2001"}
 )
@@ -25,17 +25,17 @@ dbutils.notebook.run(
 
 # COMMAND ----------
 
-# MAGIC %run /Users/NWI388/03_Transform_Load/A1_location $job_id='200';
+# MAGIC %run /Users/<user_id>/03_Transform_Load/A1_location $job_id='200';
 
 # COMMAND ----------
 
-# MAGIC %run /Users/NWI388/03_Transform_Load/A2_care_site $job_id='200;
+# MAGIC %run /Users/<user_id>/03_Transform_Load/A2_care_site $job_id='200;
 
 # COMMAND ----------
 
 # DDL for non-annual tables
 dbutils.notebook.run(
-  "/Users/NWI388/02_Extract/02_Extract_DDL",
+  "/Users/<user_id>/02_Extract/02_Extract_DDL",
   timeout_seconds = 600000,
   arguments = {"job_id": "2001"}
 )
@@ -44,7 +44,7 @@ dbutils.notebook.run(
 
 #extract base and dates
 dbutils.notebook.run(
-"/Users/NWI388/02_demog",
+"/Users/<user_id>/02_demog",
   timeout_seconds=360000,
   arguments={"job_id":"2001",
              
@@ -56,7 +56,7 @@ dbutils.notebook.run(
 
 #extract 2014
 dbutils.notebook.run(
-  "/Users/NWI388/02_Extract/02_2014",
+  "/Users/<user_id>/02_Extract/02_2014",
   timeout_seconds = 360000,
   arguments = {"job_id": "2001",
 
@@ -81,7 +81,7 @@ dbutils.notebook.run(
 
 #extract 2015
 dbutils.notebook.run(
-  "/Users/NWI388/02_Extract/02_2015",
+  "/Users/<user_id>/02_Extract/02_2015",
   timeout_seconds = 360000,
   arguments = {"job_id": "2001",
 "demog_elig_base":"AGE,   BENE_ID,  BENE_STATE_CD,  BIRTH_DT,  DEATH_DT,  ETHNCTY_CD,  RACE_ETHNCTY_CD,  RFRNC_YR,  SEX_CD,  STATE_CD,  bene_cnty_cd,  bene_zip_cd",
@@ -100,7 +100,7 @@ dbutils.notebook.run(
 
 #extract 2016
 dbutils.notebook.run(
-  "/Users/NWI388/02_Extract/02_2016",
+  "/Users/<user_id>/02_Extract/02_2016",
   timeout_seconds = 360000,
   arguments = {"job_id": "2001",
 "demog_elig_base":"AGE,   BENE_ID,  BENE_STATE_CD,  BIRTH_DT,  DEATH_DT,  ETHNCTY_CD,  RACE_ETHNCTY_CD,  RFRNC_YR,  SEX_CD,  STATE_CD,  bene_cnty_cd,  bene_zip_cd",
@@ -119,7 +119,7 @@ dbutils.notebook.run(
 
 #extract 2017
 dbutils.notebook.run(
-  "/Users/NWI388/02_Extract/02_2017",
+  "/Users/<user_id>/02_Extract/02_2017",
   timeout_seconds = 360000,
   arguments = {"job_id": "2001",
 "demog_elig_base":"AGE,   BENE_ID,  BENE_STATE_CD,  BIRTH_DT,  DEATH_DT,  ETHNCTY_CD,  RACE_ETHNCTY_CD,  RFRNC_YR,  SEX_CD,  STATE_CD,  bene_cnty_cd,  bene_zip_cd",
@@ -138,7 +138,7 @@ dbutils.notebook.run(
 
 #extract 2018
 dbutils.notebook.run(
-  "/Users/NWI388/02_Extract/02_2018",
+  "/Users/<user_id>/02_Extract/02_2018",
   timeout_seconds = 360000,
   arguments = {"job_id": "2001",
 "demog_elig_base":"AGE,   BENE_ID,  BENE_STATE_CD,  BIRTH_DT,  DEATH_DT,  ETHNCTY_CD,  RACE_ETHNCTY_CD,  RFRNC_YR,  SEX_CD,  STATE_CD,  bene_cnty_cd,  bene_zip_cd",
@@ -156,7 +156,7 @@ dbutils.notebook.run(
 # COMMAND ----------
 
 dbutils.notebook.run(
-  "/Users/NWI388/02_Extract/Optimize",
+  "/Users/<user_id>/02_Extract/Optimize",
   timeout_seconds = 36000000000000,
   arguments = {"job_id": "2001"}
 )
@@ -165,7 +165,7 @@ dbutils.notebook.run(
 
 
 dbutils.notebook.run(
-"/Users/NWI388/03_Transform_Load/Transform_Load_14",
+"/Users/<user_id>/03_Transform_Load/Transform_Load_14",
   timeout_seconds=360000000,
   arguments={"job_id":"2014",
              "year":"14"}
@@ -175,7 +175,7 @@ dbutils.notebook.run(
 
 
 dbutils.notebook.run(
-"/Users/NWI388/03_Transform_Load/Transform_Load_15",
+"/Users/<user_id>/03_Transform_Load/Transform_Load_15",
   timeout_seconds=360000000,
   arguments={"job_id":"2014",
              "year":"15"}
@@ -184,7 +184,7 @@ dbutils.notebook.run(
 # COMMAND ----------
 
 dbutils.notebook.run(
-"/Users/NWI388/03_Transform_Load/Transform_Load_16",
+"/Users/<user_id>/03_Transform_Load/Transform_Load_16",
   timeout_seconds=360000000,
   arguments={"job_id":"2014",
              "year":"16"}
@@ -193,7 +193,7 @@ dbutils.notebook.run(
 # COMMAND ----------
 
 dbutils.notebook.run(
-"/Users/NWI388/03_Transform_Load/Transform_Load_17",
+"/Users/<user_id>/03_Transform_Load/Transform_Load_17",
   timeout_seconds=360000000,
   arguments={"job_id":"2014",
              "year":"17"}
@@ -202,7 +202,7 @@ dbutils.notebook.run(
 # COMMAND ----------
 
 dbutils.notebook.run(
-"/Users/NWI388/03_Transform_Load/Transform_Load_18",
+"/Users/<user_id>/03_Transform_Load/Transform_Load_18",
   timeout_seconds=360000000,
   arguments={"job_id":"2014",
              "year":"18"}
@@ -211,7 +211,7 @@ dbutils.notebook.run(
 # COMMAND ----------
 
 dbutils.notebook.run(
-"/Users/NWI388/03_Transform_Load/C1_person",
+"/Users/<user_id>/03_Transform_Load/C1_person",
   timeout_seconds=360000000,
   arguments={"job_id":"2014"
              })
@@ -219,7 +219,7 @@ dbutils.notebook.run(
 # COMMAND ----------
 
 dbutils.notebook.run(
-"/Users/NWI388/03_Transform_Load/C2_observation_period",
+"/Users/<user_id>/03_Transform_Load/C2_observation_period",
   timeout_seconds=360000000,
   arguments={"job_id":"2014"
              })
@@ -227,7 +227,7 @@ dbutils.notebook.run(
 # COMMAND ----------
 
 dbutils.notebook.run(
-"/Users/NWI388/03_Transform_Load/C3_death",
+"/Users/<user_id>/03_Transform_Load/C3_death",
   timeout_seconds=360000000,
   arguments={"job_id":"2014"
              })
