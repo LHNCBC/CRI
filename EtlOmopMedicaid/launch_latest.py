@@ -44,7 +44,7 @@ dbutils.notebook.run(
 
 #extract base and dates
 dbutils.notebook.run(
-"/Users/<user_id>/02_demog",
+"/Users/<user_id>/02_Extract/02_demo_all_years",
   timeout_seconds=360000,
   arguments={"job_id":"2001",
              
