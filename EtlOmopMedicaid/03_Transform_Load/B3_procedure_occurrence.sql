@@ -67,7 +67,7 @@ create table
   "inpatient_header" as origin_table,
   a.state_cd as origin,
   32855 as procedure_type_concept_id,--Inpatient Header Claim
-  "na" as modifier_concept_id,
+  null as modifier_concept_id,
   a.prcdr_cd_1 as event_source_value,
   a.prcdr_cd_dt_1 as event_start_date,
   concat(a.clm_id,'_',a.state_cd,'_',a.year,'_',  32855) as forign_key,--Inpatient Header Claim
