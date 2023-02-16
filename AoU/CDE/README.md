@@ -1,6 +1,6 @@
 # All of US Data Elements
 
-Analysis was done for both the COntrolled and Registered tiers of access. For results regarding each tier, visit the respective folder.
+Analysis was done for both the Controlled and Registered tiers of access. For results regarding each tier, visit the respective folder.
 
 For Electronic Health Record (EHR) Data Elements use the excel files with EHR in the title of the file
 
