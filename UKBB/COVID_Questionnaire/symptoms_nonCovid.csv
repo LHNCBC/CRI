@@ -1,0 +1,729 @@
+question_id,question,q_ev,q_pt,answer_id,answer,a_ev,a_pt,ev_prop,pt_prop
+28010,Method of returning questionnaire results,58742,10540,1,Website,837,644,0.014248749,0.061100569
+28010,Method of returning questionnaire results,58742,10540,2,Post,57905,10540,0.985751251,1
+28011,COVID-19 symptoms: Fever 38 degrees C or greater,58742,10540,1,Yes,969,870,0.016495863,0.082542694
+28011,COVID-19 symptoms: Fever 38 degrees C or greater,58742,10540,0,No,57773,10512,0.983504137,0.997343454
+28012,COVID-19 symptoms: Wheezing,58742,10540,0,No,57485,10505,0.978601341,0.996679317
+28012,COVID-19 symptoms: Wheezing,58742,10540,1,Yes,1257,821,0.021398659,0.077893738
+28013,COVID-19 symptoms: Chills,58742,10540,0,No,57367,10511,0.976592557,0.997248577
+28013,COVID-19 symptoms: Chills,58742,10540,1,Yes,1375,1154,0.023407443,0.109487666
+28014,COVID-19 symptoms: Chest pain,58742,10540,0,No,57711,10512,0.982448674,0.997343454
+28014,COVID-19 symptoms: Chest pain,58742,10540,1,Yes,1031,711,0.017551326,0.067457306
+28015,COVID-19 symptoms: Feeling more tired than usual,58742,10540,0,No,52971,10376,0.901756835,0.984440228
+28015,COVID-19 symptoms: Feeling more tired than usual,58742,10540,1,Yes,5771,3448,0.098243165,0.327134725
+28016,COVID-19 symptoms: Headache,58742,10540,0,No,52882,10383,0.900241735,0.985104364
+28016,COVID-19 symptoms: Headache,58742,10540,1,Yes,5860,3220,0.099758265,0.305502846
+28017,COVID-19 symptoms: Muscle ache,58742,10540,0,No,54865,10424,0.933999523,0.988994307
+28017,COVID-19 symptoms: Muscle ache,58742,10540,1,Yes,3877,2346,0.066000477,0.222580645
+28018,COVID-19 symptoms: Nausea/vomiting,58742,10540,0,No,57646,10524,0.98134214,0.998481973
+28018,COVID-19 symptoms: Nausea/vomiting,58742,10540,1,Yes,1096,831,0.01865786,0.078842505
+28019,COVID-19 symptoms: Sore throat,58742,10540,0,No,54215,10447,0.922934187,0.991176471
+28019,COVID-19 symptoms: Sore throat,58742,10540,1,Yes,4527,2953,0.077065813,0.280170778
+28020,COVID-19 symptoms: Abdominal pain,58742,10540,0,No,57172,10510,0.973272956,0.9971537
+28020,COVID-19 symptoms: Abdominal pain,58742,10540,1,Yes,1570,1083,0.026727044,0.102751423
+28021,COVID-19 symptoms: Persistent dry cough,58742,10540,0,No,56820,10493,0.967280651,0.995540797
+28021,COVID-19 symptoms: Persistent dry cough,58742,10540,1,Yes,1922,1509,0.032719349,0.14316888
+28022,COVID-19 symptoms: Diarrhoea,58742,10540,0,No,56056,10477,0.954274625,0.99402277
+28022,COVID-19 symptoms: Diarrhoea,58742,10540,1,Yes,2686,1772,0.045725375,0.168121442
+28023,COVID-19 symptoms: Runny nose,58742,10540,1,Yes,5113,3008,0.08704164,0.285388994
+28023,COVID-19 symptoms: Runny nose,58742,10540,0,No,53629,10409,0.91295836,0.987571157
+28024,COVID-19 symptoms: Loss of sense of small and taste,58742,10540,0,No,57737,10497,0.982891287,0.995920304
+28024,COVID-19 symptoms: Loss of sense of small and taste,58742,10540,1,Yes,1005,690,0.017108713,0.065464896
+28025,COVID-19 symptoms: Shortness of breath,58742,10540,0,No,56298,10461,0.958394335,0.992504744
+28025,COVID-19 symptoms: Shortness of breath,58742,10540,1,Yes,2444,1450,0.041605665,0.137571157
+28026,COVID-19 symptoms: Productive long-term cough ('wet' or chesty),58742,10540,0,No,57129,10490,0.972540942,0.995256167
+28026,COVID-19 symptoms: Productive long-term cough ('wet' or chesty),58742,10540,1,Yes,1613,1038,0.027459058,0.098481973
+28027,COVID-19 symptoms requiring medical attention,58742,10540,0,No,56900,10505,0.968642539,0.996679317
+28027,COVID-19 symptoms requiring medical attention,58742,10540,1,Yes,1842,1438,0.031357461,0.136432638
+28028,COVID-19 symptoms requiring self-isolation,58742,10540,0,No,57512,10507,0.979060979,0.99686907
+28028,COVID-19 symptoms requiring self-isolation,58742,10540,1,Yes,1230,1051,0.020939021,0.09971537
+28029,COVID-19 symptoms requiring hospitalisation,58742,10540,0,No,58637,10539,0.998212523,0.999905123
+28029,COVID-19 symptoms requiring hospitalisation,58742,10540,1,Yes,105,94,0.001787477,0.008918406
+28030,Self-reported date symptoms first experienced,8935,5234,12/17/2019,NA,7,6,7.83E-04,0.001146351
+28030,Self-reported date symptoms first experienced,8935,5234,12/18/2019,NA,7,7,7.83E-04,0.001337409
+28030,Self-reported date symptoms first experienced,8935,5234,12/19/2019,NA,5,5,5.60E-04,9.55E-04
+28030,Self-reported date symptoms first experienced,8935,5234,12/20/2019,NA,24,23,0.002686066,0.004394345
+28030,Self-reported date symptoms first experienced,8935,5234,12/21/2019,NA,8,7,8.95E-04,0.001337409
+28030,Self-reported date symptoms first experienced,8935,5234,12/22/2019,NA,8,8,8.95E-04,0.001528468
+28030,Self-reported date symptoms first experienced,8935,5234,12/23/2019,NA,14,13,0.001566872,0.00248376
+28030,Self-reported date symptoms first experienced,8935,5234,12/24/2019,NA,15,15,0.001678791,0.002865877
+28030,Self-reported date symptoms first experienced,8935,5234,12/25/2019,NA,23,22,0.002574147,0.004203286
+28030,Self-reported date symptoms first experienced,8935,5234,12/26/2019,NA,20,16,0.002238388,0.003056935
+28030,Self-reported date symptoms first experienced,8935,5234,12/27/2019,NA,11,11,0.001231114,0.002101643
+28030,Self-reported date symptoms first experienced,8935,5234,12/28/2019,NA,27,26,0.003021824,0.00496752
+28030,Self-reported date symptoms first experienced,8935,5234,12/29/2019,NA,13,13,0.001454952,0.00248376
+28030,Self-reported date symptoms first experienced,8935,5234,12/30/2019,NA,20,20,0.002238388,0.003821169
+28030,Self-reported date symptoms first experienced,8935,5234,12/31/2019,NA,27,23,0.003021824,0.004394345
+28030,Self-reported date symptoms first experienced,8935,5234,12/5/2019,NA,12,11,0.001343033,0.002101643
+28030,Self-reported date symptoms first experienced,8935,5234,12/7/2019,NA,7,7,7.83E-04,0.001337409
+28030,Self-reported date symptoms first experienced,8935,5234,12/9/2019,NA,6,6,6.72E-04,0.001146351
+28030,Self-reported date symptoms first experienced,8935,5234,12/10/2019,NA,13,13,0.001454952,0.00248376
+28030,Self-reported date symptoms first experienced,8935,5234,12/12/2019,NA,12,10,0.001343033,0.001910585
+28030,Self-reported date symptoms first experienced,8935,5234,12/13/2019,NA,7,7,7.83E-04,0.001337409
+28030,Self-reported date symptoms first experienced,8935,5234,12/14/2019,NA,10,9,0.001119194,0.001719526
+28030,Self-reported date symptoms first experienced,8935,5234,12/15/2019,NA,120,110,0.01343033,0.021016431
+28030,Self-reported date symptoms first experienced,8935,5234,12/16/2019,NA,8,8,8.95E-04,0.001528468
+28030,Self-reported date symptoms first experienced,8935,5234,1/26/2020,NA,9,6,0.001007275,0.001146351
+28030,Self-reported date symptoms first experienced,8935,5234,1/27/2020,NA,15,15,0.001678791,0.002865877
+28030,Self-reported date symptoms first experienced,8935,5234,1/28/2020,NA,20,16,0.002238388,0.003056935
+28030,Self-reported date symptoms first experienced,8935,5234,1/29/2020,NA,8,8,8.95E-04,0.001528468
+28030,Self-reported date symptoms first experienced,8935,5234,1/30/2020,NA,16,16,0.001790711,0.003056935
+28030,Self-reported date symptoms first experienced,8935,5234,1/31/2020,NA,50,49,0.005595971,0.009361865
+28030,Self-reported date symptoms first experienced,8935,5234,2/1/2020,NA,115,109,0.012870733,0.020825373
+28030,Self-reported date symptoms first experienced,8935,5234,2/2/2020,NA,23,22,0.002574147,0.004203286
+28030,Self-reported date symptoms first experienced,8935,5234,2/3/2020,NA,25,23,0.002797985,0.004394345
+28030,Self-reported date symptoms first experienced,8935,5234,2/4/2020,NA,11,11,0.001231114,0.002101643
+28030,Self-reported date symptoms first experienced,8935,5234,2/5/2020,NA,18,17,0.00201455,0.003247994
+28030,Self-reported date symptoms first experienced,8935,5234,2/6/2020,NA,20,17,0.002238388,0.003247994
+28030,Self-reported date symptoms first experienced,8935,5234,2/7/2020,NA,15,15,0.001678791,0.002865877
+28030,Self-reported date symptoms first experienced,8935,5234,2/8/2020,NA,24,16,0.002686066,0.003056935
+28030,Self-reported date symptoms first experienced,8935,5234,2/9/2020,NA,15,15,0.001678791,0.002865877
+28030,Self-reported date symptoms first experienced,8935,5234,1/1/2020,NA,111,102,0.012423055,0.019487963
+28030,Self-reported date symptoms first experienced,8935,5234,1/2/2020,NA,18,17,0.00201455,0.003247994
+28030,Self-reported date symptoms first experienced,8935,5234,1/3/2020,NA,25,23,0.002797985,0.004394345
+28030,Self-reported date symptoms first experienced,8935,5234,1/4/2020,NA,16,16,0.001790711,0.003056935
+28030,Self-reported date symptoms first experienced,8935,5234,1/5/2020,NA,21,21,0.002350308,0.004012228
+28030,Self-reported date symptoms first experienced,8935,5234,1/6/2020,NA,26,24,0.002909905,0.004585403
+28030,Self-reported date symptoms first experienced,8935,5234,1/7/2020,NA,9,9,0.001007275,0.001719526
+28030,Self-reported date symptoms first experienced,8935,5234,1/8/2020,NA,9,9,0.001007275,0.001719526
+28030,Self-reported date symptoms first experienced,8935,5234,1/9/2020,NA,5,5,5.60E-04,9.55E-04
+28030,Self-reported date symptoms first experienced,8935,5234,1/10/2020,NA,62,60,0.006939004,0.011463508
+28030,Self-reported date symptoms first experienced,8935,5234,1/11/2020,NA,8,8,8.95E-04,0.001528468
+28030,Self-reported date symptoms first experienced,8935,5234,1/12/2020,NA,5,5,5.60E-04,9.55E-04
+28030,Self-reported date symptoms first experienced,8935,5234,1/13/2020,NA,7,7,7.83E-04,0.001337409
+28030,Self-reported date symptoms first experienced,8935,5234,1/14/2020,NA,14,14,0.001566872,0.002674818
+28030,Self-reported date symptoms first experienced,8935,5234,1/15/2020,NA,220,209,0.024622272,0.039931219
+28030,Self-reported date symptoms first experienced,8935,5234,1/16/2020,NA,7,7,7.83E-04,0.001337409
+28030,Self-reported date symptoms first experienced,8935,5234,1/17/2020,NA,14,10,0.001566872,0.001910585
+28030,Self-reported date symptoms first experienced,8935,5234,1/18/2020,NA,7,7,7.83E-04,0.001337409
+28030,Self-reported date symptoms first experienced,8935,5234,1/19/2020,NA,8,6,8.95E-04,0.001146351
+28030,Self-reported date symptoms first experienced,8935,5234,1/20/2020,NA,40,33,0.004476777,0.006304929
+28030,Self-reported date symptoms first experienced,8935,5234,1/21/2020,NA,7,7,7.83E-04,0.001337409
+28030,Self-reported date symptoms first experienced,8935,5234,1/22/2020,NA,10,10,0.001119194,0.001910585
+28030,Self-reported date symptoms first experienced,8935,5234,1/23/2020,NA,8,8,8.95E-04,0.001528468
+28030,Self-reported date symptoms first experienced,8935,5234,1/24/2020,NA,10,10,0.001119194,0.001910585
+28030,Self-reported date symptoms first experienced,8935,5234,1/25/2020,NA,18,15,0.00201455,0.002865877
+28030,Self-reported date symptoms first experienced,8935,5234,3/6/2020,NA,28,24,0.003133744,0.004585403
+28030,Self-reported date symptoms first experienced,8935,5234,3/7/2020,NA,38,33,0.004252938,0.006304929
+28030,Self-reported date symptoms first experienced,8935,5234,3/8/2020,NA,27,22,0.003021824,0.004203286
+28030,Self-reported date symptoms first experienced,8935,5234,3/9/2020,NA,39,37,0.004364857,0.007069163
+28030,Self-reported date symptoms first experienced,8935,5234,3/10/2020,NA,59,58,0.006603246,0.011081391
+28030,Self-reported date symptoms first experienced,8935,5234,3/11/2020,NA,29,28,0.003245663,0.005349637
+28030,Self-reported date symptoms first experienced,8935,5234,3/12/2020,NA,48,48,0.005372132,0.009170806
+28030,Self-reported date symptoms first experienced,8935,5234,3/13/2020,NA,35,31,0.00391718,0.005922812
+28030,Self-reported date symptoms first experienced,8935,5234,3/14/2020,NA,44,43,0.004924454,0.008215514
+28030,Self-reported date symptoms first experienced,8935,5234,3/15/2020,NA,259,244,0.028987129,0.046618265
+28030,Self-reported date symptoms first experienced,8935,5234,3/16/2020,NA,57,55,0.006379407,0.010508216
+28030,Self-reported date symptoms first experienced,8935,5234,3/17/2020,NA,59,51,0.006603246,0.009743982
+28030,Self-reported date symptoms first experienced,8935,5234,3/18/2020,NA,53,48,0.005931729,0.009170806
+28030,Self-reported date symptoms first experienced,8935,5234,3/19/2020,NA,31,26,0.003469502,0.00496752
+28030,Self-reported date symptoms first experienced,8935,5234,3/20/2020,NA,88,85,0.009848909,0.016239969
+28030,Self-reported date symptoms first experienced,8935,5234,3/21/2020,NA,31,27,0.003469502,0.005158579
+28030,Self-reported date symptoms first experienced,8935,5234,3/22/2020,NA,40,28,0.004476777,0.005349637
+28030,Self-reported date symptoms first experienced,8935,5234,3/23/2020,NA,59,53,0.006603246,0.010126099
+28030,Self-reported date symptoms first experienced,8935,5234,3/24/2020,NA,23,23,0.002574147,0.004394345
+28030,Self-reported date symptoms first experienced,8935,5234,3/25/2020,NA,44,44,0.004924454,0.008406572
+28030,Self-reported date symptoms first experienced,8935,5234,3/26/2020,NA,21,19,0.002350308,0.003630111
+28030,Self-reported date symptoms first experienced,8935,5234,3/27/2020,NA,22,21,0.002462227,0.004012228
+28030,Self-reported date symptoms first experienced,8935,5234,3/28/2020,NA,32,22,0.003581421,0.004203286
+28030,Self-reported date symptoms first experienced,8935,5234,3/29/2020,NA,12,12,0.001343033,0.002292702
+28030,Self-reported date symptoms first experienced,8935,5234,3/30/2020,NA,31,30,0.003469502,0.005731754
+28030,Self-reported date symptoms first experienced,8935,5234,3/31/2020,NA,38,38,0.004252938,0.007260222
+28030,Self-reported date symptoms first experienced,8935,5234,4/1/2020,NA,105,97,0.011751539,0.018532671
+28030,Self-reported date symptoms first experienced,8935,5234,4/2/2020,NA,13,13,0.001454952,0.00248376
+28030,Self-reported date symptoms first experienced,8935,5234,4/3/2020,NA,9,9,0.001007275,0.001719526
+28030,Self-reported date symptoms first experienced,8935,5234,4/4/2020,NA,18,17,0.00201455,0.003247994
+28030,Self-reported date symptoms first experienced,8935,5234,4/5/2020,NA,9,9,0.001007275,0.001719526
+28030,Self-reported date symptoms first experienced,8935,5234,4/6/2020,NA,19,19,0.002126469,0.003630111
+28030,Self-reported date symptoms first experienced,8935,5234,4/7/2020,NA,11,11,0.001231114,0.002101643
+28030,Self-reported date symptoms first experienced,8935,5234,4/8/2020,NA,11,11,0.001231114,0.002101643
+28030,Self-reported date symptoms first experienced,8935,5234,4/10/2020,NA,32,30,0.003581421,0.005731754
+28030,Self-reported date symptoms first experienced,8935,5234,4/12/2020,NA,8,5,8.95E-04,9.55E-04
+28030,Self-reported date symptoms first experienced,8935,5234,4/13/2020,NA,6,6,6.72E-04,0.001146351
+28030,Self-reported date symptoms first experienced,8935,5234,4/14/2020,NA,10,10,0.001119194,0.001910585
+28030,Self-reported date symptoms first experienced,8935,5234,4/15/2020,NA,121,106,0.01354225,0.020252197
+28030,Self-reported date symptoms first experienced,8935,5234,4/16/2020,NA,10,5,0.001119194,9.55E-04
+28030,Self-reported date symptoms first experienced,8935,5234,4/20/2020,NA,30,25,0.003357583,0.004776462
+28030,Self-reported date symptoms first experienced,8935,5234,4/22/2020,NA,5,5,5.60E-04,9.55E-04
+28030,Self-reported date symptoms first experienced,8935,5234,4/23/2020,NA,7,7,7.83E-04,0.001337409
+28030,Self-reported date symptoms first experienced,8935,5234,4/24/2020,NA,7,5,7.83E-04,9.55E-04
+28030,Self-reported date symptoms first experienced,8935,5234,4/25/2020,NA,7,7,7.83E-04,0.001337409
+28030,Self-reported date symptoms first experienced,8935,5234,4/27/2020,NA,7,7,7.83E-04,0.001337409
+28030,Self-reported date symptoms first experienced,8935,5234,4/28/2020,NA,5,5,5.60E-04,9.55E-04
+28030,Self-reported date symptoms first experienced,8935,5234,4/30/2020,NA,10,10,0.001119194,0.001910585
+28030,Self-reported date symptoms first experienced,8935,5234,5/1/2020,NA,47,47,0.005260213,0.008979748
+28030,Self-reported date symptoms first experienced,8935,5234,5/2/2020,NA,6,6,6.72E-04,0.001146351
+28030,Self-reported date symptoms first experienced,8935,5234,5/3/2020,NA,9,8,0.001007275,0.001528468
+28030,Self-reported date symptoms first experienced,8935,5234,5/4/2020,NA,15,15,0.001678791,0.002865877
+28030,Self-reported date symptoms first experienced,8935,5234,5/5/2020,NA,19,19,0.002126469,0.003630111
+28030,Self-reported date symptoms first experienced,8935,5234,5/6/2020,NA,7,6,7.83E-04,0.001146351
+28030,Self-reported date symptoms first experienced,8935,5234,5/7/2020,NA,5,5,5.60E-04,9.55E-04
+28030,Self-reported date symptoms first experienced,8935,5234,5/8/2020,NA,5,5,5.60E-04,9.55E-04
+28030,Self-reported date symptoms first experienced,8935,5234,5/10/2020,NA,22,21,0.002462227,0.004012228
+28030,Self-reported date symptoms first experienced,8935,5234,5/11/2020,NA,5,5,5.60E-04,9.55E-04
+28030,Self-reported date symptoms first experienced,8935,5234,5/12/2020,NA,9,9,0.001007275,0.001719526
+28030,Self-reported date symptoms first experienced,8935,5234,5/13/2020,NA,9,9,0.001007275,0.001719526
+28030,Self-reported date symptoms first experienced,8935,5234,5/14/2020,NA,9,9,0.001007275,0.001719526
+28030,Self-reported date symptoms first experienced,8935,5234,5/15/2020,NA,73,67,0.008170118,0.012800917
+28030,Self-reported date symptoms first experienced,8935,5234,5/18/2020,NA,7,7,7.83E-04,0.001337409
+28030,Self-reported date symptoms first experienced,8935,5234,5/19/2020,NA,7,7,7.83E-04,0.001337409
+28030,Self-reported date symptoms first experienced,8935,5234,5/20/2020,NA,23,23,0.002574147,0.004394345
+28030,Self-reported date symptoms first experienced,8935,5234,5/21/2020,NA,5,5,5.60E-04,9.55E-04
+28030,Self-reported date symptoms first experienced,8935,5234,5/23/2020,NA,7,7,7.83E-04,0.001337409
+28030,Self-reported date symptoms first experienced,8935,5234,5/24/2020,NA,11,11,0.001231114,0.002101643
+28030,Self-reported date symptoms first experienced,8935,5234,5/25/2020,NA,14,14,0.001566872,0.002674818
+28030,Self-reported date symptoms first experienced,8935,5234,5/26/2020,NA,8,8,8.95E-04,0.001528468
+28030,Self-reported date symptoms first experienced,8935,5234,5/27/2020,NA,10,10,0.001119194,0.001910585
+28030,Self-reported date symptoms first experienced,8935,5234,5/28/2020,NA,8,8,8.95E-04,0.001528468
+28030,Self-reported date symptoms first experienced,8935,5234,5/29/2020,NA,6,6,6.72E-04,0.001146351
+28030,Self-reported date symptoms first experienced,8935,5234,5/30/2020,NA,7,7,7.83E-04,0.001337409
+28030,Self-reported date symptoms first experienced,8935,5234,5/31/2020,NA,6,6,6.72E-04,0.001146351
+28030,Self-reported date symptoms first experienced,8935,5234,6/1/2020,NA,56,55,0.006267487,0.010508216
+28030,Self-reported date symptoms first experienced,8935,5234,6/2/2020,NA,11,10,0.001231114,0.001910585
+28030,Self-reported date symptoms first experienced,8935,5234,6/3/2020,NA,9,9,0.001007275,0.001719526
+28030,Self-reported date symptoms first experienced,8935,5234,6/4/2020,NA,8,8,8.95E-04,0.001528468
+28030,Self-reported date symptoms first experienced,8935,5234,6/5/2020,NA,6,6,6.72E-04,0.001146351
+28030,Self-reported date symptoms first experienced,8935,5234,6/6/2020,NA,12,12,0.001343033,0.002292702
+28030,Self-reported date symptoms first experienced,8935,5234,6/7/2020,NA,8,8,8.95E-04,0.001528468
+28030,Self-reported date symptoms first experienced,8935,5234,6/8/2020,NA,13,13,0.001454952,0.00248376
+28030,Self-reported date symptoms first experienced,8935,5234,6/9/2020,NA,6,6,6.72E-04,0.001146351
+28030,Self-reported date symptoms first experienced,8935,5234,2/10/2020,NA,46,45,0.005148293,0.008597631
+28030,Self-reported date symptoms first experienced,8935,5234,2/12/2020,NA,9,9,0.001007275,0.001719526
+28030,Self-reported date symptoms first experienced,8935,5234,2/13/2020,NA,13,13,0.001454952,0.00248376
+28030,Self-reported date symptoms first experienced,8935,5234,2/14/2020,NA,25,24,0.002797985,0.004585403
+28030,Self-reported date symptoms first experienced,8935,5234,2/15/2020,NA,178,161,0.019921656,0.030760413
+28030,Self-reported date symptoms first experienced,8935,5234,2/16/2020,NA,11,11,0.001231114,0.002101643
+28030,Self-reported date symptoms first experienced,8935,5234,2/17/2020,NA,25,22,0.002797985,0.004203286
+28030,Self-reported date symptoms first experienced,8935,5234,2/18/2020,NA,11,11,0.001231114,0.002101643
+28030,Self-reported date symptoms first experienced,8935,5234,2/19/2020,NA,8,8,8.95E-04,0.001528468
+28030,Self-reported date symptoms first experienced,8935,5234,2/20/2020,NA,35,35,0.00391718,0.006687046
+28030,Self-reported date symptoms first experienced,8935,5234,2/21/2020,NA,17,15,0.00190263,0.002865877
+28030,Self-reported date symptoms first experienced,8935,5234,2/22/2020,NA,8,8,8.95E-04,0.001528468
+28030,Self-reported date symptoms first experienced,8935,5234,2/23/2020,NA,10,10,0.001119194,0.001910585
+28030,Self-reported date symptoms first experienced,8935,5234,2/24/2020,NA,22,19,0.002462227,0.003630111
+28030,Self-reported date symptoms first experienced,8935,5234,2/25/2020,NA,21,19,0.002350308,0.003630111
+28030,Self-reported date symptoms first experienced,8935,5234,2/26/2020,NA,15,15,0.001678791,0.002865877
+28030,Self-reported date symptoms first experienced,8935,5234,2/27/2020,NA,17,16,0.00190263,0.003056935
+28030,Self-reported date symptoms first experienced,8935,5234,2/28/2020,NA,40,34,0.004476777,0.006495988
+28030,Self-reported date symptoms first experienced,8935,5234,2/29/2020,NA,26,26,0.002909905,0.00496752
+28030,Self-reported date symptoms first experienced,8935,5234,3/1/2020,NA,154,139,0.01723559,0.026557126
+28030,Self-reported date symptoms first experienced,8935,5234,3/2/2020,NA,24,24,0.002686066,0.004585403
+28030,Self-reported date symptoms first experienced,8935,5234,3/3/2020,NA,29,27,0.003245663,0.005158579
+28030,Self-reported date symptoms first experienced,8935,5234,3/4/2020,NA,17,17,0.00190263,0.003247994
+28030,Self-reported date symptoms first experienced,8935,5234,3/5/2020,NA,22,22,0.002462227,0.004203286
+28030,Self-reported date symptoms first experienced,8935,5234,11/3/2020,NA,14,14,0.001566872,0.002674818
+28030,Self-reported date symptoms first experienced,8935,5234,11/4/2020,NA,6,6,6.72E-04,0.001146351
+28030,Self-reported date symptoms first experienced,8935,5234,11/5/2020,NA,9,9,0.001007275,0.001719526
+28030,Self-reported date symptoms first experienced,8935,5234,11/6/2020,NA,10,10,0.001119194,0.001910585
+28030,Self-reported date symptoms first experienced,8935,5234,11/7/2020,NA,11,11,0.001231114,0.002101643
+28030,Self-reported date symptoms first experienced,8935,5234,11/8/2020,NA,8,8,8.95E-04,0.001528468
+28030,Self-reported date symptoms first experienced,8935,5234,11/9/2020,NA,13,13,0.001454952,0.00248376
+28030,Self-reported date symptoms first experienced,8935,5234,11/10/2020,NA,8,8,8.95E-04,0.001528468
+28030,Self-reported date symptoms first experienced,8935,5234,11/11/2020,NA,9,9,0.001007275,0.001719526
+28030,Self-reported date symptoms first experienced,8935,5234,11/12/2020,NA,6,6,6.72E-04,0.001146351
+28030,Self-reported date symptoms first experienced,8935,5234,11/13/2020,NA,5,5,5.60E-04,9.55E-04
+28030,Self-reported date symptoms first experienced,8935,5234,11/14/2020,NA,5,5,5.60E-04,9.55E-04
+28030,Self-reported date symptoms first experienced,8935,5234,11/15/2020,NA,9,9,0.001007275,0.001719526
+28030,Self-reported date symptoms first experienced,8935,5234,11/15/2019,NA,8,8,8.95E-04,0.001528468
+28030,Self-reported date symptoms first experienced,8935,5234,12/1/2019,NA,63,59,0.007050923,0.011272449
+28030,Self-reported date symptoms first experienced,8935,5234,12/3/2019,NA,11,11,0.001231114,0.002101643
+28030,Self-reported date symptoms first experienced,8935,5234,8/4/2020,NA,24,24,0.002686066,0.004585403
+28030,Self-reported date symptoms first experienced,8935,5234,8/5/2020,NA,28,28,0.003133744,0.005349637
+28030,Self-reported date symptoms first experienced,8935,5234,8/6/2020,NA,19,19,0.002126469,0.003630111
+28030,Self-reported date symptoms first experienced,8935,5234,8/7/2020,NA,27,27,0.003021824,0.005158579
+28030,Self-reported date symptoms first experienced,8935,5234,8/8/2020,NA,27,27,0.003021824,0.005158579
+28030,Self-reported date symptoms first experienced,8935,5234,8/9/2020,NA,15,15,0.001678791,0.002865877
+28030,Self-reported date symptoms first experienced,8935,5234,8/10/2020,NA,52,52,0.00581981,0.00993504
+28030,Self-reported date symptoms first experienced,8935,5234,8/11/2020,NA,19,19,0.002126469,0.003630111
+28030,Self-reported date symptoms first experienced,8935,5234,8/12/2020,NA,21,21,0.002350308,0.004012228
+28030,Self-reported date symptoms first experienced,8935,5234,8/13/2020,NA,13,13,0.001454952,0.00248376
+28030,Self-reported date symptoms first experienced,8935,5234,8/14/2020,NA,26,25,0.002909905,0.004776462
+28030,Self-reported date symptoms first experienced,8935,5234,8/15/2020,NA,65,64,0.007274762,0.012227742
+28030,Self-reported date symptoms first experienced,8935,5234,8/16/2020,NA,19,19,0.002126469,0.003630111
+28030,Self-reported date symptoms first experienced,8935,5234,8/17/2020,NA,25,25,0.002797985,0.004776462
+28030,Self-reported date symptoms first experienced,8935,5234,8/18/2020,NA,25,25,0.002797985,0.004776462
+28030,Self-reported date symptoms first experienced,8935,5234,8/19/2020,NA,30,29,0.003357583,0.005540695
+28030,Self-reported date symptoms first experienced,8935,5234,8/20/2020,NA,64,63,0.007162843,0.012036683
+28030,Self-reported date symptoms first experienced,8935,5234,8/21/2020,NA,21,21,0.002350308,0.004012228
+28030,Self-reported date symptoms first experienced,8935,5234,8/22/2020,NA,22,22,0.002462227,0.004203286
+28030,Self-reported date symptoms first experienced,8935,5234,8/23/2020,NA,34,34,0.00380526,0.006495988
+28030,Self-reported date symptoms first experienced,8935,5234,8/24/2020,NA,30,30,0.003357583,0.005731754
+28030,Self-reported date symptoms first experienced,8935,5234,8/25/2020,NA,43,43,0.004812535,0.008215514
+28030,Self-reported date symptoms first experienced,8935,5234,8/26/2020,NA,23,23,0.002574147,0.004394345
+28030,Self-reported date symptoms first experienced,8935,5234,8/27/2020,NA,27,26,0.003021824,0.00496752
+28030,Self-reported date symptoms first experienced,8935,5234,8/28/2020,NA,41,39,0.004588696,0.00745128
+28030,Self-reported date symptoms first experienced,8935,5234,8/29/2020,NA,35,35,0.00391718,0.006687046
+28030,Self-reported date symptoms first experienced,8935,5234,8/30/2020,NA,35,34,0.00391718,0.006495988
+28030,Self-reported date symptoms first experienced,8935,5234,8/31/2020,NA,45,45,0.005036374,0.008597631
+28030,Self-reported date symptoms first experienced,8935,5234,9/1/2020,NA,95,95,0.010632345,0.018150554
+28030,Self-reported date symptoms first experienced,8935,5234,9/2/2020,NA,28,28,0.003133744,0.005349637
+28030,Self-reported date symptoms first experienced,8935,5234,9/3/2020,NA,27,27,0.003021824,0.005158579
+28030,Self-reported date symptoms first experienced,8935,5234,9/4/2020,NA,21,21,0.002350308,0.004012228
+28030,Self-reported date symptoms first experienced,8935,5234,9/5/2020,NA,22,22,0.002462227,0.004203286
+28030,Self-reported date symptoms first experienced,8935,5234,9/6/2020,NA,13,13,0.001454952,0.00248376
+28030,Self-reported date symptoms first experienced,8935,5234,9/7/2020,NA,42,42,0.004700616,0.008024455
+28030,Self-reported date symptoms first experienced,8935,5234,9/8/2020,NA,24,24,0.002686066,0.004585403
+28030,Self-reported date symptoms first experienced,8935,5234,9/9/2020,NA,25,25,0.002797985,0.004776462
+28030,Self-reported date symptoms first experienced,8935,5234,9/10/2020,NA,44,44,0.004924454,0.008406572
+28030,Self-reported date symptoms first experienced,8935,5234,9/11/2020,NA,24,24,0.002686066,0.004585403
+28030,Self-reported date symptoms first experienced,8935,5234,9/12/2020,NA,26,26,0.002909905,0.00496752
+28030,Self-reported date symptoms first experienced,8935,5234,9/13/2020,NA,16,16,0.001790711,0.003056935
+28030,Self-reported date symptoms first experienced,8935,5234,9/14/2020,NA,50,50,0.005595971,0.009552923
+28030,Self-reported date symptoms first experienced,8935,5234,9/15/2020,NA,50,48,0.005595971,0.009170806
+28030,Self-reported date symptoms first experienced,8935,5234,9/16/2020,NA,21,21,0.002350308,0.004012228
+28030,Self-reported date symptoms first experienced,8935,5234,9/17/2020,NA,15,15,0.001678791,0.002865877
+28030,Self-reported date symptoms first experienced,8935,5234,9/18/2020,NA,23,23,0.002574147,0.004394345
+28030,Self-reported date symptoms first experienced,8935,5234,9/19/2020,NA,35,35,0.00391718,0.006687046
+28030,Self-reported date symptoms first experienced,8935,5234,9/20/2020,NA,56,56,0.006267487,0.010699274
+28030,Self-reported date symptoms first experienced,8935,5234,9/21/2020,NA,52,52,0.00581981,0.00993504
+28030,Self-reported date symptoms first experienced,8935,5234,9/22/2020,NA,24,24,0.002686066,0.004585403
+28030,Self-reported date symptoms first experienced,8935,5234,9/23/2020,NA,29,29,0.003245663,0.005540695
+28030,Self-reported date symptoms first experienced,8935,5234,9/24/2020,NA,26,26,0.002909905,0.00496752
+28030,Self-reported date symptoms first experienced,8935,5234,9/25/2020,NA,38,38,0.004252938,0.007260222
+28030,Self-reported date symptoms first experienced,8935,5234,9/26/2020,NA,31,30,0.003469502,0.005731754
+28030,Self-reported date symptoms first experienced,8935,5234,9/27/2020,NA,24,24,0.002686066,0.004585403
+28030,Self-reported date symptoms first experienced,8935,5234,9/28/2020,NA,38,38,0.004252938,0.007260222
+28030,Self-reported date symptoms first experienced,8935,5234,9/29/2020,NA,21,21,0.002350308,0.004012228
+28030,Self-reported date symptoms first experienced,8935,5234,9/30/2020,NA,22,22,0.002462227,0.004203286
+28030,Self-reported date symptoms first experienced,8935,5234,10/1/2020,NA,61,61,0.006827084,0.011654566
+28030,Self-reported date symptoms first experienced,8935,5234,10/2/2020,NA,19,19,0.002126469,0.003630111
+28030,Self-reported date symptoms first experienced,8935,5234,10/3/2020,NA,19,19,0.002126469,0.003630111
+28030,Self-reported date symptoms first experienced,8935,5234,10/4/2020,NA,13,13,0.001454952,0.00248376
+28030,Self-reported date symptoms first experienced,8935,5234,10/5/2020,NA,38,37,0.004252938,0.007069163
+28030,Self-reported date symptoms first experienced,8935,5234,10/6/2020,NA,15,14,0.001678791,0.002674818
+28030,Self-reported date symptoms first experienced,8935,5234,10/7/2020,NA,16,16,0.001790711,0.003056935
+28030,Self-reported date symptoms first experienced,8935,5234,10/8/2020,NA,12,12,0.001343033,0.002292702
+28030,Self-reported date symptoms first experienced,8935,5234,6/10/2020,NA,25,25,0.002797985,0.004776462
+28030,Self-reported date symptoms first experienced,8935,5234,6/12/2020,NA,14,13,0.001566872,0.00248376
+28030,Self-reported date symptoms first experienced,8935,5234,6/13/2020,NA,15,15,0.001678791,0.002865877
+28030,Self-reported date symptoms first experienced,8935,5234,6/14/2020,NA,24,23,0.002686066,0.004394345
+28030,Self-reported date symptoms first experienced,8935,5234,6/15/2020,NA,64,61,0.007162843,0.011654566
+28030,Self-reported date symptoms first experienced,8935,5234,6/16/2020,NA,20,20,0.002238388,0.003821169
+28030,Self-reported date symptoms first experienced,8935,5234,6/17/2020,NA,8,8,8.95E-04,0.001528468
+28030,Self-reported date symptoms first experienced,8935,5234,6/18/2020,NA,16,16,0.001790711,0.003056935
+28030,Self-reported date symptoms first experienced,8935,5234,6/19/2020,NA,8,8,8.95E-04,0.001528468
+28030,Self-reported date symptoms first experienced,8935,5234,6/20/2020,NA,25,25,0.002797985,0.004776462
+28030,Self-reported date symptoms first experienced,8935,5234,6/21/2020,NA,12,12,0.001343033,0.002292702
+28030,Self-reported date symptoms first experienced,8935,5234,6/22/2020,NA,17,17,0.00190263,0.003247994
+28030,Self-reported date symptoms first experienced,8935,5234,6/23/2020,NA,14,14,0.001566872,0.002674818
+28030,Self-reported date symptoms first experienced,8935,5234,6/24/2020,NA,17,16,0.00190263,0.003056935
+28030,Self-reported date symptoms first experienced,8935,5234,6/25/2020,NA,24,24,0.002686066,0.004585403
+28030,Self-reported date symptoms first experienced,8935,5234,6/26/2020,NA,15,15,0.001678791,0.002865877
+28030,Self-reported date symptoms first experienced,8935,5234,6/27/2020,NA,15,15,0.001678791,0.002865877
+28030,Self-reported date symptoms first experienced,8935,5234,6/28/2020,NA,25,25,0.002797985,0.004776462
+28030,Self-reported date symptoms first experienced,8935,5234,6/29/2020,NA,20,20,0.002238388,0.003821169
+28030,Self-reported date symptoms first experienced,8935,5234,6/30/2020,NA,56,54,0.006267487,0.010317157
+28030,Self-reported date symptoms first experienced,8935,5234,7/1/2020,NA,140,138,0.015668719,0.026366068
+28030,Self-reported date symptoms first experienced,8935,5234,7/2/2020,NA,28,28,0.003133744,0.005349637
+28030,Self-reported date symptoms first experienced,8935,5234,7/3/2020,NA,43,42,0.004812535,0.008024455
+28030,Self-reported date symptoms first experienced,8935,5234,7/4/2020,NA,27,27,0.003021824,0.005158579
+28030,Self-reported date symptoms first experienced,8935,5234,7/5/2020,NA,44,44,0.004924454,0.008406572
+28030,Self-reported date symptoms first experienced,8935,5234,7/6/2020,NA,42,42,0.004700616,0.008024455
+28030,Self-reported date symptoms first experienced,8935,5234,7/7/2020,NA,31,30,0.003469502,0.005731754
+28030,Self-reported date symptoms first experienced,8935,5234,7/8/2020,NA,20,20,0.002238388,0.003821169
+28030,Self-reported date symptoms first experienced,8935,5234,7/9/2020,NA,21,21,0.002350308,0.004012228
+28030,Self-reported date symptoms first experienced,8935,5234,7/10/2020,NA,53,53,0.005931729,0.010126099
+28030,Self-reported date symptoms first experienced,8935,5234,7/11/2020,NA,23,23,0.002574147,0.004394345
+28030,Self-reported date symptoms first experienced,8935,5234,7/12/2020,NA,26,26,0.002909905,0.00496752
+28030,Self-reported date symptoms first experienced,8935,5234,7/13/2020,NA,27,27,0.003021824,0.005158579
+28030,Self-reported date symptoms first experienced,8935,5234,7/14/2020,NA,26,26,0.002909905,0.00496752
+28030,Self-reported date symptoms first experienced,8935,5234,7/15/2020,NA,66,66,0.007386682,0.012609859
+28030,Self-reported date symptoms first experienced,8935,5234,7/16/2020,NA,23,22,0.002574147,0.004203286
+28030,Self-reported date symptoms first experienced,8935,5234,7/17/2020,NA,24,24,0.002686066,0.004585403
+28030,Self-reported date symptoms first experienced,8935,5234,7/18/2020,NA,13,13,0.001454952,0.00248376
+28030,Self-reported date symptoms first experienced,8935,5234,7/19/2020,NA,19,19,0.002126469,0.003630111
+28030,Self-reported date symptoms first experienced,8935,5234,7/20/2020,NA,66,64,0.007386682,0.012227742
+28030,Self-reported date symptoms first experienced,8935,5234,7/21/2020,NA,26,26,0.002909905,0.00496752
+28030,Self-reported date symptoms first experienced,8935,5234,7/22/2020,NA,20,20,0.002238388,0.003821169
+28030,Self-reported date symptoms first experienced,8935,5234,7/23/2020,NA,29,29,0.003245663,0.005540695
+28030,Self-reported date symptoms first experienced,8935,5234,7/24/2020,NA,16,16,0.001790711,0.003056935
+28030,Self-reported date symptoms first experienced,8935,5234,7/25/2020,NA,30,30,0.003357583,0.005731754
+28030,Self-reported date symptoms first experienced,8935,5234,7/26/2020,NA,19,19,0.002126469,0.003630111
+28030,Self-reported date symptoms first experienced,8935,5234,7/27/2020,NA,29,29,0.003245663,0.005540695
+28030,Self-reported date symptoms first experienced,8935,5234,7/28/2020,NA,28,28,0.003133744,0.005349637
+28030,Self-reported date symptoms first experienced,8935,5234,7/29/2020,NA,32,32,0.003581421,0.006113871
+28030,Self-reported date symptoms first experienced,8935,5234,7/30/2020,NA,21,21,0.002350308,0.004012228
+28030,Self-reported date symptoms first experienced,8935,5234,7/31/2020,NA,23,23,0.002574147,0.004394345
+28030,Self-reported date symptoms first experienced,8935,5234,8/1/2020,NA,91,89,0.010184667,0.017004203
+28030,Self-reported date symptoms first experienced,8935,5234,8/2/2020,NA,16,16,0.001790711,0.003056935
+28030,Self-reported date symptoms first experienced,8935,5234,8/3/2020,NA,47,46,0.005260213,0.008788689
+28030,Self-reported date symptoms first experienced,8935,5234,10/23/2020,NA,19,19,0.002126469,0.003630111
+28030,Self-reported date symptoms first experienced,8935,5234,10/24/2020,NA,17,17,0.00190263,0.003247994
+28030,Self-reported date symptoms first experienced,8935,5234,10/25/2020,NA,14,14,0.001566872,0.002674818
+28030,Self-reported date symptoms first experienced,8935,5234,10/26/2020,NA,22,22,0.002462227,0.004203286
+28030,Self-reported date symptoms first experienced,8935,5234,10/27/2020,NA,8,8,8.95E-04,0.001528468
+28030,Self-reported date symptoms first experienced,8935,5234,10/28/2020,NA,12,12,0.001343033,0.002292702
+28030,Self-reported date symptoms first experienced,8935,5234,10/29/2020,NA,5,5,5.60E-04,9.55E-04
+28030,Self-reported date symptoms first experienced,8935,5234,10/30/2020,NA,18,18,0.00201455,0.003439052
+28030,Self-reported date symptoms first experienced,8935,5234,10/31/2020,NA,9,9,0.001007275,0.001719526
+28030,Self-reported date symptoms first experienced,8935,5234,11/1/2020,NA,17,17,0.00190263,0.003247994
+28030,Self-reported date symptoms first experienced,8935,5234,11/2/2020,NA,14,14,0.001566872,0.002674818
+28030,Self-reported date symptoms first experienced,8935,5234,1/1/1999,NA,21,21,0.002350308,0.004012228
+28030,Self-reported date symptoms first experienced,8935,5234,10/9/2020,NA,19,19,0.002126469,0.003630111
+28030,Self-reported date symptoms first experienced,8935,5234,10/10/2020,NA,45,45,0.005036374,0.008597631
+28030,Self-reported date symptoms first experienced,8935,5234,10/11/2020,NA,15,15,0.001678791,0.002865877
+28030,Self-reported date symptoms first experienced,8935,5234,10/12/2020,NA,29,29,0.003245663,0.005540695
+28030,Self-reported date symptoms first experienced,8935,5234,10/13/2020,NA,15,15,0.001678791,0.002865877
+28030,Self-reported date symptoms first experienced,8935,5234,10/14/2020,NA,21,21,0.002350308,0.004012228
+28030,Self-reported date symptoms first experienced,8935,5234,10/15/2020,NA,40,40,0.004476777,0.007642339
+28030,Self-reported date symptoms first experienced,8935,5234,10/16/2020,NA,20,20,0.002238388,0.003821169
+28030,Self-reported date symptoms first experienced,8935,5234,10/17/2020,NA,15,15,0.001678791,0.002865877
+28030,Self-reported date symptoms first experienced,8935,5234,10/18/2020,NA,18,18,0.00201455,0.003439052
+28030,Self-reported date symptoms first experienced,8935,5234,10/19/2020,NA,28,28,0.003133744,0.005349637
+28030,Self-reported date symptoms first experienced,8935,5234,10/20/2020,NA,34,34,0.00380526,0.006495988
+28030,Self-reported date symptoms first experienced,8935,5234,10/21/2020,NA,15,15,0.001678791,0.002865877
+28030,Self-reported date symptoms first experienced,8935,5234,10/22/2020,NA,27,27,0.003021824,0.005158579
+28031,Self-reported date of a positive COVID-19 test result,16,15,1/1/1999,NA,16,15,1,1
+28032,Date questionnaire results were received by post,57905,10540,6/15/2020,NA,15,15,2.59E-04,0.00142315
+28032,Date questionnaire results were received by post,57905,10540,6/16/2020,NA,535,535,0.009239271,0.050759013
+28032,Date questionnaire results were received by post,57905,10540,6/17/2020,NA,609,609,0.010517226,0.057779886
+28032,Date questionnaire results were received by post,57905,10540,6/18/2020,NA,486,486,0.008393058,0.046110057
+28032,Date questionnaire results were received by post,57905,10540,6/19/2020,NA,603,603,0.010413608,0.057210626
+28032,Date questionnaire results were received by post,57905,10540,6/20/2020,NA,258,258,0.004455574,0.024478178
+28032,Date questionnaire results were received by post,57905,10540,6/22/2020,NA,91,91,0.00157154,0.008633776
+28032,Date questionnaire results were received by post,57905,10540,6/23/2020,NA,406,406,0.007011484,0.038519924
+28032,Date questionnaire results were received by post,57905,10540,6/24/2020,NA,396,396,0.006838788,0.037571157
+28032,Date questionnaire results were received by post,57905,10540,6/10/2020,NA,33,33,5.70E-04,0.00313093
+28032,Date questionnaire results were received by post,57905,10540,6/11/2020,NA,32,32,5.53E-04,0.003036053
+28032,Date questionnaire results were received by post,57905,10540,6/12/2020,NA,57,57,9.84E-04,0.00540797
+28032,Date questionnaire results were received by post,57905,10540,6/13/2020,NA,15,15,2.59E-04,0.00142315
+28032,Date questionnaire results were received by post,57905,10540,6/30/2020,NA,776,776,0.013401261,0.073624288
+28032,Date questionnaire results were received by post,57905,10540,7/1/2020,NA,931,931,0.016078059,0.088330171
+28032,Date questionnaire results were received by post,57905,10540,7/2/2020,NA,483,483,0.008341249,0.045825427
+28032,Date questionnaire results were received by post,57905,10540,7/3/2020,NA,377,377,0.006510664,0.035768501
+28032,Date questionnaire results were received by post,57905,10540,7/4/2020,NA,165,165,0.002849495,0.015654649
+28032,Date questionnaire results were received by post,57905,10540,7/6/2020,NA,24,24,4.14E-04,0.00227704
+28032,Date questionnaire results were received by post,57905,10540,7/7/2020,NA,891,891,0.015387272,0.084535104
+28032,Date questionnaire results were received by post,57905,10540,7/8/2020,NA,1077,1077,0.01859943,0.102182163
+28032,Date questionnaire results were received by post,57905,10540,7/9/2020,NA,859,859,0.014834643,0.081499051
+28032,Date questionnaire results were received by post,57905,10540,6/25/2020,NA,200,200,0.003453933,0.018975332
+28032,Date questionnaire results were received by post,57905,10540,6/26/2020,NA,209,209,0.00360936,0.019829222
+28032,Date questionnaire results were received by post,57905,10540,6/27/2020,NA,46,46,7.94E-04,0.004364326
+28032,Date questionnaire results were received by post,57905,10540,6/29/2020,NA,11,11,1.90E-04,0.001043643
+28032,Date questionnaire results were received by post,57905,10540,7/15/2020,NA,597,597,0.010309991,0.056641366
+28032,Date questionnaire results were received by post,57905,10540,7/16/2020,NA,621,621,0.010724462,0.058918406
+28032,Date questionnaire results were received by post,57905,10540,7/17/2020,NA,661,661,0.011415249,0.062713472
+28032,Date questionnaire results were received by post,57905,10540,7/18/2020,NA,88,88,0.001519731,0.008349146
+28032,Date questionnaire results were received by post,57905,10540,7/20/2020,NA,7,7,1.21E-04,6.64E-04
+28032,Date questionnaire results were received by post,57905,10540,7/21/2020,NA,346,346,0.005975304,0.032827324
+28032,Date questionnaire results were received by post,57905,10540,7/22/2020,NA,466,466,0.008047664,0.044212524
+28032,Date questionnaire results were received by post,57905,10540,7/23/2020,NA,227,227,0.003920214,0.021537002
+28032,Date questionnaire results were received by post,57905,10540,7/24/2020,NA,159,159,0.002745877,0.015085389
+28032,Date questionnaire results were received by post,57905,10540,7/25/2020,NA,20,20,3.45E-04,0.001897533
+28032,Date questionnaire results were received by post,57905,10540,7/27/2020,NA,10,10,1.73E-04,9.49E-04
+28032,Date questionnaire results were received by post,57905,10540,7/28/2020,NA,720,720,0.012434159,0.068311195
+28032,Date questionnaire results were received by post,57905,10540,7/29/2020,NA,1168,1168,0.02017097,0.110815939
+28032,Date questionnaire results were received by post,57905,10540,7/30/2020,NA,245,245,0.004231068,0.023244782
+28032,Date questionnaire results were received by post,57905,10540,7/31/2020,NA,432,432,0.007460496,0.040986717
+28032,Date questionnaire results were received by post,57905,10540,8/1/2020,NA,60,60,0.00103618,0.0056926
+28032,Date questionnaire results were received by post,57905,10540,8/3/2020,NA,8,8,1.38E-04,7.59E-04
+28032,Date questionnaire results were received by post,57905,10540,8/4/2020,NA,890,890,0.015370003,0.084440228
+28032,Date questionnaire results were received by post,57905,10540,8/5/2020,NA,974,974,0.016820655,0.092409867
+28032,Date questionnaire results were received by post,57905,10540,8/6/2020,NA,909,909,0.015698126,0.086242884
+28032,Date questionnaire results were received by post,57905,10540,8/7/2020,NA,586,586,0.010120024,0.055597723
+28032,Date questionnaire results were received by post,57905,10540,8/8/2020,NA,61,61,0.00105345,0.005787476
+28032,Date questionnaire results were received by post,57905,10540,8/10/2020,NA,31,31,5.35E-04,0.002941176
+28032,Date questionnaire results were received by post,57905,10540,8/11/2020,NA,559,559,0.009653743,0.053036053
+28032,Date questionnaire results were received by post,57905,10540,8/12/2020,NA,584,584,0.010085485,0.05540797
+28032,Date questionnaire results were received by post,57905,10540,8/13/2020,NA,622,622,0.010741732,0.059013283
+28032,Date questionnaire results were received by post,57905,10540,8/14/2020,NA,580,580,0.010016406,0.055028463
+28032,Date questionnaire results were received by post,57905,10540,8/15/2020,NA,55,55,9.50E-04,0.005218216
+28032,Date questionnaire results were received by post,57905,10540,8/17/2020,NA,76,76,0.001312495,0.007210626
+28032,Date questionnaire results were received by post,57905,10540,8/18/2020,NA,394,394,0.006804248,0.037381404
+28032,Date questionnaire results were received by post,57905,10540,8/19/2020,NA,458,458,0.007909507,0.04345351
+28032,Date questionnaire results were received by post,57905,10540,8/20/2020,NA,187,187,0.003229428,0.017741935
+28032,Date questionnaire results were received by post,57905,10540,8/21/2020,NA,149,149,0.00257318,0.014136622
+28032,Date questionnaire results were received by post,57905,10540,8/22/2020,NA,35,35,6.04E-04,0.003320683
+28032,Date questionnaire results were received by post,57905,10540,8/24/2020,NA,28,28,4.84E-04,0.002656546
+28032,Date questionnaire results were received by post,57905,10540,8/25/2020,NA,975,975,0.016837924,0.092504744
+28032,Date questionnaire results were received by post,57905,10540,7/10/2020,NA,504,504,0.008703912,0.047817837
+28032,Date questionnaire results were received by post,57905,10540,7/11/2020,NA,109,109,0.001882394,0.010341556
+28032,Date questionnaire results were received by post,57905,10540,7/13/2020,NA,23,23,3.97E-04,0.002182163
+28032,Date questionnaire results were received by post,57905,10540,7/14/2020,NA,603,603,0.010413608,0.057210626
+28032,Date questionnaire results were received by post,57905,10540,10/17/2020,NA,35,35,6.04E-04,0.003320683
+28032,Date questionnaire results were received by post,57905,10540,10/20/2020,NA,807,807,0.01393662,0.076565465
+28032,Date questionnaire results were received by post,57905,10540,10/21/2020,NA,966,966,0.016682497,0.091650854
+28032,Date questionnaire results were received by post,57905,10540,10/22/2020,NA,216,216,0.003730248,0.020493359
+28032,Date questionnaire results were received by post,57905,10540,10/23/2020,NA,444,444,0.007667732,0.042125237
+28032,Date questionnaire results were received by post,57905,10540,10/24/2020,NA,49,49,8.46E-04,0.004648956
+28032,Date questionnaire results were received by post,57905,10540,10/26/2020,NA,6,6,1.04E-04,5.69E-04
+28032,Date questionnaire results were received by post,57905,10540,10/27/2020,NA,846,846,0.014610137,0.080265655
+28032,Date questionnaire results were received by post,57905,10540,10/28/2020,NA,978,978,0.016889733,0.092789374
+28032,Date questionnaire results were received by post,57905,10540,10/29/2020,NA,736,736,0.012710474,0.069829222
+28032,Date questionnaire results were received by post,57905,10540,10/30/2020,NA,492,492,0.008496676,0.046679317
+28032,Date questionnaire results were received by post,57905,10540,10/31/2020,NA,67,67,0.001157068,0.006356736
+28032,Date questionnaire results were received by post,57905,10540,11/2/2020,NA,16,16,2.76E-04,0.001518027
+28032,Date questionnaire results were received by post,57905,10540,11/3/2020,NA,453,453,0.007823159,0.042979127
+28032,Date questionnaire results were received by post,57905,10540,11/4/2020,NA,559,559,0.009653743,0.053036053
+28032,Date questionnaire results were received by post,57905,10540,11/5/2020,NA,580,580,0.010016406,0.055028463
+28032,Date questionnaire results were received by post,57905,10540,11/6/2020,NA,618,618,0.010672653,0.058633776
+28032,Date questionnaire results were received by post,57905,10540,11/7/2020,NA,150,150,0.00259045,0.014231499
+28032,Date questionnaire results were received by post,57905,10540,11/9/2020,NA,18,18,3.11E-04,0.00170778
+28032,Date questionnaire results were received by post,57905,10540,11/10/2020,NA,295,295,0.005094551,0.027988615
+28032,Date questionnaire results were received by post,57905,10540,11/11/2020,NA,465,465,0.008030395,0.044117647
+28032,Date questionnaire results were received by post,57905,10540,11/12/2020,NA,191,191,0.003298506,0.018121442
+28032,Date questionnaire results were received by post,57905,10540,11/13/2020,NA,146,146,0.002521371,0.013851992
+28032,Date questionnaire results were received by post,57905,10540,11/14/2020,NA,42,42,7.25E-04,0.00398482
+28032,Date questionnaire results were received by post,57905,10540,11/17/2020,NA,812,812,0.014022969,0.077039848
+28032,Date questionnaire results were received by post,57905,10540,11/18/2020,NA,973,973,0.016803385,0.092314991
+28032,Date questionnaire results were received by post,57905,10540,11/19/2020,NA,196,196,0.003384855,0.018595825
+28032,Date questionnaire results were received by post,57905,10540,11/20/2020,NA,444,444,0.007667732,0.042125237
+28032,Date questionnaire results were received by post,57905,10540,11/21/2020,NA,70,70,0.001208877,0.006641366
+28032,Date questionnaire results were received by post,57905,10540,11/24/2020,NA,23,23,3.97E-04,0.002182163
+28032,Date questionnaire results were received by post,57905,10540,11/25/2020,NA,25,25,4.32E-04,0.002371917
+28032,Date questionnaire results were received by post,57905,10540,11/26/2020,NA,16,16,2.76E-04,0.001518027
+28032,Date questionnaire results were received by post,57905,10540,11/27/2020,NA,19,19,3.28E-04,0.001802657
+28032,Date questionnaire results were received by post,57905,10540,11/28/2020,NA,5,5,8.63E-05,4.74E-04
+28032,Date questionnaire results were received by post,57905,10540,12/4/2020,NA,19,19,3.28E-04,0.001802657
+28032,Date questionnaire results were received by post,57905,10540,8/26/2020,NA,951,950,0.016423452,0.090132827
+28032,Date questionnaire results were received by post,57905,10540,8/27/2020,NA,184,184,0.003177619,0.017457306
+28032,Date questionnaire results were received by post,57905,10540,8/28/2020,NA,448,448,0.00773681,0.042504744
+28032,Date questionnaire results were received by post,57905,10540,8/29/2020,NA,48,48,8.29E-04,0.00455408
+28032,Date questionnaire results were received by post,57905,10540,9/2/2020,NA,880,880,0.015197306,0.083491461
+28032,Date questionnaire results were received by post,57905,10540,9/3/2020,NA,1022,1022,0.017649598,0.096963947
+28032,Date questionnaire results were received by post,57905,10540,9/4/2020,NA,961,961,0.016596149,0.091176471
+28032,Date questionnaire results were received by post,57905,10540,9/5/2020,NA,225,225,0.003885675,0.021347249
+28032,Date questionnaire results were received by post,57905,10540,9/7/2020,NA,66,66,0.001139798,0.00626186
+28032,Date questionnaire results were received by post,57905,10540,9/8/2020,NA,610,610,0.010534496,0.057874763
+28032,Date questionnaire results were received by post,57905,10540,9/9/2020,NA,621,621,0.010724462,0.058918406
+28032,Date questionnaire results were received by post,57905,10540,9/10/2020,NA,650,650,0.011225283,0.061669829
+28032,Date questionnaire results were received by post,57905,10540,9/11/2020,NA,562,562,0.009705552,0.053320683
+28032,Date questionnaire results were received by post,57905,10540,9/12/2020,NA,61,61,0.00105345,0.005787476
+28032,Date questionnaire results were received by post,57905,10540,9/14/2020,NA,7,7,1.21E-04,6.64E-04
+28032,Date questionnaire results were received by post,57905,10540,9/15/2020,NA,471,471,0.008134013,0.044686907
+28032,Date questionnaire results were received by post,57905,10540,9/16/2020,NA,398,398,0.006873327,0.037760911
+28032,Date questionnaire results were received by post,57905,10540,9/17/2020,NA,241,241,0.004161989,0.022865275
+28032,Date questionnaire results were received by post,57905,10540,9/18/2020,NA,143,143,0.002469562,0.013567362
+28032,Date questionnaire results were received by post,57905,10540,9/19/2020,NA,31,31,5.35E-04,0.002941176
+28032,Date questionnaire results were received by post,57905,10540,9/21/2020,NA,6,6,1.04E-04,5.69E-04
+28032,Date questionnaire results were received by post,57905,10540,9/22/2020,NA,859,859,0.014834643,0.081499051
+28032,Date questionnaire results were received by post,57905,10540,9/23/2020,NA,1054,1054,0.018202228,0.1
+28032,Date questionnaire results were received by post,57905,10540,9/24/2020,NA,228,228,0.003937484,0.021631879
+28032,Date questionnaire results were received by post,57905,10540,9/25/2020,NA,433,433,0.007477765,0.041081594
+28032,Date questionnaire results were received by post,57905,10540,9/26/2020,NA,45,45,7.77E-04,0.00426945
+28032,Date questionnaire results were received by post,57905,10540,9/29/2020,NA,850,850,0.014679216,0.080645161
+28032,Date questionnaire results were received by post,57905,10540,9/30/2020,NA,924,924,0.015957171,0.087666034
+28032,Date questionnaire results were received by post,57905,10540,10/1/2020,NA,742,742,0.012814092,0.070398482
+28032,Date questionnaire results were received by post,57905,10540,10/2/2020,NA,503,503,0.008686642,0.04772296
+28032,Date questionnaire results were received by post,57905,10540,10/3/2020,NA,52,52,8.98E-04,0.004933586
+28032,Date questionnaire results were received by post,57905,10540,10/5/2020,NA,8,8,1.38E-04,7.59E-04
+28032,Date questionnaire results were received by post,57905,10540,10/6/2020,NA,499,499,0.008617563,0.047343454
+28032,Date questionnaire results were received by post,57905,10540,10/7/2020,NA,740,739,0.012779553,0.070113852
+28032,Date questionnaire results were received by post,57905,10540,10/8/2020,NA,609,609,0.010517226,0.057779886
+28032,Date questionnaire results were received by post,57905,10540,10/9/2020,NA,584,584,0.010085485,0.05540797
+28032,Date questionnaire results were received by post,57905,10540,10/10/2020,NA,79,79,0.001364304,0.007495256
+28032,Date questionnaire results were received by post,57905,10540,10/12/2020,NA,27,27,4.66E-04,0.00256167
+28032,Date questionnaire results were received by post,57905,10540,10/13/2020,NA,365,365,0.006303428,0.034629981
+28032,Date questionnaire results were received by post,57905,10540,10/14/2020,NA,431,431,0.007443226,0.040891841
+28032,Date questionnaire results were received by post,57905,10540,10/15/2020,NA,166,166,0.002866765,0.015749526
+28032,Date questionnaire results were received by post,57905,10540,10/16/2020,NA,155,155,0.002676798,0.014705882
+28032,Date questionnaire results were received by post,57905,10540,5/27/2020,NA,155,155,0.002676798,0.014705882
+28032,Date questionnaire results were received by post,57905,10540,5/28/2020,NA,257,257,0.004438304,0.024383302
+28032,Date questionnaire results were received by post,57905,10540,5/29/2020,NA,310,310,0.005353596,0.029411765
+28032,Date questionnaire results were received by post,57905,10540,5/30/2020,NA,357,357,0.006165271,0.033870968
+28032,Date questionnaire results were received by post,57905,10540,6/1/2020,NA,324,324,0.005595372,0.030740038
+28032,Date questionnaire results were received by post,57905,10540,6/3/2020,NA,412,412,0.007115102,0.039089184
+28032,Date questionnaire results were received by post,57905,10540,6/4/2020,NA,398,398,0.006873327,0.037760911
+28032,Date questionnaire results were received by post,57905,10540,6/5/2020,NA,409,409,0.007063293,0.038804554
+28032,Date questionnaire results were received by post,57905,10540,6/6/2020,NA,325,325,0.005612641,0.030834915
+28032,Date questionnaire results were received by post,57905,10540,6/8/2020,NA,224,224,0.003868405,0.021252372
+28032,Date questionnaire results were received by post,57905,10540,6/9/2020,NA,192,192,0.003315776,0.018216319
+28033,Date questionnaire results were received by website,837,644,10/21/2020,NA,6,6,0.007168459,0.00931677
+28033,Date questionnaire results were received by website,837,644,10/22/2020,NA,26,26,0.031063321,0.040372671
+28033,Date questionnaire results were received by website,837,644,10/26/2020,NA,45,45,0.053763441,0.069875776
+28033,Date questionnaire results were received by website,837,644,10/27/2020,NA,50,50,0.059737157,0.077639752
+28033,Date questionnaire results were received by website,837,644,10/28/2020,NA,31,31,0.037037037,0.048136646
+28033,Date questionnaire results were received by website,837,644,10/29/2020,NA,19,19,0.022700119,0.029503106
+28033,Date questionnaire results were received by website,837,644,11/2/2020,NA,29,29,0.034647551,0.045031056
+28033,Date questionnaire results were received by website,837,644,11/3/2020,NA,22,22,0.026284349,0.034161491
+28033,Date questionnaire results were received by website,837,644,11/4/2020,NA,26,26,0.031063321,0.040372671
+28033,Date questionnaire results were received by website,837,644,11/5/2020,NA,37,37,0.044205496,0.057453416
+28033,Date questionnaire results were received by website,837,644,11/9/2020,NA,21,21,0.025089606,0.032608696
+28033,Date questionnaire results were received by website,837,644,11/10/2020,NA,29,29,0.034647551,0.045031056
+28033,Date questionnaire results were received by website,837,644,11/11/2020,NA,9,9,0.010752688,0.013975155
+28033,Date questionnaire results were received by website,837,644,11/12/2020,NA,6,6,0.007168459,0.00931677
+28033,Date questionnaire results were received by website,837,644,11/16/2020,NA,44,44,0.052568698,0.068322981
+28033,Date questionnaire results were received by website,837,644,11/17/2020,NA,51,51,0.0609319,0.079192547
+28033,Date questionnaire results were received by website,837,644,11/19/2020,NA,26,26,0.031063321,0.040372671
+28033,Date questionnaire results were received by website,837,644,11/23/2020,NA,14,14,0.016726404,0.02173913
+28033,Date questionnaire results were received by website,837,644,9/28/2020,NA,23,23,0.027479092,0.035714286
+28033,Date questionnaire results were received by website,837,644,9/29/2020,NA,17,17,0.020310633,0.026397516
+28033,Date questionnaire results were received by website,837,644,9/30/2020,NA,15,15,0.017921147,0.023291925
+28033,Date questionnaire results were received by website,837,644,10/1/2020,NA,7,7,0.008363202,0.010869565
+28033,Date questionnaire results were received by website,837,644,10/5/2020,NA,36,36,0.043010753,0.055900621
+28033,Date questionnaire results were received by website,837,644,10/6/2020,NA,19,19,0.022700119,0.029503106
+28033,Date questionnaire results were received by website,837,644,10/7/2020,NA,26,26,0.031063321,0.040372671
+28033,Date questionnaire results were received by website,837,644,10/8/2020,NA,40,40,0.047789725,0.062111801
+28033,Date questionnaire results were received by website,837,644,10/12/2020,NA,26,26,0.031063321,0.040372671
+28033,Date questionnaire results were received by website,837,644,10/13/2020,NA,18,18,0.021505376,0.027950311
+28033,Date questionnaire results were received by website,837,644,10/14/2020,NA,9,9,0.010752688,0.013975155
+28033,Date questionnaire results were received by website,837,644,10/19/2020,NA,53,53,0.063321386,0.082298137
+28033,Date questionnaire results were received by website,837,644,10/20/2020,NA,43,43,0.051373955,0.066770186
+28147,COVID-19 symptoms: Fever 38 degrees C or greater,8179,8179,-121,Do not remember,35,35,0.004279252,0.004279252
+28147,COVID-19 symptoms: Fever 38 degrees C or greater,8179,8179,0,No,7882,7882,0.963687492,0.963687492
+28147,COVID-19 symptoms: Fever 38 degrees C or greater,8179,8179,1,Yes,262,262,0.032033256,0.032033256
+28148,COVID-19 symptoms: Wheezing,8179,8179,-121,Do not remember,27,27,0.003301137,0.003301137
+28148,COVID-19 symptoms: Wheezing,8179,8179,0,No,7718,7718,0.943636141,0.943636141
+28148,COVID-19 symptoms: Wheezing,8179,8179,1,Yes,434,434,0.053062722,0.053062722
+28149,COVID-19 symptoms: Chills,8179,8179,-121,Do not remember,39,39,0.004768309,0.004768309
+28149,COVID-19 symptoms: Chills,8179,8179,0,No,7426,7426,0.907934955,0.907934955
+28149,COVID-19 symptoms: Chills,8179,8179,1,Yes,714,714,0.087296736,0.087296736
+28150,COVID-19 symptoms: Chest pain,8179,8179,-121,Do not remember,28,28,0.003423401,0.003423401
+28150,COVID-19 symptoms: Chest pain,8179,8179,0,No,7845,7845,0.959163712,0.959163712
+28150,COVID-19 symptoms: Chest pain,8179,8179,1,Yes,306,306,0.037412887,0.037412887
+28151,COVID-19 symptoms: Feeling more tired than usual,8179,8179,-121,Do not remember,51,51,0.006235481,0.006235481
+28151,COVID-19 symptoms: Feeling more tired than usual,8179,8179,0,No,6016,6016,0.735542242,0.735542242
+28151,COVID-19 symptoms: Feeling more tired than usual,8179,8179,1,Yes,2112,2112,0.258222277,0.258222277
+28152,COVID-19 symptoms: Headache,8179,8179,-121,Do not remember,40,40,0.004890573,0.004890573
+28152,COVID-19 symptoms: Headache,8179,8179,0,No,6288,6288,0.768798142,0.768798142
+28152,COVID-19 symptoms: Headache,8179,8179,1,Yes,1851,1851,0.226311285,0.226311285
+28153,COVID-19 symptoms: Muscle ache,8179,8179,-121,Do not remember,41,41,0.005012838,0.005012838
+28153,COVID-19 symptoms: Muscle ache,8179,8179,0,No,6683,6683,0.817092554,0.817092554
+28153,COVID-19 symptoms: Muscle ache,8179,8179,1,Yes,1455,1455,0.177894608,0.177894608
+28154,COVID-19 symptoms: Nausea/vomiting,8179,8179,-121,Do not remember,20,20,0.002445287,0.002445287
+28154,COVID-19 symptoms: Nausea/vomiting,8179,8179,0,No,7806,7806,0.954395403,0.954395403
+28154,COVID-19 symptoms: Nausea/vomiting,8179,8179,1,Yes,353,353,0.04315931,0.04315931
+28155,COVID-19 symptoms: Sore throat,8179,8179,-121,Do not remember,39,39,0.004768309,0.004768309
+28155,COVID-19 symptoms: Sore throat,8179,8179,0,No,6500,6500,0.794718181,0.794718181
+28155,COVID-19 symptoms: Sore throat,8179,8179,1,Yes,1640,1640,0.20051351,0.20051351
+28156,COVID-19 symptoms: Abdominal pain,8179,8179,-121,Do not remember,32,32,0.003912459,0.003912459
+28156,COVID-19 symptoms: Abdominal pain,8179,8179,0,No,7676,7676,0.938501039,0.938501039
+28156,COVID-19 symptoms: Abdominal pain,8179,8179,1,Yes,471,471,0.057586502,0.057586502
+28157,COVID-19 symptoms: Persistent dry cough,8179,8179,-121,Do not remember,31,31,0.003790194,0.003790194
+28157,COVID-19 symptoms: Persistent dry cough,8179,8179,0,No,7424,7424,0.907690427,0.907690427
+28157,COVID-19 symptoms: Persistent dry cough,8179,8179,1,Yes,724,724,0.088519379,0.088519379
+28158,COVID-19 symptoms: Diarrhoea,8179,8179,-121,Do not remember,32,32,0.003912459,0.003912459
+28158,COVID-19 symptoms: Diarrhoea,8179,8179,0,No,7422,7422,0.907445898,0.907445898
+28158,COVID-19 symptoms: Diarrhoea,8179,8179,1,Yes,725,725,0.088641643,0.088641643
+28159,COVID-19 symptoms: Runny nose,8179,8179,-121,Do not remember,49,49,0.005990952,0.005990952
+28159,COVID-19 symptoms: Runny nose,8179,8179,0,No,5660,5660,0.692016139,0.692016139
+28159,COVID-19 symptoms: Runny nose,8179,8179,1,Yes,2470,2470,0.301992909,0.301992909
+28160,COVID-19 symptoms: Loss of sense of small and taste,8179,8179,-121,Do not remember,27,27,0.003301137,0.003301137
+28160,COVID-19 symptoms: Loss of sense of small and taste,8179,8179,0,No,7767,7767,0.949627094,0.949627094
+28160,COVID-19 symptoms: Loss of sense of small and taste,8179,8179,1,Yes,385,385,0.047071769,0.047071769
+28161,COVID-19 symptoms: Shortness of breath,8179,8179,-121,Do not remember,22,22,0.002689815,0.002689815
+28161,COVID-19 symptoms: Shortness of breath,8179,8179,0,No,7475,7475,0.913925908,0.913925908
+28161,COVID-19 symptoms: Shortness of breath,8179,8179,1,Yes,682,682,0.083384277,0.083384277
+28162,COVID-19 symptoms: Productive long-term cough ('wet' or chesty),8179,8179,-121,Do not remember,28,28,0.003423401,0.003423401
+28162,COVID-19 symptoms: Productive long-term cough ('wet' or chesty),8179,8179,0,No,7503,7503,0.917349309,0.917349309
+28162,COVID-19 symptoms: Productive long-term cough ('wet' or chesty),8179,8179,1,Yes,648,648,0.079227289,0.079227289
+28163,COVID-19 symptoms requiring medical attention,8179,8179,0,No,6908,6908,0.84460203,0.84460203
+28163,COVID-19 symptoms requiring medical attention,8179,8179,1,Yes,1271,1271,0.15539797,0.15539797
+28164,COVID-19 symptoms requiring self-isolation,8179,8179,0,No,7566,7566,0.925051962,0.925051962
+28164,COVID-19 symptoms requiring self-isolation,8179,8179,1,Yes,613,613,0.074948038,0.074948038
+28165,COVID-19 symptoms requiring hospitalisation,8179,8179,0,No,8144,8144,0.995720748,0.995720748
+28165,COVID-19 symptoms requiring hospitalisation,8179,8179,1,Yes,35,35,0.004279252,0.004279252
+28166,Self-reported date of a positive COVID-19 test result,578,578,1/4/2021,NA,6,6,0.010380623,0.010380623
+28166,Self-reported date of a positive COVID-19 test result,578,578,1/10/2021,NA,6,6,0.010380623,0.010380623
+28166,Self-reported date of a positive COVID-19 test result,578,578,7/24/2021,NA,5,5,0.008650519,0.008650519
+28166,Self-reported date of a positive COVID-19 test result,578,578,8/26/2021,NA,5,5,0.008650519,0.008650519
+28166,Self-reported date of a positive COVID-19 test result,578,578,8/27/2021,NA,5,5,0.008650519,0.008650519
+28166,Self-reported date of a positive COVID-19 test result,578,578,8/30/2021,NA,5,5,0.008650519,0.008650519
+28166,Self-reported date of a positive COVID-19 test result,578,578,9/11/2021,NA,5,5,0.008650519,0.008650519
+28166,Self-reported date of a positive COVID-19 test result,578,578,9/15/2021,NA,5,5,0.008650519,0.008650519
+28166,Self-reported date of a positive COVID-19 test result,578,578,9/17/2021,NA,5,5,0.008650519,0.008650519
+28166,Self-reported date of a positive COVID-19 test result,578,578,9/30/2021,NA,7,7,0.012110727,0.012110727
+28166,Self-reported date of a positive COVID-19 test result,578,578,10/10/2021,NA,7,7,0.012110727,0.012110727
+28166,Self-reported date of a positive COVID-19 test result,578,578,10/17/2021,NA,10,10,0.017301038,0.017301038
+28166,Self-reported date of a positive COVID-19 test result,578,578,10/20/2021,NA,6,6,0.010380623,0.010380623
+28166,Self-reported date of a positive COVID-19 test result,578,578,10/21/2021,NA,6,6,0.010380623,0.010380623
+28166,Self-reported date of a positive COVID-19 test result,578,578,10/23/2021,NA,5,5,0.008650519,0.008650519
+28166,Self-reported date of a positive COVID-19 test result,578,578,10/25/2021,NA,5,5,0.008650519,0.008650519
+28166,Self-reported date of a positive COVID-19 test result,578,578,10/28/2021,NA,5,5,0.008650519,0.008650519
+28166,Self-reported date of a positive COVID-19 test result,578,578,11/1/2021,NA,10,10,0.017301038,0.017301038
+28166,Self-reported date of a positive COVID-19 test result,578,578,11/3/2021,NA,5,5,0.008650519,0.008650519
+28166,Self-reported date of a positive COVID-19 test result,578,578,11/10/2021,NA,5,5,0.008650519,0.008650519
+28166,Self-reported date of a positive COVID-19 test result,578,578,11/19/2021,NA,5,5,0.008650519,0.008650519
+28166,Self-reported date of a positive COVID-19 test result,578,578,11/24/2021,NA,5,5,0.008650519,0.008650519
+28166,Self-reported date of a positive COVID-19 test result,578,578,12/7/2021,NA,5,5,0.008650519,0.008650519
+28166,Self-reported date of a positive COVID-19 test result,578,578,12/9/2021,NA,5,5,0.008650519,0.008650519
+28166,Self-reported date of a positive COVID-19 test result,578,578,12/12/2021,NA,6,6,0.010380623,0.010380623
+28166,Self-reported date of a positive COVID-19 test result,578,578,12/13/2021,NA,5,5,0.008650519,0.008650519
+28166,Self-reported date of a positive COVID-19 test result,578,578,12/28/2021,NA,7,7,0.012110727,0.012110727
+28166,Self-reported date of a positive COVID-19 test result,578,578,12/31/2021,NA,7,7,0.012110727,0.012110727
+28167,Date online questionnaire completed,8179,8179,11/24/2021,NA,14,14,0.001711701,0.001711701
+28167,Date online questionnaire completed,8179,8179,11/25/2021,NA,29,29,0.003545666,0.003545666
+28167,Date online questionnaire completed,8179,8179,11/26/2021,NA,23,23,0.00281208,0.00281208
+28167,Date online questionnaire completed,8179,8179,11/27/2021,NA,6,6,7.34E-04,7.34E-04
+28167,Date online questionnaire completed,8179,8179,11/28/2021,NA,19,19,0.002323022,0.002323022
+28167,Date online questionnaire completed,8179,8179,11/29/2021,NA,425,425,0.051962343,0.051962343
+28167,Date online questionnaire completed,8179,8179,11/30/2021,NA,403,403,0.049272527,0.049272527
+28167,Date online questionnaire completed,8179,8179,12/1/2021,NA,267,267,0.032644578,0.032644578
+28167,Date online questionnaire completed,8179,8179,12/2/2021,NA,106,106,0.01296002,0.01296002
+28167,Date online questionnaire completed,8179,8179,12/3/2021,NA,37,37,0.00452378,0.00452378
+28167,Date online questionnaire completed,8179,8179,12/4/2021,NA,8,8,9.78E-04,9.78E-04
+28167,Date online questionnaire completed,8179,8179,12/5/2021,NA,15,15,0.001833965,0.001833965
+28167,Date online questionnaire completed,8179,8179,12/6/2021,NA,128,128,0.015649835,0.015649835
+28167,Date online questionnaire completed,8179,8179,12/7/2021,NA,86,86,0.010514733,0.010514733
+28167,Date online questionnaire completed,8179,8179,12/8/2021,NA,161,161,0.019684558,0.019684558
+28167,Date online questionnaire completed,8179,8179,12/9/2021,NA,353,353,0.04315931,0.04315931
+28167,Date online questionnaire completed,8179,8179,12/10/2021,NA,360,360,0.044015161,0.044015161
+28167,Date online questionnaire completed,8179,8179,12/11/2021,NA,66,66,0.008069446,0.008069446
+28167,Date online questionnaire completed,8179,8179,12/12/2021,NA,34,34,0.004156987,0.004156987
+28167,Date online questionnaire completed,8179,8179,12/13/2021,NA,639,639,0.07812691,0.07812691
+28167,Date online questionnaire completed,8179,8179,12/14/2021,NA,141,141,0.017239271,0.017239271
+28167,Date online questionnaire completed,8179,8179,12/15/2021,NA,1243,1243,0.151974569,0.151974569
+28167,Date online questionnaire completed,8179,8179,12/16/2021,NA,1253,1253,0.153197212,0.153197212
+28167,Date online questionnaire completed,8179,8179,12/17/2021,NA,293,293,0.03582345,0.03582345
+28167,Date online questionnaire completed,8179,8179,12/18/2021,NA,101,101,0.012348698,0.012348698
+28167,Date online questionnaire completed,8179,8179,12/19/2021,NA,75,75,0.009169825,0.009169825
+28167,Date online questionnaire completed,8179,8179,12/20/2021,NA,74,74,0.009047561,0.009047561
+28167,Date online questionnaire completed,8179,8179,12/21/2021,NA,34,34,0.004156987,0.004156987
+28167,Date online questionnaire completed,8179,8179,12/22/2021,NA,32,32,0.003912459,0.003912459
+28167,Date online questionnaire completed,8179,8179,12/23/2021,NA,17,17,0.002078494,0.002078494
+28167,Date online questionnaire completed,8179,8179,12/24/2021,NA,14,14,0.001711701,0.001711701
+28167,Date online questionnaire completed,8179,8179,12/26/2021,NA,6,6,7.34E-04,7.34E-04
+28167,Date online questionnaire completed,8179,8179,12/27/2021,NA,7,7,8.56E-04,8.56E-04
+28167,Date online questionnaire completed,8179,8179,12/28/2021,NA,17,17,0.002078494,0.002078494
+28167,Date online questionnaire completed,8179,8179,12/29/2021,NA,9,9,0.001100379,0.001100379
+28167,Date online questionnaire completed,8179,8179,12/30/2021,NA,10,10,0.001222643,0.001222643
+28167,Date online questionnaire completed,8179,8179,1/2/2022,NA,7,7,8.56E-04,8.56E-04
+28167,Date online questionnaire completed,8179,8179,1/4/2022,NA,8,8,9.78E-04,9.78E-04
+28167,Date online questionnaire completed,8179,8179,1/5/2022,NA,6,6,7.34E-04,7.34E-04
+28167,Date online questionnaire completed,8179,8179,1/6/2022,NA,8,8,9.78E-04,9.78E-04
+28167,Date online questionnaire completed,8179,8179,1/7/2022,NA,281,281,0.034356278,0.034356278
+28167,Date online questionnaire completed,8179,8179,1/8/2022,NA,46,46,0.005624159,0.005624159
+28167,Date online questionnaire completed,8179,8179,1/9/2022,NA,20,20,0.002445287,0.002445287
+28167,Date online questionnaire completed,8179,8179,1/10/2022,NA,84,84,0.010270204,0.010270204
+28167,Date online questionnaire completed,8179,8179,1/11/2022,NA,48,48,0.005868688,0.005868688
+28167,Date online questionnaire completed,8179,8179,1/12/2022,NA,25,25,0.003056608,0.003056608
+28167,Date online questionnaire completed,8179,8179,1/13/2022,NA,17,17,0.002078494,0.002078494
+28167,Date online questionnaire completed,8179,8179,1/14/2022,NA,33,33,0.004034723,0.004034723
+28167,Date online questionnaire completed,8179,8179,1/17/2022,NA,31,31,0.003790194,0.003790194
+28167,Date online questionnaire completed,8179,8179,1/18/2022,NA,51,51,0.006235481,0.006235481
+28167,Date online questionnaire completed,8179,8179,1/19/2022,NA,30,30,0.00366793,0.00366793
+28167,Date online questionnaire completed,8179,8179,1/20/2022,NA,14,14,0.001711701,0.001711701
+28167,Date online questionnaire completed,8179,8179,1/21/2022,NA,23,23,0.00281208,0.00281208
+28167,Date online questionnaire completed,8179,8179,1/22/2022,NA,5,5,6.11E-04,6.11E-04
+28167,Date online questionnaire completed,8179,8179,1/24/2022,NA,44,44,0.005379631,0.005379631
+28167,Date online questionnaire completed,8179,8179,1/25/2022,NA,9,9,0.001100379,0.001100379
+28167,Date online questionnaire completed,8179,8179,1/26/2022,NA,8,8,9.78E-04,9.78E-04
+28167,Date online questionnaire completed,8179,8179,1/27/2022,NA,6,6,7.34E-04,7.34E-04
+28167,Date online questionnaire completed,8179,8179,1/28/2022,NA,12,12,0.001467172,0.001467172
+28167,Date online questionnaire completed,8179,8179,1/31/2022,NA,26,26,0.003178873,0.003178873
+28167,Date online questionnaire completed,8179,8179,2/2/2022,NA,32,32,0.003912459,0.003912459
+28167,Date online questionnaire completed,8179,8179,2/3/2022,NA,7,7,8.56E-04,8.56E-04
+28167,Date online questionnaire completed,8179,8179,2/4/2022,NA,25,25,0.003056608,0.003056608
+28167,Date online questionnaire completed,8179,8179,2/5/2022,NA,5,5,6.11E-04,6.11E-04
+28167,Date online questionnaire completed,8179,8179,2/7/2022,NA,46,46,0.005624159,0.005624159
+28167,Date online questionnaire completed,8179,8179,2/8/2022,NA,11,11,0.001344908,0.001344908
+28167,Date online questionnaire completed,8179,8179,2/10/2022,NA,61,61,0.007458124,0.007458124
+28167,Date online questionnaire completed,8179,8179,2/11/2022,NA,128,128,0.015649835,0.015649835
+28167,Date online questionnaire completed,8179,8179,2/12/2022,NA,30,30,0.00366793,0.00366793
+28167,Date online questionnaire completed,8179,8179,2/13/2022,NA,22,22,0.002689815,0.002689815
+28167,Date online questionnaire completed,8179,8179,2/14/2022,NA,192,192,0.023474752,0.023474752
+28167,Date online questionnaire completed,8179,8179,2/15/2022,NA,48,48,0.005868688,0.005868688
+28167,Date online questionnaire completed,8179,8179,2/16/2022,NA,31,31,0.003790194,0.003790194
+28167,Date online questionnaire completed,8179,8179,2/17/2022,NA,19,19,0.002323022,0.002323022
+28167,Date online questionnaire completed,8179,8179,2/18/2022,NA,17,17,0.002078494,0.002078494
+28167,Date online questionnaire completed,8179,8179,2/19/2022,NA,7,7,8.56E-04,8.56E-04
+28167,Date online questionnaire completed,8179,8179,2/21/2022,NA,16,16,0.001956229,0.001956229
+28167,Date online questionnaire completed,8179,8179,2/22/2022,NA,12,12,0.001467172,0.001467172
+28167,Date online questionnaire completed,8179,8179,2/23/2022,NA,8,8,9.78E-04,9.78E-04
+28167,Date online questionnaire completed,8179,8179,2/24/2022,NA,9,9,0.001100379,0.001100379
+28167,Date online questionnaire completed,8179,8179,2/28/2022,NA,26,26,0.003178873,0.003178873
+28167,Date online questionnaire completed,8179,8179,3/1/2022,NA,10,10,0.001222643,0.001222643
+28167,Date online questionnaire completed,8179,8179,3/2/2022,NA,6,6,7.34E-04,7.34E-04
+28167,Date online questionnaire completed,8179,8179,3/9/2022,NA,5,5,6.11E-04,6.11E-04
+28174,"Any change of address, waves 1-6",10994,10994,0,Home address of participant did not change between waves 1 and 6,10732,10732,0.976168819,0.976168819
+28174,"Any change of address, waves 1-6",10994,10994,1,Home address of participant changed between waves 1 and 6,262,262,0.023831181,0.023831181

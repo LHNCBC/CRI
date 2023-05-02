@@ -1,0 +1,550 @@
+question_id,question,q_ev,q_pt,answer_id,answer,a_ev,a_pt,ev_prop,pt_prop
+28034,Description of main home,8607,8607,-3,Prefer not to answer,7,7,8.13E-04,8.13E-04
+28034,Description of main home,8607,8607,1,A house or bungalow,7288,7288,0.846752643,0.846752643
+28034,Description of main home,8607,8607,2,An apartment or flat with no outside space,420,420,0.04879749,0.04879749
+28034,Description of main home,8607,8607,3,An apartment or flat with outside space,857,857,0.099570117,0.099570117
+28034,Description of main home,8607,8607,4,A mobile home or caravan,20,20,0.00232369,0.00232369
+28034,Description of main home,8607,8607,6,Other,13,13,0.001510399,0.001510399
+28035,Number of separate rooms in main home,8605,8605,-3,Prefer not to answer,8,8,9.30E-04,9.30E-04
+28035,Number of separate rooms in main home,8605,8605,1,1,49,49,0.005694364,0.005694364
+28035,Number of separate rooms in main home,8605,8605,2,2,234,234,0.027193492,0.027193492
+28035,Number of separate rooms in main home,8605,8605,3,3,698,698,0.08111563,0.08111563
+28035,Number of separate rooms in main home,8605,8605,4,4,1227,1227,0.142591517,0.142591517
+28035,Number of separate rooms in main home,8605,8605,5,5,1818,1818,0.211272516,0.211272516
+28035,Number of separate rooms in main home,8605,8605,6,7-Jun,3123,3123,0.36292853,0.36292853
+28035,Number of separate rooms in main home,8605,8605,7,10-Aug,1319,1319,0.153282975,0.153282975
+28035,Number of separate rooms in main home,8605,8605,8,15-Nov,118,118,0.013712958,0.013712958
+28035,Number of separate rooms in main home,8605,8605,9,16-20,8,8,9.30E-04,9.30E-04
+28036,Lives with others in main home,8605,8605,-3,Prefer not to answer,12,12,0.001394538,0.001394538
+28036,Lives with others in main home,8605,8605,0,No,2163,2163,0.251365485,0.251365485
+28036,Lives with others in main home,8605,8605,1,Yes,6430,6430,0.747239977,0.747239977
+28037,Number of 0-4 year olds in main home,6430,6430,-3,Prefer not to answer,13,13,0.002021773,0.002021773
+28037,Number of 0-4 year olds in main home,6430,6430,0,0,6171,6171,0.959720062,0.959720062
+28037,Number of 0-4 year olds in main home,6430,6430,1,1,157,157,0.024416796,0.024416796
+28037,Number of 0-4 year olds in main home,6430,6430,2,2,51,51,0.007931571,0.007931571
+28037,Number of 0-4 year olds in main home,6430,6430,3,3,21,21,0.003265941,0.003265941
+28037,Number of 0-4 year olds in main home,6430,6430,4,4,7,7,0.001088647,0.001088647
+28037,Number of 0-4 year olds in main home,6430,6430,5,5,5,5,7.78E-04,7.78E-04
+28038,Number of 5-11 year olds in main home,6430,6430,-3,Prefer not to answer,13,13,0.002021773,0.002021773
+28038,Number of 5-11 year olds in main home,6430,6430,0,0,6225,6225,0.968118196,0.968118196
+28038,Number of 5-11 year olds in main home,6430,6430,1,1,149,149,0.023172628,0.023172628
+28038,Number of 5-11 year olds in main home,6430,6430,2,2,39,39,0.006065319,0.006065319
+28039,Number of 12-18 year olds in main home,6430,6430,-3,Prefer not to answer,12,12,0.001866252,0.001866252
+28039,Number of 12-18 year olds in main home,6430,6430,0,0,5906,5906,0.918506998,0.918506998
+28039,Number of 12-18 year olds in main home,6430,6430,1,1,360,360,0.055987558,0.055987558
+28039,Number of 12-18 year olds in main home,6430,6430,2,2,138,138,0.021461897,0.021461897
+28039,Number of 12-18 year olds in main home,6430,6430,3,3,12,12,0.001866252,0.001866252
+28040,Number of 19-29 year olds in main home,6430,6430,-3,Prefer not to answer,12,12,0.001866252,0.001866252
+28040,Number of 19-29 year olds in main home,6430,6430,0,0,5331,5331,0.829082426,0.829082426
+28040,Number of 19-29 year olds in main home,6430,6430,1,1,716,716,0.111353033,0.111353033
+28040,Number of 19-29 year olds in main home,6430,6430,2,2,315,315,0.048989114,0.048989114
+28040,Number of 19-29 year olds in main home,6430,6430,3,3,43,43,0.006687403,0.006687403
+28040,Number of 19-29 year olds in main home,6430,6430,4,4,10,10,0.00155521,0.00155521
+28041,Number of 30-39 year olds in main home,6430,6430,-3,Prefer not to answer,15,15,0.002332815,0.002332815
+28041,Number of 30-39 year olds in main home,6430,6430,0,0,5866,5866,0.912286159,0.912286159
+28041,Number of 30-39 year olds in main home,6430,6430,1,1,431,431,0.067029549,0.067029549
+28041,Number of 30-39 year olds in main home,6430,6430,2,2,95,95,0.014774495,0.014774495
+28041,Number of 30-39 year olds in main home,6430,6430,3,3,15,15,0.002332815,0.002332815
+28042,Number of 40-49 year olds in main home,6430,6430,-3,Prefer not to answer,14,14,0.002177294,0.002177294
+28042,Number of 40-49 year olds in main home,6430,6430,0,0,5906,5906,0.918506998,0.918506998
+28042,Number of 40-49 year olds in main home,6430,6430,1,1,477,477,0.074183515,0.074183515
+28042,Number of 40-49 year olds in main home,6430,6430,2,2,27,27,0.004199067,0.004199067
+28043,Number of 50-59 year olds in main home,6430,6430,-3,Prefer not to answer,15,15,0.002332815,0.002332815
+28043,Number of 50-59 year olds in main home,6430,6430,0,0,5030,5030,0.782270607,0.782270607
+28043,Number of 50-59 year olds in main home,6430,6430,1,1,1290,1290,0.200622084,0.200622084
+28043,Number of 50-59 year olds in main home,6430,6430,2,2,93,93,0.014463453,0.014463453
+28044,Number of 60-69 year olds in main home,6430,6430,-3,Prefer not to answer,9,9,0.001399689,0.001399689
+28044,Number of 60-69 year olds in main home,6430,6430,0,0,4216,4216,0.655676516,0.655676516
+28044,Number of 60-69 year olds in main home,6430,6430,1,1,2088,2088,0.324727838,0.324727838
+28044,Number of 60-69 year olds in main home,6430,6430,2,2,113,113,0.017573872,0.017573872
+28045,Number of 70-79 year olds in main home,6430,6430,-3,Prefer not to answer,14,14,0.002177294,0.002177294
+28045,Number of 70-79 year olds in main home,6430,6430,0,0,4476,4476,0.696111975,0.696111975
+28045,Number of 70-79 year olds in main home,6430,6430,1,1,1818,1818,0.28273717,0.28273717
+28045,Number of 70-79 year olds in main home,6430,6430,2,2,119,119,0.018506998,0.018506998
+28046,Number of 80+ year olds in main home,6430,6430,-3,Prefer not to answer,16,16,0.002488336,0.002488336
+28046,Number of 80+ year olds in main home,6430,6430,0,0,5962,5962,0.927216174,0.927216174
+28046,Number of 80+ year olds in main home,6430,6430,1,1,441,441,0.068584759,0.068584759
+28046,Number of 80+ year olds in main home,6430,6430,2,2,11,11,0.001710731,0.001710731
+28047,Young people in main home attended school or other childcare setting between mid-March and the end of June (i.e the first UK lockdown),827,827,-3,Prefer not to answer,14,14,0.016928658,0.016928658
+28047,Young people in main home attended school or other childcare setting between mid-March and the end of June (i.e the first UK lockdown),827,827,0,No,578,578,0.698911729,0.698911729
+28047,Young people in main home attended school or other childcare setting between mid-March and the end of June (i.e the first UK lockdown),827,827,1,Yes,235,235,0.284159613,0.284159613
+28048,Young people in main home attended school or other childcare setting between the start of July and mid-September,827,827,-3,Prefer not to answer,17,17,0.020556227,0.020556227
+28048,Young people in main home attended school or other childcare setting between the start of July and mid-September,827,827,0,No,435,435,0.525997582,0.525997582
+28048,Young people in main home attended school or other childcare setting between the start of July and mid-September,827,827,1,Yes,375,375,0.453446191,0.453446191
+28049,Young people in main home attended school or other childcare setting between mid-September and the end of October,827,827,-3,Prefer not to answer,18,18,0.021765417,0.021765417
+28049,Young people in main home attended school or other childcare setting between mid-September and the end of October,827,827,0,No,224,224,0.270858525,0.270858525
+28049,Young people in main home attended school or other childcare setting between mid-September and the end of October,827,827,1,Yes,585,585,0.707376058,0.707376058
+28050,Young people in main home attended school or other childcare setting between the start of November and the start of December,827,827,-3,Prefer not to answer,16,16,0.019347037,0.019347037
+28050,Young people in main home attended school or other childcare setting between the start of November and the start of December,827,827,0,No,266,266,0.321644498,0.321644498
+28050,Young people in main home attended school or other childcare setting between the start of November and the start of December,827,827,1,Yes,545,545,0.659008464,0.659008464
+28051,Number of people in main home who regularly worked outside the home,6432,6432,0,0,4496,4496,0.699004975,0.699004975
+28051,Number of people in main home who regularly worked outside the home,6432,6432,1,1,1504,1504,0.233830846,0.233830846
+28051,Number of people in main home who regularly worked outside the home,6432,6432,10,More than 20,10,10,0.001554726,0.001554726
+28051,Number of people in main home who regularly worked outside the home,6432,6432,2,2,317,317,0.049284826,0.049284826
+28051,Number of people in main home who regularly worked outside the home,6432,6432,3,3,78,78,0.012126866,0.012126866
+28051,Number of people in main home who regularly worked outside the home,6432,6432,4,4,13,13,0.002021144,0.002021144
+28051,Number of people in main home who regularly worked outside the home,6432,6432,5,5,6,6,9.33E-04,9.33E-04
+28052,Number of people in main home had COVID-19,6432,6432,-1,Do not know,231,231,0.035914179,0.035914179
+28052,Number of people in main home had COVID-19,6432,6432,0,0,5464,5464,0.849502488,0.849502488
+28052,Number of people in main home had COVID-19,6432,6432,1,1,567,567,0.088152985,0.088152985
+28052,Number of people in main home had COVID-19,6432,6432,2,2,108,108,0.016791045,0.016791045
+28052,Number of people in main home had COVID-19,6432,6432,3,3,39,39,0.006063433,0.006063433
+28052,Number of people in main home had COVID-19,6432,6432,4,4,14,14,0.002176617,0.002176617
+28053,Number of people in main home tested positive for COVID-19,737,737,-1,Do not know,18,18,0.024423338,0.024423338
+28053,Number of people in main home tested positive for COVID-19,737,737,0,0,408,408,0.553595658,0.553595658
+28053,Number of people in main home tested positive for COVID-19,737,737,1,1,259,259,0.351424695,0.351424695
+28053,Number of people in main home tested positive for COVID-19,737,737,2,2,35,35,0.047489824,0.047489824
+28053,Number of people in main home tested positive for COVID-19,737,737,3,3,7,7,0.009497965,0.009497965
+28054,Care or support provided to people with COVID-19,345,311,-7,None of the above,149,149,0.431884058,0.479099678
+28054,Care or support provided to people with COVID-19,345,311,1,"Assisting with personal care activities (e.g., dressing, eating, walking, taking medications)",38,38,0.110144928,0.122186495
+28054,Care or support provided to people with COVID-19,345,311,2,"Providing other support (e.g., preparing meals, grocery shopping, using the telephone, collecting medication, managing money)",155,155,0.449275362,0.498392283
+28055,Time spent per day within 1 metre of people with COVID-19,311,311,-3,Prefer not to answer,5,5,0.01607717,0.01607717
+28055,Time spent per day within 1 metre of people with COVID-19,311,311,1,Less than 10 minutes,69,69,0.221864952,0.221864952
+28055,Time spent per day within 1 metre of people with COVID-19,311,311,2,10 to 29 minutes,25,25,0.080385852,0.080385852
+28055,Time spent per day within 1 metre of people with COVID-19,311,311,3,30 to 59 minutes,12,12,0.038585209,0.038585209
+28055,Time spent per day within 1 metre of people with COVID-19,311,311,4,1 to 2 hours,24,24,0.077170418,0.077170418
+28055,Time spent per day within 1 metre of people with COVID-19,311,311,5,More than 2 hours,176,176,0.565916399,0.565916399
+28056,Qualifications,16670,8607,-3,Prefer not to answer,65,65,0.00389922,0.007551993
+28056,Qualifications,16670,8607,-7,None of the above,632,632,0.037912418,0.073428605
+28056,Qualifications,16670,8607,1,College or University degree,4587,4587,0.275164967,0.532938306
+28056,Qualifications,16670,8607,2,A levels/AS levels or equivalent,2847,2847,0.170785843,0.330777274
+28056,Qualifications,16670,8607,3,O levels/GCSEs or equivalent,3726,3726,0.223515297,0.432903451
+28056,Qualifications,16670,8607,4,CSEs or equivalent,933,933,0.055968806,0.108400139
+28056,Qualifications,16670,8607,5,NVQ or HND or HNC or equivalent,1390,1390,0.083383323,0.161496456
+28056,Qualifications,16670,8607,6,"Other professional qualifications eg: nursing, teaching",2490,2490,0.149370126,0.289299407
+28057,Employment situation between mid-March and the end of June 2020 (i.e the first UK lockdown),8607,8607,-3,Prefer not to answer,7,7,8.13E-04,8.13E-04
+28057,Employment situation between mid-March and the end of June 2020 (i.e the first UK lockdown),8607,8607,1,Employed/Self-employed and working with others at a workplace,1124,1124,0.130591379,0.130591379
+28057,Employment situation between mid-March and the end of June 2020 (i.e the first UK lockdown),8607,8607,10,None of the above,157,157,0.018240967,0.018240967
+28057,Employment situation between mid-March and the end of June 2020 (i.e the first UK lockdown),8607,8607,2,Employed/Self-employed and working alone at a workplace,197,197,0.022888347,0.022888347
+28057,Employment situation between mid-March and the end of June 2020 (i.e the first UK lockdown),8607,8607,3,Employed/Self-employed and working from home,1674,1674,0.194492855,0.194492855
+28057,Employment situation between mid-March and the end of June 2020 (i.e the first UK lockdown),8607,8607,4,Retired,4822,4822,0.560241664,0.560241664
+28057,Employment situation between mid-March and the end of June 2020 (i.e the first UK lockdown),8607,8607,5,Looking after home and/or family,199,199,0.023120716,0.023120716
+28057,Employment situation between mid-March and the end of June 2020 (i.e the first UK lockdown),8607,8607,6,Unable to work because of sickness or disability,130,130,0.015103985,0.015103985
+28057,Employment situation between mid-March and the end of June 2020 (i.e the first UK lockdown),8607,8607,7,Unemployed,88,88,0.010224236,0.010224236
+28057,Employment situation between mid-March and the end of June 2020 (i.e the first UK lockdown),8607,8607,8,Doing unpaid or voluntary work,186,186,0.021610317,0.021610317
+28057,Employment situation between mid-March and the end of June 2020 (i.e the first UK lockdown),8607,8607,9,Full or part-time student,23,23,0.002672244,0.002672244
+28058,Employment situation changed since the end of June 2020,8607,8607,-3,Prefer not to answer,55,55,0.006390148,0.006390148
+28058,Employment situation changed since the end of June 2020,8607,8607,0,No,7778,7778,0.903683049,0.903683049
+28058,Employment situation changed since the end of June 2020,8607,8607,1,Yes,774,774,0.089926804,0.089926804
+28059,Employment situation between the start of July and mid-September,774,774,1,Employed/Self-employed and working with others at a workplace,287,287,0.370801034,0.370801034
+28059,Employment situation between the start of July and mid-September,774,774,10,None of the above,55,55,0.071059432,0.071059432
+28059,Employment situation between the start of July and mid-September,774,774,2,Employed/Self-employed and working alone at a workplace,47,47,0.060723514,0.060723514
+28059,Employment situation between the start of July and mid-September,774,774,3,Employed/Self-employed and working from home,162,162,0.209302326,0.209302326
+28059,Employment situation between the start of July and mid-September,774,774,4,Retired,98,98,0.126614987,0.126614987
+28059,Employment situation between the start of July and mid-September,774,774,5,Looking after home and/or family,22,22,0.028423773,0.028423773
+28059,Employment situation between the start of July and mid-September,774,774,6,Unable to work because of sickness or disability,15,15,0.019379845,0.019379845
+28059,Employment situation between the start of July and mid-September,774,774,7,Unemployed,53,53,0.068475452,0.068475452
+28059,Employment situation between the start of July and mid-September,774,774,8,Doing unpaid or voluntary work,34,34,0.043927649,0.043927649
+28060,Employment situation between mid-September and the end of October,774,774,1,Employed/Self-employed and working with others at a workplace,324,324,0.418604651,0.418604651
+28060,Employment situation between mid-September and the end of October,774,774,10,None of the above,34,34,0.043927649,0.043927649
+28060,Employment situation between mid-September and the end of October,774,774,2,Employed/Self-employed and working alone at a workplace,35,35,0.045219638,0.045219638
+28060,Employment situation between mid-September and the end of October,774,774,3,Employed/Self-employed and working from home,137,137,0.177002584,0.177002584
+28060,Employment situation between mid-September and the end of October,774,774,4,Retired,120,120,0.15503876,0.15503876
+28060,Employment situation between mid-September and the end of October,774,774,5,Looking after home and/or family,16,16,0.020671835,0.020671835
+28060,Employment situation between mid-September and the end of October,774,774,6,Unable to work because of sickness or disability,13,13,0.016795866,0.016795866
+28060,Employment situation between mid-September and the end of October,774,774,7,Unemployed,60,60,0.07751938,0.07751938
+28060,Employment situation between mid-September and the end of October,774,774,8,Doing unpaid or voluntary work,34,34,0.043927649,0.043927649
+28061,Employment situation between the start of November and the start of December,774,774,1,Employed/Self-employed and working with others at a workplace,284,284,0.366925065,0.366925065
+28061,Employment situation between the start of November and the start of December,774,774,10,None of the above,35,35,0.045219638,0.045219638
+28061,Employment situation between the start of November and the start of December,774,774,2,Employed/Self-employed and working alone at a workplace,42,42,0.054263566,0.054263566
+28061,Employment situation between the start of November and the start of December,774,774,3,Employed/Self-employed and working from home,141,141,0.182170543,0.182170543
+28061,Employment situation between the start of November and the start of December,774,774,4,Retired,138,138,0.178294574,0.178294574
+28061,Employment situation between the start of November and the start of December,774,774,5,Looking after home and/or family,18,18,0.023255814,0.023255814
+28061,Employment situation between the start of November and the start of December,774,774,6,Unable to work because of sickness or disability,15,15,0.019379845,0.019379845
+28061,Employment situation between the start of November and the start of December,774,774,7,Unemployed,70,70,0.090439276,0.090439276
+28061,Employment situation between the start of November and the start of December,774,774,8,Doing unpaid or voluntary work,31,31,0.04005168,0.04005168
+28062,Designated key worker between 1st March 2020 and 30th November 2020,8607,8607,-2,Not applicable,638,638,0.074125712,0.074125712
+28062,Designated key worker between 1st March 2020 and 30th November 2020,8607,8607,-3,Prefer not to answer,14,14,0.001626583,0.001626583
+28062,Designated key worker between 1st March 2020 and 30th November 2020,8607,8607,0,No,6679,6679,0.775996282,0.775996282
+28062,Designated key worker between 1st March 2020 and 30th November 2020,8607,8607,1,Yes,1276,1276,0.148251423,0.148251423
+28063,Keyworker occupation group,1276,1276,-3,Prefer not to answer,30,30,0.023510972,0.023510972
+28063,Keyworker occupation group,1276,1276,1,NHS and social care,488,488,0.382445141,0.382445141
+28063,Keyworker occupation group,1276,1276,2,"Education and childcare (including supporting and teaching staff, social workers and specialist education specialists)",184,184,0.144200627,0.144200627
+28063,Keyworker occupation group,1276,1276,3,"Key public services (justice, religious staff, journalist, and environmental staff or mortuary)",115,115,0.090125392,0.090125392
+28063,Keyworker occupation group,1276,1276,4,Local and national government (delivering COVID-19 response or delivering essential public services),115,115,0.090125392,0.090125392
+28063,Keyworker occupation group,1276,1276,5,"Food and other necessary goods (production, sales, delivery)",144,144,0.112852665,0.112852665
+28063,Keyworker occupation group,1276,1276,6,"Public safety or national security worker (police, armed forces, fire and rescue)",47,47,0.036833856,0.036833856
+28063,Keyworker occupation group,1276,1276,7,"Transport worker (air, water, road and rail)",74,74,0.05799373,0.05799373
+28063,Keyworker occupation group,1276,1276,8,"Utility worker (energy, sewerage, postal service)",26,26,0.020376176,0.020376176
+28063,Keyworker occupation group,1276,1276,9,"Utilities, communication and financial services",53,53,0.04153605,0.04153605
+28064,In close contact with public or co-workers between 1st March 2020 and 30th November 2020 as part of job,8607,8607,-2,Not applicable,1220,1220,0.141745091,0.141745091
+28064,In close contact with public or co-workers between 1st March 2020 and 30th November 2020 as part of job,8607,8607,-3,Prefer not to answer,17,17,0.001975137,0.001975137
+28064,In close contact with public or co-workers between 1st March 2020 and 30th November 2020 as part of job,8607,8607,0,No,5920,5920,0.687812246,0.687812246
+28064,In close contact with public or co-workers between 1st March 2020 and 30th November 2020 as part of job,8607,8607,1,Yes,1450,1450,0.168467526,0.168467526
+28065,How often cloth face coverings used at work between 1st March 2020 and 30th November 2020,946,946,1,Never,314,314,0.33192389,0.33192389
+28065,How often cloth face coverings used at work between 1st March 2020 and 30th November 2020,946,946,2,Some of the time,222,222,0.234672304,0.234672304
+28065,How often cloth face coverings used at work between 1st March 2020 and 30th November 2020,946,946,3,Half of the time,42,42,0.044397463,0.044397463
+28065,How often cloth face coverings used at work between 1st March 2020 and 30th November 2020,946,946,4,Most of the time,177,177,0.187103594,0.187103594
+28065,How often cloth face coverings used at work between 1st March 2020 and 30th November 2020,946,946,5,All of the time,191,191,0.201902748,0.201902748
+28066,How often medical face masks used at work between 1st March 2020 and 30th November 2020,946,946,1,Never,310,310,0.32769556,0.32769556
+28066,How often medical face masks used at work between 1st March 2020 and 30th November 2020,946,946,2,Some of the time,181,181,0.191331924,0.191331924
+28066,How often medical face masks used at work between 1st March 2020 and 30th November 2020,946,946,3,Half of the time,44,44,0.046511628,0.046511628
+28066,How often medical face masks used at work between 1st March 2020 and 30th November 2020,946,946,4,Most of the time,177,177,0.187103594,0.187103594
+28066,How often medical face masks used at work between 1st March 2020 and 30th November 2020,946,946,5,All of the time,233,233,0.246300211,0.246300211
+28067,How often respirators used at work between 1st March 2020 and 30th November 2020,946,946,1,Never,854,854,0.902748414,0.902748414
+28067,How often respirators used at work between 1st March 2020 and 30th November 2020,946,946,2,Some of the time,66,66,0.069767442,0.069767442
+28067,How often respirators used at work between 1st March 2020 and 30th November 2020,946,946,3,Half of the time,10,10,0.010570825,0.010570825
+28067,How often respirators used at work between 1st March 2020 and 30th November 2020,946,946,4,Most of the time,12,12,0.012684989,0.012684989
+28068,How often eye protection used at work between 1st March 2020 and 30th November 2020,946,946,1,Never,585,585,0.618393235,0.618393235
+28068,How often eye protection used at work between 1st March 2020 and 30th November 2020,946,946,2,Some of the time,219,219,0.231501057,0.231501057
+28068,How often eye protection used at work between 1st March 2020 and 30th November 2020,946,946,3,Half of the time,25,25,0.026427061,0.026427061
+28068,How often eye protection used at work between 1st March 2020 and 30th November 2020,946,946,4,Most of the time,71,71,0.075052854,0.075052854
+28068,How often eye protection used at work between 1st March 2020 and 30th November 2020,946,946,5,All of the time,45,45,0.04756871,0.04756871
+28069,How often disposable medical gloves used at work between 1st March 2020 and 30th November 2020,946,946,1,Never,376,376,0.397463002,0.397463002
+28069,How often disposable medical gloves used at work between 1st March 2020 and 30th November 2020,946,946,2,Some of the time,271,271,0.286469345,0.286469345
+28069,How often disposable medical gloves used at work between 1st March 2020 and 30th November 2020,946,946,3,Half of the time,36,36,0.038054968,0.038054968
+28069,How often disposable medical gloves used at work between 1st March 2020 and 30th November 2020,946,946,4,Most of the time,138,138,0.145877378,0.145877378
+28069,How often disposable medical gloves used at work between 1st March 2020 and 30th November 2020,946,946,5,All of the time,125,125,0.132135307,0.132135307
+28070,How often disposable gowns/one-piece overalls used at work between 1st March 2020 and 30th November 2020,946,946,1,Never,709,709,0.749471459,0.749471459
+28070,How often disposable gowns/one-piece overalls used at work between 1st March 2020 and 30th November 2020,946,946,2,Some of the time,119,119,0.125792812,0.125792812
+28070,How often disposable gowns/one-piece overalls used at work between 1st March 2020 and 30th November 2020,946,946,3,Half of the time,13,13,0.013742072,0.013742072
+28070,How often disposable gowns/one-piece overalls used at work between 1st March 2020 and 30th November 2020,946,946,4,Most of the time,55,55,0.058139535,0.058139535
+28070,How often disposable gowns/one-piece overalls used at work between 1st March 2020 and 30th November 2020,946,946,5,All of the time,50,50,0.052854123,0.052854123
+28071,How often alcohol-based hand sanitiser used at work between 1st March 2020 and 30th November 2020,946,946,1,Never,13,13,0.013742072,0.013742072
+28071,How often alcohol-based hand sanitiser used at work between 1st March 2020 and 30th November 2020,946,946,2,Some of the time,159,159,0.16807611,0.16807611
+28071,How often alcohol-based hand sanitiser used at work between 1st March 2020 and 30th November 2020,946,946,3,Half of the time,40,40,0.042283298,0.042283298
+28071,How often alcohol-based hand sanitiser used at work between 1st March 2020 and 30th November 2020,946,946,4,Most of the time,279,279,0.294926004,0.294926004
+28071,How often alcohol-based hand sanitiser used at work between 1st March 2020 and 30th November 2020,946,946,5,All of the time,454,454,0.479915433,0.479915433
+28072,How often soap and water used at work between 1st March 2020 and 30th November 2020,946,946,1,Never,9,9,0.009513742,0.009513742
+28072,How often soap and water used at work between 1st March 2020 and 30th November 2020,946,946,2,Some of the time,135,135,0.142706131,0.142706131
+28072,How often soap and water used at work between 1st March 2020 and 30th November 2020,946,946,3,Half of the time,31,31,0.032769556,0.032769556
+28072,How often soap and water used at work between 1st March 2020 and 30th November 2020,946,946,4,Most of the time,262,262,0.276955603,0.276955603
+28072,How often soap and water used at work between 1st March 2020 and 30th November 2020,946,946,5,All of the time,509,509,0.538054968,0.538054968
+28073,Days per week meeting friends and family at an outside venue between mid-March and the end of June (i.e the first UK lockdown),8607,8607,-3,Prefer not to answer,13,13,0.001510399,0.001510399
+28073,Days per week meeting friends and family at an outside venue between mid-March and the end of June (i.e the first UK lockdown),8607,8607,1,Never,2243,2243,0.260601836,0.260601836
+28073,Days per week meeting friends and family at an outside venue between mid-March and the end of June (i.e the first UK lockdown),8607,8607,2,Less than once a week,3725,3725,0.432787266,0.432787266
+28073,Days per week meeting friends and family at an outside venue between mid-March and the end of June (i.e the first UK lockdown),8607,8607,3,1 to 2 days per week,1942,1942,0.225630301,0.225630301
+28073,Days per week meeting friends and family at an outside venue between mid-March and the end of June (i.e the first UK lockdown),8607,8607,4,3 to 4 days per week,472,472,0.054839084,0.054839084
+28073,Days per week meeting friends and family at an outside venue between mid-March and the end of June (i.e the first UK lockdown),8607,8607,5,5 or more days per week,212,212,0.024631114,0.024631114
+28074,Days per week meeting friends and family at an outside venue between the start of July and mid-September,8607,8607,-3,Prefer not to answer,11,11,0.00127803,0.00127803
+28074,Days per week meeting friends and family at an outside venue between the start of July and mid-September,8607,8607,1,Never,867,867,0.100731962,0.100731962
+28074,Days per week meeting friends and family at an outside venue between the start of July and mid-September,8607,8607,2,Less than once a week,3667,3667,0.426048565,0.426048565
+28074,Days per week meeting friends and family at an outside venue between the start of July and mid-September,8607,8607,3,1 to 2 days per week,2912,2912,0.338329267,0.338329267
+28074,Days per week meeting friends and family at an outside venue between the start of July and mid-September,8607,8607,4,3 to 4 days per week,877,877,0.101893807,0.101893807
+28074,Days per week meeting friends and family at an outside venue between the start of July and mid-September,8607,8607,5,5 or more days per week,273,273,0.031718369,0.031718369
+28075,Days per week meeting friends and family at an outside venue between mid-September and the end of October,8607,8607,-3,Prefer not to answer,18,18,0.002091321,0.002091321
+28075,Days per week meeting friends and family at an outside venue between mid-September and the end of October,8607,8607,1,Never,1518,1518,0.176368072,0.176368072
+28075,Days per week meeting friends and family at an outside venue between mid-September and the end of October,8607,8607,2,Less than once a week,3905,3905,0.453700476,0.453700476
+28075,Days per week meeting friends and family at an outside venue between mid-September and the end of October,8607,8607,3,1 to 2 days per week,2342,2342,0.272104101,0.272104101
+28075,Days per week meeting friends and family at an outside venue between mid-September and the end of October,8607,8607,4,3 to 4 days per week,615,615,0.071453468,0.071453468
+28075,Days per week meeting friends and family at an outside venue between mid-September and the end of October,8607,8607,5,5 or more days per week,209,209,0.024282561,0.024282561
+28076,Days per week meeting friends and family at an outside venue between the start of November and the start of December,8607,8607,-3,Prefer not to answer,17,17,0.001975137,0.001975137
+28076,Days per week meeting friends and family at an outside venue between the start of November and the start of December,8607,8607,1,Never,3000,3000,0.348553503,0.348553503
+28076,Days per week meeting friends and family at an outside venue between the start of November and the start of December,8607,8607,2,Less than once a week,3489,3489,0.405367724,0.405367724
+28076,Days per week meeting friends and family at an outside venue between the start of November and the start of December,8607,8607,3,1 to 2 days per week,1603,1603,0.186243755,0.186243755
+28076,Days per week meeting friends and family at an outside venue between the start of November and the start of December,8607,8607,4,3 to 4 days per week,373,373,0.043336819,0.043336819
+28076,Days per week meeting friends and family at an outside venue between the start of November and the start of December,8607,8607,5,5 or more days per week,125,125,0.014523063,0.014523063
+28077,Days per week meeting friends and family at an inside venue between mid-March and the end of June (i.e the first UK lockdown),8607,8607,-3,Prefer not to answer,17,17,0.001975137,0.001975137
+28077,Days per week meeting friends and family at an inside venue between mid-March and the end of June (i.e the first UK lockdown),8607,8607,1,Never,5118,5118,0.594632276,0.594632276
+28077,Days per week meeting friends and family at an inside venue between mid-March and the end of June (i.e the first UK lockdown),8607,8607,2,Less than once a week,2480,2480,0.288137562,0.288137562
+28077,Days per week meeting friends and family at an inside venue between mid-March and the end of June (i.e the first UK lockdown),8607,8607,3,1 to 2 days per week,757,757,0.087951667,0.087951667
+28077,Days per week meeting friends and family at an inside venue between mid-March and the end of June (i.e the first UK lockdown),8607,8607,4,3 to 4 days per week,146,146,0.016962937,0.016962937
+28077,Days per week meeting friends and family at an inside venue between mid-March and the end of June (i.e the first UK lockdown),8607,8607,5,5 or more days per week,89,89,0.010340421,0.010340421
+28078,Days per week meeting friends and family at an inside venue between the start of July and mid-September,8607,8607,-3,Prefer not to answer,19,19,0.002207506,0.002207506
+28078,Days per week meeting friends and family at an inside venue between the start of July and mid-September,8607,8607,1,Never,2560,2560,0.297432323,0.297432323
+28078,Days per week meeting friends and family at an inside venue between the start of July and mid-September,8607,8607,2,Less than once a week,3935,3935,0.457186011,0.457186011
+28078,Days per week meeting friends and family at an inside venue between the start of July and mid-September,8607,8607,3,1 to 2 days per week,1616,1616,0.187754154,0.187754154
+28078,Days per week meeting friends and family at an inside venue between the start of July and mid-September,8607,8607,4,3 to 4 days per week,328,328,0.038108516,0.038108516
+28078,Days per week meeting friends and family at an inside venue between the start of July and mid-September,8607,8607,5,5 or more days per week,149,149,0.017311491,0.017311491
+28079,Days per week meeting friends and family at an inside venue between mid-September and the end of October,8607,8607,-3,Prefer not to answer,19,19,0.002207506,0.002207506
+28079,Days per week meeting friends and family at an inside venue between mid-September and the end of October,8607,8607,1,Never,3229,3229,0.375159754,0.375159754
+28079,Days per week meeting friends and family at an inside venue between mid-September and the end of October,8607,8607,2,Less than once a week,3374,3374,0.392006506,0.392006506
+28079,Days per week meeting friends and family at an inside venue between mid-September and the end of October,8607,8607,3,1 to 2 days per week,1515,1515,0.176019519,0.176019519
+28079,Days per week meeting friends and family at an inside venue between mid-September and the end of October,8607,8607,4,3 to 4 days per week,336,336,0.039037992,0.039037992
+28079,Days per week meeting friends and family at an inside venue between mid-September and the end of October,8607,8607,5,5 or more days per week,134,134,0.015568723,0.015568723
+28080,Days per week meeting friends and family at an inside venue between the start of November and the start of December,8607,8607,-3,Prefer not to answer,15,15,0.001742768,0.001742768
+28080,Days per week meeting friends and family at an inside venue between the start of November and the start of December,8607,8607,1,Never,4853,4853,0.563843383,0.563843383
+28080,Days per week meeting friends and family at an inside venue between the start of November and the start of December,8607,8607,2,Less than once a week,2329,2329,0.270593703,0.270593703
+28080,Days per week meeting friends and family at an inside venue between the start of November and the start of December,8607,8607,3,1 to 2 days per week,1082,1082,0.12571163,0.12571163
+28080,Days per week meeting friends and family at an inside venue between the start of November and the start of December,8607,8607,4,3 to 4 days per week,216,216,0.025095852,0.025095852
+28080,Days per week meeting friends and family at an inside venue between the start of November and the start of December,8607,8607,5,5 or more days per week,112,112,0.013012664,0.013012664
+28081,Left home between mid-March and the end of June (i.e the first UK lockdown) for reason other than paid work,8607,8607,-1,Do not know,50,50,0.005809225,0.005809225
+28081,Left home between mid-March and the end of June (i.e the first UK lockdown) for reason other than paid work,8607,8607,-3,Prefer not to answer,22,22,0.002556059,0.002556059
+28081,Left home between mid-March and the end of June (i.e the first UK lockdown) for reason other than paid work,8607,8607,0,No,1723,1723,0.200185895,0.200185895
+28081,Left home between mid-March and the end of June (i.e the first UK lockdown) for reason other than paid work,8607,8607,1,Yes,6812,6812,0.791448821,0.791448821
+28082,Left home between the start of July and mid-September for reason other than paid work,8607,8607,-1,Do not know,37,37,0.004298827,0.004298827
+28082,Left home between the start of July and mid-September for reason other than paid work,8607,8607,-3,Prefer not to answer,17,17,0.001975137,0.001975137
+28082,Left home between the start of July and mid-September for reason other than paid work,8607,8607,0,No,1038,1038,0.120599512,0.120599512
+28082,Left home between the start of July and mid-September for reason other than paid work,8607,8607,1,Yes,7515,7515,0.873126525,0.873126525
+28083,Left home between mid-September and the end of October for reason other than paid work,8607,8607,-1,Do not know,47,47,0.005460672,0.005460672
+28083,Left home between mid-September and the end of October for reason other than paid work,8607,8607,-3,Prefer not to answer,32,32,0.003717904,0.003717904
+28083,Left home between mid-September and the end of October for reason other than paid work,8607,8607,0,No,1172,1172,0.136168235,0.136168235
+28083,Left home between mid-September and the end of October for reason other than paid work,8607,8607,1,Yes,7356,7356,0.854653189,0.854653189
+28084,Left home between the start of November and the start of December for reason other than paid work,8607,8607,-1,Do not know,32,32,0.003717904,0.003717904
+28084,Left home between the start of November and the start of December for reason other than paid work,8607,8607,-3,Prefer not to answer,33,33,0.003834089,0.003834089
+28084,Left home between the start of November and the start of December for reason other than paid work,8607,8607,0,No,1509,1509,0.175322412,0.175322412
+28084,Left home between the start of November and the start of December for reason other than paid work,8607,8607,1,Yes,7033,7033,0.817125595,0.817125595
+28085,Left home between mid-March and the end of June (i.e the first UK lockdown) to go shopping,6812,6812,1,Never,290,290,0.042571932,0.042571932
+28085,Left home between mid-March and the end of June (i.e the first UK lockdown) to go shopping,6812,6812,2,Less than once a week,1816,1816,0.266588373,0.266588373
+28085,Left home between mid-March and the end of June (i.e the first UK lockdown) to go shopping,6812,6812,3,1 to 2 days per week,3457,3457,0.507486788,0.507486788
+28085,Left home between mid-March and the end of June (i.e the first UK lockdown) to go shopping,6812,6812,4,3 to 4 days per week,732,732,0.107457428,0.107457428
+28085,Left home between mid-March and the end of June (i.e the first UK lockdown) to go shopping,6812,6812,5,5 or more days per week,516,516,0.075748679,0.075748679
+28086,Left home between the start of July and mid-September to go shopping,7515,7515,-3,Prefer not to answer,5,5,6.65E-04,6.65E-04
+28086,Left home between the start of July and mid-September to go shopping,7515,7515,1,Never,168,168,0.022355289,0.022355289
+28086,Left home between the start of July and mid-September to go shopping,7515,7515,2,Less than once a week,1729,1729,0.230073187,0.230073187
+28086,Left home between the start of July and mid-September to go shopping,7515,7515,3,1 to 2 days per week,3917,3917,0.521224218,0.521224218
+28086,Left home between the start of July and mid-September to go shopping,7515,7515,4,3 to 4 days per week,1137,1137,0.151297405,0.151297405
+28086,Left home between the start of July and mid-September to go shopping,7515,7515,5,5 or more days per week,559,559,0.074384564,0.074384564
+28087,Left home between mid-September and the end of October to go shopping,7356,7356,1,Never,186,186,0.025285481,0.025285481
+28087,Left home between mid-September and the end of October to go shopping,7356,7356,2,Less than once a week,1899,1899,0.258156607,0.258156607
+28087,Left home between mid-September and the end of October to go shopping,7356,7356,3,1 to 2 days per week,3819,3819,0.519168026,0.519168026
+28087,Left home between mid-September and the end of October to go shopping,7356,7356,4,3 to 4 days per week,996,996,0.135399674,0.135399674
+28087,Left home between mid-September and the end of October to go shopping,7356,7356,5,5 or more days per week,452,452,0.061446438,0.061446438
+28088,Left home between the start of November and the start of December to go shopping,7033,7033,1,Never,274,274,0.038959192,0.038959192
+28088,Left home between the start of November and the start of December to go shopping,7033,7033,2,Less than once a week,2018,2018,0.28693303,0.28693303
+28088,Left home between the start of November and the start of December to go shopping,7033,7033,3,1 to 2 days per week,3504,3504,0.498222665,0.498222665
+28088,Left home between the start of November and the start of December to go shopping,7033,7033,4,3 to 4 days per week,848,848,0.120574435,0.120574435
+28088,Left home between the start of November and the start of December to go shopping,7033,7033,5,5 or more days per week,387,387,0.055026305,0.055026305
+28089,Left home between mid-March and the end of June (i.e the first UK lockdown) to visit a healthcare setting,6812,6812,1,Never,4071,4071,0.597621844,0.597621844
+28089,Left home between mid-March and the end of June (i.e the first UK lockdown) to visit a healthcare setting,6812,6812,2,Less than once a week,2601,2601,0.381826189,0.381826189
+28089,Left home between mid-March and the end of June (i.e the first UK lockdown) to visit a healthcare setting,6812,6812,3,1 to 2 days per week,75,75,0.011009982,0.011009982
+28089,Left home between mid-March and the end of June (i.e the first UK lockdown) to visit a healthcare setting,6812,6812,4,3 to 4 days per week,33,33,0.004844392,0.004844392
+28089,Left home between mid-March and the end of June (i.e the first UK lockdown) to visit a healthcare setting,6812,6812,5,5 or more days per week,28,28,0.004110393,0.004110393
+28090,Left home between the start of July and mid-September to visit a healthcare setting,7515,7515,1,Never,3308,3308,0.440186294,0.440186294
+28090,Left home between the start of July and mid-September to visit a healthcare setting,7515,7515,2,Less than once a week,4009,4009,0.533466401,0.533466401
+28090,Left home between the start of July and mid-September to visit a healthcare setting,7515,7515,3,1 to 2 days per week,142,142,0.018895542,0.018895542
+28090,Left home between the start of July and mid-September to visit a healthcare setting,7515,7515,4,3 to 4 days per week,28,28,0.003725882,0.003725882
+28090,Left home between the start of July and mid-September to visit a healthcare setting,7515,7515,5,5 or more days per week,24,24,0.003193613,0.003193613
+28091,Left home between mid-September and the end of October to visit a healthcare setting,7356,7356,-3,Prefer not to answer,8,8,0.001087548,0.001087548
+28091,Left home between mid-September and the end of October to visit a healthcare setting,7356,7356,1,Never,3665,3665,0.498232735,0.498232735
+28091,Left home between mid-September and the end of October to visit a healthcare setting,7356,7356,2,Less than once a week,3473,3473,0.472131593,0.472131593
+28091,Left home between mid-September and the end of October to visit a healthcare setting,7356,7356,3,1 to 2 days per week,157,157,0.021343121,0.021343121
+28091,Left home between mid-September and the end of October to visit a healthcare setting,7356,7356,4,3 to 4 days per week,24,24,0.003262643,0.003262643
+28091,Left home between mid-September and the end of October to visit a healthcare setting,7356,7356,5,5 or more days per week,29,29,0.00394236,0.00394236
+28092,Left home between the start of November and the start of December to visit a healthcare setting,7033,7033,1,Never,3960,3960,0.563059861,0.563059861
+28092,Left home between the start of November and the start of December to visit a healthcare setting,7033,7033,2,Less than once a week,2853,2853,0.405659036,0.405659036
+28092,Left home between the start of November and the start of December to visit a healthcare setting,7033,7033,3,1 to 2 days per week,167,167,0.023745201,0.023745201
+28092,Left home between the start of November and the start of December to visit a healthcare setting,7033,7033,4,3 to 4 days per week,28,28,0.003981231,0.003981231
+28092,Left home between the start of November and the start of December to visit a healthcare setting,7033,7033,5,5 or more days per week,22,22,0.00312811,0.00312811
+28093,"Left home between mid-March and the end of June (i.e the first UK lockdown) to eat or drink inside a cafe, restaurant or pub/bar",6812,6812,1,Never,5639,5639,0.827803876,0.827803876
+28093,"Left home between mid-March and the end of June (i.e the first UK lockdown) to eat or drink inside a cafe, restaurant or pub/bar",6812,6812,2,Less than once a week,943,943,0.138432179,0.138432179
+28093,"Left home between mid-March and the end of June (i.e the first UK lockdown) to eat or drink inside a cafe, restaurant or pub/bar",6812,6812,3,1 to 2 days per week,188,188,0.027598356,0.027598356
+28093,"Left home between mid-March and the end of June (i.e the first UK lockdown) to eat or drink inside a cafe, restaurant or pub/bar",6812,6812,4,3 to 4 days per week,29,29,0.004257193,0.004257193
+28093,"Left home between mid-March and the end of June (i.e the first UK lockdown) to eat or drink inside a cafe, restaurant or pub/bar",6812,6812,5,5 or more days per week,9,9,0.001321198,0.001321198
+28094,"Left home between the start of July and mid-September to eat or drink inside a cafe, restaurant or pub/bar",7515,7515,-3,Prefer not to answer,5,5,6.65E-04,6.65E-04
+28094,"Left home between the start of July and mid-September to eat or drink inside a cafe, restaurant or pub/bar",7515,7515,1,Never,2988,2988,0.39760479,0.39760479
+28094,"Left home between the start of July and mid-September to eat or drink inside a cafe, restaurant or pub/bar",7515,7515,2,Less than once a week,3234,3234,0.430339321,0.430339321
+28094,"Left home between the start of July and mid-September to eat or drink inside a cafe, restaurant or pub/bar",7515,7515,3,1 to 2 days per week,1055,1055,0.140385895,0.140385895
+28094,"Left home between the start of July and mid-September to eat or drink inside a cafe, restaurant or pub/bar",7515,7515,4,3 to 4 days per week,188,188,0.025016633,0.025016633
+28094,"Left home between the start of July and mid-September to eat or drink inside a cafe, restaurant or pub/bar",7515,7515,5,5 or more days per week,45,45,0.005988024,0.005988024
+28095,"Left home between mid-September and the end of October to eat or drink inside a cafe, restaurant or pub/bar",7356,7356,-3,Prefer not to answer,6,6,8.16E-04,8.16E-04
+28095,"Left home between mid-September and the end of October to eat or drink inside a cafe, restaurant or pub/bar",7356,7356,1,Never,3994,3994,0.542958129,0.542958129
+28095,"Left home between mid-September and the end of October to eat or drink inside a cafe, restaurant or pub/bar",7356,7356,2,Less than once a week,2328,2328,0.316476346,0.316476346
+28095,"Left home between mid-September and the end of October to eat or drink inside a cafe, restaurant or pub/bar",7356,7356,3,1 to 2 days per week,834,834,0.113376835,0.113376835
+28095,"Left home between mid-September and the end of October to eat or drink inside a cafe, restaurant or pub/bar",7356,7356,4,3 to 4 days per week,153,153,0.020799347,0.020799347
+28095,"Left home between mid-September and the end of October to eat or drink inside a cafe, restaurant or pub/bar",7356,7356,5,5 or more days per week,41,41,0.005573681,0.005573681
+28096,"Left home between the start of November and the start of December to eat or drink inside a cafe, restaurant or pub/bar",7033,7033,1,Never,5652,5652,0.803639983,0.803639983
+28096,"Left home between the start of November and the start of December to eat or drink inside a cafe, restaurant or pub/bar",7033,7033,2,Less than once a week,1010,1010,0.143608702,0.143608702
+28096,"Left home between the start of November and the start of December to eat or drink inside a cafe, restaurant or pub/bar",7033,7033,3,1 to 2 days per week,299,299,0.042513863,0.042513863
+28096,"Left home between the start of November and the start of December to eat or drink inside a cafe, restaurant or pub/bar",7033,7033,4,3 to 4 days per week,60,60,0.00853121,0.00853121
+28096,"Left home between the start of November and the start of December to eat or drink inside a cafe, restaurant or pub/bar",7033,7033,5,5 or more days per week,9,9,0.001279682,0.001279682
+28097,Main mode of transport between mid-March and the end of June (i.e the first UK lockdown),6812,6812,-3,Prefer not to answer,5,5,7.34E-04,7.34E-04
+28097,Main mode of transport between mid-March and the end of June (i.e the first UK lockdown),6812,6812,1,Personal vehicle on my own,2526,2526,0.370816207,0.370816207
+28097,Main mode of transport between mid-March and the end of June (i.e the first UK lockdown),6812,6812,10,Taxi/Uber,22,22,0.003229595,0.003229595
+28097,Main mode of transport between mid-March and the end of June (i.e the first UK lockdown),6812,6812,11,Other,10,10,0.001467998,0.001467998
+28097,Main mode of transport between mid-March and the end of June (i.e the first UK lockdown),6812,6812,2,Personal vehicle with other members of my household,1480,1480,0.217263652,0.217263652
+28097,Main mode of transport between mid-March and the end of June (i.e the first UK lockdown),6812,6812,3,Personal vehicle with someone who does not live in my household,63,63,0.009248385,0.009248385
+28097,Main mode of transport between mid-March and the end of June (i.e the first UK lockdown),6812,6812,4,Motorbike,12,12,0.001761597,0.001761597
+28097,Main mode of transport between mid-March and the end of June (i.e the first UK lockdown),6812,6812,5,Bus,196,196,0.028772754,0.028772754
+28097,Main mode of transport between mid-March and the end of June (i.e the first UK lockdown),6812,6812,6,Train,40,40,0.005871991,0.005871991
+28097,Main mode of transport between mid-March and the end of June (i.e the first UK lockdown),6812,6812,7,Tube (underground train),22,22,0.003229595,0.003229595
+28097,Main mode of transport between mid-March and the end of June (i.e the first UK lockdown),6812,6812,8,Bicycle,319,319,0.046829125,0.046829125
+28097,Main mode of transport between mid-March and the end of June (i.e the first UK lockdown),6812,6812,9,Walked,2117,2117,0.310775103,0.310775103
+28098,Main mode of transport between the start of July and mid-September,7515,7515,1,Personal vehicle on my own,2753,2753,0.366333999,0.366333999
+28098,Main mode of transport between the start of July and mid-September,7515,7515,10,Taxi/Uber,33,33,0.004391218,0.004391218
+28098,Main mode of transport between the start of July and mid-September,7515,7515,11,Other,19,19,0.002528277,0.002528277
+28098,Main mode of transport between the start of July and mid-September,7515,7515,2,Personal vehicle with other members of my household,2018,2018,0.268529607,0.268529607
+28098,Main mode of transport between the start of July and mid-September,7515,7515,3,Personal vehicle with someone who does not live in my household,135,135,0.017964072,0.017964072
+28098,Main mode of transport between the start of July and mid-September,7515,7515,4,Motorbike,16,16,0.002129075,0.002129075
+28098,Main mode of transport between the start of July and mid-September,7515,7515,5,Bus,287,287,0.038190286,0.038190286
+28098,Main mode of transport between the start of July and mid-September,7515,7515,6,Train,84,84,0.011177645,0.011177645
+28098,Main mode of transport between the start of July and mid-September,7515,7515,7,Tube (underground train),72,72,0.009580838,0.009580838
+28098,Main mode of transport between the start of July and mid-September,7515,7515,8,Bicycle,306,306,0.040718563,0.040718563
+28098,Main mode of transport between the start of July and mid-September,7515,7515,9,Walked,1789,1789,0.238057219,0.238057219
+28099,Main mode of transport between mid-September and the end of October,7356,7356,1,Personal vehicle on my own,2716,2716,0.369222403,0.369222403
+28099,Main mode of transport between mid-September and the end of October,7356,7356,10,Taxi/Uber,33,33,0.004486134,0.004486134
+28099,Main mode of transport between mid-September and the end of October,7356,7356,11,Other,17,17,0.002311039,0.002311039
+28099,Main mode of transport between mid-September and the end of October,7356,7356,2,Personal vehicle with other members of my household,1867,1867,0.253806417,0.253806417
+28099,Main mode of transport between mid-September and the end of October,7356,7356,3,Personal vehicle with someone who does not live in my household,141,141,0.019168026,0.019168026
+28099,Main mode of transport between mid-September and the end of October,7356,7356,4,Motorbike,13,13,0.001767265,0.001767265
+28099,Main mode of transport between mid-September and the end of October,7356,7356,5,Bus,272,272,0.036976618,0.036976618
+28099,Main mode of transport between mid-September and the end of October,7356,7356,6,Train,77,77,0.010467645,0.010467645
+28099,Main mode of transport between mid-September and the end of October,7356,7356,7,Tube (underground train),67,67,0.009108211,0.009108211
+28099,Main mode of transport between mid-September and the end of October,7356,7356,8,Bicycle,291,291,0.039559543,0.039559543
+28099,Main mode of transport between mid-September and the end of October,7356,7356,9,Walked,1858,1858,0.252582926,0.252582926
+28100,Main mode of transport between the start of November and the start of December,7033,7033,1,Personal vehicle on my own,2636,2636,0.374804493,0.374804493
+28100,Main mode of transport between the start of November and the start of December,7033,7033,10,Taxi/Uber,38,38,0.0054031,0.0054031
+28100,Main mode of transport between the start of November and the start of December,7033,7033,11,Other,7,7,9.95E-04,9.95E-04
+28100,Main mode of transport between the start of November and the start of December,7033,7033,2,Personal vehicle with other members of my household,1647,1647,0.234181715,0.234181715
+28100,Main mode of transport between the start of November and the start of December,7033,7033,3,Personal vehicle with someone who does not live in my household,103,103,0.014645244,0.014645244
+28100,Main mode of transport between the start of November and the start of December,7033,7033,4,Motorbike,10,10,0.001421868,0.001421868
+28100,Main mode of transport between the start of November and the start of December,7033,7033,5,Bus,250,250,0.035546708,0.035546708
+28100,Main mode of transport between the start of November and the start of December,7033,7033,6,Train,56,56,0.007962463,0.007962463
+28100,Main mode of transport between the start of November and the start of December,7033,7033,7,Tube (underground train),53,53,0.007535902,0.007535902
+28100,Main mode of transport between the start of November and the start of December,7033,7033,8,Bicycle,268,268,0.038106071,0.038106071
+28100,Main mode of transport between the start of November and the start of December,7033,7033,9,Walked,1962,1962,0.278970567,0.278970567
+28101,How often face mask used when outside home between mid-March and the end of June (i.e the first UK lockdown),6812,6812,-3,Prefer not to answer,7,7,0.001027598,0.001027598
+28101,How often face mask used when outside home between mid-March and the end of June (i.e the first UK lockdown),6812,6812,1,Never,992,992,0.145625367,0.145625367
+28101,How often face mask used when outside home between mid-March and the end of June (i.e the first UK lockdown),6812,6812,2,Some of the time,2570,2570,0.377275396,0.377275396
+28101,How often face mask used when outside home between mid-March and the end of June (i.e the first UK lockdown),6812,6812,3,Half of the time,247,247,0.036259542,0.036259542
+28101,How often face mask used when outside home between mid-March and the end of June (i.e the first UK lockdown),6812,6812,4,Most of the time,1486,1486,0.218144451,0.218144451
+28101,How often face mask used when outside home between mid-March and the end of June (i.e the first UK lockdown),6812,6812,5,All of the time,1510,1510,0.221667645,0.221667645
+28102,How often face mask used when outside home between the start of July and mid-September,7515,7515,1,Never,430,430,0.057218896,0.057218896
+28102,How often face mask used when outside home between the start of July and mid-September,7515,7515,2,Some of the time,2784,2784,0.370459082,0.370459082
+28102,How often face mask used when outside home between the start of July and mid-September,7515,7515,3,Half of the time,443,443,0.058948769,0.058948769
+28102,How often face mask used when outside home between the start of July and mid-September,7515,7515,4,Most of the time,2060,2060,0.27411843,0.27411843
+28102,How often face mask used when outside home between the start of July and mid-September,7515,7515,5,All of the time,1795,1795,0.238855622,0.238855622
+28103,How often face mask used when outside home between mid-September and the end of October,7356,7356,1,Never,309,309,0.042006525,0.042006525
+28103,How often face mask used when outside home between mid-September and the end of October,7356,7356,2,Some of the time,2398,2398,0.325992387,0.325992387
+28103,How often face mask used when outside home between mid-September and the end of October,7356,7356,3,Half of the time,473,473,0.064301251,0.064301251
+28103,How often face mask used when outside home between mid-September and the end of October,7356,7356,4,Most of the time,2139,2139,0.290783034,0.290783034
+28103,How often face mask used when outside home between mid-September and the end of October,7356,7356,5,All of the time,2035,2035,0.276644916,0.276644916
+28104,How often face mask used when outside home between the start of November and the start of December,7033,7033,1,Never,221,221,0.03142329,0.03142329
+28104,How often face mask used when outside home between the start of November and the start of December,7033,7033,2,Some of the time,1996,1996,0.28380492,0.28380492
+28104,How often face mask used when outside home between the start of November and the start of December,7033,7033,3,Half of the time,403,403,0.057301294,0.057301294
+28104,How often face mask used when outside home between the start of November and the start of December,7033,7033,4,Most of the time,2135,2135,0.30356889,0.30356889
+28104,How often face mask used when outside home between the start of November and the start of December,7033,7033,5,All of the time,2278,2278,0.323901607,0.323901607
+28105,How often eye protection used when outside home between mid-March and the end of June (i.e the first UK lockdown),6812,6812,1,Never,6354,6354,0.932765708,0.932765708
+28105,How often eye protection used when outside home between mid-March and the end of June (i.e the first UK lockdown),6812,6812,2,Some of the time,309,309,0.045361127,0.045361127
+28105,How often eye protection used when outside home between mid-March and the end of June (i.e the first UK lockdown),6812,6812,3,Half of the time,19,19,0.002789196,0.002789196
+28105,How often eye protection used when outside home between mid-March and the end of June (i.e the first UK lockdown),6812,6812,4,Most of the time,44,44,0.00645919,0.00645919
+28105,How often eye protection used when outside home between mid-March and the end of June (i.e the first UK lockdown),6812,6812,5,All of the time,83,83,0.012184381,0.012184381
+28106,How often eye protection used when outside home between the start of July and mid-September,7515,7515,1,Never,6928,6928,0.921889554,0.921889554
+28106,How often eye protection used when outside home between the start of July and mid-September,7515,7515,2,Some of the time,400,400,0.05322688,0.05322688
+28106,How often eye protection used when outside home between the start of July and mid-September,7515,7515,3,Half of the time,28,28,0.003725882,0.003725882
+28106,How often eye protection used when outside home between the start of July and mid-September,7515,7515,4,Most of the time,70,70,0.009314704,0.009314704
+28106,How often eye protection used when outside home between the start of July and mid-September,7515,7515,5,All of the time,85,85,0.011310712,0.011310712
+28107,How often eye protection used when outside home between mid-September and the end of October,7356,7356,1,Never,6778,6778,0.921424687,0.921424687
+28107,How often eye protection used when outside home between mid-September and the end of October,7356,7356,2,Some of the time,372,372,0.050570962,0.050570962
+28107,How often eye protection used when outside home between mid-September and the end of October,7356,7356,3,Half of the time,34,34,0.004622077,0.004622077
+28107,How often eye protection used when outside home between mid-September and the end of October,7356,7356,4,Most of the time,72,72,0.009787928,0.009787928
+28107,How often eye protection used when outside home between mid-September and the end of October,7356,7356,5,All of the time,96,96,0.013050571,0.013050571
+28108,How often eye protection used when outside home between the start of November and the start of December,7033,7033,1,Never,6519,6519,0.926915968,0.926915968
+28108,How often eye protection used when outside home between the start of November and the start of December,7033,7033,2,Some of the time,316,316,0.044931039,0.044931039
+28108,How often eye protection used when outside home between the start of November and the start of December,7033,7033,3,Half of the time,40,40,0.005687473,0.005687473
+28108,How often eye protection used when outside home between the start of November and the start of December,7033,7033,4,Most of the time,70,70,0.009953078,0.009953078
+28108,How often eye protection used when outside home between the start of November and the start of December,7033,7033,5,All of the time,85,85,0.012085881,0.012085881
+28109,How often disposable gloves worn when outside home between mid-March and the end of June (i.e the first UK lockdown),6812,6812,1,Never,4477,4477,0.657222548,0.657222548
+28109,How often disposable gloves worn when outside home between mid-March and the end of June (i.e the first UK lockdown),6812,6812,2,Some of the time,1910,1910,0.280387551,0.280387551
+28109,How often disposable gloves worn when outside home between mid-March and the end of June (i.e the first UK lockdown),6812,6812,3,Half of the time,91,91,0.013358779,0.013358779
+28109,How often disposable gloves worn when outside home between mid-March and the end of June (i.e the first UK lockdown),6812,6812,4,Most of the time,230,230,0.033763946,0.033763946
+28109,How often disposable gloves worn when outside home between mid-March and the end of June (i.e the first UK lockdown),6812,6812,5,All of the time,104,104,0.015267176,0.015267176
+28110,How often disposable gloves worn when outside home between the start of July and mid-September,7515,7515,-3,Prefer not to answer,5,5,6.65E-04,6.65E-04
+28110,How often disposable gloves worn when outside home between the start of July and mid-September,7515,7515,1,Never,5366,5366,0.714038589,0.714038589
+28110,How often disposable gloves worn when outside home between the start of July and mid-September,7515,7515,2,Some of the time,1727,1727,0.229807053,0.229807053
+28110,How often disposable gloves worn when outside home between the start of July and mid-September,7515,7515,3,Half of the time,102,102,0.013572854,0.013572854
+28110,How often disposable gloves worn when outside home between the start of July and mid-September,7515,7515,4,Most of the time,211,211,0.028077179,0.028077179
+28110,How often disposable gloves worn when outside home between the start of July and mid-September,7515,7515,5,All of the time,104,104,0.013838989,0.013838989
+28111,How often disposable gloves worn when outside home between mid-September and the end of October,7356,7356,1,Never,5490,5490,0.746329527,0.746329527
+28111,How often disposable gloves worn when outside home between mid-September and the end of October,7356,7356,2,Some of the time,1447,1447,0.196710169,0.196710169
+28111,How often disposable gloves worn when outside home between mid-September and the end of October,7356,7356,3,Half of the time,90,90,0.01223491,0.01223491
+28111,How often disposable gloves worn when outside home between mid-September and the end of October,7356,7356,4,Most of the time,227,227,0.030859163,0.030859163
+28111,How often disposable gloves worn when outside home between mid-September and the end of October,7356,7356,5,All of the time,98,98,0.013322458,0.013322458
+28112,How often disposable gloves worn when outside home between the start of November and the start of December,7033,7033,1,Never,5386,5386,0.765818285,0.765818285
+28112,How often disposable gloves worn when outside home between the start of November and the start of December,7033,7033,2,Some of the time,1229,1229,0.174747618,0.174747618
+28112,How often disposable gloves worn when outside home between the start of November and the start of December,7033,7033,3,Half of the time,85,85,0.012085881,0.012085881
+28112,How often disposable gloves worn when outside home between the start of November and the start of December,7033,7033,4,Most of the time,224,224,0.031849851,0.031849851
+28112,How often disposable gloves worn when outside home between the start of November and the start of December,7033,7033,5,All of the time,105,105,0.014929618,0.014929618
+28113,How often alcohol-based sanitiser used when outside home between mid-March and the end of June (i.e the first UK lockdown),6812,6812,1,Never,200,200,0.029359953,0.029359953
+28113,How often alcohol-based sanitiser used when outside home between mid-March and the end of June (i.e the first UK lockdown),6812,6812,2,Some of the time,1773,1773,0.260275984,0.260275984
+28113,How often alcohol-based sanitiser used when outside home between mid-March and the end of June (i.e the first UK lockdown),6812,6812,3,Half of the time,353,353,0.051820317,0.051820317
+28113,How often alcohol-based sanitiser used when outside home between mid-March and the end of June (i.e the first UK lockdown),6812,6812,4,Most of the time,2250,2250,0.330299472,0.330299472
+28113,How often alcohol-based sanitiser used when outside home between mid-March and the end of June (i.e the first UK lockdown),6812,6812,5,All of the time,2233,2233,0.327803876,0.327803876
+28114,How often alcohol-based sanitiser used when outside home between the start of July and mid-September,7515,7515,1,Never,206,206,0.027411843,0.027411843
+28114,How often alcohol-based sanitiser used when outside home between the start of July and mid-September,7515,7515,2,Some of the time,2032,2032,0.270392548,0.270392548
+28114,How often alcohol-based sanitiser used when outside home between the start of July and mid-September,7515,7515,3,Half of the time,381,381,0.050698603,0.050698603
+28114,How often alcohol-based sanitiser used when outside home between the start of July and mid-September,7515,7515,4,Most of the time,2318,2318,0.308449767,0.308449767
+28114,How often alcohol-based sanitiser used when outside home between the start of July and mid-September,7515,7515,5,All of the time,2578,2578,0.343047239,0.343047239
+28115,How often alcohol-based sanitiser used when outside home between mid-September and the end of October,7356,7356,1,Never,249,249,0.033849918,0.033849918
+28115,How often alcohol-based sanitiser used when outside home between mid-September and the end of October,7356,7356,2,Some of the time,1964,1964,0.266992931,0.266992931
+28115,How often alcohol-based sanitiser used when outside home between mid-September and the end of October,7356,7356,3,Half of the time,375,375,0.050978793,0.050978793
+28115,How often alcohol-based sanitiser used when outside home between mid-September and the end of October,7356,7356,4,Most of the time,2191,2191,0.297852094,0.297852094
+28115,How often alcohol-based sanitiser used when outside home between mid-September and the end of October,7356,7356,5,All of the time,2575,2575,0.350054377,0.350054377
+28116,How often alcohol-based sanitiser used when outside home between the start of November and the start of December,7033,7033,1,Never,295,295,0.041945116,0.041945116
+28116,How often alcohol-based sanitiser used when outside home between the start of November and the start of December,7033,7033,2,Some of the time,1799,1799,0.255794113,0.255794113
+28116,How often alcohol-based sanitiser used when outside home between the start of November and the start of December,7033,7033,3,Half of the time,327,327,0.046495095,0.046495095
+28116,How often alcohol-based sanitiser used when outside home between the start of November and the start of December,7033,7033,4,Most of the time,2013,2013,0.286222096,0.286222096
+28116,How often alcohol-based sanitiser used when outside home between the start of November and the start of December,7033,7033,5,All of the time,2598,2598,0.369401393,0.369401393
+28117,Time in close contact with people between mid-March and the end of June (i.e the first UK lockdown),6812,6812,-3,Prefer not to answer,7,7,0.001027598,0.001027598
+28117,Time in close contact with people between mid-March and the end of June (i.e the first UK lockdown),6812,6812,1,Never,3255,3255,0.477833235,0.477833235
+28117,Time in close contact with people between mid-March and the end of June (i.e the first UK lockdown),6812,6812,2,Less than once a week,2262,2262,0.332061069,0.332061069
+28117,Time in close contact with people between mid-March and the end of June (i.e the first UK lockdown),6812,6812,3,1 to 2 days per week,800,800,0.117439812,0.117439812
+28117,Time in close contact with people between mid-March and the end of June (i.e the first UK lockdown),6812,6812,4,3 to 4 days per week,275,275,0.040369935,0.040369935
+28117,Time in close contact with people between mid-March and the end of June (i.e the first UK lockdown),6812,6812,5,5 or more days per week,213,213,0.03126835,0.03126835
+28118,Time in close contact with people between the start of July and mid-September,7515,7515,-3,Prefer not to answer,12,12,0.001596806,0.001596806
+28118,Time in close contact with people between the start of July and mid-September,7515,7515,1,Never,2148,2148,0.285828343,0.285828343
+28118,Time in close contact with people between the start of July and mid-September,7515,7515,2,Less than once a week,2857,2857,0.380172987,0.380172987
+28118,Time in close contact with people between the start of July and mid-September,7515,7515,3,1 to 2 days per week,1638,1638,0.217964072,0.217964072
+28118,Time in close contact with people between the start of July and mid-September,7515,7515,4,3 to 4 days per week,544,544,0.072388556,0.072388556
+28118,Time in close contact with people between the start of July and mid-September,7515,7515,5,5 or more days per week,316,316,0.042049235,0.042049235
+28119,Time in close contact with people between mid-September and the end of October,7356,7356,-3,Prefer not to answer,13,13,0.001767265,0.001767265
+28119,Time in close contact with people between mid-September and the end of October,7356,7356,1,Never,2346,2346,0.318923328,0.318923328
+28119,Time in close contact with people between mid-September and the end of October,7356,7356,2,Less than once a week,2645,2645,0.359570419,0.359570419
+28119,Time in close contact with people between mid-September and the end of October,7356,7356,3,1 to 2 days per week,1505,1505,0.204594889,0.204594889
+28119,Time in close contact with people between mid-September and the end of October,7356,7356,4,3 to 4 days per week,507,507,0.068923328,0.068923328
+28119,Time in close contact with people between mid-September and the end of October,7356,7356,5,5 or more days per week,340,340,0.046220772,0.046220772
+28120,Time in close contact with people between the start of November and the start of December,7033,7033,1,Never,2910,2910,0.413763685,0.413763685
+28120,Time in close contact with people between the start of November and the start of December,7033,7033,2,Less than once a week,2276,2276,0.323617233,0.323617233
+28120,Time in close contact with people between the start of November and the start of December,7033,7033,3,1 to 2 days per week,1171,1171,0.166500782,0.166500782
+28120,Time in close contact with people between the start of November and the start of December,7033,7033,4,3 to 4 days per week,389,389,0.055310678,0.055310678
+28120,Time in close contact with people between the start of November and the start of December,7033,7033,5,5 or more days per week,283,283,0.040238874,0.040238874
+28121,Spent nights away from own home between 1st March 2020 and 30th November 2020,8607,8607,-3,Prefer not to answer,9,9,0.001045661,0.001045661
+28121,Spent nights away from own home between 1st March 2020 and 30th November 2020,8607,8607,0,No,4098,4098,0.476124085,0.476124085
+28121,Spent nights away from own home between 1st March 2020 and 30th November 2020,8607,8607,1,Yes,4500,4500,0.522830254,0.522830254
+28122,Nights spent in friend's or relative's home between 1st March 2020 and 30th November 2020,4500,4500,-3,Prefer not to answer,5,5,0.001111111,0.001111111
+28122,Nights spent in friend's or relative's home between 1st March 2020 and 30th November 2020,4500,4500,0,0,2488,2488,0.552888889,0.552888889
+28122,Nights spent in friend's or relative's home between 1st March 2020 and 30th November 2020,4500,4500,1,1,313,313,0.069555556,0.069555556
+28122,Nights spent in friend's or relative's home between 1st March 2020 and 30th November 2020,4500,4500,10,More than 20,194,194,0.043111111,0.043111111
+28122,Nights spent in friend's or relative's home between 1st March 2020 and 30th November 2020,4500,4500,2,2,364,364,0.080888889,0.080888889
+28122,Nights spent in friend's or relative's home between 1st March 2020 and 30th November 2020,4500,4500,3,3,264,264,0.058666667,0.058666667
+28122,Nights spent in friend's or relative's home between 1st March 2020 and 30th November 2020,4500,4500,4,4,153,153,0.034,0.034
+28122,Nights spent in friend's or relative's home between 1st March 2020 and 30th November 2020,4500,4500,5,5,133,133,0.029555556,0.029555556
+28122,Nights spent in friend's or relative's home between 1st March 2020 and 30th November 2020,4500,4500,6,7-Jun,206,206,0.045777778,0.045777778
+28122,Nights spent in friend's or relative's home between 1st March 2020 and 30th November 2020,4500,4500,7,10-Aug,173,173,0.038444444,0.038444444
+28122,Nights spent in friend's or relative's home between 1st March 2020 and 30th November 2020,4500,4500,8,15-Nov,132,132,0.029333333,0.029333333
+28122,Nights spent in friend's or relative's home between 1st March 2020 and 30th November 2020,4500,4500,9,16-20,75,75,0.016666667,0.016666667
+28123,Nights spent in hotel/guest house/bed and breakfast between 1st March 2020 and 30th November 2020,4500,4500,0,0,2080,2080,0.462222222,0.462222222
+28123,Nights spent in hotel/guest house/bed and breakfast between 1st March 2020 and 30th November 2020,4500,4500,1,1,267,267,0.059333333,0.059333333
+28123,Nights spent in hotel/guest house/bed and breakfast between 1st March 2020 and 30th November 2020,4500,4500,10,More than 20,78,78,0.017333333,0.017333333
+28123,Nights spent in hotel/guest house/bed and breakfast between 1st March 2020 and 30th November 2020,4500,4500,2,2,379,379,0.084222222,0.084222222
+28123,Nights spent in hotel/guest house/bed and breakfast between 1st March 2020 and 30th November 2020,4500,4500,3,3,339,339,0.075333333,0.075333333
+28123,Nights spent in hotel/guest house/bed and breakfast between 1st March 2020 and 30th November 2020,4500,4500,4,4,265,265,0.058888889,0.058888889
+28123,Nights spent in hotel/guest house/bed and breakfast between 1st March 2020 and 30th November 2020,4500,4500,5,5,163,163,0.036222222,0.036222222
+28123,Nights spent in hotel/guest house/bed and breakfast between 1st March 2020 and 30th November 2020,4500,4500,6,7-Jun,420,420,0.093333333,0.093333333
+28123,Nights spent in hotel/guest house/bed and breakfast between 1st March 2020 and 30th November 2020,4500,4500,7,10-Aug,227,227,0.050444444,0.050444444
+28123,Nights spent in hotel/guest house/bed and breakfast between 1st March 2020 and 30th November 2020,4500,4500,8,15-Nov,201,201,0.044666667,0.044666667
+28123,Nights spent in hotel/guest house/bed and breakfast between 1st March 2020 and 30th November 2020,4500,4500,9,16-20,78,78,0.017333333,0.017333333
+28124,Nights spent in a second home between 1st March 2020 and 30th November 2020,4500,4500,-3,Prefer not to answer,8,8,0.001777778,0.001777778
+28124,Nights spent in a second home between 1st March 2020 and 30th November 2020,4500,4500,0,0,3721,3721,0.826888889,0.826888889
+28124,Nights spent in a second home between 1st March 2020 and 30th November 2020,4500,4500,1,1,23,23,0.005111111,0.005111111
+28124,Nights spent in a second home between 1st March 2020 and 30th November 2020,4500,4500,10,More than 20,214,214,0.047555556,0.047555556
+28124,Nights spent in a second home between 1st March 2020 and 30th November 2020,4500,4500,2,2,35,35,0.007777778,0.007777778
+28124,Nights spent in a second home between 1st March 2020 and 30th November 2020,4500,4500,3,3,44,44,0.009777778,0.009777778
+28124,Nights spent in a second home between 1st March 2020 and 30th November 2020,4500,4500,4,4,41,41,0.009111111,0.009111111
+28124,Nights spent in a second home between 1st March 2020 and 30th November 2020,4500,4500,5,5,40,40,0.008888889,0.008888889
+28124,Nights spent in a second home between 1st March 2020 and 30th November 2020,4500,4500,6,7-Jun,78,78,0.017333333,0.017333333
+28124,Nights spent in a second home between 1st March 2020 and 30th November 2020,4500,4500,7,10-Aug,87,87,0.019333333,0.019333333
+28124,Nights spent in a second home between 1st March 2020 and 30th November 2020,4500,4500,8,15-Nov,120,120,0.026666667,0.026666667
+28124,Nights spent in a second home between 1st March 2020 and 30th November 2020,4500,4500,9,16-20,89,89,0.019777778,0.019777778
+28125,Nights spent in a hospital between 1st March 2020 and 30th November 2020,4500,4500,0,0,4309,4309,0.957555556,0.957555556
+28125,Nights spent in a hospital between 1st March 2020 and 30th November 2020,4500,4500,1,1,59,59,0.013111111,0.013111111
+28125,Nights spent in a hospital between 1st March 2020 and 30th November 2020,4500,4500,10,More than 20,5,5,0.001111111,0.001111111
+28125,Nights spent in a hospital between 1st March 2020 and 30th November 2020,4500,4500,2,2,37,37,0.008222222,0.008222222
+28125,Nights spent in a hospital between 1st March 2020 and 30th November 2020,4500,4500,3,3,23,23,0.005111111,0.005111111
+28125,Nights spent in a hospital between 1st March 2020 and 30th November 2020,4500,4500,4,4,11,11,0.002444444,0.002444444
+28125,Nights spent in a hospital between 1st March 2020 and 30th November 2020,4500,4500,5,5,15,15,0.003333333,0.003333333
+28125,Nights spent in a hospital between 1st March 2020 and 30th November 2020,4500,4500,6,7-Jun,16,16,0.003555556,0.003555556
+28125,Nights spent in a hospital between 1st March 2020 and 30th November 2020,4500,4500,7,10-Aug,8,8,0.001777778,0.001777778
+28125,Nights spent in a hospital between 1st March 2020 and 30th November 2020,4500,4500,8,15-Nov,7,7,0.001555556,0.001555556
+28125,Nights spent in a hospital between 1st March 2020 and 30th November 2020,4500,4500,9,16-20,6,6,0.001333333,0.001333333
+28126,Nights spent in another place between 1st March 2020 and 30th November 2020,4500,4500,0,0,3382,3382,0.751555556,0.751555556
+28126,Nights spent in another place between 1st March 2020 and 30th November 2020,4500,4500,1,1,72,72,0.016,0.016
+28126,Nights spent in another place between 1st March 2020 and 30th November 2020,4500,4500,10,More than 20,90,90,0.02,0.02
+28126,Nights spent in another place between 1st March 2020 and 30th November 2020,4500,4500,2,2,71,71,0.015777778,0.015777778
+28126,Nights spent in another place between 1st March 2020 and 30th November 2020,4500,4500,3,3,101,101,0.022444444,0.022444444
+28126,Nights spent in another place between 1st March 2020 and 30th November 2020,4500,4500,4,4,77,77,0.017111111,0.017111111
+28126,Nights spent in another place between 1st March 2020 and 30th November 2020,4500,4500,5,5,66,66,0.014666667,0.014666667
+28126,Nights spent in another place between 1st March 2020 and 30th November 2020,4500,4500,6,7-Jun,305,305,0.067777778,0.067777778
+28126,Nights spent in another place between 1st March 2020 and 30th November 2020,4500,4500,7,10-Aug,114,114,0.025333333,0.025333333
+28126,Nights spent in another place between 1st March 2020 and 30th November 2020,4500,4500,8,15-Nov,169,169,0.037555556,0.037555556
+28126,Nights spent in another place between 1st March 2020 and 30th November 2020,4500,4500,9,16-20,51,51,0.011333333,0.011333333
